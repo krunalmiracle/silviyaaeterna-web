@@ -11,6 +11,8 @@ RUN git config --global user.email "ai@inspector.local" && \
 
 COPY . .
 
+RUN bun install
+
 EXPOSE 3000
 
 CMD ["bun", "run", "server.ts"]

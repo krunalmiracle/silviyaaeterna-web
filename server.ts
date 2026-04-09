@@ -1,6 +1,9 @@
 import fs from 'fs';
 import path from 'path';
 import { exec } from 'child_process';
+import { parse } from 'node-html-parser';
+
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0'; // Traefik self-signed chain
 
 // ─── Config ───────────────────────────────────────────────────────────────────
 const MINIMAX_API_KEY    = process.env.MINIMAX_API_KEY;
@@ -70,7 +73,7 @@ EXECUTION RULES:
 - Use existing styling conventions (TailwindCSS for krusil-webpage).`;
 
 // ─── AI call — OpenRouter first, Minimax fallback ─────────────────────────────
-async function callAI(systemPrompt: string, userPrompt: string): Promise<ReadableStream<Uint8Array>> {
+async function callAI(systemPrompt: string, userPrompt: string, maxTokens = 32000): Promise<ReadableStream<Uint8Array>> {
   // Try OpenRouter z-ai/glm-5.1 first
   if (OPENROUTER_API_KEY) {
     console.log('Calling OpenRouter z-ai/glm-5.1...');
@@ -87,7 +90,7 @@ async function callAI(systemPrompt: string, userPrompt: string): Promise<Readabl
         messages: [{ role: 'system', content: systemPrompt }, { role: 'user', content: userPrompt }],
         stream: true,
         temperature: 0.7,
-        max_tokens: 32000,
+        max_tokens: maxTokens,
       })
     });
     if (res.ok) return res.body!;
@@ -150,6 +153,20 @@ function cleanHtml(raw: string): string {
   const ft = h.indexOf('<');
   if (ft !== -1) return h.substring(ft).trim();
   return h;
+}
+
+// ─── Selector-based DOM patching ──────────────────────────────────────────────
+function patchBySelector(html: string, selector: string, replacement: string): string | null {
+  try {
+    const root = parse(html, { comment: true, blockTextElements: { script: true, style: true, pre: true } });
+    const el = root.querySelector(selector);
+    if (!el) { console.warn(`patchBySelector: no element found for "${selector}"`); return null; }
+    el.replaceWith(replacement);
+    return root.toString();
+  } catch (e) {
+    console.error('patchBySelector error:', e);
+    return null;
+  }
 }
 
 // ─── AWS Signature v4 (no external deps) ─────────────────────────────────────
@@ -299,7 +316,7 @@ Bun.serve({
     if (url.pathname === '/api/generate' && req.method === 'POST') {
       try {
         const body = await req.json();
-        const { prompt, targetHtml, chunks } = body;
+        const { prompt, targetHtml, chunks, targetSelector } = body;
         if (!prompt) return new Response(JSON.stringify({ error: 'Prompt is required' }), { status: 400 });
 
         const indexPath  = path.join(process.cwd(), INDEX_FILE);
@@ -358,7 +375,7 @@ Bun.serve({
           ? `TARGET ELEMENT TO MODIFY:\n${targetHtml}\n\nUSER REQUEST: ${prompt}`
           : `CURRENT FULL PAGE HTML:\n${currentHtml}\n\nUSER REQUEST: ${prompt}`;
 
-        const aiStream = await callAI(sysP, usrP);
+        const aiStream = await callAI(sysP, usrP, 32000);
 
         return new Response(new ReadableStream({
           async start(controller) {
@@ -369,36 +386,34 @@ Bun.serve({
               let applied = false;
 
               if (targetHtml) {
-                const patched = currentHtml.replace(targetHtml, fh);
-                if (patched !== currentHtml) {
-                  fs.writeFileSync(indexPath, patched, 'utf-8');
-                  await snapshotAndCommit('AI Update: Targeted element modified via Inspector');
-                  applied = true;
-                } else {
-                  // String replace missed — retry with alt model
-                  console.warn('Targeted replace missed — retrying with alt model...');
-                  const altStream = await callAI(
-                    SYSTEM_TARGETED + '\n\nIMPORTANT: The previous attempt failed because the returned HTML did not match the original. Preserve the EXACT outer tag, class names, and ID of the target element so string replacement works.',
-                    `TARGET ELEMENT (retry):\n${targetHtml}\n\nUSER REQUEST: ${prompt}`
-                  );
-                  const altAcc = await streamToString(altStream, c => enc(c));
-                  const altFh = cleanHtml(altAcc);
-                  const altPatched = currentHtml.replace(targetHtml, altFh);
-                  if (altPatched !== currentHtml) {
-                    fs.writeFileSync(indexPath, altPatched, 'utf-8');
-                    await snapshotAndCommit('AI Update: Targeted element modified via Inspector (retry)');
+                // Primary: selector-based DOM patch (reliable against DOM mutation)
+                if (targetSelector) {
+                  const patched = patchBySelector(currentHtml, targetSelector, fh);
+                  if (patched) {
+                    fs.writeFileSync(indexPath, patched, 'utf-8');
+                    await snapshotAndCommit('AI Update: Targeted element modified via Inspector');
                     applied = true;
-                    console.log('Retry targeted replace succeeded.');
+                  }
+                }
+                // Fallback: string replace if no selector or selector missed
+                if (!applied) {
+                  const patched = currentHtml.replace(targetHtml, fh);
+                  if (patched !== currentHtml) {
+                    fs.writeFileSync(indexPath, patched, 'utf-8');
+                    await snapshotAndCommit('AI Update: Targeted element modified via Inspector');
+                    applied = true;
                   } else {
-                    console.error('Both attempts failed for targeted replace.');
+                    console.warn('Both selector and string-replace missed — no change applied.');
                   }
                 }
               } else {
-                // Full page — always succeeds if we got HTML back
-                if (fh.includes('<')) {
+                // Full page — reject truncated responses to prevent content loss
+                if (fh.includes('<') && fh.includes('</html>')) {
                   fs.writeFileSync(indexPath, fh, 'utf-8');
                   await snapshotAndCommit('AI Update: Full layout redesigned via Inspector');
                   applied = true;
+                } else if (fh.includes('<')) {
+                  console.error('Full-page response truncated (missing </html>) — rejecting to prevent content loss.');
                 }
               }
 
