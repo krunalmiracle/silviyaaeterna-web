@@ -320,7 +320,7 @@ await ensureBucket();
 // ─── Server ───────────────────────────────────────────────────────────────────
 Bun.serve({
   port: process.env.PORT || 3000,
-  idleTimeout: 300, // 5 min — AI generation can take a while
+  idleTimeout: 255, // Bun max — AI generation can take a while
   async fetch(req) {
     const url = new URL(req.url);
 
