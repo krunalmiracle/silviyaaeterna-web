@@ -22,23 +22,20 @@ const S3_BUCKET     = process.env.S3_BUCKET      || 'silviyaaeterna';
 const INDEX_FILE = 'index.html';
 
 // ─── Deep reasoning prompts ───────────────────────────────────────────────────
-const SYSTEM_FULL_PAGE = `You are a world-class Frontend Web Developer and UI/UX Designer with 15+ years of experience building award-winning, pixel-perfect websites.
+const SYSTEM_PLANNER = `You are a precise webpage modification planner.
 
-THINKING PROCESS — Before writing any code, you must silently reason through:
-1. What is the user's INTENT? What visual/functional change are they actually requesting?
-2. Which exact HTML sections need to change to satisfy that intent? List them mentally.
-3. What should NOT change? Identify structural sections, IDs, class names, and scripts that must be preserved.
-4. What design improvements can you make WITHIN the scope — better typography, spacing, micro-animations, color depth?
-5. Will your change break any existing JavaScript behaviour? Audit thoroughly.
+Given a page section outline and user request, identify exactly which sections need to change.
 
-EXECUTION RULES:
-- Return ONLY the complete updated HTML starting with <!DOCTYPE html>. No markdown, no explanation.
-- Every section you touch must be MORE detailed, richer, and higher quality than before.
-- Use premium design patterns: glassmorphism, layered gradients, smooth transitions (0.3s ease), CSS custom properties.
-- Typography: use existing Google Font stacks; never introduce new external dependencies.
-- Only generate production-ready HTML — no TODO comments, no placeholder text.
-- Preserve ALL existing IDs, data- attributes, and JavaScript hooks exactly.
-- DO NOT add or remove any <script> tag that was not in the original unless explicitly asked.`;
+RESPONSE — Return ONLY a JSON array, no markdown, no explanation, nothing else:
+[
+  {"selector": "#section-id", "instruction": "specific change for this section only"}
+]
+
+Rules:
+- Use only selectors that exist in the outline (the exact #id values shown)
+- Only include sections that truly need to change for the user request
+- Instructions must be specific and actionable
+- Maximum 8 entries`;
 
 const SYSTEM_TARGETED = `You are a world-class Frontend Web Developer performing a precise surgical edit on a single HTML element.
 
@@ -153,6 +150,31 @@ function cleanHtml(raw: string): string {
   const ft = h.indexOf('<');
   if (ft !== -1) return h.substring(ft).trim();
   return h;
+}
+
+// ─── Page outline extractor (for planner) ─────────────────────────────────────
+function extractPageOutline(html: string): string {
+  try {
+    const root = parse(html);
+    const lines: string[] = [];
+    const seen = new Set<string>();
+    for (const el of root.querySelectorAll('[id]')) {
+      const id = el.getAttribute('id')!;
+      if (id.startsWith('ai-') || id.startsWith('mobile-') || seen.has(id)) continue;
+      seen.add(id);
+      const tag = (el.rawTagName || 'div').toLowerCase();
+      const text = el.innerText.trim().replace(/\s+/g, ' ').substring(0, 80);
+      lines.push(`<${tag} id="${id}">${text}</${tag}>`);
+    }
+    return lines.join('\n');
+  } catch(e) { return ''; }
+}
+
+// ─── Extract JSON array from AI output ────────────────────────────────────────
+function cleanJson(raw: string): string {
+  const h = raw.replace(/<think>[\s\S]*?<\/think>/gi, '').trim();
+  const m = h.match(/\[[\s\S]*\]/);
+  return m ? m[0] : h;
 }
 
 // ─── Selector-based DOM patching ──────────────────────────────────────────────
@@ -370,23 +392,21 @@ Bun.serve({
         }
 
         // ── Single / targeted mode ─────────────────────────────────────────────
-        const sysP = targetHtml ? SYSTEM_TARGETED : SYSTEM_FULL_PAGE;
-        const usrP = targetHtml
-          ? `TARGET ELEMENT TO MODIFY:\n${targetHtml}\n\nUSER REQUEST: ${prompt}`
-          : `CURRENT FULL PAGE HTML:\n${currentHtml}\n\nUSER REQUEST: ${prompt}`;
-
-        const aiStream = await callAI(sysP, usrP, 32000);
-
-        return new Response(new ReadableStream({
-          async start(controller) {
-            const enc = (s: string) => controller.enqueue(new TextEncoder().encode(s));
-            try {
-              const acc = await streamToString(aiStream, c => enc(c));
-              let fh = cleanHtml(acc);
-              let applied = false;
-
-              if (targetHtml) {
-                // Primary: selector-based DOM patch (reliable against DOM mutation)
+        // Targeted mode: single element patch
+        if (targetHtml) {
+          const aiStream = await callAI(
+            SYSTEM_TARGETED,
+            `TARGET ELEMENT TO MODIFY:\n${targetHtml}\n\nUSER REQUEST: ${prompt}`,
+            32000
+          );
+          return new Response(new ReadableStream({
+            async start(controller) {
+              const enc = (s: string) => controller.enqueue(new TextEncoder().encode(s));
+              try {
+                const acc = await streamToString(aiStream, c => enc(c));
+                const fh = cleanHtml(acc);
+                let applied = false;
+                // Primary: selector-based DOM patch
                 if (targetSelector) {
                   const patched = patchBySelector(currentHtml, targetSelector, fh);
                   if (patched) {
@@ -395,7 +415,7 @@ Bun.serve({
                     applied = true;
                   }
                 }
-                // Fallback: string replace if no selector or selector missed
+                // Fallback: string replace
                 if (!applied) {
                   const patched = currentHtml.replace(targetHtml, fh);
                   if (patched !== currentHtml) {
@@ -406,15 +426,82 @@ Bun.serve({
                     console.warn('Both selector and string-replace missed — no change applied.');
                   }
                 }
-              } else {
-                // Full page — reject truncated responses to prevent content loss
-                if (fh.includes('<') && fh.includes('</html>')) {
-                  fs.writeFileSync(indexPath, fh, 'utf-8');
-                  await snapshotAndCommit('AI Update: Full layout redesigned via Inspector');
-                  applied = true;
-                } else if (fh.includes('<')) {
-                  console.error('Full-page response truncated (missing </html>) — rejecting to prevent content loss.');
+                enc(`\n\x00PATCH_STATUS:${applied ? 'ok' : 'fail'}\x00`);
+                controller.close();
+              } catch(err) { controller.error(err); }
+            }
+          }), { headers: { 'Content-Type': 'text/event-stream' } });
+        }
+
+        // Smart full-page mode: plan → parallel targeted patches
+        return new Response(new ReadableStream({
+          async start(controller) {
+            const enc = (s: string) => controller.enqueue(new TextEncoder().encode(s));
+            try {
+              let applied = false;
+
+              // Step 1: planner — lightweight outline → JSON plan
+              enc('[Planning which sections to modify...]\n');
+              const outline = extractPageOutline(currentHtml);
+              const planStream = await callAI(
+                SYSTEM_PLANNER,
+                `PAGE OUTLINE:\n${outline}\n\nUSER REQUEST: ${prompt}`,
+                2000
+              );
+              const planAcc = await streamToString(planStream); // don't stream raw JSON to client
+
+              let patches: Array<{selector: string, instruction: string}> = [];
+              try {
+                patches = JSON.parse(cleanJson(planAcc));
+                if (!Array.isArray(patches) || patches.length === 0) throw new Error('empty plan');
+              } catch(e) {
+                console.error('Planner JSON parse failed:', planAcc);
+                enc('\n[Planning failed — try targeting a specific element instead.]\n');
+                enc(`\n\x00PATCH_STATUS:fail\x00`);
+                controller.close();
+                return;
+              }
+
+              enc(`[Patching ${patches.length} section(s) in parallel...]\n`);
+              console.log('Plan:', JSON.stringify(patches));
+
+              // Step 2: parallel targeted patches in batches of 3
+              let liveHtml = currentHtml;
+              let totalApplied = 0;
+
+              for (let i = 0; i < patches.length; i += 3) {
+                const batch = patches.slice(i, i + 3);
+                const results = await Promise.all(batch.map(async ({ selector, instruction }) => {
+                  const root = parse(currentHtml);
+                  const el = root.querySelector(selector);
+                  if (!el) { console.warn(`Planner selector "${selector}" not found`); return null; }
+                  const elHtml = el.toString();
+                  const stream = await callAI(
+                    SYSTEM_TARGETED,
+                    `TARGET ELEMENT:\n${elHtml}\n\nUSER REQUEST: ${instruction}`,
+                    32000
+                  );
+                  const acc = await streamToString(stream, c => enc(c));
+                  return { selector, html: cleanHtml(acc) };
+                }));
+
+                for (const r of results) {
+                  if (!r || !r.html) continue;
+                  const patched = patchBySelector(liveHtml, r.selector, r.html);
+                  if (patched) {
+                    liveHtml = patched;
+                    totalApplied++;
+                    console.log(`✅ Patched "${r.selector}"`);
+                  } else {
+                    console.warn(`patchBySelector missed "${r.selector}"`);
+                  }
                 }
+              }
+
+              if (totalApplied > 0) {
+                fs.writeFileSync(indexPath, liveHtml, 'utf-8');
+                await snapshotAndCommit(`AI Update: ${totalApplied} section(s) patched in parallel`);
+                applied = true;
               }
 
               enc(`\n\x00PATCH_STATUS:${applied ? 'ok' : 'fail'}\x00`);
