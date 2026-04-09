@@ -178,13 +178,19 @@ function cleanJson(raw: string): string {
 }
 
 // ─── Selector-based DOM patching ──────────────────────────────────────────────
+// Uses range positions so ONLY the target element bytes are replaced.
+// Nothing outside the element is re-serialized or touched.
 function patchBySelector(html: string, selector: string, replacement: string): string | null {
   try {
-    const root = parse(html, { comment: true, blockTextElements: { script: true, style: true, pre: true } });
+    const root = parse(html, {
+      comment: true,
+      blockTextElements: { script: true, style: true, pre: true },
+      range: true,
+    });
     const el = root.querySelector(selector);
     if (!el) { console.warn(`patchBySelector: no element found for "${selector}"`); return null; }
-    el.replaceWith(replacement);
-    return root.toString();
+    const [start, end] = (el as any).range as [number, number];
+    return html.substring(0, start) + replacement + html.substring(end);
   } catch (e) {
     console.error('patchBySelector error:', e);
     return null;
