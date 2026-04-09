@@ -14,7 +14,7 @@ if (!MINIMAX_API_KEY && !OPENROUTER_API_KEY) {
 }
 
 // S3 — always use external Traefik URL (works from any isolated container)
-const S3_ENDPOINT   = process.env.S3_ENDPOINT   || 'https://s3-rustfs-6bfb08-82-165-172-78.traefik.me';
+const S3_ENDPOINT   = process.env.S3_ENDPOINT   || 'https://s3.krusil.com';
 const S3_ACCESS_KEY = process.env.S3_ACCESS_KEY  || 'rustfsadmin';
 const S3_SECRET_KEY = process.env.S3_SECRET_KEY  || 'ecirjxhvfpuzn3ut';
 const S3_BUCKET     = process.env.S3_BUCKET      || 'silviyaaeterna';
