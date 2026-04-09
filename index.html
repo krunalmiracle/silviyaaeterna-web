@@ -838,5 +838,282 @@
     });
   });
 </script>
+
+<!-- ═══════════════════════════════ AI INSPECTOR WIDGET ═══════════════════════════════ -->
+<style>
+  #ai-chat-widget { position: fixed; bottom: 2rem; right: 2rem; z-index: 9999; display: flex; flex-direction: column; align-items: flex-end; gap: 1rem; font-family: 'DM Sans', sans-serif; }
+  #ai-chat-panel { width: 360px; background: #0f0f0f; border: 1px solid rgba(255,255,255,.08); border-radius: 16px; box-shadow: 0 25px 60px rgba(0,0,0,.6); overflow: hidden; position: relative; transition: opacity .3s, transform .3s; }
+  #ai-chat-panel.hidden { display: none; }
+</style>
+
+<div id="ai-chat-widget">
+  <!-- Panel -->
+  <div id="ai-chat-panel" class="hidden scale-95 opacity-0">
+    <!-- Header -->
+    <div style="background:linear-gradient(135deg,#C94475,#a0305a);padding:1rem 1.2rem;display:flex;align-items:center;justify-content:space-between;">
+      <h3 style="color:#fff;font-size:.85rem;font-weight:600;letter-spacing:.05em;margin:0;display:flex;align-items:center;gap:.5rem;">
+        <svg style="width:16px;height:16px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+        AI Web Assistant
+      </h3>
+      <div style="display:flex;align-items:center;gap:.75rem;">
+        <button id="ai-undo-btn" title="Undo latest AI edit" style="background:none;border:none;cursor:pointer;color:rgba(255,255,255,.7);padding:4px;display:flex;transition:all .2s;">
+          <svg style="width:15px;height:15px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h10a8 8 0 018 8v2M3 10l6 6m-6-6l6-6"/></svg>
+        </button>
+        <button id="close-ai-chat" style="background:none;border:none;cursor:pointer;color:rgba(255,255,255,.8);padding:4px;display:flex;transition:transform .2s;">
+          <svg style="width:18px;height:18px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Messages -->
+    <div id="ai-chat-messages" style="padding:1rem;height:260px;overflow-y:auto;background:#0f0f0f;">
+      <div style="margin-bottom:1rem;">
+        <div style="background:#1a1a1a;border:1px solid rgba(255,255,255,.08);color:rgba(255,255,255,.8);font-size:.8rem;padding:.75rem 1rem;border-radius:0 12px 12px 12px;display:inline-block;max-width:85%;line-height:1.6;">
+          Hello! I'm your AI page editor. Describe how you want to redesign or update this webpage!
+        </div>
+      </div>
+      <div id="chat-end-anchor"></div>
+    </div>
+
+    <!-- Input -->
+    <div style="padding:.85rem 1rem;background:#111;border-top:1px solid rgba(255,255,255,.06);">
+      <form id="ai-chat-form" style="display:flex;gap:.5rem;align-items:center;">
+        <button type="button" id="ai-target-btn" title="Select element to edit" style="width:36px;height:36px;flex-shrink:0;background:#1a1a1a;border:1px solid rgba(255,255,255,.1);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;color:rgba(255,255,255,.5);transition:all .2s;">
+          <svg style="width:16px;height:16px;pointer-events:none;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"/></svg>
+        </button>
+        <div style="position:relative;flex:1;">
+          <input type="text" id="ai-chat-input" placeholder="e.g. Change hero to dark theme..." autocomplete="off"
+            style="width:100%;background:#1a1a1a;border:1px solid rgba(255,255,255,.1);color:#fff;border-radius:24px;padding:.65rem 3rem .65rem 1rem;font-size:.8rem;outline:none;font-family:'DM Sans',sans-serif;transition:border-color .2s;box-sizing:border-box;">
+          <button type="submit" id="ai-chat-submit" style="position:absolute;right:4px;top:50%;transform:translateY(-50%);width:32px;height:32px;background:linear-gradient(135deg,#C94475,#a0305a);border:none;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;color:#fff;">
+            <svg style="width:13px;height:13px;transform:rotate(90deg);" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Loading overlay -->
+    <div id="ai-chat-loading" style="display:none;position:absolute;inset:0;background:rgba(0,0,0,.85);backdrop-filter:blur(6px);flex-direction:column;align-items:center;justify-content:center;border-radius:16px;">
+      <div style="width:40px;height:40px;border:3px solid rgba(255,255,255,.1);border-top-color:#C94475;border-radius:50%;animation:aiSpin 1s linear infinite;margin-bottom:1rem;"></div>
+      <p style="color:#C94475;font-size:.8rem;font-weight:600;">Redesigning page...</p>
+    </div>
+  </div>
+
+  <!-- FAB -->
+  <button id="ai-chat-fab" style="width:52px;height:52px;background:linear-gradient(135deg,#C94475,#a0305a);border:none;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 8px 24px rgba(201,68,117,.4);transition:transform .3s,box-shadow .3s;">
+    <svg style="width:22px;height:22px;color:#fff;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg>
+  </button>
+</div>
+
+<style>
+  @keyframes aiSpin { to { transform: rotate(360deg); } }
+  #ai-chat-fab:hover { transform: scale(1.08) translateY(-2px); box-shadow: 0 12px 32px rgba(201,68,117,.55); }
+  #ai-chat-input:focus { border-color: rgba(201,68,117,.5) !important; }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const fab = document.getElementById('ai-chat-fab');
+  const panel = document.getElementById('ai-chat-panel');
+  const closeBtn = document.getElementById('close-ai-chat');
+  const form = document.getElementById('ai-chat-form');
+  const input = document.getElementById('ai-chat-input');
+  const messages = document.getElementById('ai-chat-messages');
+  const undoBtn = document.getElementById('ai-undo-btn');
+  const targetBtn = document.getElementById('ai-target-btn');
+
+  let isOpen = false;
+  let isSelecting = false;
+  let targetHtmlInner = '';
+  let selectedElement = null;
+  const requestQueue = [];
+  let isProcessingItem = false;
+
+  function toggleChat() {
+    isOpen = !isOpen;
+    if (isOpen) {
+      panel.classList.remove('hidden');
+      setTimeout(() => { panel.style.opacity = '1'; panel.style.transform = 'scale(1)'; input.focus(); }, 10);
+    } else {
+      panel.style.opacity = '0'; panel.style.transform = 'scale(0.95)';
+      setTimeout(() => panel.classList.add('hidden'), 300);
+    }
+  }
+
+  fab.addEventListener('click', toggleChat);
+  closeBtn.addEventListener('click', toggleChat);
+
+  function appendMessage(text, isUser = false) {
+    const anchor = document.getElementById('chat-end-anchor');
+    const div = document.createElement('div');
+    div.style.cssText = `margin-bottom:1rem;display:flex;justify-content:${isUser ? 'flex-end' : 'flex-start'};`;
+    const bubble = document.createElement('div');
+    bubble.style.cssText = isUser
+      ? 'background:linear-gradient(135deg,#C94475,#a0305a);color:#fff;font-size:.8rem;padding:.75rem 1rem;border-radius:12px 0 12px 12px;max-width:85%;line-height:1.6;'
+      : 'background:#1a1a1a;border:1px solid rgba(255,255,255,.08);color:rgba(255,255,255,.8);font-size:.8rem;padding:.75rem 1rem;border-radius:0 12px 12px 12px;max-width:85%;line-height:1.6;';
+    bubble.textContent = text;
+    div.appendChild(bubble);
+    messages.insertBefore(div, anchor);
+    messages.scrollTop = messages.scrollHeight;
+    return div;
+  }
+
+  // Undo / rollback
+  undoBtn.addEventListener('click', async () => {
+    undoBtn.style.animation = 'aiSpin 1s linear infinite';
+    try {
+      const res = await fetch('/api/rollback', { method: 'POST' });
+      const data = await res.json();
+      if (data.success) {
+        appendMessage('✅ Rolled back to previous version! Refreshing...', false);
+        setTimeout(async () => {
+          const rawHtml = await fetch(window.location.href).then(r => r.text());
+          const parser = new DOMParser();
+          const nextDoc = parser.parseFromString(rawHtml, 'text/html');
+          Array.from(document.body.children).forEach(node => {
+            if (node.id !== 'ai-chat-widget' && node.tagName !== 'SCRIPT') node.remove();
+          });
+          const widget = document.getElementById('ai-chat-widget');
+          Array.from(nextDoc.body.children).forEach(node => {
+            if (node.id !== 'ai-chat-widget' && node.tagName !== 'SCRIPT') {
+              widget ? document.body.insertBefore(node, widget) : document.body.appendChild(node);
+            }
+          });
+        }, 500);
+      } else {
+        appendMessage(`❌ Rollback failed: ${data.error}`, false);
+      }
+    } catch(e) {
+      appendMessage(`❌ Rollback error: ${e.message}`, false);
+    }
+    undoBtn.style.animation = '';
+  });
+
+  // Element targeting
+  function onMouseOverTarget(e) {
+    if (!isSelecting || e.target.closest('#ai-chat-widget')) return;
+    e.stopPropagation();
+    e.target.style.outline = '2px dashed #C94475';
+    e.target.style.outlineOffset = '2px';
+  }
+  function onMouseOutTarget(e) {
+    if (!isSelecting || e.target.closest('#ai-chat-widget')) return;
+    e.target.style.outline = '';
+    e.target.style.outlineOffset = '';
+  }
+  function onClickTarget(e) {
+    if (!isSelecting || e.target.closest('#ai-chat-widget')) return;
+    e.preventDefault(); e.stopPropagation();
+    isSelecting = false;
+    selectedElement = e.target;
+    targetBtn.style.background = '#C94475'; targetBtn.style.color = '#fff';
+    document.querySelectorAll('*').forEach(el => { if (el !== selectedElement) { el.style.outline = ''; el.style.outlineOffset = ''; } });
+    selectedElement.style.outline = '3px solid #C94475';
+    selectedElement.style.outlineOffset = '2px';
+    targetHtmlInner = selectedElement.outerHTML;
+    input.placeholder = `Modifying <${selectedElement.tagName.toLowerCase()}>...`;
+    document.removeEventListener('mouseover', onMouseOverTarget);
+    document.removeEventListener('mouseout', onMouseOutTarget);
+    document.removeEventListener('click', onClickTarget, true);
+  }
+
+  targetBtn.addEventListener('click', () => {
+    if (isSelecting) {
+      isSelecting = false;
+      targetBtn.style.background = '#1a1a1a'; targetBtn.style.color = 'rgba(255,255,255,.5)';
+      document.removeEventListener('mouseover', onMouseOverTarget);
+      document.removeEventListener('mouseout', onMouseOutTarget);
+      document.removeEventListener('click', onClickTarget, true);
+      input.placeholder = 'e.g. Change hero to dark theme...';
+    } else if (selectedElement) {
+      selectedElement.style.outline = ''; selectedElement.style.outlineOffset = '';
+      selectedElement = null; targetHtmlInner = '';
+      targetBtn.style.background = '#1a1a1a'; targetBtn.style.color = 'rgba(255,255,255,.5)';
+      input.placeholder = 'e.g. Change hero to dark theme...';
+    } else {
+      isSelecting = true;
+      targetBtn.style.background = 'rgba(201,68,117,.2)'; targetBtn.style.color = '#C94475'; targetBtn.style.borderColor = '#C94475';
+      document.addEventListener('mouseover', onMouseOverTarget);
+      document.addEventListener('mouseout', onMouseOutTarget);
+      document.addEventListener('click', onClickTarget, true);
+      input.placeholder = 'Click element to select...';
+    }
+  });
+
+  async function processQueue() {
+    if (isProcessingItem) return;
+    const nextItem = requestQueue.find(r => r.status === 'queued');
+    if (!nextItem) return;
+    isProcessingItem = true;
+    nextItem.status = 'processing';
+
+    const loadingEl = document.getElementById('ai-chat-loading');
+    loadingEl.style.display = 'flex';
+
+    try {
+      const res = await fetch('/api/generate', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ prompt: nextItem.prompt, targetHtml: nextItem.targetHtmlInner })
+      });
+      if (res.ok) {
+        const reader = res.body.getReader();
+        const decoder = new TextDecoder();
+        while (true) {
+          const { done } = await reader.read();
+          if (done) break;
+        }
+      }
+    } catch(err) {
+      console.error('Fetch error:', err);
+    } finally {
+      loadingEl.style.display = 'none';
+      isProcessingItem = false;
+
+      try {
+        const rawHtml = await fetch(window.location.href).then(r => r.text());
+        const parser = new DOMParser();
+        const nextDoc = parser.parseFromString(rawHtml, 'text/html');
+        Array.from(document.body.children).forEach(node => {
+          if (node.id !== 'ai-chat-widget' && node.tagName !== 'SCRIPT') node.remove();
+        });
+        const widget = document.getElementById('ai-chat-widget');
+        Array.from(nextDoc.body.children).forEach(node => {
+          if (node.id !== 'ai-chat-widget' && node.tagName !== 'SCRIPT') {
+            widget ? document.body.insertBefore(node, widget) : document.body.appendChild(node);
+          }
+        });
+        appendMessage('✅ Page updated!', false);
+      } catch(err) {
+        console.error('DOM patch failed:', err);
+      }
+
+      setTimeout(processQueue, 100);
+    }
+  }
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const prompt = input.value.trim();
+    if (!prompt) return;
+    input.value = '';
+    appendMessage(prompt, true);
+
+    requestQueue.push({
+      id: Date.now(),
+      prompt,
+      targetHtmlInner: targetHtmlInner || undefined,
+      status: 'queued'
+    });
+
+    if (selectedElement) {
+      selectedElement.style.outline = ''; selectedElement.style.outlineOffset = '';
+      selectedElement = null; targetHtmlInner = '';
+      targetBtn.style.background = '#1a1a1a'; targetBtn.style.color = 'rgba(255,255,255,.5)';
+    }
+    input.focus();
+    processQueue();
+  });
+});
+</script>
 </body>
 </html>
