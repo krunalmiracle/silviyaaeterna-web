@@ -1062,7 +1062,7 @@
     <div id="ai-chat-messages">
       <div class="ai-bot-msg">
         <div class="ai-bot-bubble">
-          Hello! I'm your AI page editor powered by Minimax M2.7.<br>
+          Hello! I'm your AI page editor powered by <strong>z-ai/glm-5.1</strong> via OpenRouter.<br>
           Describe how you'd like me to redesign or update this webpage!
         </div>
       </div>
@@ -1218,17 +1218,35 @@ document.addEventListener('DOMContentLoaded', () => {
   // ── DOM live-patch ──
   async function patchDOM() {
     try {
-      const rawHtml = await fetch(window.location.href).then(r => r.text());
+      // Cache-bust so we always get the freshly-written HTML from the server
+      const cacheBust = `?_ts=${Date.now()}`;
+      const rawHtml = await fetch(window.location.pathname + cacheBust, { cache: 'no-store' }).then(r => r.text());
       const parser = new DOMParser();
       const nextDoc = parser.parseFromString(rawHtml, 'text/html');
+
+      // Swap <head> styles/scripts that changed (skip widget script)
+      const currentStyles = new Set(Array.from(document.head.querySelectorAll('style,link')).map(n => n.outerHTML));
+      Array.from(nextDoc.head.querySelectorAll('style,link')).forEach(node => {
+        if (!currentStyles.has(node.outerHTML)) document.head.appendChild(document.importNode(node, true));
+      });
+
+      // Swap <body> children — preserve widget
       Array.from(document.body.children).forEach(node => {
         if (node.id !== 'ai-chat-widget' && node.tagName !== 'SCRIPT') node.remove();
       });
       const widget = document.getElementById('ai-chat-widget');
       Array.from(nextDoc.body.children).forEach(node => {
         if (node.id !== 'ai-chat-widget' && node.tagName !== 'SCRIPT') {
-          widget ? document.body.insertBefore(node, widget) : document.body.appendChild(node);
+          widget ? document.body.insertBefore(document.importNode(node, true), widget) : document.body.appendChild(document.importNode(node, true));
         }
+      });
+
+      // Re-execute any inline scripts from the new HTML (for animations etc)
+      Array.from(nextDoc.body.querySelectorAll('script:not([src])')).forEach(s => {
+        if (s.closest('#ai-chat-widget')) return;
+        const ns = document.createElement('script');
+        ns.textContent = s.textContent;
+        document.body.appendChild(ns);
       });
     } catch(err) {
       console.error('DOM live-patch failed:', err);
