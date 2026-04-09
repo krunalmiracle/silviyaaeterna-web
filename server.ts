@@ -309,8 +309,6 @@ function autoCommit(message: string) {
 }
 
 async function snapshotAndCommit(message: string) {
-  const html = fs.readFileSync(path.join(process.cwd(), INDEX_FILE), 'utf-8');
-  try { await s3SaveSnapshot(html); } catch(e) { console.error('S3 snapshot error:', e); }
   autoCommit(message);
 }
 
@@ -328,14 +326,13 @@ Bun.serve({
     if (url.pathname === '/api/rollback' && req.method === 'POST') {
       try {
         const versions = await s3ListVersions();
-        if (versions.length < 2) return new Response(JSON.stringify({ success: false, error: 'Not enough history to rollback' }), { status: 400, headers: { 'Content-Type': 'application/json' } });
-        const newest = versions[versions.length - 1];
-        const target = versions[versions.length - 2];
+        if (versions.length < 1) return new Response(JSON.stringify({ success: false, error: 'No history to rollback' }), { status: 400, headers: { 'Content-Type': 'application/json' } });
+        const target = versions[versions.length - 1];
         const html   = await s3GetVersion(target);
         fs.writeFileSync(path.join(process.cwd(), INDEX_FILE), html, 'utf-8');
-        await s3DeleteVersion(newest);
+        await s3DeleteVersion(target);
         autoCommit(`AI Update ⏪ Rollback to ${target}`);
-        return new Response(JSON.stringify({ success: true, versionsLeft: versions.length - 2 }), { headers: { 'Content-Type': 'application/json' } });
+        return new Response(JSON.stringify({ success: true, versionsLeft: versions.length - 1 }), { headers: { 'Content-Type': 'application/json' } });
       } catch(e: any) {
         return new Response(JSON.stringify({ success: false, error: e.message }), { status: 500, headers: { 'Content-Type': 'application/json' } });
       }
@@ -352,6 +349,9 @@ Bun.serve({
         let currentHtml  = '';
         try { currentHtml = fs.readFileSync(indexPath, 'utf-8'); }
         catch(e) { return new Response(JSON.stringify({ error: `Could not read ${INDEX_FILE}` }), { status: 500 }); }
+
+        // Save pre-edit snapshot so rollback always has something to restore
+        try { await s3SaveSnapshot(currentHtml); } catch(e) { console.error('Pre-edit snapshot failed:', e); }
 
         // ── Chunk / cluster mode ───────────────────────────────────────────────
         if (chunks && chunks.length > 0) {
