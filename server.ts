@@ -13,8 +13,8 @@ if (!MINIMAX_API_KEY && !OPENROUTER_API_KEY) {
   console.error('Warning: No AI API key set (MINIMAX_API_KEY or OPENROUTER_API_KEY).');
 }
 
-// S3 — always use external Traefik URL (works from any isolated container)
-const S3_ENDPOINT   = process.env.S3_ENDPOINT   || 'https://s3.krusil.com';
+// S3 — use env var but auto-correct the old traefik.me wildcard URL (only routes GET/HEAD)
+const S3_ENDPOINT   = (() => { const e = process.env.S3_ENDPOINT; return (!e || e.includes('traefik.me')) ? 'https://s3.krusil.com' : e; })();
 const S3_ACCESS_KEY = process.env.S3_ACCESS_KEY  || 'rustfsadmin';
 const S3_SECRET_KEY = process.env.S3_SECRET_KEY  || 'ecirjxhvfpuzn3ut';
 const S3_BUCKET     = process.env.S3_BUCKET      || 'silviyaaeterna';
@@ -453,7 +453,7 @@ Bun.serve({
               const planStream = await callAI(
                 SYSTEM_PLANNER,
                 `PAGE OUTLINE:\n${outline}\n\nUSER REQUEST: ${prompt}`,
-                2000
+                8000
               );
               const planAcc = await streamToString(planStream); // don't stream raw JSON to client
 
