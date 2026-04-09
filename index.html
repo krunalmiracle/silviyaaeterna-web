@@ -1323,6 +1323,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const slot = domNode ? domNode.querySelector('.ai-stream-slot') : null;
     const codebox = slot ? createStreamUI(slot) : null;
 
+    let patchOk = false;
     try {
       const res = await fetch('/api/generate', {
         method: 'POST',
@@ -1339,27 +1340,44 @@ document.addEventListener('DOMContentLoaded', () => {
         while (true) {
           const { done, value } = await reader.read();
           if (done) break;
-          streamedData += decoder.decode(value, { stream: true });
+          const chunk = decoder.decode(value, { stream: true });
+          streamedData += chunk;
+          // Parse PATCH_STATUS terminal marker (strip from display)
+          if (streamedData.includes('\x00PATCH_STATUS:')) {
+            const match = streamedData.match(/\x00PATCH_STATUS:(ok|fail)\x00/);
+            if (match) { patchOk = match[1] === 'ok'; streamedData = streamedData.replace(/\n?\x00PATCH_STATUS:(ok|fail)\x00/, ''); }
+          }
           if (codebox) {
-            codebox.textContent = streamedData.length > 300
-              ? streamedData.substring(streamedData.length - 300)
-              : streamedData;
+            const display = streamedData.replace(/\x00PATCH_STATUS:(ok|fail)\x00/g, '');
+            codebox.textContent = display.length > 300 ? display.substring(display.length - 300) : display;
             codebox.scrollTop = codebox.scrollHeight;
           }
         }
+        if (!streamedData.includes('\x00PATCH_STATUS:')) patchOk = true; // old server compat
       }
     } catch(err) {
       console.error('Fetch error:', err);
     } finally {
       if (slot) {
-        slot.innerHTML = `
-          <div class="ai-success-badge">
-            <svg style="width:13px;height:13px;color:#C94475;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-            </svg>
-            <span>Applied!</span>
-          </div>
-        `;
+        if (patchOk) {
+          slot.innerHTML = `
+            <div class="ai-success-badge">
+              <svg style="width:13px;height:13px;color:#C94475;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              <span>Applied!</span>
+            </div>
+          `;
+        } else {
+          slot.innerHTML = `
+            <div class="ai-success-badge" style="background:rgba(220,38,38,0.15);border-color:rgba(220,38,38,0.3);">
+              <svg style="width:13px;height:13px;color:#ef4444;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+              </svg>
+              <span style="color:#ef4444;">Retried — patch failed. Try rephrasing or targeting a smaller element.</span>
+            </div>
+          `;
+        }
       }
       if (domNode) domNode.classList.remove('ai-processing');
       isProcessingItem = false;

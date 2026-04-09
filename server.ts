@@ -312,23 +312,40 @@ Bun.serve({
           console.log(`AI cluster mode: ${chunks.length} chunks...`);
           return new Response(new ReadableStream({
             async start(controller) {
+              const enc = (s: string) => controller.enqueue(new TextEncoder().encode(s));
               try {
+                let totalApplied = 0;
                 for (let i = 0; i < chunks.length; i += 3) {
                   const batch = chunks.slice(i, i + 3);
                   const results = await Promise.all(batch.map(async (chunk: string, bi: number) => {
                     const gi = i + bi;
-                    const stream = await callAI(SYSTEM_CHUNK, `TARGET SECTION (${gi+1}/${chunks.length}):\n${chunk}\n\nUSER REQUEST: ${prompt}`);
-                    const acc = await streamToString(stream, c => controller.enqueue(new TextEncoder().encode(c)));
+                    const userMsg = `TARGET SECTION (${gi+1}/${chunks.length}):\n${chunk}\n\nUSER REQUEST: ${prompt}`;
+                    const stream = await callAI(SYSTEM_CHUNK, userMsg);
+                    const acc = await streamToString(stream, c => enc(c));
                     return { chunk, gi, acc };
                   }));
 
                   let liveHtml = fs.readFileSync(indexPath, 'utf-8'); let changed = false;
                   for (const r of results) {
                     const fh = cleanHtml(r.acc);
-                    if (fh) { const nh = liveHtml.replace(r.chunk, fh); if (nh !== liveHtml) { liveHtml = nh; changed = true; console.log(`Chunk ${r.gi+1} injected.`); } }
+                    if (!fh) continue;
+                    const nh = liveHtml.replace(r.chunk, fh);
+                    if (nh !== liveHtml) { liveHtml = nh; changed = true; totalApplied++; console.log(`Chunk ${r.gi+1} injected.`); }
+                    else {
+                      // Retry with alternate model
+                      console.warn(`Chunk ${r.gi+1} string-replace missed — retrying with alt model...`);
+                      try {
+                        const altStream = await callAI(SYSTEM_CHUNK + '\n\nIMPORTANT: The previous attempt returned HTML that did not match the original. This time, preserve the EXACT opening and closing tags of the target section so string replacement succeeds.', `TARGET SECTION (retry ${r.gi+1}/${chunks.length}):\n${r.chunk}\n\nUSER REQUEST: ${prompt}`);
+                        const altAcc = await streamToString(altStream, c => enc(c));
+                        const altFh = cleanHtml(altAcc);
+                        const altNh = liveHtml.replace(r.chunk, altFh);
+                        if (altNh !== liveHtml) { liveHtml = altNh; changed = true; totalApplied++; console.log(`Chunk ${r.gi+1} injected on retry.`); }
+                      } catch(retryErr) { console.error(`Retry chunk ${r.gi+1} failed:`, retryErr); }
+                    }
                   }
                   if (changed) { fs.writeFileSync(indexPath, liveHtml, 'utf-8'); await snapshotAndCommit('AI Update: Batch chunk modifications via Inspector'); }
                 }
+                enc(`\n\x00PATCH_STATUS:${totalApplied > 0 ? 'ok' : 'fail'}\x00`);
                 controller.close();
               } catch(e) { controller.error(e); }
             }
@@ -345,16 +362,47 @@ Bun.serve({
 
         return new Response(new ReadableStream({
           async start(controller) {
+            const enc = (s: string) => controller.enqueue(new TextEncoder().encode(s));
             try {
-              const acc = await streamToString(aiStream, c => controller.enqueue(new TextEncoder().encode(c)));
-              const fh  = cleanHtml(acc);
+              const acc = await streamToString(aiStream, c => enc(c));
+              let fh = cleanHtml(acc);
+              let applied = false;
+
               if (targetHtml) {
-                fs.writeFileSync(indexPath, currentHtml.replace(targetHtml, fh), 'utf-8');
-                await snapshotAndCommit('AI Update: Targeted element modified via Inspector');
+                const patched = currentHtml.replace(targetHtml, fh);
+                if (patched !== currentHtml) {
+                  fs.writeFileSync(indexPath, patched, 'utf-8');
+                  await snapshotAndCommit('AI Update: Targeted element modified via Inspector');
+                  applied = true;
+                } else {
+                  // String replace missed — retry with alt model
+                  console.warn('Targeted replace missed — retrying with alt model...');
+                  const altStream = await callAI(
+                    SYSTEM_TARGETED + '\n\nIMPORTANT: The previous attempt failed because the returned HTML did not match the original. Preserve the EXACT outer tag, class names, and ID of the target element so string replacement works.',
+                    `TARGET ELEMENT (retry):\n${targetHtml}\n\nUSER REQUEST: ${prompt}`
+                  );
+                  const altAcc = await streamToString(altStream, c => enc(c));
+                  const altFh = cleanHtml(altAcc);
+                  const altPatched = currentHtml.replace(targetHtml, altFh);
+                  if (altPatched !== currentHtml) {
+                    fs.writeFileSync(indexPath, altPatched, 'utf-8');
+                    await snapshotAndCommit('AI Update: Targeted element modified via Inspector (retry)');
+                    applied = true;
+                    console.log('Retry targeted replace succeeded.');
+                  } else {
+                    console.error('Both attempts failed for targeted replace.');
+                  }
+                }
               } else {
-                fs.writeFileSync(indexPath, fh, 'utf-8');
-                await snapshotAndCommit('AI Update: Full layout redesigned via Inspector');
+                // Full page — always succeeds if we got HTML back
+                if (fh.includes('<')) {
+                  fs.writeFileSync(indexPath, fh, 'utf-8');
+                  await snapshotAndCommit('AI Update: Full layout redesigned via Inspector');
+                  applied = true;
+                }
               }
+
+              enc(`\n\x00PATCH_STATUS:${applied ? 'ok' : 'fail'}\x00`);
               controller.close();
             } catch(err) { controller.error(err); }
           }
