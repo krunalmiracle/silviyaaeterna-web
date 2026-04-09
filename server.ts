@@ -453,7 +453,7 @@ Bun.serve({
               const planStream = await callAI(
                 SYSTEM_PLANNER,
                 `PAGE OUTLINE:\n${outline}\n\nUSER REQUEST: ${prompt}`,
-                8000
+                32000
               );
               const planAcc = await streamToString(planStream); // don't stream raw JSON to client
 
