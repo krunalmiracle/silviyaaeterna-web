@@ -1,5 +1,13 @@
 {
-  "dependencies": {
-    "node-html-parser": "^7.0.0"
+  "name": "silviyaaeterna-web",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Silviya Aeterna bilingual landing page, static assets only.",
+  "scripts": {
+    "start": "node server.ts",
+    "start:bun": "bun run server.ts",
+    "test": "node --test tests/*.test.mjs",
+    "assets": "python3 tools/generate_assets.py"
   }
 }

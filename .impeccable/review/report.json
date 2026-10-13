@@ -1,0 +1,214 @@
+{
+  "url": "http://127.0.0.1:43118",
+  "viewports": [
+    {
+      "name": "desktop",
+      "width": 1440,
+      "height": 900,
+      "title": "Silviya Aeterna | Astrology, numerology, skincare and wellbeing",
+      "h1": "Silviya Aeterna",
+      "lang": "en",
+      "overflowX_px": 0,
+      "images_total": 14,
+      "images_not_loaded_at_top": [
+        {
+          "src": "http://127.0.0.1:43118/assets/brand-mark.svg",
+          "ok": true
+        },
+        {
+          "src": "http://127.0.0.1:43118/assets/hero-plate.svg",
+          "ok": true
+        },
+        {
+          "src": "http://127.0.0.1:43118/assets/manifesto-plate.svg",
+          "ok": true
+        },
+        {
+          "src": "http://127.0.0.1:43118/assets/topic-astrology.svg",
+          "ok": true
+        },
+        {
+          "src": "http://127.0.0.1:43118/assets/topic-numerology.svg",
+          "ok": true
+        },
+        {
+          "src": "http://127.0.0.1:43118/assets/topic-skincare.svg",
+          "ok": false
+        },
+        {
+          "src": "http://127.0.0.1:43118/assets/topic-wellbeing.svg",
+          "ok": false
+        },
+        {
+          "src": "http://127.0.0.1:43118/assets/topic-family.svg",
+          "ok": false
+        },
+        {
+          "src": "http://127.0.0.1:43118/assets/topic-mental-health.svg",
+          "ok": false
+        },
+        {
+          "src": "http://127.0.0.1:43118/assets/channel-plate.svg",
+          "ok": false
+        },
+        {
+          "src": "http://127.0.0.1:43118/assets/shop-plate.svg",
+          "ok": false
+        },
+        {
+          "src": "http://127.0.0.1:43118/assets/safety-plate.svg",
+          "ok": false
+        },
+        {
+          "src": "http://127.0.0.1:43118/assets/closing-plate.svg",
+          "ok": false
+        },
+        {
+          "src": "http://127.0.0.1:43118/assets/brand-mark.svg",
+          "ok": true
+        }
+      ],
+      "images_failed_after_scroll": [],
+      "hidden_reveals_in_view": 0,
+      "hidden_after_scroll": 0,
+      "hidden_under_reduced_motion": 0,
+      "overflowX_reduced": 0,
+      "min_visible_target_px": 44,
+      "focus_after_tab": {
+        "tag": "A",
+        "text": "Skip to content",
+        "outline": "solid 2px"
+      },
+      "coming_soon_states": [
+        "Channel launching soon",
+        "Channel launching soon",
+        "Details coming later",
+        "Channel launching soon"
+      ],
+      "coming_soon_wrapped_in_control": 0,
+      "primary_ctas": [
+        {
+          "text": "Explore the world",
+          "href": "#manifesto"
+        },
+        {
+          "text": "Explore the world",
+          "href": "#manifesto"
+        }
+      ],
+      "bg_toggle": {
+        "lang": "bg",
+        "sub": "Астрология, нумерология, грижа за кожата и благополучие, основано на психологията, на български и английски.",
+        "pressedEn": "false",
+        "pressedBg": "true",
+        "nav": "Манифест"
+      }
+    },
+    {
+      "name": "mobile",
+      "width": 390,
+      "height": 844,
+      "title": "Silviya Aeterna | Astrology, numerology, skincare and wellbeing",
+      "h1": "Silviya Aeterna",
+      "lang": "en",
+      "overflowX_px": 0,
+      "images_total": 14,
+      "images_not_loaded_at_top": [
+        {
+          "src": "http://127.0.0.1:43118/assets/brand-mark.svg",
+          "ok": true
+        },
+        {
+          "src": "http://127.0.0.1:43118/assets/hero-plate.svg",
+          "ok": true
+        },
+        {
+          "src": "http://127.0.0.1:43118/assets/manifesto-plate.svg",
+          "ok": true
+        },
+        {
+          "src": "http://127.0.0.1:43118/assets/topic-astrology.svg",
+          "ok": true
+        },
+        {
+          "src": "http://127.0.0.1:43118/assets/topic-numerology.svg",
+          "ok": true
+        },
+        {
+          "src": "http://127.0.0.1:43118/assets/topic-skincare.svg",
+          "ok": true
+        },
+        {
+          "src": "http://127.0.0.1:43118/assets/topic-wellbeing.svg",
+          "ok": true
+        },
+        {
+          "src": "http://127.0.0.1:43118/assets/topic-family.svg",
+          "ok": true
+        },
+        {
+          "src": "http://127.0.0.1:43118/assets/topic-mental-health.svg",
+          "ok": true
+        },
+        {
+          "src": "http://127.0.0.1:43118/assets/channel-plate.svg",
+          "ok": true
+        },
+        {
+          "src": "http://127.0.0.1:43118/assets/shop-plate.svg",
+          "ok": true
+        },
+        {
+          "src": "http://127.0.0.1:43118/assets/safety-plate.svg",
+          "ok": true
+        },
+        {
+          "src": "http://127.0.0.1:43118/assets/closing-plate.svg",
+          "ok": true
+        },
+        {
+          "src": "http://127.0.0.1:43118/assets/brand-mark.svg",
+          "ok": true
+        }
+      ],
+      "images_failed_after_scroll": [],
+      "hidden_reveals_in_view": 0,
+      "hidden_after_scroll": 0,
+      "hidden_under_reduced_motion": 0,
+      "overflowX_reduced": 0,
+      "min_visible_target_px": 44,
+      "focus_after_tab": {
+        "tag": "A",
+        "text": "Skip to content",
+        "outline": "solid 2px"
+      },
+      "coming_soon_states": [
+        "Channel launching soon",
+        "Channel launching soon",
+        "Details coming later",
+        "Channel launching soon"
+      ],
+      "coming_soon_wrapped_in_control": 0,
+      "primary_ctas": [
+        {
+          "text": "Explore the world",
+          "href": "#manifesto"
+        },
+        {
+          "text": "Explore the world",
+          "href": "#manifesto"
+        }
+      ],
+      "bg_toggle": {
+        "lang": "bg",
+        "sub": "Астрология, нумерология, грижа за кожата и благополучие, основано на психологията, на български и английски.",
+        "pressedEn": "false",
+        "pressedBg": "true",
+        "nav": "Манифест"
+      }
+    }
+  ],
+  "console_errors": [],
+  "failed_requests": [],
+  "issues": []
+}
