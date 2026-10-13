@@ -570,7 +570,7 @@ def social_og():
         f'<circle cx="{cx}" cy="{cy}" r="112" fill="{MOON}" opacity="0.95" mask="url(#ogcres)"/>',
         f'<circle cx="{cx + 148}" cy="{cy - 112}" r="42" fill="none" stroke="{CORAL}" stroke-width="1.4" opacity="0.6"/>',
         f'<circle cx="{cx + 148}" cy="{cy - 112}" r="26" fill="{CORAL}"/>',
-        f'<text x="500" y="300" fill="{MOON}" font-family="Geist, system-ui, sans-serif" font-size="94" '
+        f'<text x="500" y="300" fill="{MOON}" font-family="Geist, system-ui, sans-serif" font-size="82" '
         f'font-weight="600" letter-spacing="-3">Silviya Aeterna</text>',
         f'<text x="504" y="372" fill="{MINT}" font-family="Geist, system-ui, sans-serif" font-size="34" '
         f'font-weight="500">Bulgarian and English</text>',

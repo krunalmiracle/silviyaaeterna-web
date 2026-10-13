@@ -20,7 +20,7 @@ An unhurried, educational "living almanac" rather than a hype channel: reflectio
 
 ## Operating Context
 
-- Live production repo: `krunalmiracle/silviyaaeterna-web`, deployed by Dokploy from `main`. This work happens on branch `redesign/silviya-aeterna-2026` and must not push, merge or change Dokploy.
+- Live production repo: `krunalmiracle/silviyaaeterna-web`, deployed by Dokploy from `main` to `silviyaaeterna.krusil.com`.
 - Runtime: a single Bun process serving static files on port 3000 behind Traefik (Docker). No database, no auth, no third-party runtime services.
 - Language: Bulgarian and English are equal; visitors switch languages on the page.
 

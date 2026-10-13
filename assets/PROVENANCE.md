@@ -21,6 +21,7 @@ photograph anywhere in the site.
 | `safety-plate.svg` | Boundary brackets with a centre line | Same generator |
 | `closing-plate.svg` | Crescent, coral sun and dawn arcs | Same generator |
 | `social-og.svg` | 1200x630 social card | Same generator; embeds the subset Geist font as a data URI so the card keeps its typography |
+| `social-og.png` | 1200x630 social delivery card | Rasterized locally from `social-og.svg` with FFmpeg for broad Open Graph crawler support |
 | `fonts/Geist-Variable-subset.woff2` | Self-hosted variable typeface (latin, latin-ext, cyrillic) | Subset from the official `geist` npm package (SIL OFL 1.1) with fontTools; license in `fonts/OFL-1.1.txt` |
 
 Generation record: run `python3 tools/generate_assets.py`. Geometry is seeded, so the output

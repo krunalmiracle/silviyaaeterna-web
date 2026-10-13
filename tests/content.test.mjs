@@ -16,8 +16,15 @@ test("no em dash or en dash anywhere in the shipped page", () => {
   assert.ok(!js.includes("—"), "em dash found in site.js");
 });
 
-test("the page makes no external requests", () => {
-  for (const [name, source] of [["index.html", html], ["styles.css", css], ["site.js", js]]) {
+test("the page makes no third-party runtime requests", () => {
+  const productionOrigin = "https://silviyaaeterna.krusil.com";
+  const absoluteUrls = [...html.matchAll(/https?:\/\/[^\"'\s<]+/g)].map((match) => match[0]);
+  assert.ok(absoluteUrls.length >= 3, "expected canonical and social metadata URLs");
+  for (const url of absoluteUrls) {
+    assert.ok(url.startsWith(productionOrigin), `unexpected external URL: ${url}`);
+  }
+  assert.ok(!/<(?:script|img)[^>]+(?:src|href)="https?:\/\//.test(html), "runtime asset uses an absolute URL");
+  for (const [name, source] of [["styles.css", css], ["site.js", js]]) {
     assert.ok(!/https?:\/\//.test(source), `${name} contains an absolute URL`);
     assert.ok(!source.includes("fonts.googleapis.com"), `${name} links Google Fonts`);
     assert.ok(!source.includes("//cdn"), `${name} references a CDN`);
@@ -101,7 +108,7 @@ test("coming soon states are honest, non clickable elements", () => {
     assert.equal(tag, "span", "coming soon state must not be a control");
     assert.ok(!/href=/.test(attrs), "coming soon state must not link anywhere");
   }
-  assert.ok(!/href="https?:/.test(html), "page must not link to social or shop destinations");
+  assert.ok(!/<a\b[^>]*href="https?:/.test(html), "page must not link to social or shop destinations");
 });
 
 test("language toggle is exposed accessibly", () => {
@@ -124,6 +131,6 @@ test("motion respects reduced motion and survives failed JavaScript", () => {
 test("the page declares the two languages and viewport", () => {
   assert.match(html, /<html lang="en">/);
   assert.match(html, /name="viewport" content="width=device-width, initial-scale=1"/);
-  assert.match(html, /assets\/social-og\.svg/);
+  assert.match(html, /https:\/\/silviyaaeterna\.krusil\.com\/assets\/social-og\.png/);
   assert.match(html, /assets\/favicon\.svg/);
 });

@@ -52,7 +52,7 @@
 <circle cx="268" cy="315" r="112" fill="#EDF1F8" opacity="0.95" mask="url(#ogcres)"/>
 <circle cx="416" cy="203" r="42" fill="none" stroke="#FF6B4A" stroke-width="1.4" opacity="0.6"/>
 <circle cx="416" cy="203" r="26" fill="#FF6B4A"/>
-<text x="500" y="300" fill="#EDF1F8" font-family="Geist, system-ui, sans-serif" font-size="94" font-weight="600" letter-spacing="-3">Silviya Aeterna</text>
+<text x="500" y="300" fill="#EDF1F8" font-family="Geist, system-ui, sans-serif" font-size="82" font-weight="600" letter-spacing="-3">Silviya Aeterna</text>
 <text x="504" y="372" fill="#9FE7CE" font-family="Geist, system-ui, sans-serif" font-size="34" font-weight="500">Bulgarian and English</text>
 <text x="504" y="430" fill="#C3CBDE" font-family="Geist, system-ui, sans-serif" font-size="27" font-weight="400">Astrology, numerology, skincare, wellbeing</text>
 <line x1="504.0" y1="470.0" x2="1120.0" y2="470.0" stroke="#9FE7CE" stroke-width="1.4" opacity="0.35"/>
