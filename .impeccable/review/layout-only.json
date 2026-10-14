@@ -1,0 +1,1940 @@
+{
+  "capturedAt": "2026-10-14T01:40:28.224100+00:00",
+  "url": "http://127.0.0.1:43118",
+  "mode": "layout-only, original images pending",
+  "viewports": [
+    {
+      "lang": "en",
+      "overflowX": 0,
+      "smallTargets": [],
+      "clipped": [],
+      "images": [
+        {
+          "src": "/assets/images/hero-glasshouse.webp",
+          "decoded": false,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "src": "/assets/images/sky-study.webp",
+          "decoded": false,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "src": "/assets/images/skin-ritual.webp",
+          "decoded": false,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "src": "/assets/images/quiet-growth.webp",
+          "decoded": false,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "allTopics": 6,
+      "cta": "#atlas",
+      "heading": "A little more\nin tune.",
+      "font": "Onest, sans-serif",
+      "soonAreControls": 0,
+      "heroImageTop": 373,
+      "heroImageBottom": 805,
+      "name": "desktop",
+      "width": 1440,
+      "height": 900,
+      "language": "en"
+    },
+    {
+      "lang": "en",
+      "overflowX": 0,
+      "smallTargets": [],
+      "clipped": [],
+      "images": [
+        {
+          "src": "/assets/images/hero-glasshouse-mobile.webp",
+          "decoded": false,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "src": "/assets/images/sky-study.webp",
+          "decoded": false,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "src": "/assets/images/skin-ritual.webp",
+          "decoded": false,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "src": "/assets/images/quiet-growth.webp",
+          "decoded": false,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "allTopics": 6,
+      "cta": "#atlas",
+      "heading": "A little more\nin tune.",
+      "font": "Onest, sans-serif",
+      "soonAreControls": 0,
+      "heroImageTop": 417,
+      "heroImageBottom": 707,
+      "name": "mobile",
+      "width": 390,
+      "height": 844,
+      "language": "en"
+    },
+    {
+      "lang": "en",
+      "overflowX": 0,
+      "smallTargets": [],
+      "clipped": [],
+      "images": [
+        {
+          "src": "/assets/images/hero-glasshouse-mobile.webp",
+          "decoded": false,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "src": "/assets/images/sky-study.webp",
+          "decoded": false,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "src": "/assets/images/skin-ritual.webp",
+          "decoded": false,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "src": "/assets/images/quiet-growth.webp",
+          "decoded": false,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "allTopics": 6,
+      "cta": "#atlas",
+      "heading": "A little more\nin tune.",
+      "font": "Onest, sans-serif",
+      "soonAreControls": 0,
+      "heroImageTop": 434,
+      "heroImageBottom": 704,
+      "name": "compact",
+      "width": 320,
+      "height": 844,
+      "language": "en"
+    },
+    {
+      "lang": "en",
+      "overflowX": 0,
+      "smallTargets": [],
+      "clipped": [],
+      "images": [
+        {
+          "src": "/assets/images/hero-glasshouse-mobile.webp",
+          "decoded": false,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "src": "/assets/images/sky-study.webp",
+          "decoded": false,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "src": "/assets/images/skin-ritual.webp",
+          "decoded": false,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "src": "/assets/images/quiet-growth.webp",
+          "decoded": false,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "allTopics": 6,
+      "cta": "#atlas",
+      "heading": "A little more\nin tune.",
+      "font": "Onest, sans-serif",
+      "soonAreControls": 0,
+      "heroImageTop": 321,
+      "heroImageBottom": 641,
+      "name": "tablet",
+      "width": 768,
+      "height": 1024,
+      "language": "en"
+    },
+    {
+      "lang": "en",
+      "overflowX": 0,
+      "smallTargets": [],
+      "clipped": [],
+      "images": [
+        {
+          "src": "/assets/images/hero-glasshouse.webp",
+          "decoded": false,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "src": "/assets/images/sky-study.webp",
+          "decoded": false,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "src": "/assets/images/skin-ritual.webp",
+          "decoded": false,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "src": "/assets/images/quiet-growth.webp",
+          "decoded": false,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "allTopics": 6,
+      "cta": "#atlas",
+      "heading": "A little more\nin tune.",
+      "font": "Onest, sans-serif",
+      "soonAreControls": 0,
+      "heroImageTop": 333,
+      "heroImageBottom": 653,
+      "name": "laptop",
+      "width": 1024,
+      "height": 900,
+      "language": "en"
+    },
+    {
+      "lang": "bg",
+      "overflowX": 0,
+      "smallTargets": [],
+      "clipped": [],
+      "images": [
+        {
+          "src": "/assets/images/hero-glasshouse.webp",
+          "decoded": false,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "src": "/assets/images/sky-study.webp",
+          "decoded": false,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "src": "/assets/images/skin-ritual.webp",
+          "decoded": false,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "src": "/assets/images/quiet-growth.webp",
+          "decoded": false,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "allTopics": 6,
+      "cta": "#atlas",
+      "heading": "По-близо\nдо себе си.",
+      "font": "Onest, sans-serif",
+      "soonAreControls": 0,
+      "heroImageTop": 373,
+      "heroImageBottom": 805,
+      "name": "desktop",
+      "width": 1440,
+      "height": 900,
+      "language": "bg"
+    },
+    {
+      "lang": "bg",
+      "overflowX": 0,
+      "smallTargets": [],
+      "clipped": [],
+      "images": [
+        {
+          "src": "/assets/images/hero-glasshouse-mobile.webp",
+          "decoded": false,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "src": "/assets/images/sky-study.webp",
+          "decoded": false,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "src": "/assets/images/skin-ritual.webp",
+          "decoded": false,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "src": "/assets/images/quiet-growth.webp",
+          "decoded": false,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "allTopics": 6,
+      "cta": "#atlas",
+      "heading": "По-близо\nдо себе си.",
+      "font": "Onest, sans-serif",
+      "soonAreControls": 0,
+      "heroImageTop": 442,
+      "heroImageBottom": 732,
+      "name": "mobile",
+      "width": 390,
+      "height": 844,
+      "language": "bg"
+    },
+    {
+      "lang": "bg",
+      "overflowX": 0,
+      "smallTargets": [],
+      "clipped": [],
+      "images": [
+        {
+          "src": "/assets/images/hero-glasshouse-mobile.webp",
+          "decoded": false,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "src": "/assets/images/sky-study.webp",
+          "decoded": false,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "src": "/assets/images/skin-ritual.webp",
+          "decoded": false,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "src": "/assets/images/quiet-growth.webp",
+          "decoded": false,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "allTopics": 6,
+      "cta": "#atlas",
+      "heading": "По-близо\nдо себе си.",
+      "font": "Onest, sans-serif",
+      "soonAreControls": 0,
+      "heroImageTop": 459,
+      "heroImageBottom": 729,
+      "name": "compact",
+      "width": 320,
+      "height": 844,
+      "language": "bg"
+    },
+    {
+      "lang": "bg",
+      "overflowX": 0,
+      "smallTargets": [],
+      "clipped": [],
+      "images": [
+        {
+          "src": "/assets/images/hero-glasshouse-mobile.webp",
+          "decoded": false,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "src": "/assets/images/sky-study.webp",
+          "decoded": false,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "src": "/assets/images/skin-ritual.webp",
+          "decoded": false,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "src": "/assets/images/quiet-growth.webp",
+          "decoded": false,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "allTopics": 6,
+      "cta": "#atlas",
+      "heading": "По-близо\nдо себе си.",
+      "font": "Onest, sans-serif",
+      "soonAreControls": 0,
+      "heroImageTop": 346,
+      "heroImageBottom": 666,
+      "name": "tablet",
+      "width": 768,
+      "height": 1024,
+      "language": "bg"
+    },
+    {
+      "lang": "bg",
+      "overflowX": 0,
+      "smallTargets": [],
+      "clipped": [],
+      "images": [
+        {
+          "src": "/assets/images/hero-glasshouse.webp",
+          "decoded": false,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "src": "/assets/images/sky-study.webp",
+          "decoded": false,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "src": "/assets/images/skin-ritual.webp",
+          "decoded": false,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "src": "/assets/images/quiet-growth.webp",
+          "decoded": false,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "allTopics": 6,
+      "cta": "#atlas",
+      "heading": "По-близо\nдо себе си.",
+      "font": "Onest, sans-serif",
+      "soonAreControls": 0,
+      "heroImageTop": 333,
+      "heroImageBottom": 653,
+      "name": "laptop",
+      "width": 1024,
+      "height": 900,
+      "language": "bg"
+    }
+  ],
+  "interactions": [
+    {
+      "name": "desktop-en: language persistence and aria",
+      "passed": true
+    },
+    {
+      "name": "desktop-en: no overflow or clipped text",
+      "passed": true
+    },
+    {
+      "name": "desktop-en: 44px touch targets",
+      "passed": true
+    },
+    {
+      "name": "desktop-en: semantic content",
+      "passed": true
+    },
+    {
+      "name": "desktop-en: display font loaded",
+      "passed": true
+    },
+    {
+      "name": "desktop-en: select astrology",
+      "passed": true
+    },
+    {
+      "name": "desktop-en: focus astrology",
+      "passed": true
+    },
+    {
+      "name": "desktop-en: anchor headroom astrology",
+      "passed": true
+    },
+    {
+      "name": "desktop-en: select numerology",
+      "passed": true
+    },
+    {
+      "name": "desktop-en: focus numerology",
+      "passed": true
+    },
+    {
+      "name": "desktop-en: anchor headroom numerology",
+      "passed": true
+    },
+    {
+      "name": "desktop-en: select skincare",
+      "passed": true
+    },
+    {
+      "name": "desktop-en: focus skincare",
+      "passed": true
+    },
+    {
+      "name": "desktop-en: anchor headroom skincare",
+      "passed": true
+    },
+    {
+      "name": "desktop-en: select wellbeing",
+      "passed": true
+    },
+    {
+      "name": "desktop-en: focus wellbeing",
+      "passed": true
+    },
+    {
+      "name": "desktop-en: anchor headroom wellbeing",
+      "passed": true
+    },
+    {
+      "name": "desktop-en: select family",
+      "passed": true
+    },
+    {
+      "name": "desktop-en: focus family",
+      "passed": true
+    },
+    {
+      "name": "desktop-en: anchor headroom family",
+      "passed": true
+    },
+    {
+      "name": "desktop-en: select mental-health",
+      "passed": true
+    },
+    {
+      "name": "desktop-en: focus mental-health",
+      "passed": true
+    },
+    {
+      "name": "desktop-en: anchor headroom mental-health",
+      "passed": true
+    },
+    {
+      "name": "mobile-en: language persistence and aria",
+      "passed": true
+    },
+    {
+      "name": "mobile-en: no overflow or clipped text",
+      "passed": true
+    },
+    {
+      "name": "mobile-en: 44px touch targets",
+      "passed": true
+    },
+    {
+      "name": "mobile-en: semantic content",
+      "passed": true
+    },
+    {
+      "name": "mobile-en: display font loaded",
+      "passed": true
+    },
+    {
+      "name": "mobile-en: select astrology",
+      "passed": true
+    },
+    {
+      "name": "mobile-en: focus astrology",
+      "passed": true
+    },
+    {
+      "name": "mobile-en: anchor headroom astrology",
+      "passed": true
+    },
+    {
+      "name": "mobile-en: select numerology",
+      "passed": true
+    },
+    {
+      "name": "mobile-en: focus numerology",
+      "passed": true
+    },
+    {
+      "name": "mobile-en: anchor headroom numerology",
+      "passed": true
+    },
+    {
+      "name": "mobile-en: select skincare",
+      "passed": true
+    },
+    {
+      "name": "mobile-en: focus skincare",
+      "passed": true
+    },
+    {
+      "name": "mobile-en: anchor headroom skincare",
+      "passed": true
+    },
+    {
+      "name": "mobile-en: select wellbeing",
+      "passed": true
+    },
+    {
+      "name": "mobile-en: focus wellbeing",
+      "passed": true
+    },
+    {
+      "name": "mobile-en: anchor headroom wellbeing",
+      "passed": true
+    },
+    {
+      "name": "mobile-en: select family",
+      "passed": true
+    },
+    {
+      "name": "mobile-en: focus family",
+      "passed": true
+    },
+    {
+      "name": "mobile-en: anchor headroom family",
+      "passed": true
+    },
+    {
+      "name": "mobile-en: select mental-health",
+      "passed": true
+    },
+    {
+      "name": "mobile-en: focus mental-health",
+      "passed": true
+    },
+    {
+      "name": "mobile-en: anchor headroom mental-health",
+      "passed": true
+    },
+    {
+      "name": "mobile-en: menu opens",
+      "passed": true
+    },
+    {
+      "name": "mobile-en: open menu targets and overflow",
+      "passed": true
+    },
+    {
+      "name": "mobile-en: Escape closes and restores focus",
+      "passed": true
+    },
+    {
+      "name": "mobile-en: selection closes menu",
+      "passed": true
+    },
+    {
+      "name": "mobile-en: mobile nav headroom",
+      "passed": true
+    },
+    {
+      "name": "compact-en: language persistence and aria",
+      "passed": true
+    },
+    {
+      "name": "compact-en: no overflow or clipped text",
+      "passed": true
+    },
+    {
+      "name": "compact-en: 44px touch targets",
+      "passed": true
+    },
+    {
+      "name": "compact-en: semantic content",
+      "passed": true
+    },
+    {
+      "name": "compact-en: display font loaded",
+      "passed": true
+    },
+    {
+      "name": "compact-en: select astrology",
+      "passed": true
+    },
+    {
+      "name": "compact-en: focus astrology",
+      "passed": true
+    },
+    {
+      "name": "compact-en: anchor headroom astrology",
+      "passed": true
+    },
+    {
+      "name": "compact-en: select numerology",
+      "passed": true
+    },
+    {
+      "name": "compact-en: focus numerology",
+      "passed": true
+    },
+    {
+      "name": "compact-en: anchor headroom numerology",
+      "passed": true
+    },
+    {
+      "name": "compact-en: select skincare",
+      "passed": true
+    },
+    {
+      "name": "compact-en: focus skincare",
+      "passed": true
+    },
+    {
+      "name": "compact-en: anchor headroom skincare",
+      "passed": true
+    },
+    {
+      "name": "compact-en: select wellbeing",
+      "passed": true
+    },
+    {
+      "name": "compact-en: focus wellbeing",
+      "passed": true
+    },
+    {
+      "name": "compact-en: anchor headroom wellbeing",
+      "passed": true
+    },
+    {
+      "name": "compact-en: select family",
+      "passed": true
+    },
+    {
+      "name": "compact-en: focus family",
+      "passed": true
+    },
+    {
+      "name": "compact-en: anchor headroom family",
+      "passed": true
+    },
+    {
+      "name": "compact-en: select mental-health",
+      "passed": true
+    },
+    {
+      "name": "compact-en: focus mental-health",
+      "passed": true
+    },
+    {
+      "name": "compact-en: anchor headroom mental-health",
+      "passed": true
+    },
+    {
+      "name": "compact-en: menu opens",
+      "passed": true
+    },
+    {
+      "name": "compact-en: open menu targets and overflow",
+      "passed": true
+    },
+    {
+      "name": "compact-en: Escape closes and restores focus",
+      "passed": true
+    },
+    {
+      "name": "compact-en: selection closes menu",
+      "passed": true
+    },
+    {
+      "name": "compact-en: mobile nav headroom",
+      "passed": true
+    },
+    {
+      "name": "tablet-en: language persistence and aria",
+      "passed": true
+    },
+    {
+      "name": "tablet-en: no overflow or clipped text",
+      "passed": true
+    },
+    {
+      "name": "tablet-en: 44px touch targets",
+      "passed": true
+    },
+    {
+      "name": "tablet-en: semantic content",
+      "passed": true
+    },
+    {
+      "name": "tablet-en: display font loaded",
+      "passed": true
+    },
+    {
+      "name": "tablet-en: select astrology",
+      "passed": true
+    },
+    {
+      "name": "tablet-en: focus astrology",
+      "passed": true
+    },
+    {
+      "name": "tablet-en: anchor headroom astrology",
+      "passed": true
+    },
+    {
+      "name": "tablet-en: select numerology",
+      "passed": true
+    },
+    {
+      "name": "tablet-en: focus numerology",
+      "passed": true
+    },
+    {
+      "name": "tablet-en: anchor headroom numerology",
+      "passed": true
+    },
+    {
+      "name": "tablet-en: select skincare",
+      "passed": true
+    },
+    {
+      "name": "tablet-en: focus skincare",
+      "passed": true
+    },
+    {
+      "name": "tablet-en: anchor headroom skincare",
+      "passed": true
+    },
+    {
+      "name": "tablet-en: select wellbeing",
+      "passed": true
+    },
+    {
+      "name": "tablet-en: focus wellbeing",
+      "passed": true
+    },
+    {
+      "name": "tablet-en: anchor headroom wellbeing",
+      "passed": true
+    },
+    {
+      "name": "tablet-en: select family",
+      "passed": true
+    },
+    {
+      "name": "tablet-en: focus family",
+      "passed": true
+    },
+    {
+      "name": "tablet-en: anchor headroom family",
+      "passed": true
+    },
+    {
+      "name": "tablet-en: select mental-health",
+      "passed": true
+    },
+    {
+      "name": "tablet-en: focus mental-health",
+      "passed": true
+    },
+    {
+      "name": "tablet-en: anchor headroom mental-health",
+      "passed": true
+    },
+    {
+      "name": "tablet-en: menu opens",
+      "passed": true
+    },
+    {
+      "name": "tablet-en: open menu targets and overflow",
+      "passed": true
+    },
+    {
+      "name": "tablet-en: Escape closes and restores focus",
+      "passed": true
+    },
+    {
+      "name": "tablet-en: selection closes menu",
+      "passed": true
+    },
+    {
+      "name": "tablet-en: mobile nav headroom",
+      "passed": true
+    },
+    {
+      "name": "laptop-en: language persistence and aria",
+      "passed": true
+    },
+    {
+      "name": "laptop-en: no overflow or clipped text",
+      "passed": true
+    },
+    {
+      "name": "laptop-en: 44px touch targets",
+      "passed": true
+    },
+    {
+      "name": "laptop-en: semantic content",
+      "passed": true
+    },
+    {
+      "name": "laptop-en: display font loaded",
+      "passed": true
+    },
+    {
+      "name": "laptop-en: select astrology",
+      "passed": true
+    },
+    {
+      "name": "laptop-en: focus astrology",
+      "passed": true
+    },
+    {
+      "name": "laptop-en: anchor headroom astrology",
+      "passed": true
+    },
+    {
+      "name": "laptop-en: select numerology",
+      "passed": true
+    },
+    {
+      "name": "laptop-en: focus numerology",
+      "passed": true
+    },
+    {
+      "name": "laptop-en: anchor headroom numerology",
+      "passed": true
+    },
+    {
+      "name": "laptop-en: select skincare",
+      "passed": true
+    },
+    {
+      "name": "laptop-en: focus skincare",
+      "passed": true
+    },
+    {
+      "name": "laptop-en: anchor headroom skincare",
+      "passed": true
+    },
+    {
+      "name": "laptop-en: select wellbeing",
+      "passed": true
+    },
+    {
+      "name": "laptop-en: focus wellbeing",
+      "passed": true
+    },
+    {
+      "name": "laptop-en: anchor headroom wellbeing",
+      "passed": true
+    },
+    {
+      "name": "laptop-en: select family",
+      "passed": true
+    },
+    {
+      "name": "laptop-en: focus family",
+      "passed": true
+    },
+    {
+      "name": "laptop-en: anchor headroom family",
+      "passed": true
+    },
+    {
+      "name": "laptop-en: select mental-health",
+      "passed": true
+    },
+    {
+      "name": "laptop-en: focus mental-health",
+      "passed": true
+    },
+    {
+      "name": "laptop-en: anchor headroom mental-health",
+      "passed": true
+    },
+    {
+      "name": "desktop-bg: language persistence and aria",
+      "passed": true
+    },
+    {
+      "name": "desktop-bg: no overflow or clipped text",
+      "passed": true
+    },
+    {
+      "name": "desktop-bg: 44px touch targets",
+      "passed": true
+    },
+    {
+      "name": "desktop-bg: semantic content",
+      "passed": true
+    },
+    {
+      "name": "desktop-bg: display font loaded",
+      "passed": true
+    },
+    {
+      "name": "desktop-bg: select astrology",
+      "passed": true
+    },
+    {
+      "name": "desktop-bg: focus astrology",
+      "passed": true
+    },
+    {
+      "name": "desktop-bg: anchor headroom astrology",
+      "passed": true
+    },
+    {
+      "name": "desktop-bg: select numerology",
+      "passed": true
+    },
+    {
+      "name": "desktop-bg: focus numerology",
+      "passed": true
+    },
+    {
+      "name": "desktop-bg: anchor headroom numerology",
+      "passed": true
+    },
+    {
+      "name": "desktop-bg: select skincare",
+      "passed": true
+    },
+    {
+      "name": "desktop-bg: focus skincare",
+      "passed": true
+    },
+    {
+      "name": "desktop-bg: anchor headroom skincare",
+      "passed": true
+    },
+    {
+      "name": "desktop-bg: select wellbeing",
+      "passed": true
+    },
+    {
+      "name": "desktop-bg: focus wellbeing",
+      "passed": true
+    },
+    {
+      "name": "desktop-bg: anchor headroom wellbeing",
+      "passed": true
+    },
+    {
+      "name": "desktop-bg: select family",
+      "passed": true
+    },
+    {
+      "name": "desktop-bg: focus family",
+      "passed": true
+    },
+    {
+      "name": "desktop-bg: anchor headroom family",
+      "passed": true
+    },
+    {
+      "name": "desktop-bg: select mental-health",
+      "passed": true
+    },
+    {
+      "name": "desktop-bg: focus mental-health",
+      "passed": true
+    },
+    {
+      "name": "desktop-bg: anchor headroom mental-health",
+      "passed": true
+    },
+    {
+      "name": "mobile-bg: language persistence and aria",
+      "passed": true
+    },
+    {
+      "name": "mobile-bg: no overflow or clipped text",
+      "passed": true
+    },
+    {
+      "name": "mobile-bg: 44px touch targets",
+      "passed": true
+    },
+    {
+      "name": "mobile-bg: semantic content",
+      "passed": true
+    },
+    {
+      "name": "mobile-bg: display font loaded",
+      "passed": true
+    },
+    {
+      "name": "mobile-bg: select astrology",
+      "passed": true
+    },
+    {
+      "name": "mobile-bg: focus astrology",
+      "passed": true
+    },
+    {
+      "name": "mobile-bg: anchor headroom astrology",
+      "passed": true
+    },
+    {
+      "name": "mobile-bg: select numerology",
+      "passed": true
+    },
+    {
+      "name": "mobile-bg: focus numerology",
+      "passed": true
+    },
+    {
+      "name": "mobile-bg: anchor headroom numerology",
+      "passed": true
+    },
+    {
+      "name": "mobile-bg: select skincare",
+      "passed": true
+    },
+    {
+      "name": "mobile-bg: focus skincare",
+      "passed": true
+    },
+    {
+      "name": "mobile-bg: anchor headroom skincare",
+      "passed": true
+    },
+    {
+      "name": "mobile-bg: select wellbeing",
+      "passed": true
+    },
+    {
+      "name": "mobile-bg: focus wellbeing",
+      "passed": true
+    },
+    {
+      "name": "mobile-bg: anchor headroom wellbeing",
+      "passed": true
+    },
+    {
+      "name": "mobile-bg: select family",
+      "passed": true
+    },
+    {
+      "name": "mobile-bg: focus family",
+      "passed": true
+    },
+    {
+      "name": "mobile-bg: anchor headroom family",
+      "passed": true
+    },
+    {
+      "name": "mobile-bg: select mental-health",
+      "passed": true
+    },
+    {
+      "name": "mobile-bg: focus mental-health",
+      "passed": true
+    },
+    {
+      "name": "mobile-bg: anchor headroom mental-health",
+      "passed": true
+    },
+    {
+      "name": "mobile-bg: menu opens",
+      "passed": true
+    },
+    {
+      "name": "mobile-bg: open menu targets and overflow",
+      "passed": true
+    },
+    {
+      "name": "mobile-bg: Escape closes and restores focus",
+      "passed": true
+    },
+    {
+      "name": "mobile-bg: selection closes menu",
+      "passed": true
+    },
+    {
+      "name": "mobile-bg: mobile nav headroom",
+      "passed": true
+    },
+    {
+      "name": "compact-bg: language persistence and aria",
+      "passed": true
+    },
+    {
+      "name": "compact-bg: no overflow or clipped text",
+      "passed": true
+    },
+    {
+      "name": "compact-bg: 44px touch targets",
+      "passed": true
+    },
+    {
+      "name": "compact-bg: semantic content",
+      "passed": true
+    },
+    {
+      "name": "compact-bg: display font loaded",
+      "passed": true
+    },
+    {
+      "name": "compact-bg: select astrology",
+      "passed": true
+    },
+    {
+      "name": "compact-bg: focus astrology",
+      "passed": true
+    },
+    {
+      "name": "compact-bg: anchor headroom astrology",
+      "passed": true
+    },
+    {
+      "name": "compact-bg: select numerology",
+      "passed": true
+    },
+    {
+      "name": "compact-bg: focus numerology",
+      "passed": true
+    },
+    {
+      "name": "compact-bg: anchor headroom numerology",
+      "passed": true
+    },
+    {
+      "name": "compact-bg: select skincare",
+      "passed": true
+    },
+    {
+      "name": "compact-bg: focus skincare",
+      "passed": true
+    },
+    {
+      "name": "compact-bg: anchor headroom skincare",
+      "passed": true
+    },
+    {
+      "name": "compact-bg: select wellbeing",
+      "passed": true
+    },
+    {
+      "name": "compact-bg: focus wellbeing",
+      "passed": true
+    },
+    {
+      "name": "compact-bg: anchor headroom wellbeing",
+      "passed": true
+    },
+    {
+      "name": "compact-bg: select family",
+      "passed": true
+    },
+    {
+      "name": "compact-bg: focus family",
+      "passed": true
+    },
+    {
+      "name": "compact-bg: anchor headroom family",
+      "passed": true
+    },
+    {
+      "name": "compact-bg: select mental-health",
+      "passed": true
+    },
+    {
+      "name": "compact-bg: focus mental-health",
+      "passed": true
+    },
+    {
+      "name": "compact-bg: anchor headroom mental-health",
+      "passed": true
+    },
+    {
+      "name": "compact-bg: menu opens",
+      "passed": true
+    },
+    {
+      "name": "compact-bg: open menu targets and overflow",
+      "passed": true
+    },
+    {
+      "name": "compact-bg: Escape closes and restores focus",
+      "passed": true
+    },
+    {
+      "name": "compact-bg: selection closes menu",
+      "passed": true
+    },
+    {
+      "name": "compact-bg: mobile nav headroom",
+      "passed": true
+    },
+    {
+      "name": "tablet-bg: language persistence and aria",
+      "passed": true
+    },
+    {
+      "name": "tablet-bg: no overflow or clipped text",
+      "passed": true
+    },
+    {
+      "name": "tablet-bg: 44px touch targets",
+      "passed": true
+    },
+    {
+      "name": "tablet-bg: semantic content",
+      "passed": true
+    },
+    {
+      "name": "tablet-bg: display font loaded",
+      "passed": true
+    },
+    {
+      "name": "tablet-bg: select astrology",
+      "passed": true
+    },
+    {
+      "name": "tablet-bg: focus astrology",
+      "passed": true
+    },
+    {
+      "name": "tablet-bg: anchor headroom astrology",
+      "passed": true
+    },
+    {
+      "name": "tablet-bg: select numerology",
+      "passed": true
+    },
+    {
+      "name": "tablet-bg: focus numerology",
+      "passed": true
+    },
+    {
+      "name": "tablet-bg: anchor headroom numerology",
+      "passed": true
+    },
+    {
+      "name": "tablet-bg: select skincare",
+      "passed": true
+    },
+    {
+      "name": "tablet-bg: focus skincare",
+      "passed": true
+    },
+    {
+      "name": "tablet-bg: anchor headroom skincare",
+      "passed": true
+    },
+    {
+      "name": "tablet-bg: select wellbeing",
+      "passed": true
+    },
+    {
+      "name": "tablet-bg: focus wellbeing",
+      "passed": true
+    },
+    {
+      "name": "tablet-bg: anchor headroom wellbeing",
+      "passed": true
+    },
+    {
+      "name": "tablet-bg: select family",
+      "passed": true
+    },
+    {
+      "name": "tablet-bg: focus family",
+      "passed": true
+    },
+    {
+      "name": "tablet-bg: anchor headroom family",
+      "passed": true
+    },
+    {
+      "name": "tablet-bg: select mental-health",
+      "passed": true
+    },
+    {
+      "name": "tablet-bg: focus mental-health",
+      "passed": true
+    },
+    {
+      "name": "tablet-bg: anchor headroom mental-health",
+      "passed": true
+    },
+    {
+      "name": "tablet-bg: menu opens",
+      "passed": true
+    },
+    {
+      "name": "tablet-bg: open menu targets and overflow",
+      "passed": true
+    },
+    {
+      "name": "tablet-bg: Escape closes and restores focus",
+      "passed": true
+    },
+    {
+      "name": "tablet-bg: selection closes menu",
+      "passed": true
+    },
+    {
+      "name": "tablet-bg: mobile nav headroom",
+      "passed": true
+    },
+    {
+      "name": "laptop-bg: language persistence and aria",
+      "passed": true
+    },
+    {
+      "name": "laptop-bg: no overflow or clipped text",
+      "passed": true
+    },
+    {
+      "name": "laptop-bg: 44px touch targets",
+      "passed": true
+    },
+    {
+      "name": "laptop-bg: semantic content",
+      "passed": true
+    },
+    {
+      "name": "laptop-bg: display font loaded",
+      "passed": true
+    },
+    {
+      "name": "laptop-bg: select astrology",
+      "passed": true
+    },
+    {
+      "name": "laptop-bg: focus astrology",
+      "passed": true
+    },
+    {
+      "name": "laptop-bg: anchor headroom astrology",
+      "passed": true
+    },
+    {
+      "name": "laptop-bg: select numerology",
+      "passed": true
+    },
+    {
+      "name": "laptop-bg: focus numerology",
+      "passed": true
+    },
+    {
+      "name": "laptop-bg: anchor headroom numerology",
+      "passed": true
+    },
+    {
+      "name": "laptop-bg: select skincare",
+      "passed": true
+    },
+    {
+      "name": "laptop-bg: focus skincare",
+      "passed": true
+    },
+    {
+      "name": "laptop-bg: anchor headroom skincare",
+      "passed": true
+    },
+    {
+      "name": "laptop-bg: select wellbeing",
+      "passed": true
+    },
+    {
+      "name": "laptop-bg: focus wellbeing",
+      "passed": true
+    },
+    {
+      "name": "laptop-bg: anchor headroom wellbeing",
+      "passed": true
+    },
+    {
+      "name": "laptop-bg: select family",
+      "passed": true
+    },
+    {
+      "name": "laptop-bg: focus family",
+      "passed": true
+    },
+    {
+      "name": "laptop-bg: anchor headroom family",
+      "passed": true
+    },
+    {
+      "name": "laptop-bg: select mental-health",
+      "passed": true
+    },
+    {
+      "name": "laptop-bg: focus mental-health",
+      "passed": true
+    },
+    {
+      "name": "laptop-bg: anchor headroom mental-health",
+      "passed": true
+    },
+    {
+      "name": "keyboard: visible skip-link focus",
+      "passed": true
+    },
+    {
+      "name": "keyboard: skip-link reaches main",
+      "passed": true
+    },
+    {
+      "name": "reduced motion: no image animation",
+      "passed": true
+    },
+    {
+      "name": "normal motion: content remains visible",
+      "passed": true
+    },
+    {
+      "name": "direct fragment: correct prompt opens",
+      "passed": true
+    },
+    {
+      "name": "denied storage: language control still works",
+      "passed": true
+    },
+    {
+      "name": "no JS: all six topics visible",
+      "passed": true
+    },
+    {
+      "name": "no JS: native reflection opens",
+      "passed": true
+    },
+    {
+      "name": "no JS: native mobile navigation works",
+      "passed": true
+    },
+    {
+      "name": "contrast: #183f35 on #e6ede3",
+      "passed": true
+    },
+    {
+      "name": "contrast: #466255 on #e6ede3",
+      "passed": true
+    },
+    {
+      "name": "contrast: #466255 on #f2f6ef",
+      "passed": true
+    },
+    {
+      "name": "contrast: #f2f6ef on #183f35",
+      "passed": true
+    },
+    {
+      "name": "contrast: #f2f6ef on #285344",
+      "passed": true
+    }
+  ],
+  "screenshots": [],
+  "consoleErrors": [
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  ],
+  "failedRequests": [],
+  "externalRequests": [],
+  "httpErrors": [
+    {
+      "url": "http://127.0.0.1:43118/assets/images/hero-glasshouse.webp",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:43118/assets/images/sky-study.webp",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:43118/assets/images/skin-ritual.webp",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:43118/assets/images/hero-glasshouse.webp",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:43118/assets/images/sky-study.webp",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:43118/assets/images/skin-ritual.webp",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:43118/assets/images/quiet-growth.webp",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:43118/assets/images/hero-glasshouse-mobile.webp",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:43118/assets/images/hero-glasshouse-mobile.webp",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:43118/assets/images/sky-study.webp",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:43118/assets/images/hero-glasshouse-mobile.webp",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:43118/assets/images/sky-study.webp",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:43118/assets/images/skin-ritual.webp",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:43118/assets/images/quiet-growth.webp",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:43118/assets/images/hero-glasshouse-mobile.webp",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:43118/assets/images/sky-study.webp",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:43118/assets/images/hero-glasshouse-mobile.webp",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:43118/assets/images/sky-study.webp",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:43118/assets/images/skin-ritual.webp",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:43118/assets/images/quiet-growth.webp",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:43118/assets/images/hero-glasshouse-mobile.webp",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:43118/assets/images/sky-study.webp",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:43118/assets/images/skin-ritual.webp",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:43118/assets/images/hero-glasshouse-mobile.webp",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:43118/assets/images/sky-study.webp",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:43118/assets/images/skin-ritual.webp",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:43118/assets/images/quiet-growth.webp",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:43118/assets/images/hero-glasshouse.webp",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:43118/assets/images/hero-glasshouse.webp",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:43118/assets/images/sky-study.webp",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:43118/assets/images/skin-ritual.webp",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:43118/assets/images/hero-glasshouse.webp",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:43118/assets/images/sky-study.webp",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:43118/assets/images/skin-ritual.webp",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:43118/assets/images/quiet-growth.webp",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:43118/assets/images/hero-glasshouse.webp",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:43118/assets/images/sky-study.webp",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:43118/assets/images/skin-ritual.webp",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:43118/assets/images/hero-glasshouse.webp",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:43118/assets/images/sky-study.webp",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:43118/assets/images/quiet-growth.webp",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:43118/assets/images/skin-ritual.webp",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:43118/assets/images/hero-glasshouse-mobile.webp",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:43118/assets/images/hero-glasshouse-mobile.webp",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:43118/assets/images/sky-study.webp",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:43118/assets/images/hero-glasshouse-mobile.webp",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:43118/assets/images/sky-study.webp",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:43118/assets/images/skin-ritual.webp",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:43118/assets/images/quiet-growth.webp",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:43118/assets/images/hero-glasshouse-mobile.webp",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:43118/assets/images/sky-study.webp",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:43118/assets/images/hero-glasshouse-mobile.webp",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:43118/assets/images/sky-study.webp",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:43118/assets/images/skin-ritual.webp",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:43118/assets/images/quiet-growth.webp",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:43118/assets/images/hero-glasshouse-mobile.webp",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:43118/assets/images/sky-study.webp",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:43118/assets/images/skin-ritual.webp",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:43118/assets/images/hero-glasshouse-mobile.webp",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:43118/assets/images/sky-study.webp",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:43118/assets/images/skin-ritual.webp",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:43118/assets/images/quiet-growth.webp",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:43118/assets/images/hero-glasshouse.webp",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:43118/assets/images/hero-glasshouse.webp",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:43118/assets/images/sky-study.webp",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:43118/assets/images/skin-ritual.webp",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:43118/assets/images/hero-glasshouse.webp",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:43118/assets/images/sky-study.webp",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:43118/assets/images/skin-ritual.webp",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:43118/assets/images/quiet-growth.webp",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:43118/assets/images/hero-glasshouse.webp",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:43118/assets/images/sky-study.webp",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:43118/assets/images/skin-ritual.webp",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:43118/assets/images/hero-glasshouse.webp",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:43118/assets/images/sky-study.webp",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:43118/assets/images/skin-ritual.webp",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:43118/assets/images/quiet-growth.webp",
+      "status": 404
+    }
+  ],
+  "issues": [
+    "consoleErrors",
+    "httpErrors"
+  ],
+  "contrast": {
+    "#183f35 on #e6ede3": 9.76,
+    "#466255 on #e6ede3": 5.6,
+    "#466255 on #f2f6ef": 6.12,
+    "#f2f6ef on #183f35": 10.66,
+    "#f2f6ef on #285344": 7.97
+  },
+  "checksPassed": 274,
+  "checksTotal": 274
+}

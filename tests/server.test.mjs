@@ -73,7 +73,7 @@ test("every local asset referenced by index.html answers 200", async () => {
   const refs = [...html.matchAll(/(?:src|href)="([^"]+)"/g)]
     .map((match) => match[1])
     .filter((ref) => !ref.startsWith("#") && !ref.startsWith("http") && !ref.startsWith("data:"));
-  assert.ok(refs.length >= 10, `expected local references, found ${refs.length}`);
+  assert.ok(refs.length >= 8, `expected local references, found ${refs.length}`);
   for (const ref of new Set(refs)) {
     const res = await fetch(new URL(ref, BASE));
     assert.equal(res.status, 200, `${ref} returned ${res.status}`);
@@ -85,8 +85,10 @@ test("styles, script and images are served with correct types", async () => {
   const cases = [
     ["/assets/styles.css", /text\/css/],
     ["/assets/site.js", /javascript/],
-    ["/assets/brand-mark.svg", /image\/svg\+xml/],
-    ["/assets/hero-plate.svg", /image\/svg\+xml/],
+    ["/assets/favicon.svg", /image\/svg\+xml/],
+    ["/assets/images/hero-glasshouse.webp", /image\/webp/],
+    ["/assets/social-og.png", /image\/png/],
+    ["/assets/fonts/Onest-Variable.woff2", /font\/woff2/],
     ["/assets/fonts/Geist-Variable-subset.woff2", /font\/woff2/],
   ];
   for (const [pathName, type] of cases) {
@@ -114,6 +116,12 @@ test("server sources and dev documents are never served", async () => {
     "/.impeccable/surfaces/index-html.md",
     "/.gitignore",
     "/Dockerfile",
+    "/tools/ASSET-MANIFEST.json",
+    "/tools/ASSET-PROVENANCE.md",
+    "/tools/prepare_images.py",
+    "/tools/Onest-source.ttf",
+    "/.impeccable/review/report.json",
+    "/DESIGN.md",
   ];
   for (const pathName of hidden) {
     const res = await fetch(`${BASE}${pathName}`);

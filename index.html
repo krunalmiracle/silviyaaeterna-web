@@ -1,345 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- impeccable-disable cramped-padding -- rendered text insets measured at 15px to 87px from every flagged border; the safety panel's image band is intentionally full bleed -->
-  <!-- impeccable-disable overused-font -- the brief pins a Geist-like sans system -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title data-en="Silviya Aeterna | Astrology, numerology, skincare and wellbeing" data-bg="Silviya Aeterna | Астрология, нумерология, грижа за кожата и благополучие">Silviya Aeterna | Astrology, numerology, skincare and wellbeing</title>
-  <meta name="description" content="Silviya Aeterna is a bilingual project about astrology, numerology, skincare and psychology-informed wellbeing, in Bulgarian and English. Channel launching soon.">
-  <meta name="theme-color" content="#060A17">
-  <meta name="color-scheme" content="dark">
+  <title data-en="Silviya Aeterna | A little more in tune" data-bg="Silviya Aeterna | По-близо до себе си">Silviya Aeterna | A little more in tune</title>
+  <meta name="description" content="Explore astrology, numerology, skincare, wellbeing, family and mental health with Silviya Aeterna. A reflective personal project in English and Bulgarian.">
+  <meta name="theme-color" content="#E6EDE3">
+  <meta name="color-scheme" content="light">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://silviyaaeterna.krusil.com/">
   <meta property="og:site_name" content="Silviya Aeterna">
-  <meta property="og:title" content="Silviya Aeterna">
-  <meta property="og:description" content="Astrology, numerology, skincare and psychology-informed wellbeing, in Bulgarian and English. Channel launching soon.">
+  <meta property="og:title" content="Silviya Aeterna | A little more in tune">
+  <meta property="og:description" content="Six ways of paying attention to yourself. Astrology, numerology, skincare and wellbeing, in English and Bulgarian.">
   <meta property="og:image" content="https://silviyaaeterna.krusil.com/assets/social-og.png">
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Silviya Aeterna, pale jade lettering beside an original botanical glasshouse still life.">
   <meta property="og:locale" content="en_US">
   <meta property="og:locale:alternate" content="bg_BG">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://silviyaaeterna.krusil.com/assets/social-og.png">
   <link rel="canonical" href="https://silviyaaeterna.krusil.com/">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/Onest-Variable.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/Geist-Variable-subset.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/styles.css">
-  <script src="assets/site.js"></script>
+  <script src="assets/site.js" defer></script>
 </head>
 <body id="top">
   <a class="skip-link" href="#main" data-en="Skip to content" data-bg="Към съдържанието">Skip to content</a>
-
   <header class="site-header">
     <div class="shell header-inner">
-      <a class="brand" href="#top">
-        <img src="assets/brand-mark.svg" alt="" width="30" height="30">
-        <b>Silviya Aeterna</b>
-      </a>
-
+      <a class="brand" href="#top" aria-label="Silviya Aeterna"><span>Silviya</span><span>Aeterna</span></a>
       <nav class="primary-nav" aria-label="Primary" data-aria-en="Primary" data-aria-bg="Основна навигация">
-        <ul>
-          <li><a href="#manifesto" data-en="Manifesto" data-bg="Манифест">Manifesto</a></li>
-          <li><a href="#atlas" data-en="Topics" data-bg="Теми">Topics</a></li>
-          <li><a href="#channel" data-en="Channel" data-bg="Канал">Channel</a></li>
-          <li><a href="#shop" data-en="Shop" data-bg="Магазин">Shop</a></li>
-          <li><a href="#safety" data-en="Safety" data-bg="Безопасност">Safety</a></li>
-        </ul>
+        <a href="#atlas" data-en="The themes" data-bg="Темите">The themes</a>
+        <a href="#manifesto" data-en="The project" data-bg="Проектът">The project</a>
+        <a href="#next" data-en="What’s next" data-bg="Какво предстои">What’s next</a>
       </nav>
-
       <div class="header-tools">
         <div class="lang" role="group" aria-label="Language" data-aria-en="Language" data-aria-bg="Език">
           <button type="button" id="lang-en" lang="en" aria-pressed="true">EN</button>
           <button type="button" id="lang-bg" lang="bg" aria-pressed="false">BG</button>
         </div>
-
         <details class="nav-more">
-          <summary>
-            <span class="nav-bars" aria-hidden="true"></span>
-            <span class="visually-hidden" data-en="Menu" data-bg="Меню">Menu</span>
-          </summary>
-          <nav class="mobile-nav" aria-label="Primary" data-aria-en="Primary" data-aria-bg="Основна навигация">
-            <ul>
-              <li><a href="#manifesto" data-en="Manifesto" data-bg="Манифест">Manifesto</a></li>
-              <li><a href="#atlas" data-en="Topics" data-bg="Теми">Topics</a></li>
-              <li><a href="#channel" data-en="Channel" data-bg="Канал">Channel</a></li>
-              <li><a href="#shop" data-en="Shop" data-bg="Магазин">Shop</a></li>
-              <li><a href="#safety" data-en="Safety" data-bg="Безопасност">Safety</a></li>
-            </ul>
+          <summary aria-controls="mobile-navigation"><span class="menu-mark" aria-hidden="true"></span><span class="visually-hidden" data-en="Menu" data-bg="Меню">Menu</span></summary>
+          <nav class="mobile-nav" id="mobile-navigation" aria-label="Primary" data-aria-en="Primary" data-aria-bg="Основна навигация">
+            <a href="#atlas" data-en="The themes" data-bg="Темите">The themes</a>
+            <a href="#manifesto" data-en="The project" data-bg="Проектът">The project</a>
+            <a href="#next" data-en="What’s next" data-bg="Какво предстои">What’s next</a>
+            <a href="#safety" data-en="A note on care" data-bg="За грижата и границите">A note on care</a>
           </nav>
         </details>
       </div>
     </div>
   </header>
-
   <main id="main">
     <section class="hero shell" aria-labelledby="hero-title">
-      <div class="hero-copy">
-        <h1 class="hero-title" id="hero-title">Silviya Aeterna</h1>
-        <p class="hero-sub" data-reveal
-           data-en="Astrology, numerology, skincare and psychology-informed wellbeing, in Bulgarian and English."
-           data-bg="Астрология, нумерология, грижа за кожата и благополучие, основано на психологията, на български и английски.">Astrology, numerology, skincare and psychology-informed wellbeing, in Bulgarian and English.</p>
-        <div class="hero-actions" data-reveal>
-          <a class="btn btn-primary" href="#manifesto" data-en="Explore the world" data-bg="Разгледай света">Explore the world</a>
-          <span class="soon-state" data-en="Channel launching soon" data-bg="Каналът предстои">Channel launching soon</span>
+      <div class="hero-intro">
+        <h1 id="hero-title"><span data-en="A little more" data-bg="По-близо">A little more</span><span data-en="in tune." data-bg="до себе си.">in tune.</span></h1>
+        <div class="hero-note">
+          <p class="hero-sub" data-en="Astrology, numerology, skincare and the everyday art of wellbeing. A personal project to explore, in English and Bulgarian." data-bg="Астрология, нумерология, грижа за кожата и благополучие в ежедневието. Личен проект за любопитни хора, на български и английски.">Astrology, numerology, skincare and the everyday art of wellbeing. A personal project to explore, in English and Bulgarian.</p>
+          <a class="primary-action" href="#atlas"><span data-en="Explore the themes" data-bg="Разгледай темите">Explore the themes</span><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 4v16m-6-6 6 6 6-6"/></svg></a>
         </div>
       </div>
-
-      <div class="plate hero-plate js-plate" data-reveal>
-        <img src="assets/hero-plate.svg" width="800" height="1000" fetchpriority="high"
-             alt="A nocturnal almanac chart: concentric rings, orbiting bodies and a coral sun over an ephemeris scale."
-             data-alt-en="A nocturnal almanac chart: concentric rings, orbiting bodies and a coral sun over an ephemeris scale."
-             data-alt-bg="Нощен алманах: концентрични пръстени, планети по орбити и коралово слънце над скала на ефемерида.">
-      </div>
+      <figure class="hero-art">
+        <img src="assets/images/hero-glasshouse.webp" srcset="assets/images/hero-glasshouse-mobile.webp 780w, assets/images/hero-glasshouse.webp 1800w" sizes="(max-width: 600px) 100vw, 94vw" width="1800" height="1200" fetchpriority="high" alt="Sunlit botanical still life with glass, leaves and celestial forms on pale jade." data-alt-en="Sunlit botanical still life with glass, leaves and celestial forms on pale jade." data-alt-bg="Ботаничен натюрморт със стъкло, листа и небесни форми върху бледозелен фон, огрян от слънце.">
+        <figcaption><span data-en="A space for curiosity. Room to grow." data-bg="Място за любопитство. Пространство за растеж.">A space for curiosity. Room to grow.</span><span data-en="Original rendered illustration" data-bg="Оригинална 3D илюстрация">Original rendered illustration</span></figcaption>
+      </figure>
     </section>
 
-    <section class="section manifesto" id="manifesto" aria-labelledby="manifesto-title">
-      <div class="shell">
-        <h2 id="manifesto-title" data-reveal data-en="An almanac, not a feed" data-bg="Алманах, не поток">An almanac, not a feed</h2>
-        <p class="section-body" data-reveal
-           data-en="Silviya Aeterna is a personal project about the patterns we live by: the sky we were born under, the numbers we keep repeating, the skin we care for, and the mind we are growing. It is made slowly, in two languages, and it says clearly where reflection ends."
-           data-bg="Silviya Aeterna е личен проект за моделите, по които живеем: небето, под което сме родени, числата, които повтаряме, кожата, за която се грижим, и ума, който отглеждаме. Прави се бавно, на два езика и казва ясно къде свършва размисълът.">Silviya Aeterna is a personal project about the patterns we live by: the sky we were born under, the numbers we keep repeating, the skin we care for, and the mind we are growing. It is made slowly, in two languages, and it says clearly where reflection ends.</p>
-        <p class="section-body" data-reveal
-           data-en="Nothing here is medical advice, diagnosis or treatment. It is material for reflection, made for curious adults and families."
-           data-bg="Нищо тук не е медицински съвет, диагноза или лечение. Това е материал за размисъл, направен за любопитни възрастни и семейства.">Nothing here is medical advice, diagnosis or treatment. It is material for reflection, made for curious adults and families.</p>
+    <section class="atlas shell" id="atlas" aria-labelledby="atlas-title">
+      <div class="section-heading">
+        <h2 id="atlas-title" data-en="Follow your curiosity." data-bg="Последвай любопитството си.">Follow your curiosity.</h2>
+        <p data-en="Six themes, connected by one idea: paying a little more attention. Choose a theme to find a question worth sitting with." data-bg="Шест теми с една обща идея: да обръщаме малко повече внимание. Избери тема и открий въпрос за размисъл.">Six themes, connected by one idea: paying a little more attention. Choose a theme to find a question worth sitting with.</p>
+      </div>
+      <nav class="theme-nav" aria-label="Choose a theme" data-aria-en="Choose a theme" data-aria-bg="Избери тема">
+        <a href="#astrology" data-theme="astrology" data-en="Astrology" data-bg="Астрология">Astrology</a>
+        <a href="#numerology" data-theme="numerology" data-en="Numerology" data-bg="Нумерология">Numerology</a>
+        <a href="#skincare" data-theme="skincare" data-en="Skincare" data-bg="Грижа за кожата">Skincare</a>
+        <a href="#wellbeing" data-theme="wellbeing" data-en="Wellbeing" data-bg="Благополучие">Wellbeing</a>
+        <a href="#family" data-theme="family" data-en="Family & children" data-bg="Семейство и деца">Family &amp; children</a>
+        <a href="#mental-health" data-theme="mental-health" data-en="Mental health" data-bg="Психично здраве">Mental health</a>
+      </nav>
 
-        <div class="plate manifesto-plate" data-reveal>
-          <img src="assets/manifesto-plate.svg" width="1400" height="560" loading="lazy"
-               alt="A wide plate of moon phases above nested sun-path arcs and a ruled horizon."
-               data-alt-en="A wide plate of moon phases above nested sun-path arcs and a ruled horizon."
-               data-alt-bg="Широка плоча с фази на Луната над дъги на слънчев път и линийка на хоризонта.">
+      <section class="chapter chapter-sky" aria-labelledby="sky-title">
+        <div class="chapter-visual">
+          <h3 id="sky-title" data-en="Look up. Look within." data-bg="Поглед навън. Поглед навътре.">Look up. Look within.</h3>
+          <figure><img src="assets/images/sky-study.webp" width="1400" height="1100" loading="lazy" decoding="async" alt="A celestial study of sculptural spheres, an amber sun and botanical leaves." data-alt-en="A celestial study of sculptural spheres, an amber sun and botanical leaves." data-alt-bg="Небесна композиция от скулптурни сфери, кехлибарено слънце и листа."></figure>
         </div>
-      </div>
-    </section>
-
-    <section class="section atlas" id="atlas" aria-labelledby="atlas-title">
-      <div class="shell">
-        <h2 id="atlas-title" data-reveal data-en="The topic atlas" data-bg="Атлас на темите">The topic atlas</h2>
-        <p class="section-intro" data-reveal
-           data-en="Six pillars, each with its own illustration. Together they are the full map of what this project will talk about."
-           data-bg="Шест стълба, всеки със своя илюстрация. Заедно те са цялата карта на това за какво ще говори този проект.">Six pillars, each with its own illustration. Together they are the full map of what this project will talk about.</p>
-
-        <div class="atlas-grid">
-          <article class="atlas-item field a1" id="astrology" data-reveal>
-            <div class="media">
-              <img src="assets/topic-astrology.svg" width="700" height="520" loading="lazy"
-                   alt="A twelve segment zodiac wheel with a coral centre and a dotted orbit."
-                   data-alt-en="A twelve segment zodiac wheel with a coral centre and a dotted orbit."
-                   data-alt-bg="Зодиакално колело с дванадесет сегмента, коралов център и пунктирна орбита.">
-            </div>
-            <div class="body">
-              <h3 data-en="Astrology" data-bg="Астрология">Astrology</h3>
-              <p data-en="Birth charts, transits and seasonal cycles, treated as a language for reflection rather than a forecast you must obey."
-                 data-bg="Натални карти, транзити и сезонни цикли, разглеждани като език за размисъл, а не като прогноза, на която трябва да се подчиняваш.">Birth charts, transits and seasonal cycles, treated as a language for reflection rather than a forecast you must obey.</p>
-            </div>
+        <div class="chapter-topics">
+          <article class="topic" id="astrology" tabindex="-1">
+            <h4 data-en="Astrology" data-bg="Астрология">Astrology</h4>
+            <p data-en="Birth charts, transits and seasonal cycles as a symbolic language for reflection. An invitation to notice patterns, not a prediction to live by." data-bg="Натални карти, транзити и сезонни цикли като символичен език за размисъл. Покана да забелязваш закономерности, не предсказание, което да ръководи живота ти.">Birth charts, transits and seasonal cycles as a symbolic language for reflection. An invitation to notice patterns, not a prediction to live by.</p>
+            <details class="reflection"><summary data-en="A question to explore" data-bg="Въпрос за размисъл">A question to explore</summary><p data-en="Which parts of a description feel familiar, and which do not? Leave room for both instead of letting a label define you." data-bg="Кои части от едно описание ти звучат познато и кои не? Дай място и на двете, вместо да позволяваш на един етикет да те определя.">Which parts of a description feel familiar, and which do not? Leave room for both instead of letting a label define you.</p></details>
           </article>
-
-          <article class="atlas-item a2" id="numerology" data-reveal>
-            <div class="media">
-              <img src="assets/topic-numerology.svg" width="700" height="520" loading="lazy"
-                   alt="A three by three grid of numbers with a coral outlined centre cell."
-                   data-alt-en="A three by three grid of numbers with a coral outlined centre cell."
-                   data-alt-bg="Мрежа от три по три числа с централна клетка, очертана в коралово.">
-            </div>
-            <div class="body">
-              <h3 data-en="Numerology" data-bg="Нумерология">Numerology</h3>
-              <p data-en="Life paths, repeating numbers and personal cycles, explained with restraint and room for your own reading."
-                 data-bg="Жизнени пътища, повтарящи се числа и лични цикли, обяснени със сдържаност и място за твоето собствено четене.">Life paths, repeating numbers and personal cycles, explained with restraint and room for your own reading.</p>
-            </div>
-          </article>
-
-          <article class="atlas-item a3" id="skincare" data-reveal>
-            <div class="media">
-              <img src="assets/topic-skincare.svg" width="700" height="520" loading="lazy"
-                   alt="A droplet over layered skin strata and rippling rings."
-                   data-alt-en="A droplet over layered skin strata and rippling rings."
-                   data-alt-bg="Капка върху слоеве на кожата и пулсиращи пръстени.">
-            </div>
-            <div class="body">
-              <h3 data-en="Skincare" data-bg="Грижа за кожата">Skincare</h3>
-              <p data-en="Routine, ingredients and realistic expectations for adult and family skin, without miracle claims."
-                 data-bg="Рутина, съставки и реалистични очаквания за кожата на възрастни и деца, без чудеса в обещанията.">Routine, ingredients and realistic expectations for adult and family skin, without miracle claims.</p>
-            </div>
-          </article>
-
-          <article class="atlas-item field a4" id="wellbeing" data-reveal>
-            <div class="media">
-              <img src="assets/topic-wellbeing.svg" width="700" height="520" loading="lazy"
-                   alt="Nested topographic contour lines around a small coral core."
-                   data-alt-en="Nested topographic contour lines around a small coral core."
-                   data-alt-bg="Вложени топографски контури около малко коралово ядро.">
-            </div>
-            <div class="body">
-              <h3 data-en="Wellbeing" data-bg="Благополучие">Wellbeing</h3>
-              <p data-en="Attention, rest, habits and self-improvement, drawn from psychology and offered as education, never as therapy."
-                 data-bg="Внимание, почивка, навици и самоусъвършенстване, почерпени от психологията и предлагани като образование, никога като терапия.">Attention, rest, habits and self-improvement, drawn from psychology and offered as education, never as therapy.</p>
-            </div>
-          </article>
-
-          <article class="atlas-item a5" id="family" data-reveal>
-            <div class="media">
-              <img src="assets/topic-family.svg" width="700" height="520" loading="lazy"
-                   alt="Three linked circles under a protective arc, the smallest one outlined in coral."
-                   data-alt-en="Three linked circles under a protective arc, the smallest one outlined in coral."
-                   data-alt-bg="Три свързани кръга под защитна дъга, най-малкият очертан в коралово.">
-            </div>
-            <div class="body">
-              <h3 data-en="Family and children" data-bg="Семейство и деца">Family and children</h3>
-              <p data-en="Routines, conversations and boundaries for parents and children, written to be useful on an ordinary Tuesday."
-                 data-bg="Рутини, разговори и граници за родители и деца, написани да са полезни в обикновен вторник.">Routines, conversations and boundaries for parents and children, written to be useful on an ordinary Tuesday.</p>
-            </div>
-          </article>
-
-          <article class="atlas-item field a6" id="mental-health" data-reveal>
-            <div class="media">
-              <img src="assets/topic-mental-health.svg" width="700" height="520" loading="lazy"
-                   alt="An arched window at night with a warm lamp glow and a plant on the sill."
-                   data-alt-en="An arched window at night with a warm lamp glow and a plant on the sill."
-                   data-alt-bg="Прозорец с арка нощем с топла светлина и растение на прага.">
-            </div>
-            <div class="body">
-              <h3 data-en="Mental health" data-bg="Психично здраве">Mental health</h3>
-              <p data-en="Plain-language reflections on mental health, with a clear line: education and support, not professional care."
-                 data-bg="Размисли за психичното здраве на разбираем език, с ясна граница: образование и подкрепа, не професионална грижа.">Plain-language reflections on mental health, with a clear line: education and support, not professional care.</p>
-            </div>
+          <article class="topic" id="numerology" tabindex="-1">
+            <h4 data-en="Numerology" data-bg="Нумерология">Numerology</h4>
+            <p data-en="Life paths, repeating numbers and the meanings we give them. A lens for personal interpretation, not scientific evidence or a fixed destiny." data-bg="Жизнени пътища, повтарящи се числа и смисълът, който им придаваме. Гледна точка за лично тълкуване, не научно доказателство или предопределена съдба.">Life paths, repeating numbers and the meanings we give them. A lens for personal interpretation, not scientific evidence or a fixed destiny.</p>
+            <details class="reflection"><summary data-en="A question to explore" data-bg="Въпрос за размисъл">A question to explore</summary><p data-en="Is there a number you associate with a memory? What matters more to you: the number itself, or the story attached to it?" data-bg="Има ли число, което свързваш със спомен? Кое е по-важно за теб: самото число или историята, която стои зад него?">Is there a number you associate with a memory? What matters more to you: the number itself, or the story attached to it?</p></details>
           </article>
         </div>
+      </section>
+
+      <section class="chapter chapter-care" aria-labelledby="care-title">
+        <div class="chapter-visual">
+          <h3 id="care-title" data-en="Make room for care." data-bg="Направи място за грижа.">Make room for care.</h3>
+          <figure><img src="assets/images/skin-ritual.webp" width="1400" height="1100" loading="lazy" decoding="async" alt="Unbranded frosted vessels, water and a leaf in soft daylight." data-alt-en="Unbranded frosted vessels, water and a leaf in soft daylight." data-alt-bg="Матирани съдове без марка, вода и лист в мека дневна светлина."></figure>
+        </div>
+        <div class="chapter-topics">
+          <article class="topic" id="skincare" tabindex="-1">
+            <h4 data-en="Skincare" data-bg="Грижа за кожата">Skincare</h4>
+            <p data-en="Simple routines, ingredient literacy and realistic expectations. Space to understand your skin without miracle promises or pressure to buy more." data-bg="Лесни навици, разбиране на съставките и реалистични очаквания. Пространство да опознаеш кожата си без обещания за чудеса и натиск да купуваш повече.">Simple routines, ingredient literacy and realistic expectations. Space to understand your skin without miracle promises or pressure to buy more.</p>
+            <details class="reflection"><summary data-en="A question to explore" data-bg="Въпрос за размисъл">A question to explore</summary><p data-en="Which steps in your routine feel useful, and which are there out of habit? For persistent irritation or other skin concerns, ask a qualified clinician." data-bg="Кои стъпки в грижата ти се струват полезни и кои правиш просто по навик? При продължително раздразнение или други кожни проблеми се обърни към лекар.">Which steps in your routine feel useful, and which are there out of habit? For persistent irritation or other skin concerns, ask a qualified clinician.</p></details>
+          </article>
+          <article class="topic" id="wellbeing" tabindex="-1">
+            <h4 data-en="Wellbeing" data-bg="Благополучие">Wellbeing</h4>
+            <p data-en="Attention, rest, habits and self-improvement, approached through psychology-informed education. Small observations rather than another standard to live up to." data-bg="Внимание, почивка, навици и личностно развитие през призмата на психологията. Малки наблюдения, а не още един стандарт, на който да отговаряш.">Attention, rest, habits and self-improvement, approached through psychology-informed education. Small observations rather than another standard to live up to.</p>
+            <details class="reflection"><summary data-en="A question to explore" data-bg="Въпрос за размисъл">A question to explore</summary><p data-en="What gave you a little breathing room today? Notice it without turning it into another task to complete." data-bg="Какво ти даде малко спокойствие днес? Забележи го, без да го превръщаш в поредната задача за изпълнение.">What gave you a little breathing room today? Notice it without turning it into another task to complete.</p></details>
+          </article>
+        </div>
+      </section>
+
+      <section class="chapter chapter-growth" aria-labelledby="growth-title">
+        <div class="chapter-visual">
+          <h3 id="growth-title" data-en="Grow, in good company." data-bg="Растем заедно.">Grow, in good company.</h3>
+          <figure><img src="assets/images/quiet-growth.webp" width="1400" height="1100" loading="lazy" decoding="async" alt="A quiet botanical arrangement of plants at different stages of growth." data-alt-en="A quiet botanical arrangement of plants at different stages of growth." data-alt-bg="Спокойна ботанична композиция с растения в различни етапи на растеж."></figure>
+        </div>
+        <div class="chapter-topics">
+          <article class="topic" id="family" tabindex="-1">
+            <h4 data-en="Family & children" data-bg="Семейство и деца">Family &amp; children</h4>
+            <p data-en="Everyday routines, conversations and boundaries. Reflections for adults caring for children, with room for different families and imperfect days." data-bg="Ежедневни навици, разговори и граници. Размисли за възрастните, които се грижат за деца, с разбиране към различните семейства и несъвършените дни.">Everyday routines, conversations and boundaries. Reflections for adults caring for children, with room for different families and imperfect days.</p>
+            <details class="reflection"><summary data-en="A question to explore" data-bg="Въпрос за размисъл">A question to explore</summary><p data-en="When was the last time you felt heard at home? What helped that conversation feel different?" data-bg="Кога за последно усети, че те чуват у дома? Какво направи този разговор различен?">When was the last time you felt heard at home? What helped that conversation feel different?</p></details>
+          </article>
+          <article class="topic" id="mental-health" tabindex="-1">
+            <h4 data-en="Mental health" data-bg="Психично здраве">Mental health</h4>
+            <p data-en="Clear language for feelings, support and asking for help. General education that respects the difference between a thoughtful conversation and professional care." data-bg="Разбираем език за чувствата, подкрепата и търсенето на помощ. Образователно съдържание, което различава внимателния разговор от професионалната грижа.">Clear language for feelings, support and asking for help. General education that respects the difference between a thoughtful conversation and professional care.</p>
+            <details class="reflection"><summary data-en="A question to explore" data-bg="Въпрос за размисъл">A question to explore</summary><p data-en="Who could you turn to when things feel difficult? You do not need to wait for a crisis to seek qualified support." data-bg="Към кого можеш да се обърнеш, когато ти е трудно? Не е нужно да чакаш криза, за да потърсиш квалифицирана подкрепа.">Who could you turn to when things feel difficult? You do not need to wait for a crisis to seek qualified support.</p></details>
+          </article>
+        </div>
+      </section>
+    </section>
+
+    <section class="about" id="manifesto" aria-labelledby="about-title">
+      <div class="shell about-inner">
+        <h2 id="about-title" data-en="Curiosity, with both feet on the ground." data-bg="Любопитство, здраво стъпило на земята.">Curiosity, with both feet on the ground.</h2>
+        <div><p data-en="Silviya Aeterna is a personal project bringing together symbolic traditions, everyday care and psychology-informed reflection. Different ways of looking at life, without pretending they all offer the same kind of knowledge." data-bg="Silviya Aeterna е личен проект, който събира символични традиции, ежедневна грижа и размисли, основани на психологията. Различни погледи към живота, без да твърдим, че всички дават един и същ вид познание.">Silviya Aeterna is a personal project bringing together symbolic traditions, everyday care and psychology-informed reflection. Different ways of looking at life, without pretending they all offer the same kind of knowledge.</p>
+        <p data-en="Made for curious adults and families. Shared in Bulgarian and English, with space for your own perspective." data-bg="За любопитни възрастни и семейства. На български и английски, с място за твоята собствена гледна точка.">Made for curious adults and families. Shared in Bulgarian and English, with space for your own perspective.</p></div>
       </div>
     </section>
 
-    <section class="section channel" id="channel" aria-labelledby="channel-title">
-      <div class="shell">
-        <div class="plate channel-plate" data-reveal>
-          <img src="assets/channel-plate.svg" width="1000" height="640" loading="lazy"
-               alt="Concentric broadcast waves from a coral signal point above a film strip."
-               data-alt-en="Concentric broadcast waves from a coral signal point above a film strip."
-               data-alt-bg="Концентрични вълни от коралов източник на сигнал над филмова лента.">
-        </div>
-
-        <div class="channel-copy">
-          <h2 id="channel-title" data-reveal data-en="The channel is being prepared" data-bg="Каналът се подготвя">The channel is being prepared</h2>
-          <p class="section-body" data-reveal
-             data-en="Silviya Aeterna will live on YouTube first. No channel link exists yet, and this page will not pretend otherwise. When the first video is ready, the link will appear here, in both languages."
-             data-bg="Silviya Aeterna първо ще живее в YouTube. Линк към канал все още не съществува и тази страница няма да преструва обратното. Когато първото видео е готово, линкът ще се появи тук, на два езика.">Silviya Aeterna will live on YouTube first. No channel link exists yet, and this page will not pretend otherwise. When the first video is ready, the link will appear here, in both languages.</p>
-          <div class="section-actions" data-reveal>
-            <span class="soon-state" data-en="Channel launching soon" data-bg="Каналът предстои">Channel launching soon</span>
-            <p class="note" data-en="No channel link, subscriber count or upload is shown here, because none of them exist yet."
-               data-bg="Тук няма линк към канал, брояч на абонати или качено видео, защото такива все още няма.">No channel link, subscriber count or upload is shown here, because none of them exist yet.</p>
-          </div>
-        </div>
+    <section class="next shell" id="next" aria-labelledby="next-title">
+      <h2 id="next-title" data-en="Good things take shape." data-bg="Хубавите неща се изграждат постепенно.">Good things take shape.</h2>
+      <div class="future-list">
+        <div id="channel"><h3>YouTube</h3><p data-en="A home for longer conversations. The channel is being prepared; the link will appear here when it launches." data-bg="Място за по-задълбочени разговори. Каналът се подготвя; връзката ще се появи тук след старта.">A home for longer conversations. The channel is being prepared; the link will appear here when it launches.</p><span class="soon-state" data-en="Coming soon" data-bg="Очаквай скоро">Coming soon</span></div>
+        <div id="shop"><h3>Oriflame</h3><p data-en="A future shopping option. Confirmed details will be shared here later. There is no active shop yet." data-bg="Бъдеща възможност за пазаруване. Потвърдените подробности ще бъдат споделени тук по-късно. Все още няма активен магазин.">A future shopping option. Confirmed details will be shared here later. There is no active shop yet.</p><span class="soon-state" data-en="Planned for later" data-bg="На по-късен етап">Planned for later</span></div>
       </div>
     </section>
 
-    <section class="section shop" id="shop" aria-labelledby="shop-title">
-      <div class="shell shop-grid">
-        <div class="plate shop-plate" data-reveal>
-          <img src="assets/shop-plate.svg" width="700" height="900" loading="lazy"
-               alt="Three unlabelled vessels on a shelf, covered in hatching and a dashed placeholder frame."
-               data-alt-en="Three unlabelled vessels on a shelf, covered in hatching and a dashed placeholder frame."
-               data-alt-bg="Три съда без етикети на рафт, покрити с шрафаж и пунктирна рамка за бъдещето.">
-        </div>
-        <div>
-          <h2 id="shop-title" data-reveal data-en="A shopping path, later" data-bg="Път за пазаруване, по-късно">A shopping path, later</h2>
-          <p class="section-body" data-reveal
-             data-en="A secondary Oriflame pathway is planned for the future. Product details, availability and links will be added only once they are confirmed. Until then this is a placeholder, not a store."
-             data-bg="В бъдеще се планира вторичен път през Oriflame. Детайли за продукти, наличност и линкове ще бъдат добавени само когато са потвърдени. Дотогава това е място за бъдещето, не магазин.">A secondary Oriflame pathway is planned for the future. Product details, availability and links will be added only once they are confirmed. Until then this is a placeholder, not a store.</p>
-          <div class="section-actions" data-reveal>
-            <span class="soon-state" data-en="Details coming later" data-bg="Подробностите предстоят">Details coming later</span>
-            <p class="note" data-en="No prices, product claims or shop links appear on this page."
-               data-bg="Тази страница не показва цени, твърдения за продукти или линкове към магазин.">No prices, product claims or shop links appear on this page.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section safety" id="safety" aria-labelledby="safety-title">
-      <div class="shell">
-        <div class="safety-panel" data-reveal>
-          <div class="safety-band">
-            <img src="assets/safety-plate.svg" width="1200" height="300" loading="lazy"
-                 alt="A centred circle between two brackets, crossed by a coral centre line."
-                 data-alt-en="A centred circle between two brackets, crossed by a coral centre line."
-                 data-alt-bg="Центриран кръг между две скоби, пресечен от коралова средна линия.">
-          </div>
-          <div class="safety-body">
-            <h2 id="safety-title" data-en="What this is, and what it is not" data-bg="Какво е това и какво не е">What this is, and what it is not</h2>
-            <p class="section-intro"
-               data-en="A short boundary note, kept in the same place as the content it describes."
-               data-bg="Кратка бележка за границите, на същото място като съдържанието, за което се отнася.">A short boundary note, kept in the same place as the content it describes.</p>
-            <dl class="safety-list">
-              <div>
-                <dt data-en="Educational" data-bg="Образователно">Educational</dt>
-                <dd data-en="Everything here is made for reflection and general education. It is not medical advice, diagnosis or treatment, and it does not replace a professional."
-                    data-bg="Всичко тук е направено за размисъл и обща просвета. Не е медицински съвет, диагноза или лечение и не замества специалист.">Everything here is made for reflection and general education. It is not medical advice, diagnosis or treatment, and it does not replace a professional.</dd>
-              </div>
-              <div>
-                <dt data-en="When it gets personal" data-bg="Когато става лично">When it gets personal</dt>
-                <dd data-en="If something here raises a real concern about your health, or the health of someone you care about, speak with a qualified professional who can look at your situation."
-                    data-bg="Ако нещо тук породи реално притеснение за твоето здраве или за здравето на човек, на когото държиш, говори с квалифициран специалист, който може да види твоя случай.">If something here raises a real concern about your health, or the health of someone you care about, speak with a qualified professional who can look at your situation.</dd>
-              </div>
-              <div>
-                <dt data-en="Urgent" data-bg="Спешно">Urgent</dt>
-                <dd data-en="If you or someone else is in immediate danger, contact your local emergency number. This page cannot help with that."
-                    data-bg="Ако ти или някой друг сте в непосредствена опасност, обади се на номера за спешна помощ в твоята страна. Тази страница не може да помогне с това.">If you or someone else is in immediate danger, contact your local emergency number. This page cannot help with that.</dd>
-              </div>
-            </dl>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="closing" aria-labelledby="closing-title">
-      <div class="shell">
-        <div class="closing-plate">
-          <img src="assets/closing-plate.svg" width="1000" height="800" loading="lazy"
-               alt="A large crescent with a coral sun above a rising dawn line."
-               data-alt-en="A large crescent with a coral sun above a rising dawn line."
-               data-alt-bg="Голям полумесец с коралово слънце над линия на изгрева.">
-        </div>
-        <div class="closing-copy">
-          <h2 id="closing-title" data-reveal data-en="One almanac, two languages" data-bg="Един алманах, два езика">One almanac, two languages</h2>
-          <p class="section-body" data-reveal
-             data-en="The first video is still being made. Until then, the atlas above is the honest version of what is coming."
-             data-bg="Първото видео все още се прави. Дотогава атласът по-горе е честната версия на това, което предстои.">The first video is still being made. Until then, the atlas above is the honest version of what is coming.</p>
-          <div class="section-actions" data-reveal>
-            <a class="btn btn-primary" href="#manifesto" data-en="Explore the world" data-bg="Разгледай света">Explore the world</a>
-            <span class="soon-state" data-en="Channel launching soon" data-bg="Каналът предстои">Channel launching soon</span>
-          </div>
-        </div>
-      </div>
-    </section>
+    <aside class="safety shell" id="safety" aria-labelledby="safety-title">
+      <h2 id="safety-title" data-en="A note on care." data-bg="За грижата и границите.">A note on care.</h2>
+      <div class="safety-copy"><p data-en="This is educational material for reflection, not medical advice, diagnosis, treatment or therapy. Astrology and numerology do not provide scientifically established predictions." data-bg="Това е образователно съдържание за размисъл, а не медицински съвет, диагноза, лечение или терапия. Астрологията и нумерологията не дават научно доказани предсказания.">This is educational material for reflection, not medical advice, diagnosis, treatment or therapy. Astrology and numerology do not provide scientifically established predictions.</p><p data-en="For concerns about your health or a child’s wellbeing, speak with a qualified professional. If you or someone else is in immediate danger, contact your local emergency services." data-bg="При притеснения за здравето ти или благополучието на дете се обърни към квалифициран специалист. Ако ти или друг човек сте в непосредствена опасност, потърси местните служби за спешна помощ.">For concerns about your health or a child’s wellbeing, speak with a qualified professional. If you or someone else is in immediate danger, contact your local emergency services.</p></div>
+    </aside>
   </main>
-
-  <footer class="site-footer">
-    <div class="shell">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <a class="brand" href="#top">
-            <img src="assets/brand-mark.svg" alt="" width="30" height="30">
-            <b>Silviya Aeterna</b>
-          </a>
-          <p data-en="Bulgarian and English. No social accounts or shop links are live yet."
-             data-bg="Български и английски. Все още няма активни профили в социални мрежи или линкове към магазин.">Bulgarian and English. No social accounts or shop links are live yet.</p>
-        </div>
-
-        <nav class="footer-nav" aria-label="Footer" data-aria-en="Footer" data-aria-bg="Долна навигация">
-          <ul>
-            <li><a href="#manifesto" data-en="Manifesto" data-bg="Манифест">Manifesto</a></li>
-            <li><a href="#atlas" data-en="Topics" data-bg="Теми">Topics</a></li>
-            <li><a href="#channel" data-en="Channel" data-bg="Канал">Channel</a></li>
-            <li><a href="#shop" data-en="Shop" data-bg="Магазин">Shop</a></li>
-            <li><a href="#safety" data-en="Safety" data-bg="Безопасност">Safety</a></li>
-          </ul>
-        </nav>
-      </div>
-
-      <div class="footer-meta">
-        <p data-en="Educational content only. Not medical advice, diagnosis or treatment."
-           data-bg="Само образователно съдържание. Не е медицински съвет, диагноза или лечение.">Educational content only. Not medical advice, diagnosis or treatment.</p>
-        <p>&copy; 2026 Silviya Aeterna</p>
-      </div>
-    </div>
+  <footer class="site-footer shell">
+    <div class="footer-top"><a class="footer-wordmark" href="#top">Silviya Aeterna</a><a class="back-top" href="#top"><span data-en="Back to the light" data-bg="Обратно нагоре">Back to the light</span><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 20V4m-6 6 6-6 6 6"/></svg></a></div>
+    <div class="footer-bottom"><p data-en="A little more attention. A little more room to grow." data-bg="Малко повече внимание. Малко повече място за растеж.">A little more attention. A little more room to grow.</p><a href="#safety" data-en="Educational content only" data-bg="Само образователно съдържание">Educational content only</a><p>© 2026 Silviya Aeterna</p></div>
   </footer>
 </body>
 </html>

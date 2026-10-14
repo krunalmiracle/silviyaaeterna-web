@@ -52,7 +52,7 @@ test("every translatable node carries both languages", () => {
 
 test("every image has alt text", () => {
   const imgs = [...html.matchAll(/<img\b[^>]*>/g)];
-  assert.ok(imgs.length >= 10, `expected the illustration set, found ${imgs.length} images`);
+  assert.equal(imgs.length, 4, "four original editorial still lifes are required");
   let decorative = 0;
   for (const [tag] of imgs) {
     assert.match(tag, /\salt="/, `image missing alt: ${tag}`);
@@ -66,14 +66,14 @@ test("every image has alt text", () => {
     assert.match(tag, /\sdata-alt-en="/, `image missing English alt: ${tag}`);
     assert.match(tag, /\sdata-alt-bg="/, `image missing Bulgarian alt: ${tag}`);
   }
-  assert.equal(decorative, 2, "exactly the two brand marks are decorative");
+  assert.equal(decorative, 0, "every still life has a meaningful bilingual description");
 });
 
 test("every local reference resolves to a file on disk", async () => {
   const refs = [...html.matchAll(/(?:src|href)="([^"#][^"]*)"/g)]
     .map((match) => match[1])
     .filter((ref) => !ref.startsWith("http"));
-  assert.ok(refs.length >= 10);
+  assert.ok(refs.length >= 8);
   for (const ref of new Set(refs)) {
     await access(path.join(ROOT, ref));
   }
@@ -92,7 +92,7 @@ test("navigation anchors all point at real sections", () => {
 });
 
 test("heading structure is a single h1 with ordered levels", () => {
-  const levels = [...html.matchAll(/<h([1-3])\b/g)].map((match) => Number(match[1]));
+  const levels = [...html.matchAll(/<h([1-6])\b/g)].map((match) => Number(match[1]));
   assert.equal(levels.filter((level) => level === 1).length, 1);
   let previous = 1;
   for (const level of levels) {
@@ -103,7 +103,7 @@ test("heading structure is a single h1 with ordered levels", () => {
 
 test("coming soon states are honest, non clickable elements", () => {
   const chips = [...html.matchAll(/<(\w+)([^>]*class="[^"]*soon-state[^"]*"[^>]*)>/g)];
-  assert.ok(chips.length >= 3, `expected the honest states, found ${chips.length}`);
+  assert.equal(chips.length, 2, "one honest state each for YouTube and Oriflame");
   for (const [, tag, attrs] of chips) {
     assert.equal(tag, "span", "coming soon state must not be a control");
     assert.ok(!/href=/.test(attrs), "coming soon state must not link anywhere");
@@ -122,8 +122,8 @@ test("language toggle is exposed accessibly", () => {
 test("motion respects reduced motion and survives failed JavaScript", () => {
   assert.match(css, /@media \(prefers-reduced-motion: no-preference\)/);
   assert.match(css, /@media \(prefers-reduced-motion: reduce\)/);
-  assert.ok(css.includes(".js [data-reveal]"), "reveals must be gated behind the js class");
-  assert.match(js, /IntersectionObserver/);
+  assert.ok(!css.includes("opacity: 0"), "content must never depend on a reveal");
+  assert.ok(!css.includes("visibility: hidden"), "content must remain readable without JS");
   assert.ok(!js.includes('addEventListener("scroll"'), "no window scroll listeners");
   assert.ok(!js.includes("addEventListener('scroll'"), "no window scroll listeners");
 });

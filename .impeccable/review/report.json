@@ -1,214 +1,153 @@
 {
-  "url": "http://127.0.0.1:43118",
-  "viewports": [
-    {
-      "name": "desktop",
-      "width": 1440,
-      "height": 900,
-      "title": "Silviya Aeterna | Astrology, numerology, skincare and wellbeing",
-      "h1": "Silviya Aeterna",
-      "lang": "en",
-      "overflowX_px": 0,
-      "images_total": 14,
-      "images_not_loaded_at_top": [
-        {
-          "src": "http://127.0.0.1:43118/assets/brand-mark.svg",
-          "ok": true
-        },
-        {
-          "src": "http://127.0.0.1:43118/assets/hero-plate.svg",
-          "ok": true
-        },
-        {
-          "src": "http://127.0.0.1:43118/assets/manifesto-plate.svg",
-          "ok": true
-        },
-        {
-          "src": "http://127.0.0.1:43118/assets/topic-astrology.svg",
-          "ok": true
-        },
-        {
-          "src": "http://127.0.0.1:43118/assets/topic-numerology.svg",
-          "ok": true
-        },
-        {
-          "src": "http://127.0.0.1:43118/assets/topic-skincare.svg",
-          "ok": false
-        },
-        {
-          "src": "http://127.0.0.1:43118/assets/topic-wellbeing.svg",
-          "ok": false
-        },
-        {
-          "src": "http://127.0.0.1:43118/assets/topic-family.svg",
-          "ok": false
-        },
-        {
-          "src": "http://127.0.0.1:43118/assets/topic-mental-health.svg",
-          "ok": false
-        },
-        {
-          "src": "http://127.0.0.1:43118/assets/channel-plate.svg",
-          "ok": false
-        },
-        {
-          "src": "http://127.0.0.1:43118/assets/shop-plate.svg",
-          "ok": false
-        },
-        {
-          "src": "http://127.0.0.1:43118/assets/safety-plate.svg",
-          "ok": false
-        },
-        {
-          "src": "http://127.0.0.1:43118/assets/closing-plate.svg",
-          "ok": false
-        },
-        {
-          "src": "http://127.0.0.1:43118/assets/brand-mark.svg",
-          "ok": true
-        }
-      ],
-      "images_failed_after_scroll": [],
-      "hidden_reveals_in_view": 0,
-      "hidden_after_scroll": 0,
-      "hidden_under_reduced_motion": 0,
-      "overflowX_reduced": 0,
-      "min_visible_target_px": 44,
-      "focus_after_tab": {
-        "tag": "A",
-        "text": "Skip to content",
-        "outline": "solid 2px"
+  "status": "INCOMPLETE: pending independent original image input; do not deploy",
+  "recordedAt": "2026-10-14T01:43:00.038Z",
+  "worktree": "/opt/data/home/projects/silviyaaeterna-web/.worktrees/t_f3c65564",
+  "branch": "silviya-aeterna-redesign/t_f3c65564-replace-silviya-aeterna-with-an-original",
+  "unitAndServerTests": {
+    "command": "npm test",
+    "tests": 32,
+    "pass": 27,
+    "fail": 5,
+    "artifact": ".impeccable/review/npm-test.tap",
+    "expectedFailureCause": "All five failures are absent original image/social assets. Security, content and interaction tests pass."
+  },
+  "browser": {
+    "command": "uv run --with patchright python tools/shots.py --layout-only",
+    "mode": "layout-only, original images pending",
+    "checksPassed": 274,
+    "checksTotal": 274,
+    "remainingIssues": [
+      "consoleErrors",
+      "httpErrors"
+    ],
+    "artifact": ".impeccable/review/layout-only.json",
+    "screenshotRounds": 0,
+    "screenshots": [],
+    "missingImageErrorsExpected": true,
+    "viewportSummary": [
+      {
+        "width": 1440,
+        "height": 900,
+        "language": "en",
+        "overflowX": 0,
+        "clipped": [],
+        "smallTargets": []
       },
-      "coming_soon_states": [
-        "Channel launching soon",
-        "Channel launching soon",
-        "Details coming later",
-        "Channel launching soon"
-      ],
-      "coming_soon_wrapped_in_control": 0,
-      "primary_ctas": [
-        {
-          "text": "Explore the world",
-          "href": "#manifesto"
-        },
-        {
-          "text": "Explore the world",
-          "href": "#manifesto"
-        }
-      ],
-      "bg_toggle": {
-        "lang": "bg",
-        "sub": "Астрология, нумерология, грижа за кожата и благополучие, основано на психологията, на български и английски.",
-        "pressedEn": "false",
-        "pressedBg": "true",
-        "nav": "Манифест"
-      }
-    },
-    {
-      "name": "mobile",
-      "width": 390,
-      "height": 844,
-      "title": "Silviya Aeterna | Astrology, numerology, skincare and wellbeing",
-      "h1": "Silviya Aeterna",
-      "lang": "en",
-      "overflowX_px": 0,
-      "images_total": 14,
-      "images_not_loaded_at_top": [
-        {
-          "src": "http://127.0.0.1:43118/assets/brand-mark.svg",
-          "ok": true
-        },
-        {
-          "src": "http://127.0.0.1:43118/assets/hero-plate.svg",
-          "ok": true
-        },
-        {
-          "src": "http://127.0.0.1:43118/assets/manifesto-plate.svg",
-          "ok": true
-        },
-        {
-          "src": "http://127.0.0.1:43118/assets/topic-astrology.svg",
-          "ok": true
-        },
-        {
-          "src": "http://127.0.0.1:43118/assets/topic-numerology.svg",
-          "ok": true
-        },
-        {
-          "src": "http://127.0.0.1:43118/assets/topic-skincare.svg",
-          "ok": true
-        },
-        {
-          "src": "http://127.0.0.1:43118/assets/topic-wellbeing.svg",
-          "ok": true
-        },
-        {
-          "src": "http://127.0.0.1:43118/assets/topic-family.svg",
-          "ok": true
-        },
-        {
-          "src": "http://127.0.0.1:43118/assets/topic-mental-health.svg",
-          "ok": true
-        },
-        {
-          "src": "http://127.0.0.1:43118/assets/channel-plate.svg",
-          "ok": true
-        },
-        {
-          "src": "http://127.0.0.1:43118/assets/shop-plate.svg",
-          "ok": true
-        },
-        {
-          "src": "http://127.0.0.1:43118/assets/safety-plate.svg",
-          "ok": true
-        },
-        {
-          "src": "http://127.0.0.1:43118/assets/closing-plate.svg",
-          "ok": true
-        },
-        {
-          "src": "http://127.0.0.1:43118/assets/brand-mark.svg",
-          "ok": true
-        }
-      ],
-      "images_failed_after_scroll": [],
-      "hidden_reveals_in_view": 0,
-      "hidden_after_scroll": 0,
-      "hidden_under_reduced_motion": 0,
-      "overflowX_reduced": 0,
-      "min_visible_target_px": 44,
-      "focus_after_tab": {
-        "tag": "A",
-        "text": "Skip to content",
-        "outline": "solid 2px"
+      {
+        "width": 390,
+        "height": 844,
+        "language": "en",
+        "overflowX": 0,
+        "clipped": [],
+        "smallTargets": []
       },
-      "coming_soon_states": [
-        "Channel launching soon",
-        "Channel launching soon",
-        "Details coming later",
-        "Channel launching soon"
-      ],
-      "coming_soon_wrapped_in_control": 0,
-      "primary_ctas": [
-        {
-          "text": "Explore the world",
-          "href": "#manifesto"
-        },
-        {
-          "text": "Explore the world",
-          "href": "#manifesto"
-        }
-      ],
-      "bg_toggle": {
-        "lang": "bg",
-        "sub": "Астрология, нумерология, грижа за кожата и благополучие, основано на психологията, на български и английски.",
-        "pressedEn": "false",
-        "pressedBg": "true",
-        "nav": "Манифест"
+      {
+        "width": 320,
+        "height": 844,
+        "language": "en",
+        "overflowX": 0,
+        "clipped": [],
+        "smallTargets": []
+      },
+      {
+        "width": 768,
+        "height": 1024,
+        "language": "en",
+        "overflowX": 0,
+        "clipped": [],
+        "smallTargets": []
+      },
+      {
+        "width": 1024,
+        "height": 900,
+        "language": "en",
+        "overflowX": 0,
+        "clipped": [],
+        "smallTargets": []
+      },
+      {
+        "width": 1440,
+        "height": 900,
+        "language": "bg",
+        "overflowX": 0,
+        "clipped": [],
+        "smallTargets": []
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "language": "bg",
+        "overflowX": 0,
+        "clipped": [],
+        "smallTargets": []
+      },
+      {
+        "width": 320,
+        "height": 844,
+        "language": "bg",
+        "overflowX": 0,
+        "clipped": [],
+        "smallTargets": []
+      },
+      {
+        "width": 768,
+        "height": 1024,
+        "language": "bg",
+        "overflowX": 0,
+        "clipped": [],
+        "smallTargets": []
+      },
+      {
+        "width": 1024,
+        "height": 900,
+        "language": "bg",
+        "overflowX": 0,
+        "clipped": [],
+        "smallTargets": []
       }
+    ],
+    "contrast": {
+      "#183f35 on #e6ede3": 9.76,
+      "#466255 on #e6ede3": 5.6,
+      "#466255 on #f2f6ef": 6.12,
+      "#f2f6ef on #183f35": 10.66,
+      "#f2f6ef on #285344": 7.97
     }
+  },
+  "detector": {
+    "command": "/opt/data/skills/impeccable/scripts/impeccable detect --json index.html assets/styles.css assets/site.js",
+    "runs": 1,
+    "primary": 6,
+    "advisory": 24,
+    "artifact": ".impeccable/review/detect.json",
+    "residuals": [
+      "Cramped-padding: static scanner does not resolve logical padding-block on chapter/about wrappers. Chapters use 64px/48px top padding; About uses 64-112px and shell gutters. Final rendered review remains pending.",
+      "Overused-font: Geist is supporting text, expressly permitted by the brief; distinctive Onest owns all headings and the wordmark.",
+      "Font-size advisories: small navigation/status/caption and responsive variant sizes are intentional; primary type roles are documented, not suppressed."
+    ]
+  },
+  "originalImagesIntegrated": [],
+  "pendingInputs": [
+    "/opt/data/home/silviya-glasshouse-assets/hero-glasshouse.webp",
+    "/opt/data/home/silviya-glasshouse-assets/sky-study.webp",
+    "/opt/data/home/silviya-glasshouse-assets/skin-ritual.webp",
+    "/opt/data/home/silviya-glasshouse-assets/quiet-growth.webp",
+    "/opt/data/home/silviya-glasshouse-assets/ASSET-MANIFEST.json",
+    "/opt/data/home/silviya-glasshouse-assets/SUMMARY.md"
   ],
-  "console_errors": [],
-  "failed_requests": [],
-  "issues": []
+  "remainingAcceptance": [
+    "Inspect all four delivered images visually; verify dimensions/alt and integrate them using tools/prepare_images.py.",
+    "Update all HTML intrinsic dimensions/srcset widths from actual image output if they differ; choose crops from real artwork.",
+    "Generate and inspect matching social PNG; retain truthful producer provenance.",
+    "Run npm test to 32/32.",
+    "Run full screenshot batch, inspect every EN/BG capture, fix material issues together and confirm once.",
+    "Update DESIGN.md/surface brief pending notes and complete exact-commit independent judge review through parent."
+  ],
+  "boundary": {
+    "serverAndDockerUnchanged": true,
+    "pushed": false,
+    "deployed": false,
+    "nativeKanbanModified": false,
+    "independentReview": "Parent-owned, not performed"
+  }
 }

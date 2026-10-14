@@ -2,27 +2,27 @@
 version: 1
 slug: "index-html"
 primary_target: "index.html"
-related_targets: []
+related_targets: ["assets/styles.css", "assets/site.js"]
 ---
 
-# Surface brief: index.html (landing, Persuade)
+# Silviya Aeterna / complete replacement
 
-Scope: the whole public site, one page, bilingual EN/BG. Visitor mode: Persuade. A first-time visitor must know what Silviya Aeterna is, which six topics it covers, what is not live yet, and what to do next, in either language.
-
-Audience: Bulgarian and diaspora adults curious about astrology, numerology, skincare and psychology-informed wellbeing; parents included. Job: evaluate the project in seconds. Action: "Explore the world" into the content; the channel action is an honest disabled state. Proof: the topic atlas with six original illustrations and the content-safety section. Constraints: no fake links or metrics, no em dashes in copy, no external requests, 390px and 1440px clean, keyboard complete.
+Mode: Persuade. Bulgarian and English adults reading on phones by daylight. Understand this personal content project, explore six themes and distinguish reflection from professional care. Primary action: Explore the themes, #atlas. No channel/store links exist. No invented biography or claims. Parent owns independent review and release.
 
 ## Direction contract
 
-THESIS: A personal brand launch page that is an almanac spread, not a marketing template: one nocturnal cobalt ground across the whole page, editorial asymmetry, and honesty rendered as design (disabled channel and shop states sit in the layout as first-class elements). It refuses the centered hero over a mesh gradient with a row of three equal cards.
+THESIS: A botanical editorial place to explore six ways of paying attention to yourself, not an astrology dashboard or brochure of empty future features.
 
-OWN-WORLD: Ink `#060A17` ground with cobalt fields `#0E1B45`/`#12225C`; moonstone text `#EDF1F8`/`#C3CBDE`; mineral mint `#9FE7CE` for line work and illustration; solar coral `#FF6B4A` as the single accent reserved for action and emphasis. One radius value (14px) on every framed surface and control. Self-hosted Geist variable sans, two-weight hierarchy, no serif, no mono costume.
+OWN-WORLD: Pale jade #E6EDE3, cool leaf #F2F6EF, deep spruce #183F35, restrained amber #C5913D. Self-hosted Onest with Cyrillic for distinctive large headings, Geist supporting text. Open chapters, small-radius broad original still-life raster frames, no repeated cards or orbit diagrams.
 
-STORY: visitor lands, reads the name and one line of substance, scrolls a manifesto, walks a six-plate topic atlas, then meets the two honest "not yet" states and the safety boundary, and ends where they started with the same single action.
+STORY: Purpose and brand first; Explore the themes leads to six-topic wayfinding across three editorial chapters. About introduces the project without biography. One compact YouTube/Oriflame coming-soon section and an educational/professional-help boundary finish the page.
 
-FIRST VIEWPORT: at 1440, a left column (56%) carries the two-line wordmark H1, a 14-word subline, then the coral "Explore the world" button and the outlined disabled "Channel launching soon" state; a right column (44%) holds the hero almanac plate, a cobalt celestial chart with mint arcs and a coral sun, deliberately dropped 40px lower than the text baseline for asymmetry. Header is a 64px sticky bar: mark and wordmark left, five nav links plus EN/BG toggle right. At 390 it collapses to one column: header, H1, subline, buttons, plate, all above or at the fold.
+FIRST VIEWPORT: Masthead, navigation and EN/BG above a large left-aligned two-line heading; concise supporting copy/action alongside the lower type. A broad panoramic botanical/celestial original image spans the page below, hero substantially within 900px at 1440. At 390px: brand, language, heading, description, action, then meaningful mobile-cropped art. No text burned into imagery.
 
-FORM: brief-pinned direction (the request locked the visual world and forbade the interactive concept round), so no seed roll was run; composition follows the pinned asymmetry, position on the requested list.
+FORM: Daylight glasshouse, candidate 5, seed 2281061a assigned by parent; choice delegated and acknowledged. Code-led. Named interaction: six theme anchors select and open a useful reflection prompt beside each theme, while all six descriptions remain visible without JavaScript. Each chapter has a related original still life. No content hidden by entrance motion.
 
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance.
 
-Unresolved: Oriflame details and all real social/channel URLs are pending from the brand owner; the sections stay disabled until supplied. Nothing else is open.
+Raised disciplines from declined challengers: concrete specificity (gyaru), paced chapters (dungeon cassette), type confidence (alphabet storm), honest state clarity (drum-machine), responsive consistency (CRT). Competitive cloud direction lost product clarity; no motif borrowed.
+
+Unresolved inputs: originals are produced independently in /opt/data/home/silviya-glasshouse-assets; integrate verified output only. Final independent judge/release belongs to parent, not this worker.

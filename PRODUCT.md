@@ -16,7 +16,7 @@ Silviya Aeterna is a bilingual (Bulgarian and English) personal brand and conten
 
 ## Positioning
 
-An unhurried, educational "living almanac" rather than a hype channel: reflection material with explicit boundaries (educational, never diagnosis, treatment or professional care), fully bilingual at launch, and honest about everything that does not exist yet. A neighbouring project could copy the topics, but not the combination of two-language parity, plain boundary-setting, and refusing to fake links, metrics or social proof.
+An unhurried personal project for curiosity and everyday care: reflection material with explicit boundaries (educational, never diagnosis, treatment or professional care), fully bilingual at launch, and honest about everything that does not exist yet. Symbolic traditions are clearly distinguished from scientific knowledge. No fake links, metrics or social proof.
 
 ## Operating Context
 
@@ -26,7 +26,7 @@ An unhurried, educational "living almanac" rather than a hype channel: reflectio
 
 ## Capabilities and Constraints
 
-- Static, single-page site: HTML, CSS, one small JavaScript file, local SVG assets only.
+- Static, single-page site: HTML, CSS, one small JavaScript file, local original WebP still lifes, a raster social preview and a small SVG favicon. No runtime third-party requests.
 - Accessible language toggle (keyboard operable, `aria-pressed`, `lang` attribute updated, preference remembered locally).
 - Honest states only: no fake links, follower counts, videos, testimonials, qualifications, pricing, income claims, product claims, newsletter success or medical outcomes.
 - No YouTube, social or Oriflame destinations exist yet; their sections are explicit coming-soon states with no href.
@@ -40,13 +40,13 @@ An unhurried, educational "living almanac" rather than a hype channel: reflectio
 - Brand and future YouTube channel name: **Silviya Aeterna** (fact; preserve exactly).
 - Broad subject areas are fixed: astrology, numerology, skincare, psychology-informed wellbeing, family and children, adult self-improvement, mental health.
 - Bilingual EN/BG parity at launch.
-- The brief pins the visual direction: a "Living Almanac" world, nocturnal cobalt/ink ground with mineral mint, moonstone and a restrained solar-coral accent; contemporary Geist-like sans; asymmetric hero; no cream-luxury serif, no purple AI glow, no black/pink carryover; one theme, one radius system, one accent logic; no em dashes in visible copy. (Visual detail lives in DESIGN.md; recorded here only as a binding commitment.)
-- User explicitly requested generated original assets: hand-authored local SVG editorial illustrations instead of stock or hotlinks.
+- The user authorized complete replacement and delegated design choice. The settled direction is Daylight Glasshouse: cool pale jade/leaf grounds, deep spruce type, restrained amber inside sunlit botanical/celestial still lifes. Self-hosted Cyrillic-capable Onest display with Geist supporting text. Broad raster art, open editorial chapters, no repeated cards, no navy/coral orbit-chart identity, no cream-luxury serif or purple glow. No em dashes in visible copy.
+- User explicitly requested generated original assets. The approved production method is original locally authored 3D rendering, not stock, hotlinks or a claim of AI photography. Provenance and generation scripts stay dev-only under tools/.
 
 ## Evidence on Hand
 
-- Existing site in the repo (black/pink/purple serif look, Google Fonts, AI-editor `server.ts` with hard-coded credentials) is the anti-reference for this redesign, not an asset.
-- Real assets that exist: the brand name, the topic list, and the locally authored SVG set in `assets/` (see `assets/PROVENANCE.md`).
+- Previous navy/coral SVG almanac design is the anti-reference for this replacement. The already-hardened static server and port 3000 deployment contract are preserved unchanged.
+- Brand name and six topics are settled. Original raster output is supplied by the independent glasshouse asset producer; only verified files are integrated, with the exact manifest retained under tools/.
 - Absences future work must not fabricate: no YouTube channel URL, no social accounts, no Oriflame links, product details or pricing, no audience metrics, no testimonials, no credentials, no published videos.
 
 ## Product Principles
@@ -60,6 +60,6 @@ An unhurried, educational "living almanac" rather than a hype channel: reflectio
 ## Accessibility & Inclusion
 
 - Keyboard-complete navigation with visible focus; touch targets at least 44px.
-- WCAG 2.1 AA contrast on the nocturnal palette; semantic landmarks and heading order; descriptive bilingual alt text.
+- WCAG 2.1 AA contrast on the daylight jade palette; semantic landmarks and heading order; descriptive bilingual alt text.
 - `prefers-reduced-motion` disables all entrance motion; content stays visible without JavaScript.
-- Language switch announced through `lang` and `aria-pressed`; no horizontal scrolling at 390px or 1440px.
+- Language switch exposed through `lang` and `aria-pressed`; no horizontal scrolling at 320, 390, 768, 1024 or 1440px. Theme anchors enhance native disclosures without hiding any of the six topic descriptions.
