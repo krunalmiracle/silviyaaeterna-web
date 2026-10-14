@@ -120,6 +120,7 @@ h1 span { display: block; }
   .nav-more > summary { width: 44px; height: 44px; display: grid; place-items: center; cursor: pointer; list-style: none; border: 1px solid var(--line); border-radius: var(--radius); }
   .menu-mark { width: 18px; height: 8px; border-top: 1.5px solid; border-bottom: 1.5px solid; }
   .nav-more[open] .menu-mark { height: 0; border-bottom: 0; transform: rotate(-45deg); }
+  .nav-more[open] .menu-mark::after { content: ''; display: block; width: 18px; border-top: 1.5px solid; transform: translateY(-1.5px) rotate(90deg); }
   .mobile-nav { position: absolute; top: 100%; left: 0; right: 0; background: var(--leaf); border-bottom: 1px solid var(--line); padding: 20px var(--gutter) 28px; box-shadow: 0 16px 24px #183f3514; }
   .mobile-nav a { display: flex; align-items: center; min-height: 52px; font-family: Onest, sans-serif; font-size: 22px; text-decoration: none; }
   .hero-intro { grid-template-columns: 1fr 1fr; gap: 24px; }
@@ -128,8 +129,8 @@ h1 span { display: block; }
   .section-heading { gap: 32px; }
   .chapter { gap: 32px; }
   .chapter-topics { padding-top: 48px; }
-  .chapter-visual img { aspect-ratio: .78; }
-  .chapter-care .chapter-visual img, .chapter-growth .chapter-visual img { aspect-ratio: .85; }
+  .chapter-visual img { aspect-ratio: 1.12; }
+  .chapter-care .chapter-visual img, .chapter-growth .chapter-visual img { aspect-ratio: 1.12; }
   .future-list > div { grid-template-columns: .6fr 1.5fr; gap: 12px 24px; }
   .soon-state { grid-column: 2; justify-self: start; }
   .safety { grid-template-columns: 1fr; gap: 24px; }
@@ -146,7 +147,7 @@ h1 span { display: block; }
   .hero-note { margin-top: 24px; max-width: 100%; }
   .hero-sub { font-size: 16px; line-height: 1.6; }
   .primary-action { margin-top: 20px; font-size: 15px; }
-  .hero-art img { height: 290px; object-position: 54% 50%; }
+  .hero-art img { height: 290px; object-position: 55% 50%; }
   .hero-art figcaption { display: block; font-size: .75rem; }
   .hero-art figcaption span { display: block; }
   .hero-art figcaption span + span { margin-top: 4px; }

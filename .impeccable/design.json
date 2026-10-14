@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-14T01:40:50Z",
+  "generatedAt": "2026-10-14T01:55:42Z",
   "title": "Design System: Silviya Aeterna",
   "extensions": {
     "colorMeta": {
@@ -17,7 +17,7 @@
       "headline": { "displayName": "Section heading", "purpose": "Balanced editorial section headlines." },
       "chapter": { "displayName": "Chapter heading", "purpose": "Introduces a paired-theme still life." },
       "title": { "displayName": "Topic title", "purpose": "Six individual theme headings." },
-      "body": { "displayName": "Reading text", "purpose": "Geist, up to 68ch, full Cyrillic support." }
+      "body": { "displayName": "Reading text", "purpose": "Geist, up to 68ch; all 49 used Cyrillic codepoints verified in both shipping font files." }
     },
     "shadows": [{ "name": "mobile-menu", "value": "0 16px 24px #183f3514", "purpose": "Separate the open native navigation from content beneath." }],
     "motion": [{ "name": "daylight", "value": "filter brightness(.92) to brightness(1), .8s cubic-bezier(.16,1,.3,1)", "purpose": "A single already-visible hero image brightening; disabled under reduced motion." }],

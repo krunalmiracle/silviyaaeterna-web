@@ -1,7 +1,7 @@
 {
-  "capturedAt": "2026-10-14T01:40:28.224100+00:00",
+  "capturedAt": "2026-10-14T01:51:56.662611+00:00",
   "url": "http://127.0.0.1:43118",
-  "mode": "layout-only, original images pending",
+  "mode": "full acceptance",
   "viewports": [
     {
       "lang": "en",
@@ -11,27 +11,27 @@
       "images": [
         {
           "src": "/assets/images/hero-glasshouse.webp",
-          "decoded": false,
-          "width": 0,
-          "height": 0
+          "decoded": true,
+          "width": 1353,
+          "height": 902
         },
         {
           "src": "/assets/images/sky-study.webp",
-          "decoded": false,
-          "width": 0,
-          "height": 0
+          "decoded": true,
+          "width": 1400,
+          "height": 1050
         },
         {
           "src": "/assets/images/skin-ritual.webp",
-          "decoded": false,
-          "width": 0,
-          "height": 0
+          "decoded": true,
+          "width": 1400,
+          "height": 1050
         },
         {
           "src": "/assets/images/quiet-growth.webp",
-          "decoded": false,
-          "width": 0,
-          "height": 0
+          "decoded": true,
+          "width": 1400,
+          "height": 1050
         }
       ],
       "allTopics": 6,
@@ -54,27 +54,27 @@
       "images": [
         {
           "src": "/assets/images/hero-glasshouse-mobile.webp",
-          "decoded": false,
-          "width": 0,
-          "height": 0
+          "decoded": true,
+          "width": 390,
+          "height": 260
         },
         {
           "src": "/assets/images/sky-study.webp",
-          "decoded": false,
-          "width": 0,
-          "height": 0
+          "decoded": true,
+          "width": 1400,
+          "height": 1050
         },
         {
           "src": "/assets/images/skin-ritual.webp",
-          "decoded": false,
-          "width": 0,
-          "height": 0
+          "decoded": true,
+          "width": 1400,
+          "height": 1050
         },
         {
           "src": "/assets/images/quiet-growth.webp",
-          "decoded": false,
-          "width": 0,
-          "height": 0
+          "decoded": true,
+          "width": 1400,
+          "height": 1050
         }
       ],
       "allTopics": 6,
@@ -97,27 +97,27 @@
       "images": [
         {
           "src": "/assets/images/hero-glasshouse-mobile.webp",
-          "decoded": false,
-          "width": 0,
-          "height": 0
+          "decoded": true,
+          "width": 320,
+          "height": 213
         },
         {
           "src": "/assets/images/sky-study.webp",
-          "decoded": false,
-          "width": 0,
-          "height": 0
+          "decoded": true,
+          "width": 1400,
+          "height": 1050
         },
         {
           "src": "/assets/images/skin-ritual.webp",
-          "decoded": false,
-          "width": 0,
-          "height": 0
+          "decoded": true,
+          "width": 1400,
+          "height": 1050
         },
         {
           "src": "/assets/images/quiet-growth.webp",
-          "decoded": false,
-          "width": 0,
-          "height": 0
+          "decoded": true,
+          "width": 1400,
+          "height": 1050
         }
       ],
       "allTopics": 6,
@@ -140,27 +140,27 @@
       "images": [
         {
           "src": "/assets/images/hero-glasshouse-mobile.webp",
-          "decoded": false,
-          "width": 0,
-          "height": 0
+          "decoded": true,
+          "width": 721,
+          "height": 481
         },
         {
           "src": "/assets/images/sky-study.webp",
-          "decoded": false,
-          "width": 0,
-          "height": 0
+          "decoded": true,
+          "width": 1400,
+          "height": 1050
         },
         {
           "src": "/assets/images/skin-ritual.webp",
-          "decoded": false,
-          "width": 0,
-          "height": 0
+          "decoded": true,
+          "width": 1400,
+          "height": 1050
         },
         {
           "src": "/assets/images/quiet-growth.webp",
-          "decoded": false,
-          "width": 0,
-          "height": 0
+          "decoded": true,
+          "width": 1400,
+          "height": 1050
         }
       ],
       "allTopics": 6,
@@ -183,27 +183,27 @@
       "images": [
         {
           "src": "/assets/images/hero-glasshouse.webp",
-          "decoded": false,
-          "width": 0,
-          "height": 0
+          "decoded": true,
+          "width": 962,
+          "height": 641
         },
         {
           "src": "/assets/images/sky-study.webp",
-          "decoded": false,
-          "width": 0,
-          "height": 0
+          "decoded": true,
+          "width": 1400,
+          "height": 1050
         },
         {
           "src": "/assets/images/skin-ritual.webp",
-          "decoded": false,
-          "width": 0,
-          "height": 0
+          "decoded": true,
+          "width": 1400,
+          "height": 1050
         },
         {
           "src": "/assets/images/quiet-growth.webp",
-          "decoded": false,
-          "width": 0,
-          "height": 0
+          "decoded": true,
+          "width": 1400,
+          "height": 1050
         }
       ],
       "allTopics": 6,
@@ -226,27 +226,27 @@
       "images": [
         {
           "src": "/assets/images/hero-glasshouse.webp",
-          "decoded": false,
-          "width": 0,
-          "height": 0
+          "decoded": true,
+          "width": 1353,
+          "height": 902
         },
         {
           "src": "/assets/images/sky-study.webp",
-          "decoded": false,
-          "width": 0,
-          "height": 0
+          "decoded": true,
+          "width": 1400,
+          "height": 1050
         },
         {
           "src": "/assets/images/skin-ritual.webp",
-          "decoded": false,
-          "width": 0,
-          "height": 0
+          "decoded": true,
+          "width": 1400,
+          "height": 1050
         },
         {
           "src": "/assets/images/quiet-growth.webp",
-          "decoded": false,
-          "width": 0,
-          "height": 0
+          "decoded": true,
+          "width": 1400,
+          "height": 1050
         }
       ],
       "allTopics": 6,
@@ -269,27 +269,27 @@
       "images": [
         {
           "src": "/assets/images/hero-glasshouse-mobile.webp",
-          "decoded": false,
-          "width": 0,
-          "height": 0
+          "decoded": true,
+          "width": 390,
+          "height": 260
         },
         {
           "src": "/assets/images/sky-study.webp",
-          "decoded": false,
-          "width": 0,
-          "height": 0
+          "decoded": true,
+          "width": 1400,
+          "height": 1050
         },
         {
           "src": "/assets/images/skin-ritual.webp",
-          "decoded": false,
-          "width": 0,
-          "height": 0
+          "decoded": true,
+          "width": 1400,
+          "height": 1050
         },
         {
           "src": "/assets/images/quiet-growth.webp",
-          "decoded": false,
-          "width": 0,
-          "height": 0
+          "decoded": true,
+          "width": 1400,
+          "height": 1050
         }
       ],
       "allTopics": 6,
@@ -312,27 +312,27 @@
       "images": [
         {
           "src": "/assets/images/hero-glasshouse-mobile.webp",
-          "decoded": false,
-          "width": 0,
-          "height": 0
+          "decoded": true,
+          "width": 320,
+          "height": 213
         },
         {
           "src": "/assets/images/sky-study.webp",
-          "decoded": false,
-          "width": 0,
-          "height": 0
+          "decoded": true,
+          "width": 1400,
+          "height": 1050
         },
         {
           "src": "/assets/images/skin-ritual.webp",
-          "decoded": false,
-          "width": 0,
-          "height": 0
+          "decoded": true,
+          "width": 1400,
+          "height": 1050
         },
         {
           "src": "/assets/images/quiet-growth.webp",
-          "decoded": false,
-          "width": 0,
-          "height": 0
+          "decoded": true,
+          "width": 1400,
+          "height": 1050
         }
       ],
       "allTopics": 6,
@@ -355,27 +355,27 @@
       "images": [
         {
           "src": "/assets/images/hero-glasshouse-mobile.webp",
-          "decoded": false,
-          "width": 0,
-          "height": 0
+          "decoded": true,
+          "width": 721,
+          "height": 481
         },
         {
           "src": "/assets/images/sky-study.webp",
-          "decoded": false,
-          "width": 0,
-          "height": 0
+          "decoded": true,
+          "width": 1400,
+          "height": 1050
         },
         {
           "src": "/assets/images/skin-ritual.webp",
-          "decoded": false,
-          "width": 0,
-          "height": 0
+          "decoded": true,
+          "width": 1400,
+          "height": 1050
         },
         {
           "src": "/assets/images/quiet-growth.webp",
-          "decoded": false,
-          "width": 0,
-          "height": 0
+          "decoded": true,
+          "width": 1400,
+          "height": 1050
         }
       ],
       "allTopics": 6,
@@ -398,27 +398,27 @@
       "images": [
         {
           "src": "/assets/images/hero-glasshouse.webp",
-          "decoded": false,
-          "width": 0,
-          "height": 0
+          "decoded": true,
+          "width": 962,
+          "height": 641
         },
         {
           "src": "/assets/images/sky-study.webp",
-          "decoded": false,
-          "width": 0,
-          "height": 0
+          "decoded": true,
+          "width": 1400,
+          "height": 1050
         },
         {
           "src": "/assets/images/skin-ritual.webp",
-          "decoded": false,
-          "width": 0,
-          "height": 0
+          "decoded": true,
+          "width": 1400,
+          "height": 1050
         },
         {
           "src": "/assets/images/quiet-growth.webp",
-          "decoded": false,
-          "width": 0,
-          "height": 0
+          "decoded": true,
+          "width": 1400,
+          "height": 1050
         }
       ],
       "allTopics": 6,
@@ -445,6 +445,10 @@
     },
     {
       "name": "desktop-en: 44px touch targets",
+      "passed": true
+    },
+    {
+      "name": "desktop-en: four decoded still lifes",
       "passed": true
     },
     {
@@ -537,6 +541,10 @@
     },
     {
       "name": "mobile-en: 44px touch targets",
+      "passed": true
+    },
+    {
+      "name": "mobile-en: four decoded still lifes",
       "passed": true
     },
     {
@@ -652,6 +660,10 @@
       "passed": true
     },
     {
+      "name": "compact-en: four decoded still lifes",
+      "passed": true
+    },
+    {
       "name": "compact-en: semantic content",
       "passed": true
     },
@@ -761,6 +773,10 @@
     },
     {
       "name": "tablet-en: 44px touch targets",
+      "passed": true
+    },
+    {
+      "name": "tablet-en: four decoded still lifes",
       "passed": true
     },
     {
@@ -876,6 +892,10 @@
       "passed": true
     },
     {
+      "name": "laptop-en: four decoded still lifes",
+      "passed": true
+    },
+    {
       "name": "laptop-en: semantic content",
       "passed": true
     },
@@ -968,6 +988,10 @@
       "passed": true
     },
     {
+      "name": "desktop-bg: four decoded still lifes",
+      "passed": true
+    },
+    {
       "name": "desktop-bg: semantic content",
       "passed": true
     },
@@ -1057,6 +1081,10 @@
     },
     {
       "name": "mobile-bg: 44px touch targets",
+      "passed": true
+    },
+    {
+      "name": "mobile-bg: four decoded still lifes",
       "passed": true
     },
     {
@@ -1172,6 +1200,10 @@
       "passed": true
     },
     {
+      "name": "compact-bg: four decoded still lifes",
+      "passed": true
+    },
+    {
       "name": "compact-bg: semantic content",
       "passed": true
     },
@@ -1284,6 +1316,10 @@
       "passed": true
     },
     {
+      "name": "tablet-bg: four decoded still lifes",
+      "passed": true
+    },
+    {
       "name": "tablet-bg: semantic content",
       "passed": true
     },
@@ -1393,6 +1429,10 @@
     },
     {
       "name": "laptop-bg: 44px touch targets",
+      "passed": true
+    },
+    {
+      "name": "laptop-bg: four decoded still lifes",
       "passed": true
     },
     {
@@ -1532,402 +1572,23 @@
       "passed": true
     }
   ],
-  "screenshots": [],
-  "consoleErrors": [
-    "Failed to load resource: the server responded with a status of 404 (Not Found)",
-    "Failed to load resource: the server responded with a status of 404 (Not Found)",
-    "Failed to load resource: the server responded with a status of 404 (Not Found)",
-    "Failed to load resource: the server responded with a status of 404 (Not Found)",
-    "Failed to load resource: the server responded with a status of 404 (Not Found)",
-    "Failed to load resource: the server responded with a status of 404 (Not Found)",
-    "Failed to load resource: the server responded with a status of 404 (Not Found)",
-    "Failed to load resource: the server responded with a status of 404 (Not Found)",
-    "Failed to load resource: the server responded with a status of 404 (Not Found)",
-    "Failed to load resource: the server responded with a status of 404 (Not Found)",
-    "Failed to load resource: the server responded with a status of 404 (Not Found)",
-    "Failed to load resource: the server responded with a status of 404 (Not Found)",
-    "Failed to load resource: the server responded with a status of 404 (Not Found)",
-    "Failed to load resource: the server responded with a status of 404 (Not Found)",
-    "Failed to load resource: the server responded with a status of 404 (Not Found)",
-    "Failed to load resource: the server responded with a status of 404 (Not Found)",
-    "Failed to load resource: the server responded with a status of 404 (Not Found)",
-    "Failed to load resource: the server responded with a status of 404 (Not Found)",
-    "Failed to load resource: the server responded with a status of 404 (Not Found)",
-    "Failed to load resource: the server responded with a status of 404 (Not Found)",
-    "Failed to load resource: the server responded with a status of 404 (Not Found)",
-    "Failed to load resource: the server responded with a status of 404 (Not Found)",
-    "Failed to load resource: the server responded with a status of 404 (Not Found)",
-    "Failed to load resource: the server responded with a status of 404 (Not Found)",
-    "Failed to load resource: the server responded with a status of 404 (Not Found)",
-    "Failed to load resource: the server responded with a status of 404 (Not Found)",
-    "Failed to load resource: the server responded with a status of 404 (Not Found)",
-    "Failed to load resource: the server responded with a status of 404 (Not Found)",
-    "Failed to load resource: the server responded with a status of 404 (Not Found)",
-    "Failed to load resource: the server responded with a status of 404 (Not Found)",
-    "Failed to load resource: the server responded with a status of 404 (Not Found)",
-    "Failed to load resource: the server responded with a status of 404 (Not Found)",
-    "Failed to load resource: the server responded with a status of 404 (Not Found)",
-    "Failed to load resource: the server responded with a status of 404 (Not Found)",
-    "Failed to load resource: the server responded with a status of 404 (Not Found)",
-    "Failed to load resource: the server responded with a status of 404 (Not Found)",
-    "Failed to load resource: the server responded with a status of 404 (Not Found)",
-    "Failed to load resource: the server responded with a status of 404 (Not Found)",
-    "Failed to load resource: the server responded with a status of 404 (Not Found)",
-    "Failed to load resource: the server responded with a status of 404 (Not Found)",
-    "Failed to load resource: the server responded with a status of 404 (Not Found)",
-    "Failed to load resource: the server responded with a status of 404 (Not Found)",
-    "Failed to load resource: the server responded with a status of 404 (Not Found)",
-    "Failed to load resource: the server responded with a status of 404 (Not Found)",
-    "Failed to load resource: the server responded with a status of 404 (Not Found)",
-    "Failed to load resource: the server responded with a status of 404 (Not Found)",
-    "Failed to load resource: the server responded with a status of 404 (Not Found)",
-    "Failed to load resource: the server responded with a status of 404 (Not Found)",
-    "Failed to load resource: the server responded with a status of 404 (Not Found)",
-    "Failed to load resource: the server responded with a status of 404 (Not Found)",
-    "Failed to load resource: the server responded with a status of 404 (Not Found)",
-    "Failed to load resource: the server responded with a status of 404 (Not Found)",
-    "Failed to load resource: the server responded with a status of 404 (Not Found)",
-    "Failed to load resource: the server responded with a status of 404 (Not Found)",
-    "Failed to load resource: the server responded with a status of 404 (Not Found)",
-    "Failed to load resource: the server responded with a status of 404 (Not Found)",
-    "Failed to load resource: the server responded with a status of 404 (Not Found)",
-    "Failed to load resource: the server responded with a status of 404 (Not Found)",
-    "Failed to load resource: the server responded with a status of 404 (Not Found)",
-    "Failed to load resource: the server responded with a status of 404 (Not Found)",
-    "Failed to load resource: the server responded with a status of 404 (Not Found)",
-    "Failed to load resource: the server responded with a status of 404 (Not Found)",
-    "Failed to load resource: the server responded with a status of 404 (Not Found)",
-    "Failed to load resource: the server responded with a status of 404 (Not Found)",
-    "Failed to load resource: the server responded with a status of 404 (Not Found)",
-    "Failed to load resource: the server responded with a status of 404 (Not Found)",
-    "Failed to load resource: the server responded with a status of 404 (Not Found)",
-    "Failed to load resource: the server responded with a status of 404 (Not Found)",
-    "Failed to load resource: the server responded with a status of 404 (Not Found)",
-    "Failed to load resource: the server responded with a status of 404 (Not Found)",
-    "Failed to load resource: the server responded with a status of 404 (Not Found)",
-    "Failed to load resource: the server responded with a status of 404 (Not Found)",
-    "Failed to load resource: the server responded with a status of 404 (Not Found)",
-    "Failed to load resource: the server responded with a status of 404 (Not Found)",
-    "Failed to load resource: the server responded with a status of 404 (Not Found)",
-    "Failed to load resource: the server responded with a status of 404 (Not Found)",
-    "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  "screenshots": [
+    ".impeccable/review/desktop-top.png",
+    ".impeccable/review/desktop.png",
+    ".impeccable/review/mobile-top.png",
+    ".impeccable/review/mobile.png",
+    ".impeccable/review/mobile-menu-en.png",
+    ".impeccable/review/desktop-bg-top.png",
+    ".impeccable/review/desktop-bg.png",
+    ".impeccable/review/mobile-bg-top.png",
+    ".impeccable/review/mobile-bg.png",
+    ".impeccable/review/mobile-menu-bg.png"
   ],
+  "consoleErrors": [],
   "failedRequests": [],
   "externalRequests": [],
-  "httpErrors": [
-    {
-      "url": "http://127.0.0.1:43118/assets/images/hero-glasshouse.webp",
-      "status": 404
-    },
-    {
-      "url": "http://127.0.0.1:43118/assets/images/sky-study.webp",
-      "status": 404
-    },
-    {
-      "url": "http://127.0.0.1:43118/assets/images/skin-ritual.webp",
-      "status": 404
-    },
-    {
-      "url": "http://127.0.0.1:43118/assets/images/hero-glasshouse.webp",
-      "status": 404
-    },
-    {
-      "url": "http://127.0.0.1:43118/assets/images/sky-study.webp",
-      "status": 404
-    },
-    {
-      "url": "http://127.0.0.1:43118/assets/images/skin-ritual.webp",
-      "status": 404
-    },
-    {
-      "url": "http://127.0.0.1:43118/assets/images/quiet-growth.webp",
-      "status": 404
-    },
-    {
-      "url": "http://127.0.0.1:43118/assets/images/hero-glasshouse-mobile.webp",
-      "status": 404
-    },
-    {
-      "url": "http://127.0.0.1:43118/assets/images/hero-glasshouse-mobile.webp",
-      "status": 404
-    },
-    {
-      "url": "http://127.0.0.1:43118/assets/images/sky-study.webp",
-      "status": 404
-    },
-    {
-      "url": "http://127.0.0.1:43118/assets/images/hero-glasshouse-mobile.webp",
-      "status": 404
-    },
-    {
-      "url": "http://127.0.0.1:43118/assets/images/sky-study.webp",
-      "status": 404
-    },
-    {
-      "url": "http://127.0.0.1:43118/assets/images/skin-ritual.webp",
-      "status": 404
-    },
-    {
-      "url": "http://127.0.0.1:43118/assets/images/quiet-growth.webp",
-      "status": 404
-    },
-    {
-      "url": "http://127.0.0.1:43118/assets/images/hero-glasshouse-mobile.webp",
-      "status": 404
-    },
-    {
-      "url": "http://127.0.0.1:43118/assets/images/sky-study.webp",
-      "status": 404
-    },
-    {
-      "url": "http://127.0.0.1:43118/assets/images/hero-glasshouse-mobile.webp",
-      "status": 404
-    },
-    {
-      "url": "http://127.0.0.1:43118/assets/images/sky-study.webp",
-      "status": 404
-    },
-    {
-      "url": "http://127.0.0.1:43118/assets/images/skin-ritual.webp",
-      "status": 404
-    },
-    {
-      "url": "http://127.0.0.1:43118/assets/images/quiet-growth.webp",
-      "status": 404
-    },
-    {
-      "url": "http://127.0.0.1:43118/assets/images/hero-glasshouse-mobile.webp",
-      "status": 404
-    },
-    {
-      "url": "http://127.0.0.1:43118/assets/images/sky-study.webp",
-      "status": 404
-    },
-    {
-      "url": "http://127.0.0.1:43118/assets/images/skin-ritual.webp",
-      "status": 404
-    },
-    {
-      "url": "http://127.0.0.1:43118/assets/images/hero-glasshouse-mobile.webp",
-      "status": 404
-    },
-    {
-      "url": "http://127.0.0.1:43118/assets/images/sky-study.webp",
-      "status": 404
-    },
-    {
-      "url": "http://127.0.0.1:43118/assets/images/skin-ritual.webp",
-      "status": 404
-    },
-    {
-      "url": "http://127.0.0.1:43118/assets/images/quiet-growth.webp",
-      "status": 404
-    },
-    {
-      "url": "http://127.0.0.1:43118/assets/images/hero-glasshouse.webp",
-      "status": 404
-    },
-    {
-      "url": "http://127.0.0.1:43118/assets/images/hero-glasshouse.webp",
-      "status": 404
-    },
-    {
-      "url": "http://127.0.0.1:43118/assets/images/sky-study.webp",
-      "status": 404
-    },
-    {
-      "url": "http://127.0.0.1:43118/assets/images/skin-ritual.webp",
-      "status": 404
-    },
-    {
-      "url": "http://127.0.0.1:43118/assets/images/hero-glasshouse.webp",
-      "status": 404
-    },
-    {
-      "url": "http://127.0.0.1:43118/assets/images/sky-study.webp",
-      "status": 404
-    },
-    {
-      "url": "http://127.0.0.1:43118/assets/images/skin-ritual.webp",
-      "status": 404
-    },
-    {
-      "url": "http://127.0.0.1:43118/assets/images/quiet-growth.webp",
-      "status": 404
-    },
-    {
-      "url": "http://127.0.0.1:43118/assets/images/hero-glasshouse.webp",
-      "status": 404
-    },
-    {
-      "url": "http://127.0.0.1:43118/assets/images/sky-study.webp",
-      "status": 404
-    },
-    {
-      "url": "http://127.0.0.1:43118/assets/images/skin-ritual.webp",
-      "status": 404
-    },
-    {
-      "url": "http://127.0.0.1:43118/assets/images/hero-glasshouse.webp",
-      "status": 404
-    },
-    {
-      "url": "http://127.0.0.1:43118/assets/images/sky-study.webp",
-      "status": 404
-    },
-    {
-      "url": "http://127.0.0.1:43118/assets/images/quiet-growth.webp",
-      "status": 404
-    },
-    {
-      "url": "http://127.0.0.1:43118/assets/images/skin-ritual.webp",
-      "status": 404
-    },
-    {
-      "url": "http://127.0.0.1:43118/assets/images/hero-glasshouse-mobile.webp",
-      "status": 404
-    },
-    {
-      "url": "http://127.0.0.1:43118/assets/images/hero-glasshouse-mobile.webp",
-      "status": 404
-    },
-    {
-      "url": "http://127.0.0.1:43118/assets/images/sky-study.webp",
-      "status": 404
-    },
-    {
-      "url": "http://127.0.0.1:43118/assets/images/hero-glasshouse-mobile.webp",
-      "status": 404
-    },
-    {
-      "url": "http://127.0.0.1:43118/assets/images/sky-study.webp",
-      "status": 404
-    },
-    {
-      "url": "http://127.0.0.1:43118/assets/images/skin-ritual.webp",
-      "status": 404
-    },
-    {
-      "url": "http://127.0.0.1:43118/assets/images/quiet-growth.webp",
-      "status": 404
-    },
-    {
-      "url": "http://127.0.0.1:43118/assets/images/hero-glasshouse-mobile.webp",
-      "status": 404
-    },
-    {
-      "url": "http://127.0.0.1:43118/assets/images/sky-study.webp",
-      "status": 404
-    },
-    {
-      "url": "http://127.0.0.1:43118/assets/images/hero-glasshouse-mobile.webp",
-      "status": 404
-    },
-    {
-      "url": "http://127.0.0.1:43118/assets/images/sky-study.webp",
-      "status": 404
-    },
-    {
-      "url": "http://127.0.0.1:43118/assets/images/skin-ritual.webp",
-      "status": 404
-    },
-    {
-      "url": "http://127.0.0.1:43118/assets/images/quiet-growth.webp",
-      "status": 404
-    },
-    {
-      "url": "http://127.0.0.1:43118/assets/images/hero-glasshouse-mobile.webp",
-      "status": 404
-    },
-    {
-      "url": "http://127.0.0.1:43118/assets/images/sky-study.webp",
-      "status": 404
-    },
-    {
-      "url": "http://127.0.0.1:43118/assets/images/skin-ritual.webp",
-      "status": 404
-    },
-    {
-      "url": "http://127.0.0.1:43118/assets/images/hero-glasshouse-mobile.webp",
-      "status": 404
-    },
-    {
-      "url": "http://127.0.0.1:43118/assets/images/sky-study.webp",
-      "status": 404
-    },
-    {
-      "url": "http://127.0.0.1:43118/assets/images/skin-ritual.webp",
-      "status": 404
-    },
-    {
-      "url": "http://127.0.0.1:43118/assets/images/quiet-growth.webp",
-      "status": 404
-    },
-    {
-      "url": "http://127.0.0.1:43118/assets/images/hero-glasshouse.webp",
-      "status": 404
-    },
-    {
-      "url": "http://127.0.0.1:43118/assets/images/hero-glasshouse.webp",
-      "status": 404
-    },
-    {
-      "url": "http://127.0.0.1:43118/assets/images/sky-study.webp",
-      "status": 404
-    },
-    {
-      "url": "http://127.0.0.1:43118/assets/images/skin-ritual.webp",
-      "status": 404
-    },
-    {
-      "url": "http://127.0.0.1:43118/assets/images/hero-glasshouse.webp",
-      "status": 404
-    },
-    {
-      "url": "http://127.0.0.1:43118/assets/images/sky-study.webp",
-      "status": 404
-    },
-    {
-      "url": "http://127.0.0.1:43118/assets/images/skin-ritual.webp",
-      "status": 404
-    },
-    {
-      "url": "http://127.0.0.1:43118/assets/images/quiet-growth.webp",
-      "status": 404
-    },
-    {
-      "url": "http://127.0.0.1:43118/assets/images/hero-glasshouse.webp",
-      "status": 404
-    },
-    {
-      "url": "http://127.0.0.1:43118/assets/images/sky-study.webp",
-      "status": 404
-    },
-    {
-      "url": "http://127.0.0.1:43118/assets/images/skin-ritual.webp",
-      "status": 404
-    },
-    {
-      "url": "http://127.0.0.1:43118/assets/images/hero-glasshouse.webp",
-      "status": 404
-    },
-    {
-      "url": "http://127.0.0.1:43118/assets/images/sky-study.webp",
-      "status": 404
-    },
-    {
-      "url": "http://127.0.0.1:43118/assets/images/skin-ritual.webp",
-      "status": 404
-    },
-    {
-      "url": "http://127.0.0.1:43118/assets/images/quiet-growth.webp",
-      "status": 404
-    }
-  ],
-  "issues": [
-    "consoleErrors",
-    "httpErrors"
-  ],
+  "httpErrors": [],
+  "issues": [],
   "contrast": {
     "#183f35 on #e6ede3": 9.76,
     "#466255 on #e6ede3": 5.6,
@@ -1935,6 +1596,6 @@
     "#f2f6ef on #183f35": 10.66,
     "#f2f6ef on #285344": 7.97
   },
-  "checksPassed": 274,
-  "checksTotal": 274
+  "checksPassed": 284,
+  "checksTotal": 284
 }

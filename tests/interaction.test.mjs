@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { test } from 'node:test';
 import vm from 'node:vm';
+import { createHash } from 'node:crypto';
 const source = await readFile(new URL('../assets/site.js', import.meta.url), 'utf8');
 const html = await readFile(new URL('../index.html', import.meta.url), 'utf8');
 
@@ -87,6 +88,18 @@ test('six static descriptions and native prompt disclosures exist without JavaSc
   assert.equal((html.match(/class="reflection"/g) || []).length, 6);
 });
 test('original images and responsive hero are real WebP assets', async () => {
+  const manifest = JSON.parse(await readFile(new URL('../tools/ASSET-MANIFEST.json', import.meta.url), 'utf8'));
+  assert.equal(manifest.asset_count, 4);
+  for (const asset of manifest.assets) {
+    const bytes = await readFile(new URL(`../assets/images/${asset.filename}`, import.meta.url));
+    assert.equal(createHash('sha256').update(bytes).digest('hex'), asset.sha256);
+    const tag = [...html.matchAll(/<img\b[^>]*>/g)].map(m => m[0]).find(t => t.includes(`assets/images/${asset.filename}`));
+    assert.ok(tag, `${asset.filename} is not integrated`);
+    assert.ok(tag.includes(`width="${asset.width}" height="${asset.height}"`), 'intrinsic dimensions must match the original');
+    assert.ok(tag.includes(`alt="${asset.alt.en}"`));
+    assert.ok(tag.includes(`data-alt-bg="${asset.alt.bg}"`));
+    assert.ok(bytes.includes(Buffer.from('XMP ')), 'original WebP provenance must be preserved');
+  }
   for (const name of ['hero-glasshouse', 'hero-glasshouse-mobile', 'sky-study', 'skin-ritual', 'quiet-growth']) {
     const bytes = await readFile(new URL(`../assets/images/${name}.webp`, import.meta.url));
     assert.equal(bytes.toString('ascii', 0, 4), 'RIFF'); assert.equal(bytes.toString('ascii', 8, 12), 'WEBP');

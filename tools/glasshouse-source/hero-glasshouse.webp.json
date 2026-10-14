@@ -1,0 +1,29 @@
+{
+  "asset": "hero-glasshouse.webp",
+  "method": "Original authored procedural 3D illustration; geometry authored with Blender 5.2.2 LTS, exported as PLY, then ray traced with Mitsuba 3.9.1 LLVM CPU, 64 samples, three threads, bounded tile queues. Mild OpenCV non-local-means denoising. No image-generation model, photography, stock, or external texture/geometry assets.",
+  "authored_render_brief": "Image-led editorial hero: sunlike amber glass orb on a honed mineral plinth; jade curved architectural screen; generous deep-green laurel leaves and fern; still water dish, daylight and soft window shadows. Tangible grown foliage rather than primitive decoration.",
+  "shared_art_direction": "# DAYLIGHT GLASSHOUSE — original rendered illustrations\n\nAuthored for Silviya Aeterna. These are procedural 3D still-life illustrations, not photographs, AI-image-model output, real products, portraits, or real locations.\n\nPalette: pale jade #E6EDE3, deep spruce #183F35, living botanical greens, amber #C5913D.\n\nHero: ambitious editorial glasshouse still life; luminous amber glass sphere on mineral plinth, generous mesh foliage and fern, jade architectural curve, shallow water, soft window light.\nSky study: sculptural mineral celestial sphere with subtle surface variation, botanical branch and refractive amber crescent detail.\nSkin ritual: unbranded frosted vessel and water bowl, broad folded botanical leaf; tactile quiet ritual, no labels or medical implication.\nQuiet growth: sculpted ceramic vase with generous branching foliage and nested ceramic forms in inviting sunlight.\n\nNo text, logos, people, stock imagery, external texture assets, or invented location. Deterministic mesh geometry authored with Blender in source/render.py and exported by source/export_scenes.py. Final images rendered with Mitsuba 3.9.1 LLVM CPU path tracing in source/render_mitsuba.py, 64 samples, three threads, tiled low-memory execution; mild non-generative OpenCV non-local-means image-space denoising. Two Blender Cycles attempts were killed by the container's 4 GB memory limit; no Cycles output is represented as a final image. Original procedural mineral texture, no external texture sources. Exact execution and verification are recorded in SUMMARY.md.\n",
+  "image_model_prompt": null,
+  "source_script": "source/render_mitsuba.py",
+  "geometry_scripts": [
+    "source/render.py",
+    "source/export_scenes.py"
+  ],
+  "scene_file": "source/hero-glasshouse.blend",
+  "seed": 71426,
+  "render": {
+    "scene": "hero-glasshouse",
+    "seconds": 76.31,
+    "width": 1800,
+    "height": 1200,
+    "samples": 64,
+    "engine": "Mitsuba 3.9.1 / LLVM CPU path tracer",
+    "geometry_authoring": "Blender 5.2.2 LTS procedural meshes; Cycles not used in final",
+    "threads": 3,
+    "seed": 71426,
+    "file": "/opt/data/home/silviya-glasshouse-assets/source/hero-glasshouse.png",
+    "denoising": "OpenCV non-local means, h=3, hColor=3, template=7, search=21; non-generative image-space cleanup",
+    "tone_map": "ACES-like filmic curve, explicit sRGB encoding",
+    "tile_size": 384
+  }
+}

@@ -1,0 +1,218 @@
+{
+  "verifiedAt": "2026-10-14T01:55:41.814978+00:00",
+  "assets": [
+    {
+      "path": "assets/images/hero-glasshouse.webp",
+      "dimensions": [
+        1800,
+        1200
+      ],
+      "bytes": 188588,
+      "sha256": "239a2f19861ab098a064113fb05abfc2c0a97c12a165ee691e94d292e347ec9e",
+      "provenance": "original XMP retained; manifest hash and bilingual alt match"
+    },
+    {
+      "path": "assets/images/sky-study.webp",
+      "dimensions": [
+        1400,
+        1050
+      ],
+      "bytes": 103304,
+      "sha256": "68d29e2e70abbe3ac25e3ed835a3c9838d22c54c37095901f0156b6434325a51",
+      "provenance": "original XMP retained; manifest hash and bilingual alt match"
+    },
+    {
+      "path": "assets/images/skin-ritual.webp",
+      "dimensions": [
+        1400,
+        1050
+      ],
+      "bytes": 92392,
+      "sha256": "4ea78e9f13fd911bfb48fc3bd0aa0f9da6d0bfe3d9de0c0a2968c76e911ad5aa",
+      "provenance": "original XMP retained; manifest hash and bilingual alt match"
+    },
+    {
+      "path": "assets/images/quiet-growth.webp",
+      "dimensions": [
+        1400,
+        1050
+      ],
+      "bytes": 116522,
+      "sha256": "33b79f3a410ba41c62bd90011c9feb27a1e18851b7a25c48a6b78e1247209112",
+      "provenance": "original XMP retained; manifest hash and bilingual alt match"
+    },
+    {
+      "path": "assets/images/hero-glasshouse-mobile.webp",
+      "dimensions": [
+        780,
+        520
+      ],
+      "bytes": 26552,
+      "sha256": "eacde476c1f36b002912397b19f846f31ddfa921deb288fa6b12b4199044347b",
+      "provenance": "embedded derivative origin retained"
+    },
+    {
+      "path": "assets/social-og.png",
+      "dimensions": [
+        1200,
+        630
+      ],
+      "bytes": 375390,
+      "sha256": "0a32218b972907cb1aec3cead1667696b14b7633cba2e6540437143308606db3",
+      "provenance": "embedded derivative origin retained"
+    }
+  ],
+  "fonts": [
+    {
+      "path": "assets/fonts/Onest-Variable.woff2",
+      "CyrillicCodepointsUsed": 49,
+      "missing": [],
+      "sha256": "9657c4acc66431585127b66845fb571a6b4e8cd200a20a2d629a9bac2b59ea6d"
+    },
+    {
+      "path": "assets/fonts/Geist-Variable-subset.woff2",
+      "CyrillicCodepointsUsed": 49,
+      "missing": [],
+      "sha256": "277ba95bbba0cd5ea50b01c2a35defe8ee8b7b04445cc78789479de3cded706d"
+    }
+  ],
+  "screenshots": [
+    {
+      "path": ".impeccable/review/desktop-top.png",
+      "dimensions": [
+        1440,
+        900
+      ],
+      "sha256": "3fd0eb525d76479b2350ab394a77c2602617a6290c6a5e14806883a245ca0e07"
+    },
+    {
+      "path": ".impeccable/review/desktop.png",
+      "dimensions": [
+        1440,
+        4863
+      ],
+      "sha256": "1ed557c66b3b1a1011159b990b21e23dba676edd59b2ada7ef60ac899e8f3a54"
+    },
+    {
+      "path": ".impeccable/review/mobile-top.png",
+      "dimensions": [
+        390,
+        844
+      ],
+      "sha256": "8942175ba4d3aec8a28868c8049f6632f382edea4bd72c8b8345062fadd2d11a"
+    },
+    {
+      "path": ".impeccable/review/mobile.png",
+      "dimensions": [
+        390,
+        5653
+      ],
+      "sha256": "6f4c59991fe393f2b491ac38cddc10c6b27337b1877242ca763a2d8542bfb0e3"
+    },
+    {
+      "path": ".impeccable/review/mobile-reflection-en.png",
+      "dimensions": [
+        390,
+        844
+      ],
+      "sha256": "190bc9d1445453d063e33fe12c572faf4787ec8101bd49f26cab0599417e5e79"
+    },
+    {
+      "path": ".impeccable/review/mobile-menu-en.png",
+      "dimensions": [
+        390,
+        844
+      ],
+      "sha256": "adc7715ba86d071546765dcd7012509fc89a081eb137dc9e046a99380f8c2ff8"
+    },
+    {
+      "path": ".impeccable/review/desktop-bg-top.png",
+      "dimensions": [
+        1440,
+        900
+      ],
+      "sha256": "1266725b56e2e0388cc823ca72c4d984d9f44ef6eaec3e1a166583cb242de304"
+    },
+    {
+      "path": ".impeccable/review/desktop-bg.png",
+      "dimensions": [
+        1440,
+        5075
+      ],
+      "sha256": "02b6c6938d1f06b78d2042057256d1bb3a2cb4ea11079d0f5fe18390ffea0da8"
+    },
+    {
+      "path": ".impeccable/review/mobile-bg-top.png",
+      "dimensions": [
+        390,
+        844
+      ],
+      "sha256": "7a8e99928fb7d235193e27d63160ed75468804618fffda607e22cca064651bbd"
+    },
+    {
+      "path": ".impeccable/review/mobile-bg.png",
+      "dimensions": [
+        390,
+        6020
+      ],
+      "sha256": "6be4d9d796df124dafe2e26461ee50c6a1083cccf5f936c122950bf25c2de871"
+    },
+    {
+      "path": ".impeccable/review/mobile-reflection-bg.png",
+      "dimensions": [
+        390,
+        844
+      ],
+      "sha256": "8b2a4d48d1a94dfde515d21bf45bed3b5376242bcf53ee929e015af606ae0aee"
+    },
+    {
+      "path": ".impeccable/review/mobile-menu-bg.png",
+      "dimensions": [
+        390,
+        844
+      ],
+      "sha256": "c725e1a687caee29f5d330a07d05248f6fe7a810bc46d99f20c8b5eba075c746"
+    }
+  ],
+  "tests": {
+    "tests": 32,
+    "pass": 32,
+    "fail": 0
+  },
+  "browserChecks": {
+    "passed": 284,
+    "total": 284,
+    "imageCompleteRounds": 2,
+    "externalRequests": [],
+    "failedRequests": [],
+    "consoleErrors": [],
+    "httpErrors": [],
+    "contrast": {
+      "#183f35 on #e6ede3": 9.76,
+      "#466255 on #e6ede3": 5.6,
+      "#466255 on #f2f6ef": 6.12,
+      "#f2f6ef on #183f35": 10.66,
+      "#f2f6ef on #285344": 7.97
+    }
+  },
+  "sourceFingerprints": {
+    "index.html": "fc9cd880eb10055fbc92035e4f823260c3177945fb9010707f3b182de6fea890",
+    "assets/styles.css": "303961f791edca974a2f476253536d139703fb6c67844db86debe88856f1a543",
+    "assets/site.js": "2a8342d72c30719f338678a20555b7883353360a9dfe653ec87fddaad0e75800",
+    "server.ts": "3a74a542e94ce0dc911fbb7972427acc43cb6bf32f6c9849de02407d057d1d7b",
+    "Dockerfile": "a76824bbe55dd617fddd6464c06a1d9199b2f03b469b6a7a3b4be6c4c8d0f0bd"
+  },
+  "sourceSnapshots": {
+    "render.py": "dd827efb8299b81b84dadb93af1e61b2f1d7d8c5ff03a577d4a4ccd8546bb51a",
+    "export_scenes.py": "93c813793aa7a9c776a9a147447b1006b82572619ba82896970aceda9dd57de5",
+    "render_mitsuba.py": "9703399327e8000a99611c535327f6237c2a84639bd7d6d897c38a52253a1e71",
+    "package_assets.py": "839a9fd1611ed547d9875ccbfd0bd63db4c743bf93a6824909d83f841a822931",
+    "verify_assets.py": "bec5328a230971a91148824a86c56b53b9adf47c63907b52c07df45789e05301",
+    "ORIGIN.md": "f3cdf4f03a6ee97705cca94252bedc4b85f0a3d5681211368d4d9b92666f92b8",
+    "reproduce.sh": "d82e913bdc3b51aa79278ffe01fbf1190b7a3860035cb9150470d14f7edb9a06",
+    "dependencies.txt": "95598fd40a855bd3431daccbdff9a2b72ee183bee52d85289321acb58e7f944a"
+  },
+  "rendererSourceMatchesManifest": true,
+  "sourceArchive": "/opt/data/home/silviya-glasshouse-assets/",
+  "reviewScope": "Builder visual confirmation only; independent judge and production release are parent-owned."
+}

@@ -19,6 +19,12 @@ missing = [str(p) for p in required if not p.is_file()]
 if missing:
     raise SystemExit('PENDING ORIGINAL INPUT (nothing copied):\n'+'\n'.join(missing))
 manifest = json.loads((SOURCE/'ASSET-MANIFEST.json').read_text())
+assert manifest['asset_count'] == len(NAMES)
+entries = {entry['filename']: entry for entry in manifest['assets']}
+SCRIPTS = ['render.py', 'export_scenes.py', 'render_mitsuba.py', 'package_assets.py',
+           'verify_assets.py', 'reproduce.sh', 'dependencies.txt', 'ORIGIN.md']
+for name in SCRIPTS:
+    assert (SOURCE/'source'/name).is_file(), f'Missing reproducible source: {name}'
 # The independent producer manifest remains intact, never reinterpreted as image-model provenance.
 OUT = ROOT/'assets/images'
 OUT.mkdir(parents=True, exist_ok=True)
@@ -30,17 +36,23 @@ for name in NAMES:
         assert img.format=='WEBP', f'{name} is not a WebP'
         assert min(img.size)>=700, f'{name} is unexpectedly small'
         width,height=img.size
+        assert (width,height) == (entries[name]['width'],entries[name]['height'])
+        assert img.info.get('xmp'), f'Missing embedded provenance: {name}'
+    assert source.stat().st_size == entries[name]['bytes']
+    assert hashlib.sha256(source.read_bytes()).hexdigest() == entries[name]['sha256']
     shutil.copy2(source,OUT/name)
     records.append({'path':f'assets/images/{name}','width':width,'height':height,'bytes':source.stat().st_size,'sha256':hashlib.sha256(source.read_bytes()).hexdigest(),'origin':'Independent original render; see ASSET-MANIFEST.json'})
 shutil.copy2(SOURCE/'ASSET-MANIFEST.json',ROOT/'tools/ASSET-MANIFEST.json')
 shutil.copy2(SOURCE/'SUMMARY.md',ROOT/'tools/ASSET-SUMMARY.md')
-# Keep reproducible producer scripts dev-only; never copy environments or .blend binaries.
-for name in ['render.py','package_assets.py','ORIGIN.md']:
+# Preserve the producer's asset-root/source layout; no caches, meshes or .blend binaries.
+for name in SCRIPTS:
     path=SOURCE/'source'/name
-    if path.is_file():
-        dest=ROOT/'tools/glasshouse-source'/name
-        dest.parent.mkdir(parents=True,exist_ok=True)
-        shutil.copy2(path,dest)
+    dest=ROOT/'tools/glasshouse-source/source'/name
+    dest.parent.mkdir(parents=True,exist_ok=True)
+    shutil.copy2(path,dest)
+for name in NAMES:
+    shutil.copy2(SOURCE/(name+'.json'),ROOT/'tools/glasshouse-source'/(name+'.json'))
+shutil.copy2(SOURCE/'SUMMARY.md',ROOT/'tools/glasshouse-source/SUMMARY.md')
 hero=Image.open(OUT/'hero-glasshouse.webp')
 mobile=ImageOps.contain(hero,(780,780),Image.Resampling.LANCZOS)
 origin='Responsive derivative of original locally rendered hero-glasshouse.webp. No image-generation model or stock source. Source: tools/ASSET-MANIFEST.json.'

@@ -1,0 +1,263 @@
+{
+  "collection": "DAYLIGHT GLASSHOUSE / Silviya Aeterna",
+  "provenance": "Original authored procedural 3D illustration; geometry authored with Blender 5.2.2 LTS, exported as PLY, then ray traced with Mitsuba 3.9.1 LLVM CPU, 64 samples, three threads, bounded tile queues. Mild OpenCV non-local-means denoising. No image-generation model, photography, stock, or external texture/geometry assets.",
+  "image_generation_tool": "No connected image-generation tool was exposed by this CLI; local bpy route used.",
+  "palette": {
+    "jade": "#E6EDE3",
+    "spruce": "#183F35",
+    "amber": "#C5913D"
+  },
+  "asset_count": 4,
+  "total_webp_bytes": 500806,
+  "assets": [
+    {
+      "filename": "hero-glasshouse.webp",
+      "width": 1800,
+      "height": 1200,
+      "bytes": 188588,
+      "sha256": "239a2f19861ab098a064113fb05abfc2c0a97c12a165ee691e94d292e347ec9e",
+      "format": "image/webp",
+      "quality": 94,
+      "budget_bytes": 500000,
+      "engine": "Mitsuba 3.9.1 / LLVM CPU path tracer",
+      "method": "authored-procedural-3d-render",
+      "provenance": "Original authored procedural 3D illustration; geometry authored with Blender 5.2.2 LTS, exported as PLY, then ray traced with Mitsuba 3.9.1 LLVM CPU, 64 samples, three threads, bounded tile queues. Mild OpenCV non-local-means denoising. No image-generation model, photography, stock, or external texture/geometry assets.",
+      "generation_intent": "Image-led editorial hero: sunlike amber glass orb on a honed mineral plinth; jade curved architectural screen; generous deep-green laurel leaves and fern; still water dish, daylight and soft window shadows. Tangible grown foliage rather than primitive decoration.",
+      "alt": {
+        "en": "Amber glass sphere on a pale mineral plinth beside green foliage and a shallow water dish, framed by a curved jade wall.",
+        "bg": "Кехлибарена стъклена сфера върху светъл минерален постамент до зелени листа и плитък съд с вода, пред извита нефритенозелена стена."
+      },
+      "source_script": "source/render_mitsuba.py",
+      "source_script_sha256": "9703399327e8000a99611c535327f6237c2a84639bd7d6d897c38a52253a1e71",
+      "geometry_scripts": [
+        "source/render.py",
+        "source/export_scenes.py"
+      ],
+      "source_geometry": "source/geometry/",
+      "source_scene_description": "source/hero-glasshouse-scene.json",
+      "source_brief": "source/ORIGIN.md",
+      "source_scene": "source/hero-glasshouse.blend",
+      "source_png": "source/hero-glasshouse.png",
+      "source_png_bytes": 1062053,
+      "source_png_sha256": "087d6394262b6312042d66f41b5977c2d72663fc02fad8644d27773f5ba0bcca",
+      "prompt_sidecar": "hero-glasshouse.webp.json",
+      "embedded_metadata": {
+        "webp": "XMP: authored render method, intent, shared brief and source",
+        "png": "PNG text: Origin, AuthoredRenderBrief, Source"
+      },
+      "image_model_prompt": null,
+      "seed": 71426,
+      "render": {
+        "scene": "hero-glasshouse",
+        "seconds": 76.31,
+        "width": 1800,
+        "height": 1200,
+        "samples": 64,
+        "engine": "Mitsuba 3.9.1 / LLVM CPU path tracer",
+        "geometry_authoring": "Blender 5.2.2 LTS procedural meshes; Cycles not used in final",
+        "threads": 3,
+        "seed": 71426,
+        "file": "/opt/data/home/silviya-glasshouse-assets/source/hero-glasshouse.png",
+        "denoising": "OpenCV non-local means, h=3, hColor=3, template=7, search=21; non-generative image-space cleanup",
+        "tone_map": "ACES-like filmic curve, explicit sRGB encoding",
+        "tile_size": 384
+      },
+      "crop_note": "Keep the amber orb and right-hand foliage together. For mobile use the whole 3:2 image or object-position 55% 50%; avoid an extreme narrow portrait crop."
+    },
+    {
+      "filename": "sky-study.webp",
+      "width": 1400,
+      "height": 1050,
+      "bytes": 103304,
+      "sha256": "68d29e2e70abbe3ac25e3ed835a3c9838d22c54c37095901f0156b6434325a51",
+      "format": "image/webp",
+      "quality": 94,
+      "budget_bytes": 400000,
+      "engine": "Mitsuba 3.9.1 / LLVM CPU path tracer",
+      "method": "authored-procedural-3d-render",
+      "provenance": "Original authored procedural 3D illustration; geometry authored with Blender 5.2.2 LTS, exported as PLY, then ray traced with Mitsuba 3.9.1 LLVM CPU, 64 samples, three threads, bounded tile queues. Mild OpenCV non-local-means denoising. No image-generation model, photography, stock, or external texture/geometry assets.",
+      "generation_intent": "Dreamlike celestial study: mottled chalk-mineral sphere on a squared plinth, thick refractive amber glass crescent, botanical branch and amber lens. Sculptural still life, not a diagram or real astronomical scene.",
+      "alt": {
+        "en": "A pale mineral sphere and amber glass crescent on a stone platform, with leafy stems in soft daylight.",
+        "bg": "Светла минерална сфера и кехлибарен стъклен полумесец върху каменна платформа, със зелени клонки на мека дневна светлина."
+      },
+      "source_script": "source/render_mitsuba.py",
+      "source_script_sha256": "9703399327e8000a99611c535327f6237c2a84639bd7d6d897c38a52253a1e71",
+      "geometry_scripts": [
+        "source/render.py",
+        "source/export_scenes.py"
+      ],
+      "source_geometry": "source/geometry/",
+      "source_scene_description": "source/sky-study-scene.json",
+      "source_brief": "source/ORIGIN.md",
+      "source_scene": "source/sky-study.blend",
+      "source_png": "source/sky-study.png",
+      "source_png_bytes": 581187,
+      "source_png_sha256": "7294282be110ac7bee7121a57fb9cfc25180bb81c26392c254a5bd78389a894b",
+      "prompt_sidecar": "sky-study.webp.json",
+      "embedded_metadata": {
+        "webp": "XMP: authored render method, intent, shared brief and source",
+        "png": "PNG text: Origin, AuthoredRenderBrief, Source"
+      },
+      "image_model_prompt": null,
+      "seed": 71426,
+      "render": {
+        "scene": "sky-study",
+        "seconds": 44.68,
+        "width": 1400,
+        "height": 1050,
+        "samples": 64,
+        "engine": "Mitsuba 3.9.1 / LLVM CPU path tracer",
+        "geometry_authoring": "Blender 5.2.2 LTS procedural meshes; Cycles not used in final",
+        "threads": 3,
+        "seed": 71426,
+        "file": "/opt/data/home/silviya-glasshouse-assets/source/sky-study.png",
+        "denoising": "OpenCV non-local means, h=3, hColor=3, template=7, search=21; non-generative image-space cleanup",
+        "tone_map": "ACES-like filmic curve, explicit sRGB encoding",
+        "tile_size": 384
+      },
+      "crop_note": "Prefer 4:3 or a centered 1:1 crop; retain the left botanical branch and right amber crescent."
+    },
+    {
+      "filename": "skin-ritual.webp",
+      "width": 1400,
+      "height": 1050,
+      "bytes": 92392,
+      "sha256": "4ea78e9f13fd911bfb48fc3bd0aa0f9da6d0bfe3d9de0c0a2968c76e911ad5aa",
+      "format": "image/webp",
+      "quality": 94,
+      "budget_bytes": 400000,
+      "engine": "Mitsuba 3.9.1 / LLVM CPU path tracer",
+      "method": "authored-procedural-3d-render",
+      "provenance": "Original authored procedural 3D illustration; geometry authored with Blender 5.2.2 LTS, exported as PLY, then ray traced with Mitsuba 3.9.1 LLVM CPU, 64 samples, three threads, bounded tile queues. Mild OpenCV non-local-means denoising. No image-generation model, photography, stock, or external texture/geometry assets.",
+      "generation_intent": "Tactile skincare ritual still life: unbranded hollow frosted glass vessel, pale porcelain water bowl, broad curved mesh leaves and a small amber glass disk on a honed mineral tray. No product, label, treatment or medical claim.",
+      "alt": {
+        "en": "An unlabelled frosted vessel, a porcelain bowl of water and broad green leaves on a pale stone tray.",
+        "bg": "Матиран съд без етикет, порцеланова купа с вода и широки зелени листа върху светъл каменен поднос."
+      },
+      "source_script": "source/render_mitsuba.py",
+      "source_script_sha256": "9703399327e8000a99611c535327f6237c2a84639bd7d6d897c38a52253a1e71",
+      "geometry_scripts": [
+        "source/render.py",
+        "source/export_scenes.py"
+      ],
+      "source_geometry": "source/geometry/",
+      "source_scene_description": "source/skin-ritual-scene.json",
+      "source_brief": "source/ORIGIN.md",
+      "source_scene": "source/skin-ritual.blend",
+      "source_png": "source/skin-ritual.png",
+      "source_png_bytes": 507222,
+      "source_png_sha256": "4433875d3844cdcc8c14837babe1dc0422bfed3449bfe30e28e19bd7a801061d",
+      "prompt_sidecar": "skin-ritual.webp.json",
+      "embedded_metadata": {
+        "webp": "XMP: authored render method, intent, shared brief and source",
+        "png": "PNG text: Origin, AuthoredRenderBrief, Source"
+      },
+      "image_model_prompt": null,
+      "seed": 71426,
+      "render": {
+        "scene": "skin-ritual",
+        "seconds": 45.03,
+        "width": 1400,
+        "height": 1050,
+        "samples": 64,
+        "engine": "Mitsuba 3.9.1 / LLVM CPU path tracer",
+        "geometry_authoring": "Blender 5.2.2 LTS procedural meshes; Cycles not used in final",
+        "threads": 3,
+        "seed": 71426,
+        "file": "/opt/data/home/silviya-glasshouse-assets/source/skin-ritual.png",
+        "denoising": "OpenCV non-local means, h=3, hColor=3, template=7, search=21; non-generative image-space cleanup",
+        "tone_map": "ACES-like filmic curve, explicit sRGB encoding",
+        "tile_size": 384
+      },
+      "crop_note": "Prefer the original 4:3 frame; centered square is usable if the leaf tip may crop."
+    },
+    {
+      "filename": "quiet-growth.webp",
+      "width": 1400,
+      "height": 1050,
+      "bytes": 116522,
+      "sha256": "33b79f3a410ba41c62bd90011c9feb27a1e18851b7a25c48a6b78e1247209112",
+      "format": "image/webp",
+      "quality": 94,
+      "budget_bytes": 400000,
+      "engine": "Mitsuba 3.9.1 / LLVM CPU path tracer",
+      "method": "authored-procedural-3d-render",
+      "provenance": "Original authored procedural 3D illustration; geometry authored with Blender 5.2.2 LTS, exported as PLY, then ray traced with Mitsuba 3.9.1 LLVM CPU, 64 samples, three threads, bounded tile queues. Mild OpenCV non-local-means denoising. No image-generation model, photography, stock, or external texture/geometry assets.",
+      "generation_intent": "Inviting growth and rest still life: ribbed deep-spruce ceramic vase with generous branching green foliage, nested pale jade porcelain and amber vessels, calm sunlight and a curved jade screen. Family and growth are metaphors, not a depiction of real people.",
+      "alt": {
+        "en": "A ribbed dark-green vase holding leafy branches beside nested pale ceramic and amber glass bowls.",
+        "bg": "Оребрена тъмнозелена ваза с разлистени клонки до вложени една в друга светли керамични и кехлибарени стъклени купички."
+      },
+      "source_script": "source/render_mitsuba.py",
+      "source_script_sha256": "9703399327e8000a99611c535327f6237c2a84639bd7d6d897c38a52253a1e71",
+      "geometry_scripts": [
+        "source/render.py",
+        "source/export_scenes.py"
+      ],
+      "source_geometry": "source/geometry/",
+      "source_scene_description": "source/quiet-growth-scene.json",
+      "source_brief": "source/ORIGIN.md",
+      "source_scene": "source/quiet-growth.blend",
+      "source_png": "source/quiet-growth.png",
+      "source_png_bytes": 619456,
+      "source_png_sha256": "0f74f7a211374477d50ae707b64bc6529ef0b03df1162028e72b03d0817df9b6",
+      "prompt_sidecar": "quiet-growth.webp.json",
+      "embedded_metadata": {
+        "webp": "XMP: authored render method, intent, shared brief and source",
+        "png": "PNG text: Origin, AuthoredRenderBrief, Source"
+      },
+      "image_model_prompt": null,
+      "seed": 71426,
+      "render": {
+        "scene": "quiet-growth",
+        "seconds": 41.79,
+        "width": 1400,
+        "height": 1050,
+        "samples": 64,
+        "engine": "Mitsuba 3.9.1 / LLVM CPU path tracer",
+        "geometry_authoring": "Blender 5.2.2 LTS procedural meshes; Cycles not used in final",
+        "threads": 3,
+        "seed": 71426,
+        "file": "/opt/data/home/silviya-glasshouse-assets/source/quiet-growth.png",
+        "denoising": "OpenCV non-local means, h=3, hColor=3, template=7, search=21; non-generative image-space cleanup",
+        "tone_map": "ACES-like filmic curve, explicit sRGB encoding",
+        "tile_size": 384
+      },
+      "crop_note": "Retain the upper canopy. Use 4:3 or object-position 48% 45% for a square crop."
+    }
+  ],
+  "reproduction": {
+    "script": "source/render_mitsuba.py",
+    "geometry_export": "source/export_scenes.py",
+    "packaging": "source/package_assets.py",
+    "command_document": "SUMMARY.md",
+    "dependencies": {
+      "python": "3.13",
+      "bpy": "5.2.2",
+      "mitsuba": "3.9.1",
+      "pillow": "12.3.0",
+      "numpy": "see source/dependencies.txt",
+      "opencv-python-headless": "see source/dependencies.txt"
+    },
+    "render_device": "CPU",
+    "threads": 3,
+    "samples": 64,
+    "denoising": "OpenCV non-local means"
+  },
+  "boundaries": [
+    "No portraits or people",
+    "No text or logos in artwork",
+    "No real product or location claim",
+    "No stock assets",
+    "No model-generated photographs",
+    "No website repo, deployment, profile, settings or credential changes"
+  ],
+  "verification": {
+    "decoded_all_webp": true,
+    "exact_dimensions": true,
+    "under_byte_budgets": true,
+    "embedded_provenance_read_back": true,
+    "visual_review": "See SUMMARY.md for the actual visual inspection and any correction pass."
+  }
+}

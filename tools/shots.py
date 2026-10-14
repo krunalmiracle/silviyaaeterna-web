@@ -46,6 +46,8 @@ def inspect(page):
         heading:document.querySelector('h1').innerText, font:getComputedStyle(document.querySelector('h1')).fontFamily,
         soonAreControls:document.querySelectorAll('a.soon-state,button.soon-state,.soon-state a,.soon-state button').length,
         heroImageTop:Math.round(document.querySelector('.hero-art img').getBoundingClientRect().top),
+        chapterInsets:[...document.querySelectorAll('.chapter')].map(e=>getComputedStyle(e).paddingTop),
+        aboutInset:getComputedStyle(document.querySelector('.about')).paddingTop,
         heroImageBottom:Math.round(document.querySelector('.hero-art img').getBoundingClientRect().bottom)};
     }''')
 
@@ -100,6 +102,9 @@ def main():
                         top=page.locator('#'+theme).bounding_box()['y']
                         header=page.locator('.site-header').bounding_box()['height']
                         check(top>=header-1,f'{name}-{lang}: anchor headroom {theme}')
+                        if name=='mobile' and theme=='astrology' and not LAYOUT_ONLY:
+                            target=OUT/f'mobile-reflection-{lang}.png'; page.screenshot(path=str(target))
+                            report['screenshots'].append(str(target.relative_to(ROOT)))
                     if width<=800:
                         page.evaluate('scrollTo(0,0)')
                         page.locator('.nav-more summary').click()

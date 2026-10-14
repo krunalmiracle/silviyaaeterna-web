@@ -2,264 +2,201 @@ TAP version 13
 # Subtest: no em dash or en dash anywhere in the shipped page
 ok 1 - no em dash or en dash anywhere in the shipped page
   ---
-  duration_ms: 1.913724
+  duration_ms: 0.927655
   type: 'test'
   ...
 # Subtest: the page makes no third-party runtime requests
 ok 2 - the page makes no third-party runtime requests
   ---
-  duration_ms: 0.4579
+  duration_ms: 0.485477
   type: 'test'
   ...
 # Subtest: no inline styles or scripts that the CSP would block
 ok 3 - no inline styles or scripts that the CSP would block
   ---
-  duration_ms: 0.219652
+  duration_ms: 0.253379
   type: 'test'
   ...
 # Subtest: every translatable node carries both languages
 ok 4 - every translatable node carries both languages
   ---
-  duration_ms: 0.567802
+  duration_ms: 0.520005
   type: 'test'
   ...
 # Subtest: every image has alt text
 ok 5 - every image has alt text
   ---
-  duration_ms: 0.548725
+  duration_ms: 0.425536
   type: 'test'
   ...
 # Subtest: every local reference resolves to a file on disk
-not ok 6 - every local reference resolves to a file on disk
+ok 6 - every local reference resolves to a file on disk
   ---
-  duration_ms: 8.139061
+  duration_ms: 8.132564
   type: 'test'
-  location: '/opt/data/home/projects/silviyaaeterna-web/.worktrees/t_f3c65564/tests/content.test.mjs:72:1'
-  failureType: 'testCodeFailure'
-  error: "ENOENT: no such file or directory, access '/opt/data/home/projects/silviyaaeterna-web/.worktrees/t_f3c65564/assets/images/hero-glasshouse.webp'"
-  code: 'ENOENT'
-  stack: |-
-    async access (node:internal/fs/promises:1317:10)
-    async TestContext.<anonymous> (file:///opt/data/home/projects/silviyaaeterna-web/.worktrees/t_f3c65564/tests/content.test.mjs:78:5)
-    async Test.run (node:internal/test_runner/test:1389:7)
-    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
   ...
 # Subtest: navigation anchors all point at real sections
 ok 7 - navigation anchors all point at real sections
   ---
-  duration_ms: 1.010201
+  duration_ms: 0.412578
   type: 'test'
   ...
 # Subtest: heading structure is a single h1 with ordered levels
 ok 8 - heading structure is a single h1 with ordered levels
   ---
-  duration_ms: 0.186246
+  duration_ms: 0.195679
   type: 'test'
   ...
 # Subtest: coming soon states are honest, non clickable elements
 ok 9 - coming soon states are honest, non clickable elements
   ---
-  duration_ms: 0.430863
+  duration_ms: 0.410505
   type: 'test'
   ...
 # Subtest: language toggle is exposed accessibly
 ok 10 - language toggle is exposed accessibly
   ---
-  duration_ms: 0.242784
+  duration_ms: 0.272124
   type: 'test'
   ...
 # Subtest: motion respects reduced motion and survives failed JavaScript
 ok 11 - motion respects reduced motion and survives failed JavaScript
   ---
-  duration_ms: 0.107789
+  duration_ms: 0.126584
   type: 'test'
   ...
 # Subtest: the page declares the two languages and viewport
 ok 12 - the page declares the two languages and viewport
   ---
-  duration_ms: 0.063197
+  duration_ms: 0.069465
   type: 'test'
   ...
 # Subtest: saved Bulgarian preference applies content, lang, translated aria and image alt
 ok 13 - saved Bulgarian preference applies content, lang, translated aria and image alt
   ---
-  duration_ms: 3.737383
+  duration_ms: 2.74103
   type: 'test'
   ...
 # Subtest: invalid preference and denied storage retain functional English and language toggle
 ok 14 - invalid preference and denied storage retain functional English and language toggle
   ---
-  duration_ms: 1.438399
+  duration_ms: 1.40405
   type: 'test'
   ...
 # Subtest: mobile menu closes on selection
 ok 15 - mobile menu closes on selection
   ---
-  duration_ms: 0.723356
+  duration_ms: 0.768796
   type: 'test'
   ...
 # Subtest: mobile menu closes on Escape and restores summary focus
 ok 16 - mobile menu closes on Escape and restores summary focus
   ---
-  duration_ms: 0.578908
+  duration_ms: 0.68303
   type: 'test'
   ...
 # Subtest: outside click closes mobile menu but inside click does not
 ok 17 - outside click closes mobile menu but inside click does not
   ---
-  duration_ms: 2.006061
+  duration_ms: 0.717366
   type: 'test'
   ...
 # Subtest: all six theme selections open useful prompts with selected aria and focus
 ok 18 - all six theme selections open useful prompts with selected aria and focus
   ---
-  duration_ms: 0.621094
+  duration_ms: 0.741029
   type: 'test'
   ...
 # Subtest: direct theme fragment enhances the correct topic
 ok 19 - direct theme fragment enhances the correct topic
   ---
-  duration_ms: 0.680436
+  duration_ms: 0.678462
   type: 'test'
   ...
 # Subtest: six static descriptions and native prompt disclosures exist without JavaScript
 ok 20 - six static descriptions and native prompt disclosures exist without JavaScript
   ---
-  duration_ms: 0.557958
+  duration_ms: 0.668209
   type: 'test'
   ...
 # Subtest: original images and responsive hero are real WebP assets
-not ok 21 - original images and responsive hero are real WebP assets
+ok 21 - original images and responsive hero are real WebP assets
   ---
-  duration_ms: 5.245389
+  duration_ms: 6.98101
   type: 'test'
-  location: '/opt/data/home/projects/silviyaaeterna-web/.worktrees/t_f3c65564/tests/interaction.test.mjs:89:1'
-  failureType: 'testCodeFailure'
-  error: "ENOENT: no such file or directory, open '/opt/data/home/projects/silviyaaeterna-web/.worktrees/t_f3c65564/assets/images/hero-glasshouse.webp'"
-  code: 'ENOENT'
-  stack: |-
-    async open (node:internal/fs/promises:1360:25)
-    async readFile (node:internal/fs/promises:2149:14)
-    async TestContext.<anonymous> (file:///opt/data/home/projects/silviyaaeterna-web/.worktrees/t_f3c65564/tests/interaction.test.mjs:91:19)
-    async Test.run (node:internal/test_runner/test:1389:7)
-    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
   ...
 # Subtest: social preview is a real 1200 by 630 PNG
-not ok 22 - social preview is a real 1200 by 630 PNG
+ok 22 - social preview is a real 1200 by 630 PNG
   ---
-  duration_ms: 1.846021
+  duration_ms: 1.508795
   type: 'test'
-  location: '/opt/data/home/projects/silviyaaeterna-web/.worktrees/t_f3c65564/tests/interaction.test.mjs:98:1'
-  failureType: 'testCodeFailure'
-  error: "ENOENT: no such file or directory, open '/opt/data/home/projects/silviyaaeterna-web/.worktrees/t_f3c65564/assets/social-og.png'"
-  code: 'ENOENT'
-  stack: |-
-    async open (node:internal/fs/promises:1360:25)
-    async readFile (node:internal/fs/promises:2149:14)
-    async TestContext.<anonymous> (file:///opt/data/home/projects/silviyaaeterna-web/.worktrees/t_f3c65564/tests/interaction.test.mjs:99:15)
-    async Test.run (node:internal/test_runner/test:1389:7)
-    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
   ...
 # Subtest: GET / serves the landing page with security headers
 ok 23 - GET / serves the landing page with security headers
   ---
-  duration_ms: 102.487667
+  duration_ms: 101.174391
   type: 'test'
   ...
 # Subtest: GET /index.html behaves like the root document
 ok 24 - GET /index.html behaves like the root document
   ---
-  duration_ms: 6.528224
+  duration_ms: 2.447456
   type: 'test'
   ...
 # Subtest: HEAD / returns headers without a body
 ok 25 - HEAD / returns headers without a body
   ---
-  duration_ms: 3.319438
+  duration_ms: 2.638909
   type: 'test'
   ...
 # Subtest: every local asset referenced by index.html answers 200
-not ok 26 - every local asset referenced by index.html answers 200
+ok 26 - every local asset referenced by index.html answers 200
   ---
-  duration_ms: 13.775049
+  duration_ms: 13.958946
   type: 'test'
-  location: '/opt/data/home/projects/silviyaaeterna-web/.worktrees/t_f3c65564/tests/server.test.mjs:71:1'
-  failureType: 'testCodeFailure'
-  error: |-
-    assets/images/hero-glasshouse.webp returned 404
-    
-    404 !== 200
-    
-  code: 'ERR_ASSERTION'
-  name: 'AssertionError'
-  expected: 200
-  actual: 404
-  operator: 'strictEqual'
-  stack: |-
-    TestContext.<anonymous> (file:///opt/data/home/projects/silviyaaeterna-web/.worktrees/t_f3c65564/tests/server.test.mjs:79:12)
-    process.processTicksAndRejections (node:internal/process/task_queues:104:5)
-    async Test.run (node:internal/test_runner/test:1389:7)
-    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
   ...
 # Subtest: styles, script and images are served with correct types
-not ok 27 - styles, script and images are served with correct types
+ok 27 - styles, script and images are served with correct types
   ---
-  duration_ms: 5.236927
+  duration_ms: 8.774096
   type: 'test'
-  location: '/opt/data/home/projects/silviyaaeterna-web/.worktrees/t_f3c65564/tests/server.test.mjs:84:1'
-  failureType: 'testCodeFailure'
-  error: |-
-    /assets/images/hero-glasshouse.webp returned 404
-    
-    404 !== 200
-    
-  code: 'ERR_ASSERTION'
-  name: 'AssertionError'
-  expected: 200
-  actual: 404
-  operator: 'strictEqual'
-  stack: |-
-    TestContext.<anonymous> (file:///opt/data/home/projects/silviyaaeterna-web/.worktrees/t_f3c65564/tests/server.test.mjs:96:12)
-    process.processTicksAndRejections (node:internal/process/task_queues:104:5)
-    async Test.run (node:internal/test_runner/test:1389:7)
-    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
   ...
 # Subtest: unknown routes return 404
 ok 28 - unknown routes return 404
   ---
-  duration_ms: 2.871622
+  duration_ms: 2.118103
   type: 'test'
   ...
 # Subtest: server sources and dev documents are never served
 ok 29 - server sources and dev documents are never served
   ---
-  duration_ms: 7.532315
+  duration_ms: 5.365208
   type: 'test'
   ...
 # Subtest: removed write and AI endpoints refuse every mutation method
 ok 30 - removed write and AI endpoints refuse every mutation method
   ---
-  duration_ms: 9.223464
+  duration_ms: 6.525082
   type: 'test'
   ...
 # Subtest: path traversal stays inside the asset directory
 ok 31 - path traversal stays inside the asset directory
   ---
-  duration_ms: 4.282254
+  duration_ms: 3.071623
   type: 'test'
   ...
 # Subtest: the server keeps no secrets and makes no outbound calls
 ok 32 - the server keeps no secrets and makes no outbound calls
   ---
-  duration_ms: 0.759415
+  duration_ms: 0.507337
   type: 'test'
   ...
 1..32
 # tests 32
 # suites 0
-# pass 27
-# fail 5
+# pass 32
+# fail 0
 # cancelled 0
 # skipped 0
 # todo 0
-# duration_ms 220.932956
+# duration_ms 211.624257

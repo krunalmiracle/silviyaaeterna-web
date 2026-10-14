@@ -1,0 +1,48 @@
+[
+  {
+    "path": "assets/images/hero-glasshouse.webp",
+    "width": 1800,
+    "height": 1200,
+    "bytes": 188588,
+    "sha256": "239a2f19861ab098a064113fb05abfc2c0a97c12a165ee691e94d292e347ec9e",
+    "origin": "Independent original render; see ASSET-MANIFEST.json"
+  },
+  {
+    "path": "assets/images/sky-study.webp",
+    "width": 1400,
+    "height": 1050,
+    "bytes": 103304,
+    "sha256": "68d29e2e70abbe3ac25e3ed835a3c9838d22c54c37095901f0156b6434325a51",
+    "origin": "Independent original render; see ASSET-MANIFEST.json"
+  },
+  {
+    "path": "assets/images/skin-ritual.webp",
+    "width": 1400,
+    "height": 1050,
+    "bytes": 92392,
+    "sha256": "4ea78e9f13fd911bfb48fc3bd0aa0f9da6d0bfe3d9de0c0a2968c76e911ad5aa",
+    "origin": "Independent original render; see ASSET-MANIFEST.json"
+  },
+  {
+    "path": "assets/images/quiet-growth.webp",
+    "width": 1400,
+    "height": 1050,
+    "bytes": 116522,
+    "sha256": "33b79f3a410ba41c62bd90011c9feb27a1e18851b7a25c48a6b78e1247209112",
+    "origin": "Independent original render; see ASSET-MANIFEST.json"
+  },
+  {
+    "path": "assets/images/hero-glasshouse-mobile.webp",
+    "width": 780,
+    "height": 520,
+    "bytes": 26552,
+    "origin": "Responsive derivative of original locally rendered hero-glasshouse.webp. No image-generation model or stock source. Source: tools/ASSET-MANIFEST.json."
+  },
+  {
+    "path": "assets/social-og.png",
+    "width": 1200,
+    "height": 630,
+    "bytes": 375390,
+    "origin": "Pillow composite of original hero render and Onest brand text; tools/prepare_images.py"
+  }
+]

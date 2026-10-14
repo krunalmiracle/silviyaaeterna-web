@@ -46,7 +46,7 @@ An unhurried personal project for curiosity and everyday care: reflection materi
 ## Evidence on Hand
 
 - Previous navy/coral SVG almanac design is the anti-reference for this replacement. The already-hardened static server and port 3000 deployment contract are preserved unchanged.
-- Brand name and six topics are settled. Original raster output is supplied by the independent glasshouse asset producer; only verified files are integrated, with the exact manifest retained under tools/.
+- Brand name and six topics are settled. Four original botanical/celestial WebPs are integrated, decoded and hash-verified against tools/ASSET-MANIFEST.json. Geometry was authored with Blender, exported to PLY and finally rendered with Mitsuba CPU; not Cycles final output and not an image model. The mobile hero derivative and 1200x630 social PNG carry their own embedded source metadata. Small generator snapshots stay under tools/glasshouse-source/; the large original source archive remains outside this repository.
 - Absences future work must not fabricate: no YouTube channel URL, no social accounts, no Oriflame links, product details or pricing, no audience metrics, no testimonials, no credentials, no published videos.
 
 ## Product Principles

@@ -25,4 +25,8 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 
 Raised disciplines from declined challengers: concrete specificity (gyaru), paced chapters (dungeon cassette), type confidence (alphabet storm), honest state clarity (drum-machine), responsive consistency (CRT). Competitive cloud direction lost product clarity; no motif borrowed.
 
-Unresolved inputs: originals are produced independently in /opt/data/home/silviya-glasshouse-assets; integrate verified output only. Final independent judge/release belongs to parent, not this worker.
+Build status: four actual original WebPs from /opt/data/home/silviya-glasshouse-assets are integrated with hash verification, true bilingual alt text and intrinsic dimensions. Mobile derivative and matching 1200x630 social PNG are generated from the real hero. Provenance is tools/ASSET-PROVENANCE.md and the unchanged producer manifest.
+
+Builder finish: two image-complete rounds, 284/284 browser checks on the confirmation batch, all EN/BG desktop/mobile full/viewport/menu captures visually read, plus EN/BG expanded-reflection evidence. All 32 tests pass. Design tokens and sidecar describe the actual build. Detector ran once earlier; residual warnings and image limitations are disclosed in .impeccable/review/HANDOFF.md. No additional builder polish loop remains.
+
+No implementation input is unresolved. Independent judge review and production release remain parent-owned and have not been claimed or performed by this worker.
