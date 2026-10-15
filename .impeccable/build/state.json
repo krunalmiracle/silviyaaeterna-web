@@ -1,0 +1,290 @@
+{
+  "tool": "build-phase",
+  "version": 2,
+  "startedAt": "2026-10-14T10:10:15.193Z",
+  "comp": ".impeccable/mocks/b-native.png",
+  "direction": "aeb20778",
+  "breakpoint": "1672x941",
+  "artifact": "index.html",
+  "phase": "plates",
+  "phases": {
+    "comps": {
+      "status": "closed",
+      "openedAt": "2026-10-14T10:10:15.193Z",
+      "closedAt": "2026-10-15T10:50:17.663Z",
+      "attempts": 2,
+      "notes": [],
+      "gate": {
+        "ok": true,
+        "reasons": [],
+        "summary": "3 comps, 1 approved",
+        "approved": ".impeccable/mocks/b-native.png",
+        "at": "2026-10-15T10:50:17.663Z"
+      },
+      "forced": null
+    },
+    "spec": {
+      "status": "closed",
+      "openedAt": "2026-10-15T10:50:17.683Z",
+      "closedAt": "2026-10-15T10:53:57.205Z",
+      "attempts": 2,
+      "notes": [],
+      "gate": {
+        "ok": true,
+        "reasons": [],
+        "summary": "16 regions, 1 plates, 2 text regions measured",
+        "at": "2026-10-15T10:53:57.205Z"
+      },
+      "forced": null
+    },
+    "plates": {
+      "status": "open",
+      "openedAt": "2026-10-15T10:53:57.205Z",
+      "closedAt": null,
+      "attempts": 2,
+      "notes": [],
+      "gate": {
+        "ok": true,
+        "reasons": [],
+        "summary": "1/1 plates",
+        "at": "2026-10-15T11:02:07.005Z"
+      },
+      "forced": null
+    },
+    "hero": {
+      "status": "pending",
+      "openedAt": null,
+      "closedAt": null,
+      "attempts": 0,
+      "notes": [],
+      "gate": null,
+      "forced": null
+    },
+    "sections": {
+      "status": "pending",
+      "openedAt": null,
+      "closedAt": null,
+      "attempts": 0,
+      "notes": [],
+      "gate": null,
+      "forced": null
+    },
+    "motion": {
+      "status": "pending",
+      "openedAt": null,
+      "closedAt": null,
+      "attempts": 0,
+      "notes": [],
+      "gate": null,
+      "forced": null
+    },
+    "responsive": {
+      "status": "pending",
+      "openedAt": null,
+      "closedAt": null,
+      "attempts": 0,
+      "notes": [],
+      "gate": null,
+      "forced": null
+    },
+    "review": {
+      "status": "pending",
+      "openedAt": null,
+      "closedAt": null,
+      "attempts": 0,
+      "notes": [],
+      "gate": null,
+      "forced": null
+    }
+  },
+  "finish": null,
+  "plates": {
+    "garden": {
+      "id": "garden",
+      "file": "assets/plates/garden.png",
+      "status": "ok",
+      "assetHash": "9bfa1288ccff9bb2613a72f298c11e5d70d345069bcb11b35c31a9543bf4341d",
+      "regionHash": "ffd7edb6d53f1635c92587723b2d9d79b73230b6dc6c9e6d23028010c4e11c04",
+      "referenceHash": "ab1b7a6066e5cd8b164173bf6ad5d674f5fed48fcaa77aaa15047e0279502f79",
+      "reference": {
+        "policy": "plate-reference-v2",
+        "excludedPixels": 242611,
+        "totalPixels": 1573352,
+        "remainingPixels": 1330741,
+        "excludedFraction": 0.15420007728721863,
+        "fullyExcluded": false,
+        "regions": [
+          {
+            "id": "brand",
+            "kind": "control",
+            "cropPx": {
+              "x": 77,
+              "y": 30,
+              "w": 365,
+              "h": 66
+            },
+            "pixels": 24090
+          },
+          {
+            "id": "nav-themes",
+            "kind": "control",
+            "cropPx": {
+              "x": 974,
+              "y": 46,
+              "w": 101,
+              "h": 39
+            },
+            "pixels": 3939
+          },
+          {
+            "id": "nav-project",
+            "kind": "control",
+            "cropPx": {
+              "x": 1116,
+              "y": 46,
+              "w": 103,
+              "h": 39
+            },
+            "pixels": 4017
+          },
+          {
+            "id": "languages",
+            "kind": "control",
+            "cropPx": {
+              "x": 1267,
+              "y": 43,
+              "w": 104,
+              "h": 42
+            },
+            "pixels": 4368
+          },
+          {
+            "id": "motion",
+            "kind": "control",
+            "cropPx": {
+              "x": 1414,
+              "y": 36,
+              "w": 198,
+              "h": 55
+            },
+            "pixels": 10890
+          },
+          {
+            "id": "headline",
+            "kind": "text",
+            "cropPx": {
+              "x": 420,
+              "y": 506,
+              "w": 843,
+              "h": 91
+            },
+            "pixels": 76713
+          },
+          {
+            "id": "description",
+            "kind": "text",
+            "cropPx": {
+              "x": 422,
+              "y": 609,
+              "w": 828,
+              "h": 55
+            },
+            "pixels": 45540
+          },
+          {
+            "id": "explore",
+            "kind": "control",
+            "cropPx": {
+              "x": 708,
+              "y": 679,
+              "w": 255,
+              "h": 52
+            },
+            "pixels": 13260
+          },
+          {
+            "id": "theme-astrology",
+            "kind": "control",
+            "cropPx": {
+              "x": 111,
+              "y": 755,
+              "w": 171,
+              "h": 42
+            },
+            "pixels": 7182
+          },
+          {
+            "id": "theme-numerology",
+            "kind": "control",
+            "cropPx": {
+              "x": 336,
+              "y": 755,
+              "w": 193,
+              "h": 42
+            },
+            "pixels": 8106
+          },
+          {
+            "id": "theme-skincare",
+            "kind": "control",
+            "cropPx": {
+              "x": 590,
+              "y": 755,
+              "w": 167,
+              "h": 42
+            },
+            "pixels": 7014
+          },
+          {
+            "id": "theme-wellbeing",
+            "kind": "control",
+            "cropPx": {
+              "x": 822,
+              "y": 755,
+              "w": 179,
+              "h": 42
+            },
+            "pixels": 7518
+          },
+          {
+            "id": "theme-family",
+            "kind": "control",
+            "cropPx": {
+              "x": 1056,
+              "y": 755,
+              "w": 242,
+              "h": 42
+            },
+            "pixels": 10164
+          },
+          {
+            "id": "theme-mental",
+            "kind": "control",
+            "cropPx": {
+              "x": 1354,
+              "y": 755,
+              "w": 205,
+              "h": 42
+            },
+            "pixels": 8610
+          },
+          {
+            "id": "continuation",
+            "kind": "control",
+            "cropPx": {
+              "x": 737,
+              "y": 856,
+              "w": 200,
+              "h": 56
+            },
+            "pixels": 11200
+          }
+        ],
+        "ignoredContainers": []
+      },
+      "compHash": "90e2a408bc5b41dcfaaadbe19a09506ca22306714a56917394f93662126af693",
+      "size": "2508x1412",
+      "score": 0.6709
+    }
+  }
+}

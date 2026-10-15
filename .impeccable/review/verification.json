@@ -1,121 +1,245 @@
 {
-  "verifiedAt": "2026-10-14T01:55:41.814978+00:00",
+  "verifiedAt": "2026-10-15T12:02:05.765456+00:00",
   "assets": [
     {
-      "path": "assets/images/hero-glasshouse.webp",
-      "dimensions": [
-        1800,
-        1200
-      ],
-      "bytes": 188588,
-      "sha256": "239a2f19861ab098a064113fb05abfc2c0a97c12a165ee691e94d292e347ec9e",
-      "provenance": "original XMP retained; manifest hash and bilingual alt match"
+      "filename": "hero-garden.webp",
+      "width": 1672,
+      "height": 941,
+      "bytes": 283718,
+      "sha256": "ee3037f6761a377df6d3ac5a30800124a411236c5c6d0363f7bbfeacdaf63a65",
+      "sourceId": "hero-garden",
+      "originalSha256": "edda6fc3b6dabbe9cf89c3f279978af64cefbee4a2fbff0bffe2ba21374abb75"
     },
     {
-      "path": "assets/images/sky-study.webp",
-      "dimensions": [
-        1400,
-        1050
-      ],
-      "bytes": 103304,
-      "sha256": "68d29e2e70abbe3ac25e3ed835a3c9838d22c54c37095901f0156b6434325a51",
-      "provenance": "original XMP retained; manifest hash and bilingual alt match"
+      "filename": "hero-garden-small.webp",
+      "width": 780,
+      "height": 439,
+      "bytes": 94574,
+      "sha256": "f9fb9f5f85d587b4749642bd68606be3a84a0ecddabb8272cdc4c088361f5a7a",
+      "sourceId": "hero-garden",
+      "originalSha256": "edda6fc3b6dabbe9cf89c3f279978af64cefbee4a2fbff0bffe2ba21374abb75"
     },
     {
-      "path": "assets/images/skin-ritual.webp",
-      "dimensions": [
-        1400,
-        1050
-      ],
-      "bytes": 92392,
-      "sha256": "4ea78e9f13fd911bfb48fc3bd0aa0f9da6d0bfe3d9de0c0a2968c76e911ad5aa",
-      "provenance": "original XMP retained; manifest hash and bilingual alt match"
+      "filename": "astrology-moon.webp",
+      "width": 1672,
+      "height": 941,
+      "bytes": 263750,
+      "sha256": "32fa068a073bee5e05a52493f560f677f61fcf9ed7da78e5b13dab0de3e43302",
+      "sourceId": "astrology-moon",
+      "originalSha256": "d2f855b23ebd57a0f394867d2e15d9f4f2036a00462af30a55902bb79dba98c8"
     },
     {
-      "path": "assets/images/quiet-growth.webp",
-      "dimensions": [
-        1400,
-        1050
-      ],
-      "bytes": 116522,
-      "sha256": "33b79f3a410ba41c62bd90011c9feb27a1e18851b7a25c48a6b78e1247209112",
-      "provenance": "original XMP retained; manifest hash and bilingual alt match"
+      "filename": "astrology-moon-small.webp",
+      "width": 780,
+      "height": 439,
+      "bytes": 85802,
+      "sha256": "4d46591173d7f9d52e96fb3329ca46d3eaa1a01c3e2d1135d65ec617b1f00f4b",
+      "sourceId": "astrology-moon",
+      "originalSha256": "d2f855b23ebd57a0f394867d2e15d9f4f2036a00462af30a55902bb79dba98c8"
     },
     {
-      "path": "assets/images/hero-glasshouse-mobile.webp",
-      "dimensions": [
-        780,
-        520
-      ],
-      "bytes": 26552,
-      "sha256": "eacde476c1f36b002912397b19f846f31ddfa921deb288fa6b12b4199044347b",
-      "provenance": "embedded derivative origin retained"
+      "filename": "numerology-pattern.webp",
+      "width": 1672,
+      "height": 941,
+      "bytes": 265864,
+      "sha256": "423cba2b34d0610f29163b331b57cbf8efcbee0eaa41e5c4454fdbde58d849c6",
+      "sourceId": "numerology-pattern",
+      "originalSha256": "d604b1e8641b278c59e44dbfea7f4eb405a877c3663de2e817c2dfd7de65cc17"
     },
     {
-      "path": "assets/social-og.png",
-      "dimensions": [
-        1200,
-        630
-      ],
-      "bytes": 375390,
-      "sha256": "0a32218b972907cb1aec3cead1667696b14b7633cba2e6540437143308606db3",
-      "provenance": "embedded derivative origin retained"
+      "filename": "numerology-pattern-small.webp",
+      "width": 780,
+      "height": 439,
+      "bytes": 91080,
+      "sha256": "12a3bd388d3fbb94ca7fc5c270dd0e096c50e997955d1fc736f67b4d929d0309",
+      "sourceId": "numerology-pattern",
+      "originalSha256": "d604b1e8641b278c59e44dbfea7f4eb405a877c3663de2e817c2dfd7de65cc17"
+    },
+    {
+      "filename": "skincare-ritual.webp",
+      "width": 1672,
+      "height": 941,
+      "bytes": 201780,
+      "sha256": "98bd134bd9f2a97eb8ce4573ec647b14b37633f1a11586c6d7db8cbf73d1d37b",
+      "sourceId": "skincare-ritual",
+      "originalSha256": "c1fca513a3f34a288325b0da74754b1c410e9a9432d18493e3509384d10cba22"
+    },
+    {
+      "filename": "skincare-ritual-small.webp",
+      "width": 780,
+      "height": 439,
+      "bytes": 79848,
+      "sha256": "93f4d79aa627c45060c2fc56ef4e704130daa387590a098f7aad0113359fea57",
+      "sourceId": "skincare-ritual",
+      "originalSha256": "c1fca513a3f34a288325b0da74754b1c410e9a9432d18493e3509384d10cba22"
+    },
+    {
+      "filename": "psychology-journal.webp",
+      "width": 1672,
+      "height": 941,
+      "bytes": 252010,
+      "sha256": "d2521917d7fc6449408b0f78ff31cc7a86697d2b186e67c1a63f2a1aadeab60e",
+      "sourceId": "psychology-journal",
+      "originalSha256": "fad68910c83da8258a47a3646e1170e20ccadfd4e2a077753a3fd3f7b0870d84"
+    },
+    {
+      "filename": "psychology-journal-small.webp",
+      "width": 780,
+      "height": 439,
+      "bytes": 89958,
+      "sha256": "01751b788c47c25f11925e745dadafe10f157dc40def336c6c6c6b97df4c9261",
+      "sourceId": "psychology-journal",
+      "originalSha256": "fad68910c83da8258a47a3646e1170e20ccadfd4e2a077753a3fd3f7b0870d84"
+    },
+    {
+      "filename": "family-grove.webp",
+      "width": 1672,
+      "height": 941,
+      "bytes": 346114,
+      "sha256": "31d3408ec318cf5596f65db506764cbdecc7ec7c2c02125ba33c3202f09594cc",
+      "sourceId": "family-grove",
+      "originalSha256": "2e2b043b6353ddba66b6e7345100cbdfeecd716264d6883c178dfa971e30b88f"
+    },
+    {
+      "filename": "family-grove-small.webp",
+      "width": 780,
+      "height": 439,
+      "bytes": 112792,
+      "sha256": "608cca634441dd35c9385afaef2d97e9895b1e0510a30d261b3d351a4d0ce3a5",
+      "sourceId": "family-grove",
+      "originalSha256": "2e2b043b6353ddba66b6e7345100cbdfeecd716264d6883c178dfa971e30b88f"
+    },
+    {
+      "filename": "mental-health-haven.webp",
+      "width": 1672,
+      "height": 941,
+      "bytes": 311330,
+      "sha256": "557108a4cfd7687151a4eb51ad15195767223cbb39fe6c3d4c111cde9d764ca0",
+      "sourceId": "mental-health-haven",
+      "originalSha256": "7d541e4797e032f4c84656f77d1b6d915b15d84ae2bf0791009094eb8affe1ac"
+    },
+    {
+      "filename": "mental-health-haven-small.webp",
+      "width": 780,
+      "height": 439,
+      "bytes": 103420,
+      "sha256": "7c4f8309c9d38f0c140042fe0e133f95b26d1de130ae109108b2c4f1acdeb19d",
+      "sourceId": "mental-health-haven",
+      "originalSha256": "7d541e4797e032f4c84656f77d1b6d915b15d84ae2bf0791009094eb8affe1ac"
+    },
+    {
+      "filename": "closing-bloom.webp",
+      "width": 1672,
+      "height": 941,
+      "bytes": 95346,
+      "sha256": "10486bdffafa6ffa8c29c045e37a64351c00979cb4ea9c3bbee99ac80a450ce1",
+      "sourceId": "closing-bloom",
+      "originalSha256": "dca225800623b5e3fa5e07771932d3324cdc396b423c5532cedb4eda29ad61ff"
+    },
+    {
+      "filename": "closing-bloom-small.webp",
+      "width": 780,
+      "height": 439,
+      "bytes": 37578,
+      "sha256": "69e98b1c6421a2a57381866e6e0d6030306d5b1684f2ec59007ec357e2d2c3e9",
+      "sourceId": "closing-bloom",
+      "originalSha256": "dca225800623b5e3fa5e07771932d3324cdc396b423c5532cedb4eda29ad61ff"
     }
   ],
   "fonts": [
     {
-      "path": "assets/fonts/Onest-Variable.woff2",
-      "CyrillicCodepointsUsed": 49,
+      "name": "CormorantGaramond-Variable.woff2",
+      "usedCyrillicCodepoints": 49,
       "missing": [],
-      "sha256": "9657c4acc66431585127b66845fb571a6b4e8cd200a20a2d629a9bac2b59ea6d"
+      "sha256": "c892d11a27092b7df973fd5836fd1a88e17a5a2ba99ed0898e83fba8bbf37cf6"
     },
     {
-      "path": "assets/fonts/Geist-Variable-subset.woff2",
-      "CyrillicCodepointsUsed": 49,
+      "name": "Geist-Variable-subset.woff2",
+      "usedCyrillicCodepoints": 49,
       "missing": [],
       "sha256": "277ba95bbba0cd5ea50b01c2a35defe8ee8b7b04445cc78789479de3cded706d"
     }
   ],
   "screenshots": [
     {
-      "path": ".impeccable/review/desktop-top.png",
+      "path": ".impeccable/review/desktop-en-top.png",
       "dimensions": [
         1440,
         900
       ],
-      "sha256": "3fd0eb525d76479b2350ab394a77c2602617a6290c6a5e14806883a245ca0e07"
+      "sha256": "2a2c00d8acffc7909fc22ecf471e7741a45c515e677ca23de21ebc3bed77c29f"
     },
     {
-      "path": ".impeccable/review/desktop.png",
+      "path": ".impeccable/review/desktop-en-full.png",
       "dimensions": [
         1440,
-        4863
+        7554
       ],
-      "sha256": "1ed557c66b3b1a1011159b990b21e23dba676edd59b2ada7ef60ac899e8f3a54"
+      "sha256": "24a76a3f20d1b963af7facb1f45d2adc847844619a055ba05738c5841e2646f4"
     },
     {
-      "path": ".impeccable/review/mobile-top.png",
+      "path": ".impeccable/review/scene-astrology.png",
+      "dimensions": [
+        1440,
+        900
+      ],
+      "sha256": "973a582612f09e6c4f84bba28362e6cda2427474380a5a22b2112ca85081e348"
+    },
+    {
+      "path": ".impeccable/review/scene-numerology.png",
+      "dimensions": [
+        1440,
+        900
+      ],
+      "sha256": "91a695df39259c3ea4fae4775c978ed21de204944976b1794c18460e5708a4d5"
+    },
+    {
+      "path": ".impeccable/review/scene-skincare.png",
+      "dimensions": [
+        1440,
+        900
+      ],
+      "sha256": "72b7bdfc82862a1d14153e41816e4902b83c1fdb9ab01b14b7327b2c79a2b0c4"
+    },
+    {
+      "path": ".impeccable/review/scene-wellbeing.png",
+      "dimensions": [
+        1440,
+        900
+      ],
+      "sha256": "f19f809d9356fa1b815f564490637207d05631c4a336dffeae619fdf819abd84"
+    },
+    {
+      "path": ".impeccable/review/scene-family.png",
+      "dimensions": [
+        1440,
+        900
+      ],
+      "sha256": "b45a690debdbde67de9d7b2fdc935df07cdf5f0a3123d12f1d5b80dd8d5beec3"
+    },
+    {
+      "path": ".impeccable/review/scene-mental-health.png",
+      "dimensions": [
+        1440,
+        900
+      ],
+      "sha256": "f38238d7b4d0baf48cc041be97d0edd8f080c58a1758bdd81ceeda5309a8266e"
+    },
+    {
+      "path": ".impeccable/review/mobile-en-top.png",
       "dimensions": [
         390,
         844
       ],
-      "sha256": "8942175ba4d3aec8a28868c8049f6632f382edea4bd72c8b8345062fadd2d11a"
+      "sha256": "7bfac1816c04fdcae19d4c0a9d4e220511e99e3b65e831aa29a86507cec8824e"
     },
     {
-      "path": ".impeccable/review/mobile.png",
+      "path": ".impeccable/review/mobile-en-full.png",
       "dimensions": [
         390,
-        5653
+        7119
       ],
-      "sha256": "6f4c59991fe393f2b491ac38cddc10c6b27337b1877242ca763a2d8542bfb0e3"
-    },
-    {
-      "path": ".impeccable/review/mobile-reflection-en.png",
-      "dimensions": [
-        390,
-        844
-      ],
-      "sha256": "190bc9d1445453d063e33fe12c572faf4787ec8101bd49f26cab0599417e5e79"
+      "sha256": "c3655463634b01c2d8965e6d5b8ce170fe6818d10c0c927de4d904a79fb26314"
     },
     {
       "path": ".impeccable/review/mobile-menu-en.png",
@@ -123,7 +247,23 @@
         390,
         844
       ],
-      "sha256": "adc7715ba86d071546765dcd7012509fc89a081eb137dc9e046a99380f8c2ff8"
+      "sha256": "97141eb780b6845be7d7ce9187fbe9ce051a915695d81c1a016506ce521be11e"
+    },
+    {
+      "path": ".impeccable/review/comp-en-top.png",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "4f264392de4687f93ab46cd1e898a82912a45517d087c6a5bb596e38050b1bae"
+    },
+    {
+      "path": ".impeccable/review/comp-en-full.png",
+      "dimensions": [
+        1672,
+        7907
+      ],
+      "sha256": "0edce6875b7bb0efe1a9e53a44472e286d53b2feb026ecd1359ff7cfdf8d70ce"
     },
     {
       "path": ".impeccable/review/desktop-bg-top.png",
@@ -131,15 +271,15 @@
         1440,
         900
       ],
-      "sha256": "1266725b56e2e0388cc823ca72c4d984d9f44ef6eaec3e1a166583cb242de304"
+      "sha256": "6ad231a3d86300935829a6f0722cfb00def1627815a349d9b20af823bc52478b"
     },
     {
-      "path": ".impeccable/review/desktop-bg.png",
+      "path": ".impeccable/review/desktop-bg-full.png",
       "dimensions": [
         1440,
-        5075
+        7756
       ],
-      "sha256": "02b6c6938d1f06b78d2042057256d1bb3a2cb4ea11079d0f5fe18390ffea0da8"
+      "sha256": "43f0737ed336757e6facd4974b1f4139f9cabe0bcb91acfce9531e1db1881412"
     },
     {
       "path": ".impeccable/review/mobile-bg-top.png",
@@ -147,23 +287,15 @@
         390,
         844
       ],
-      "sha256": "7a8e99928fb7d235193e27d63160ed75468804618fffda607e22cca064651bbd"
+      "sha256": "00f3ea9ac12cd1e9fdaa92d5ccda5b1afcafaa0f8b44f735003bbe861ed4e812"
     },
     {
-      "path": ".impeccable/review/mobile-bg.png",
+      "path": ".impeccable/review/mobile-bg-full.png",
       "dimensions": [
         390,
-        6020
+        7379
       ],
-      "sha256": "6be4d9d796df124dafe2e26461ee50c6a1083cccf5f936c122950bf25c2de871"
-    },
-    {
-      "path": ".impeccable/review/mobile-reflection-bg.png",
-      "dimensions": [
-        390,
-        844
-      ],
-      "sha256": "8b2a4d48d1a94dfde515d21bf45bed3b5376242bcf53ee929e015af606ae0aee"
+      "sha256": "1f7cebbd17205dd376eace149f81a5a47f89bbc2fa9bd897ced3eb3ce79d229d"
     },
     {
       "path": ".impeccable/review/mobile-menu-bg.png",
@@ -171,48 +303,154 @@
         390,
         844
       ],
-      "sha256": "c725e1a687caee29f5d330a07d05248f6fe7a810bc46d99f20c8b5eba075c746"
+      "sha256": "91695ef144a5d93ba68a1da65c2f20213cb857f26201abb5a31f7b013e8b729f"
+    },
+    {
+      "path": ".impeccable/review/comp-bg-top.png",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "a4252989f1bf6d57838d6aa7b4678013496fdc2ff73ccb55505a44cde28579e8"
+    },
+    {
+      "path": ".impeccable/review/comp-bg-full.png",
+      "dimensions": [
+        1672,
+        7985
+      ],
+      "sha256": "2712bdbfc0c1fb8d14075e79d571a79bddd88e6bf4145639c10407a8d721eda1"
+    },
+    {
+      "path": ".impeccable/review/motion-running.png",
+      "dimensions": [
+        1440,
+        900
+      ],
+      "sha256": "1012ed0fbc96be17f54c3563a1b4e6a5c99152ecbadeb005feb11196ade518d1"
+    },
+    {
+      "path": ".impeccable/review/motion-paused.png",
+      "dimensions": [
+        1440,
+        900
+      ],
+      "sha256": "13063794e15b0dc818638f843a5c98367f3b519d00611b517367c1489c4ea619"
+    },
+    {
+      "path": ".impeccable/review/reduced-motion.png",
+      "dimensions": [
+        1440,
+        900
+      ],
+      "sha256": "2e784c7face77bf5c16783cbc09d31b41bcd09b3fe21d14050be130d272b0c7d"
+    },
+    {
+      "path": ".impeccable/review/context-loss.png",
+      "dimensions": [
+        1440,
+        900
+      ],
+      "sha256": "225d33b146763ac6cfcc6404b6e1922471a6a420799ee0939c5a29f506d043b1"
+    },
+    {
+      "path": ".impeccable/review/webgl-unavailable.png",
+      "dimensions": [
+        1440,
+        900
+      ],
+      "sha256": "2a2c00d8acffc7909fc22ecf471e7741a45c515e677ca23de21ebc3bed77c29f"
+    },
+    {
+      "path": ".impeccable/review/no-js-mobile.png",
+      "dimensions": [
+        390,
+        844
+      ],
+      "sha256": "e831f5c9058ca3135b428dfbc56de6ef987637ed6b0ee530dc263ade0caecd5f"
     }
   ],
+  "originalsIntegrated": 8,
+  "responsiveDerivatives": 16,
+  "responsiveBytes": 2714964,
+  "social": {
+    "dimensions": [
+      1200,
+      630
+    ],
+    "sha256": "e19c83d089057819d1cc7088f06eeced989f422b8e7668d06837719a9c2be46a",
+    "provenance": "Derivative of actual producer hero-garden.png; original SHA256 edda6fc3b6dabbe9cf89c3f279978af64cefbee4a2fbff0bffe2ba21374abb75"
+  },
+  "vendorMatchesPinnedPackage": true,
+  "browser": {
+    "passed": 322,
+    "total": 322,
+    "report": "browser-report.json"
+  },
+  "lifecycleAndAccessibilityRegression": {
+    "passed": 13,
+    "total": 13,
+    "report": "fix/green-regression.json",
+    "nativeBFCacheReturns": 3,
+    "localizedAXRuns": 4
+  },
+  "accessibility": {
+    "axeRuns": 4,
+    "violations": 0,
+    "incompleteChecksRetained": true
+  },
+  "performance": {
+    "lcp": [
+      {
+        "start": 132,
+        "size": 92565
+      }
+    ],
+    "longTasks": []
+  },
+  "performanceScope": "No network or CPU throttling; local host, software WebGL under Xvfb. Not field-performance metrics.",
+  "visibilityLimitation": "Chromium reports document.hidden=false for the background target in this automation setup. Actual frame production is measured independently; the hidden visibilitychange handler is tested separately in browser-report.json.",
   "tests": {
-    "tests": 32,
-    "pass": 32,
+    "tests": 34,
+    "pass": 34,
     "fail": 0
   },
-  "browserChecks": {
-    "passed": 284,
-    "total": 284,
-    "imageCompleteRounds": 2,
-    "externalRequests": [],
-    "failedRequests": [],
-    "consoleErrors": [],
-    "httpErrors": [],
-    "contrast": {
-      "#183f35 on #e6ede3": 9.76,
-      "#466255 on #e6ede3": 5.6,
-      "#466255 on #f2f6ef": 6.12,
-      "#f2f6ef on #183f35": 10.66,
-      "#f2f6ef on #285344": 7.97
-    }
+  "motionEvidence": {
+    "path": ".impeccable/review/sanctuary-motion.mp4",
+    "sha256": "bc3a73263d6a471eb996bbb22ac71b9a56d9098f39bb45d98222c55f6b32c950",
+    "ffprobe": {
+      "duration": "11.600000",
+      "size": "1403304"
+    },
+    "timingLedger": "motion-timing.json"
   },
+  "timedCaptures": 36,
   "sourceFingerprints": {
-    "index.html": "fc9cd880eb10055fbc92035e4f823260c3177945fb9010707f3b182de6fea890",
-    "assets/styles.css": "303961f791edca974a2f476253536d139703fb6c67844db86debe88856f1a543",
+    "index.html": "75196fdf9ac54dd4ae9c78d384bb8fd637bbc3498ae42353516ddd1415e2c023",
+    "assets/styles.css": "0d2dc4872b8bdae9b7ec0f922b9a9feb702079e79aecd2e264e2fefabda90c58",
     "assets/site.js": "2a8342d72c30719f338678a20555b7883353360a9dfe653ec87fddaad0e75800",
+    "assets/scene.js": "57fbf4d35c6d38b792bb028149202d614e520d5593c0cd22083e716353081e3f",
+    "assets/motion-state.js": "c5371e55ddff3565e257394a5c72ca6ee1234a6d6d2247f3cbc3704a2a772b61",
     "server.ts": "3a74a542e94ce0dc911fbb7972427acc43cb6bf32f6c9849de02407d057d1d7b",
-    "Dockerfile": "a76824bbe55dd617fddd6464c06a1d9199b2f03b469b6a7a3b4be6c4c8d0f0bd"
+    "Dockerfile": "a76824bbe55dd617fddd6464c06a1d9199b2f03b469b6a7a3b4be6c4c8d0f0bd",
+    "package.json": "bd46ec6530aa6a24eab08140f2d3acb40756b3539af72aa458025fbf9d76ba7e",
+    "package-lock.json": "29f2376b2cf245135c1467cf846ac2abcb18c470c209fb39206147eb54fe70fa",
+    "DESIGN.md": "839aaf9414026e3774c6c8d4e8e0aa20b9c78fe8c3b8f78c2eb47c141a18acb7",
+    ".impeccable/design.json": "aaced8791352540a23cee894e62e79a4038e669342c6bda1ed02ab092998d025"
   },
-  "sourceSnapshots": {
-    "render.py": "dd827efb8299b81b84dadb93af1e61b2f1d7d8c5ff03a577d4a4ccd8546bb51a",
-    "export_scenes.py": "93c813793aa7a9c776a9a147447b1006b82572619ba82896970aceda9dd57de5",
-    "render_mitsuba.py": "9703399327e8000a99611c535327f6237c2a84639bd7d6d897c38a52253a1e71",
-    "package_assets.py": "839a9fd1611ed547d9875ccbfd0bd63db4c743bf93a6824909d83f841a822931",
-    "verify_assets.py": "bec5328a230971a91148824a86c56b53b9adf47c63907b52c07df45789e05301",
-    "ORIGIN.md": "f3cdf4f03a6ee97705cca94252bedc4b85f0a3d5681211368d4d9b92666f92b8",
-    "reproduce.sh": "d82e913bdc3b51aa79278ffe01fbf1190b7a3860035cb9150470d14f7edb9a06",
-    "dependencies.txt": "95598fd40a855bd3431daccbdff9a2b72ee183bee52d85289321acb58e7f944a"
+  "tokenContrast": {
+    "#f3efe5 on #081e22": 15.0,
+    "#bfd1cc on #081e22": 10.83,
+    "#e7c995 on #081e22": 10.82,
+    "#061619 on #e7c995": 11.6,
+    "#86aaa5 on #081e22": 6.81
   },
-  "rendererSourceMatchesManifest": true,
-  "sourceArchive": "/opt/data/home/silviya-glasshouse-assets/",
-  "reviewScope": "Builder visual confirmation only; independent judge and production release are parent-owned."
+  "compWorkflow": {
+    "threeRealComps": true,
+    "selected": "b-native.png",
+    "selection": "user-delegated",
+    "interactiveReview": "explicitly waived, USER-WAIVER.md",
+    "cliGateState": "refused state retained; no forged approval or numerical SHIP claimed"
+  },
+  "reviewScope": "Builder evidence, pending independent judge. Deployment is a separate verified operation."
 }

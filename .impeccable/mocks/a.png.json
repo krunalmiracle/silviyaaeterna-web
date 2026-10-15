@@ -1,0 +1,21 @@
+{
+  "success": true,
+  "image": "/opt/data/cache/images/openai_codex_gpt-image-2-high_20261014_101146_8260c2ad.png",
+  "model": "gpt-image-2-high",
+  "prompt": "Render a finished desktop website first viewport for Silviya Aeterna, edge to edge, crisp readable live-looking typography, no browser chrome or device. This is a bilingual personal educational content project exploring astrology, numerology, skincare, psychology-informed wellbeing, family and children, and mental health. The visitor enters an enchanted botanical sanctuary and can explore the six themes. Use the supplied actual garden image as the dominant full-bleed art, preserving its recognizable arch, foreground blossoms and reflecting pool. This reference supplies the scene and palette, not an existing website layout.\nComposition A: an immersive garden threshold. The site header quietly frames the scene, a broad expressive serif statement occupies the dark open left sky while the arch remains unobstructed. Real headline: 'A little more in tune.' Purpose text: 'Astrology, everyday care and the art of paying attention. A personal project in English and Bulgarian.' Primary action: 'Explore the themes'. Header brand 'Silviya Aeterna', navigation 'The themes', 'The project', controls 'EN', 'BG', 'Pause motion'. At the lower edge the start of the Living Atlas introduces 'Follow your curiosity.' and a clearly readable six-theme rail. Moonlit petrol and teal, pearl light and tiny champagne accents; elegant Cyrillic-capable editorial serif with restrained sans support. A mature cinematic working interface, not a poster, no cards, no invented claims. Let the garden's depth carry the hierarchy.",
+  "provider": "openai-codex",
+  "modality": "image",
+  "quality": "high",
+  "aspect_ratio": "landscape",
+  "image_source": "final",
+  "requested_size": "1536x1024",
+  "pixel_size": "1672x941",
+  "references": [
+    "/opt/data/home/silviya-magic-assets/hero-garden.png"
+  ],
+  "output": "/opt/data/home/projects/silviyaaeterna-web/.worktrees/t_96b93555/.impeccable/mocks/a.png",
+  "width": 1672,
+  "height": 941,
+  "sha256": "d343ca7dca98055378fdee186c6cbaf081bf2a3a70380dd484abb9d48d8091f3",
+  "bytes": 2649984
+}

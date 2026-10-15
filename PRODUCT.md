@@ -26,7 +26,7 @@ An unhurried personal project for curiosity and everyday care: reflection materi
 
 ## Capabilities and Constraints
 
-- Static, single-page site: HTML, CSS, one small JavaScript file, local original WebP still lifes, a raster social preview and a small SVG favicon. No runtime third-party requests.
+- Static, single-page site: HTML, CSS, local language/navigation and scene JavaScript, self-hosted GSAP/ScrollTrigger, eight original GPT-produced garden scenes as responsive WebPs, a raster social preview and a small SVG favicon. One bounded native WebGL hero effect has a static fallback. No runtime third-party requests.
 - Accessible language toggle (keyboard operable, `aria-pressed`, `lang` attribute updated, preference remembered locally).
 - Honest states only: no fake links, follower counts, videos, testimonials, qualifications, pricing, income claims, product claims, newsletter success or medical outcomes.
 - No YouTube, social or Oriflame destinations exist yet; their sections are explicit coming-soon states with no href.
@@ -40,13 +40,13 @@ An unhurried personal project for curiosity and everyday care: reflection materi
 - Brand and future YouTube channel name: **Silviya Aeterna** (fact; preserve exactly).
 - Broad subject areas are fixed: astrology, numerology, skincare, psychology-informed wellbeing, family and children, adult self-improvement, mental health.
 - Bilingual EN/BG parity at launch.
-- The user authorized complete replacement and delegated design choice. The settled direction is Daylight Glasshouse: cool pale jade/leaf grounds, deep spruce type, restrained amber inside sunlit botanical/celestial still lifes. Self-hosted Cyrillic-capable Onest display with Geist supporting text. Broad raster art, open editorial chapters, no repeated cards, no navy/coral orbit-chart identity, no cream-luxury serif or purple glow. No em dashes in visible copy.
-- User explicitly requested generated original assets. The approved production method is original locally authored 3D rendering, not stock, hotlinks or a claim of AI photography. Provenance and generation scripts stay dev-only under tools/.
+- The user authorized complete replacement and delegated design choice. The pinned direction is an enchanted botanical sanctuary, seed aeb20778: moonlit garden, deep petrol, pearl display and champagne controls. A reflection-led hero leads through six illustrated scenes. Self-hosted Cyrillic-capable Cormorant Garamond display and Geist supporting text; no repeated cards or static green polish pass. No em dashes in visible copy.
+- User explicitly required actual GPT-produced original artwork and rejected stock, Picsum and local 3D stand-ins. Eight read-only producer PNGs are integrated via hash-verified WebP derivatives. Prompts, requested model and exact-engine uncertainty are documented honestly. Provenance and helpers stay dev-only under tools/.
 
 ## Evidence on Hand
 
-- Previous navy/coral SVG almanac design is the anti-reference for this replacement. The already-hardened static server and port 3000 deployment contract are preserved unchanged.
-- Brand name and six topics are settled. Four original botanical/celestial WebPs are integrated, decoded and hash-verified against tools/ASSET-MANIFEST.json. Geometry was authored with Blender, exported to PLY and finally rendered with Mitsuba CPU; not Cycles final output and not an image model. The mobile hero derivative and 1200x630 social PNG carry their own embedded source metadata. Small generator snapshots stay under tools/glasshouse-source/; the large original source archive remains outside this repository.
+- Both the navy/coral SVG almanac and pale jade Daylight Glasshouse are superseded anti-references. The already-hardened static server, strict CSP and port 3000 deployment contract are preserved unchanged.
+- Brand name and six topics are settled. Eight actual GPT-produced originals are integrated and hash-verified against tools/ASSET-MANIFEST.json as sixteen responsive derivatives. The 1200x630 social PNG is a documented hero crop with local typography. Original source archive remains read-only at /opt/data/home/silviya-magic-assets. Three real comps, measured region/font records, browser evidence and motion captures are retained under .impeccable/.
 - Absences future work must not fabricate: no YouTube channel URL, no social accounts, no Oriflame links, product details or pricing, no audience metrics, no testimonials, no credentials, no published videos.
 
 ## Product Principles
@@ -60,6 +60,6 @@ An unhurried personal project for curiosity and everyday care: reflection materi
 ## Accessibility & Inclusion
 
 - Keyboard-complete navigation with visible focus; touch targets at least 44px.
-- WCAG 2.1 AA contrast on the daylight jade palette; semantic landmarks and heading order; descriptive bilingual alt text.
-- `prefers-reduced-motion` disables all entrance motion; content stays visible without JavaScript.
+- WCAG 2.1 AA contrast on the actual dark sanctuary palette; semantic landmarks and heading order; all eight descriptive bilingual image alternatives remain in the accessibility tree at desktop and mobile.
+- Initial and changing `prefers-reduced-motion`, persistent manual pause, offscreen/hidden suspension, BFCache restoration and no-WebGL/context-loss fallback are required. Mobile uses static original art. Content remains visible without JavaScript.
 - Language switch exposed through `lang` and `aria-pressed`; no horizontal scrolling at 320, 390, 768, 1024 or 1440px. Theme anchors enhance native disclosures without hiding any of the six topic descriptions.

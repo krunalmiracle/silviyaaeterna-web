@@ -1,0 +1,31 @@
+{
+  "success": true,
+  "approved": true,
+  "approvalBasis": "Delegated design choice in original brief, reaffirmed by user instruction to finish directly on the settled domain. Builder chose reflection-led B for dominant artwork, centered lower hero and clear theme continuation; not a claimed human visual review.",
+  "image": "/opt/data/cache/images/openai_codex_gpt-image-2-high_20261015_104651_1fe14f1d.png",
+  "model": "gpt-image-2-high",
+  "prompt": "Render a finished desktop website first viewport for Silviya Aeterna, edge to edge with crisp readable interface text, no device or browser. A bilingual personal educational project brings astrology, numerology, skincare, psychology-informed wellbeing, family and children, mental health into a fictional enchanted botanical sanctuary. Use the reference garden as actual dominant artwork, preserving its arch and reflecting pool. It supplies scene and material color only, not a website layout.\nComposition B: reflection-led cinema. The upper field is almost entirely the garden with restrained header brand 'Silviya Aeterna', navigation 'The themes', 'The project', and functional-looking 'EN', 'BG', 'Pause motion' controls. The lower reflecting pool becomes the stage for an expansive centered editorial serif headline 'A little more in tune.' The purpose and a clear 'Explore the themes' action sit together beneath, above an opening sliver of the next section 'Follow your curiosity.' Six themes appear as quiet navigation rather than cards: Astrology, Numerology, Skincare, Wellbeing, Family & children, Mental health. Preserve a clear legible hierarchy and do not place small text over busy flowers. Deep petrol and teal carry the scene, pearl typography and restrained warm champagne controls. Expressive serif and supporting sans must feel compatible with Cyrillic. One dominant cinematic move, mature and inviting, no gothic motifs, no claims or fake destinations.",
+  "aspect_ratio": "landscape",
+  "modality": "image",
+  "provider": "openai-codex",
+  "size": "1536x1024",
+  "quality": "high",
+  "input_image_count": 1,
+  "requested_size": "1536x1024",
+  "pixel_size": "1672x941",
+  "reported_quality": "medium",
+  "reported_size": "1672x941",
+  "imagegen_request_id": "7fb9b259-8838-475f-85af-231a92c3e95c",
+  "providerSourceURL": "https://raw.githubusercontent.com/NousResearch/hermes-agent/main/plugins/image_gen/openai-codex/__init__.py",
+  "providerSourceSha256": "9730200e6ff4494e99371d9eb5e661e0c09f86665bb515d0dddf96d9a40bb2c1",
+  "actualEngine": "server-managed; not verifiable from requested model",
+  "references": [
+    "/opt/data/home/silviya-magic-assets/hero-garden.png"
+  ],
+  "output": "/opt/data/home/projects/silviyaaeterna-web/.worktrees/t_96b93555/.impeccable/mocks/b-native.png",
+  "width": 1672,
+  "height": 941,
+  "sha256": "90e2a408bc5b41dcfaaadbe19a09506ca22306714a56917394f93662126af693",
+  "bytes": 2547290,
+  "imageCompleteness": "native complete image response"
+}

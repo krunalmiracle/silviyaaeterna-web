@@ -1,47 +1,55 @@
-# Implementation handoff: locally complete, ready for independent judge
+# t_96b93555 — independently reviewed release candidate
 
-Worktree: /opt/data/home/projects/silviyaaeterna-web/.worktrees/t_f3c65564
-Branch: silviya-aeterna-redesign/t_f3c65564-replace-silviya-aeterna-with-an-original
+## Request and release authority
 
-## Implemented
+The user asked to finish the magical cinematic redesign and release it directly to `https://silviyaaeterna.krusil.com`, not a preview URL. That latest instruction supersedes the earlier executor-only no-deploy scope. The user also explicitly selected: “Waive interactive Impeccable approval gates; finish, test, independently review, and deploy to the domain.” No profiles, credentials, approval policy or shared provider code were modified.
 
-Complete daylight jade/spruce HTML/CSS replacement with self-hosted Onest display and Geist supporting type. Six static topics grouped into three open chapters; bilingual educational copy, optional native reflection questions, six-theme anchor/selection enhancement, language persistence and aria/lang/alt updates, mobile menu close on selection/Escape, meaningful #atlas CTA, compact truthful YouTube/Oriflame future section, clear safety. Secure server.ts and Dockerfile are unchanged.
+Worktree: `/opt/data/home/projects/silviyaaeterna-web/.worktrees/t_96b93555`.
+Branch: `silviya-aeterna-redesign/t_96b93555-silviya-aeterna-magical-gpt-redesign`.
+Baseline: `b6bcc235c61c7c8e8e2713b17ae42b72625b9c81`.
+Release candidate full SHA is recorded in the final release record after review and commit; no candidate SHA is invented here.
 
-All four original still lifes are integrated, prominent and decoded, with verified manifest dimensions, hashes and exact EN/BG alt text. The sky has an amber crescent, not a sun; growth is a vase/branches/bowls arrangement, not literal growth stages. The mobile hero retains sphere and foliage. A real 1200x630 social PNG is generated from the actual hero and brand type.
+## Actual implementation
 
-Actual system docs are updated: DESIGN.md, .impeccable/design.json, PRODUCT.md and the surface brief. Documentation was performed inline (delegation forbidden); no independent review is claimed. Five-line system summary: pale jade/leaf grounds; deep spruce type and controls; Onest display plus Geist reading text; broad original still lifes in 6px frames; open bilingual chapters and native accessible disclosures. No unresolved UI defect was canonized into the design system.
+- The entire page aesthetic is replaced: moonlit garden, reflection-led display, editorial interlude, six-scene living atlas, floating-blossom close.
+- Eight actual producer originals are integrated as sixteen optimized WebP derivatives, with bilingual alt and embedded provenance. Producer originals remain untouched.
+- Local Cormorant Garamond and Geist support EN/BG. The large display's font choice is backed by measured comp rankings, not arbitrary default use.
+- Local GSAP/ScrollTrigger supply entrance, scroll choreography and closing pan; the desktop atlas crossfades six original scenes. Native bounded WebGL supplies subtle water refraction over the lower hero, never local 3D substitute art.
+- Persistent pause, initial/live reduced motion, mobile static behavior, offscreen stopping, context-loss fallback and no-WebGL fallback work. No-JS remains a complete site with native menus/disclosures.
+- Six themes, all reflection prompts, safety statements and honest nonclickable future YouTube/Oriflame status remain. No invented credentials or destinations.
+- `server.ts` and its strict CSP are unchanged. No runtime CDN, backend or external requests. `.dockerignore` keeps development evidence, source tools and local dependencies out of the image.
 
-## Verified
+## Comps and gate honesty
 
-npm test: 32 tests, 32 passed, zero failed. Original image hash/alt/intrinsic-size assertions were added to the existing image test without removing any prior security or semantic checks. Security, no-network/no-secrets, denied mutation endpoints, traversal, dev-doc denial, language/menu/selection and static content checks passed. Exact TAP: .impeccable/review/npm-test.tap.
+Three real comps were generated and visually inspected. A used the earlier OAuth route; B and C succeeded via a task-local current native OAuth provider. Native OAuth did not disclose an exact engine version; it is not labeled verified Image 2.5. B was selected under delegated authority. Region grid, crop inspection and font measurements are retained. The independent hero plate is explicitly a resampled original, not additional AI-generated detail.
 
-Final image-complete browser batch: 284/284 checks passed across EN and BG at 1440x900, 390x844, 320x844, 768x1024 and 1024x900. Zero horizontal overflow, no clipped visible text, 44px targets, working six-theme keyboard focus/anchor headroom, language persistence, storage-denied fallback, reduced motion and no-JS native menu/disclosures. All four images decoded in every tested viewport. No external requests, failed requests, HTTP errors or console errors. Report: .impeccable/review/report.json.
+The Impeccable CLI remains at a refused interactive human component-review checkpoint, despite the user's explicit waiver. We have not forged, edited or submitted a human approval receipt. Work continued under the waiver replacing interactive gates with automatic verification and independent review. There is no claim of numerical Impeccable SHIP or independent SHIP by the builder.
 
-The final artifact audit also decoded originals and derivatives, checked embedded provenance, verified both fonts cover all 49 used Cyrillic codepoints, and hashed all twelve screenshots and runtime source files. Exact record: .impeccable/review/verification.json. Body contrast is at least 5.60:1 in the tested palette combinations; primary action contrast is 10.66:1.
+## Real verification
 
-Impeccable detector ran exactly once before image integration: 6 primary warnings and 24 advisories. Exact results: .impeccable/review/detect.json. It was not rerun or suppressed. Three primary warnings concern padding-block wrappers; final report records computed chapter top insets of 64px/48px and About insets of 64-112px, and the captures show adequate space. Three concern expressly permitted supporting Geist while Onest owns display. Advisories concern intentional small/status/navigation/responsive sizes outside the compact main type ramp; these supporting roles are now described in DESIGN.md. Independent judgment of these residual style warnings remains with the parent judge.
+- Node tests, including unchanged security boundaries and updated eight-original assertions: `unit-tests.tap`.
+- Full browser suite: `browser-report.json` (322/322 checks at this checkpoint). EN/BG at 320, 390, 768, 1024, 1440, 1672 CSS pixels; all images decoded; zero console/request/HTTP errors or external requests.
+- Four axe A/AA runs: desktop/mobile × EN/BG, zero violations. Incomplete checks remain visible in `accessibility-performance.json`, not treated as full accessibility certification.
+- Actual background-tab frame production stops and foreground resumes. This automation browser reports document.hidden=false even in the background; the explicit visibilitychange stop handler is separately tested using a synthetic hidden flag. Both observations and the earlier failed stricter test are retained. No native hidden-state observation is invented.
+- Performance observations are local, unthrottled, software WebGL; not field performance promises.
+- `sanctuary-motion.mp4` is a real approximately 12-second recording encoded from 36 timestamped browser captures; `motion-timing.json` records the measured times and states.
+- `verification.json` checks original/derivative hashes, all font Cyrillic glyphs, vendor distribution identity, source fingerprints, screenshots and video metadata.
+- Actual final desktop/mobile EN/BG shots, all six desktop scenes, paused/running/reduced/context-loss/no-WebGL/no-JS states are saved. Hero, complete Bulgarian mobile page, bilingual desktop and the six-scene contact sheet were opened with vision. No visible clipping or overlap remains in those inspections.
 
-Exactly two image-complete builder rounds were used. The first passed 284 checks and was visually read; the only UI correction was replacing the open-menu slash with a proper close X. The confirmation also passed 284 checks. Every final screenshot was loaded visually, including readable crops of the long first-round EN/BG captures. The confirmation includes expanded-reflection proof. No further builder polish loop was run. The first full report is retained as initial-report.json; obsolete pending/layout-only evidence and its generator were removed.
+## Bounded inspection and accepted warnings
 
-## Screenshot packet
+One combined visual pass found mobile 40px language targets and overly close hero action/topic spacing. Both were corrected together; final full acceptance and visual confirmation followed. An initially blank-looking offscreen mobile full-page capture was a capture-paint issue; the verifier now visits/decodes each scene before shooting. Actual scrolled capture and final full-page vision confirm every image.
 
-All files below are in /opt/data/home/projects/silviyaaeterna-web/.worktrees/t_f3c65564/.impeccable/review/:
+The raw Impeccable detector returns three warnings, retained in `detector.json`: hero/closing background containers have no direct padding (their actual text is inset by descendant shells/positioning), and Geist is familiar (it is the inherited supporting face; measured Cormorant owns display). These are documented observations, not suppressed or represented as a clean detector pass.
 
-- desktop-top.png and desktop.png: English, 1440px viewport/full.
-- desktop-bg-top.png and desktop-bg.png: Bulgarian, 1440px viewport/full.
-- mobile-top.png and mobile.png: English, 390px viewport/full.
-- mobile-bg-top.png and mobile-bg.png: Bulgarian, 390px viewport/full.
-- mobile-menu-en.png and mobile-menu-bg.png: open menu with proper close X.
-- mobile-reflection-en.png and mobile-reflection-bg.png: actual selected astrology prompt expanded, with sticky header headroom.
+## Independent round 1 and targeted corrections
 
-## Provenance and remaining scope
+The actual reviewer found BFCache restoration and missing desktop artwork descriptions to be release blockers. Original verdict is retained in round1/. A failed separate fix worker made no changes because file tools were unavailable; parent applied the narrow patches using functioning file tools. `fix/FIX-HANDOFF.md` records the cause and changes. The real native-BFCache/AX regression moved from 5/13 passed before fixes to 13/13 after. Full 322-check browser and four axe batches were rerun successfully. GLSL reversed smoothstep and stale PRODUCT/surface descriptions were also corrected. Independent re-review passed. Its unchanged returned verdict is saved in INDEPENDENT-REVIEW.json and .md; its CLI response is preserved verbatim in rereviewer-cli.log because that review context lacked file-write tools. The parent checked every reported fingerprint before committing. Final production readback and deployed full SHA will be saved locally in RELEASE.json/RELEASE.md and production-* artifacts (ignored to avoid a self-referential evidence-only redeploy).
 
-Originals: assets/images/{hero-glasshouse,sky-study,skin-ritual,quiet-growth}.webp. Derivatives: assets/images/hero-glasshouse-mobile.webp and assets/social-og.png. Exact dimensions/bytes/hashes and metadata are in tools/ASSET-MANIFEST.json, tools/INTEGRATED-ASSETS.json and .impeccable/review/verification.json.
+## Independent review and release
 
-Actual production was Blender-authored geometry followed by Mitsuba CPU rendering and mild non-generative denoising, not final Cycles or image-model output. All eight requested source/dependency/origin files are retained in tools/glasshouse-source/source/; README.md explains its relative-root assumptions and complete external archive at /opt/data/home/silviya-glasshouse-assets/. No large geometry/.blend/environment/cache/log files were added to the website repo.
+The separate reviewer must inspect the actual diff, tests, screenshots and requirements. They should assess source correctness, accessibility/motion failure modes and whether the design genuinely replaces the old static green page. They must not write implementation files or deploy.
 
-Builder verdict: ready for independent review; no material implementation gap identified in the bounded verification. Art remains stylized 3D, with some fine glass/water sampling grain, not documentary photography. The desktop hero is intentionally panoramic and crops outer scene margins; the sphere and foliage remain decisive. No independent judge pass is claimed. Parent owns exact-commit judge, release and production URL checks. No push/PR/merge/deploy/native-card action was performed.
+Deployment uses only the existing Dokploy application `xI7V7os2-PoaEfvz0liOP`, project `VBkH6jEWmkEu4Xhhanh8V`, source branch `main`, existing HTTPS domain and port 3000. No purchase, new application or domain is needed. Latest baseline deployment reference is `q2guFvXLTmlrlttYc-N0O`; rollback can use the baseline Git commit if necessary. A successful release must be verified by exact served-byte hashes and a public browser check, not a deploy tool acknowledgment.
 
-## Process safety
-
-All local preview/browser processes created by the implementation task have exited. An initial browser harness error left its own node server; its exact worktree cwd was verified and the process explicitly terminated. Cleanup is now guarded against Playwright context-manager errors. No LinkedIn/login/VNC/tunnel was started; no credentials/profiles/other project sources were modified.
+All task-owned browsers/Xvfb instances in the verifiers close in finally blocks. The local static server must be stopped after release verification. No VNC, tunnel or login browser was started.

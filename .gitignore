@@ -1,2 +1,6 @@
 node_modules/
 .env
+.impeccable/review/motion-frames/
+.impeccable/review/production-*
+.impeccable/review/RELEASE.json
+.impeccable/review/RELEASE.md

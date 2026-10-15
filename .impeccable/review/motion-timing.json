@@ -1,0 +1,506 @@
+[
+  {
+    "frame": 0,
+    "elapsedSeconds": 0.284,
+    "state": {
+      "frames": 26,
+      "renderer": "webgl",
+      "activeScene": "astrology",
+      "running": true,
+      "paused": false,
+      "reduced": false,
+      "visible": true,
+      "inView": true
+    }
+  },
+  {
+    "frame": 1,
+    "elapsedSeconds": 0.754,
+    "state": {
+      "frames": 40,
+      "renderer": "webgl",
+      "activeScene": "astrology",
+      "running": true,
+      "paused": false,
+      "reduced": false,
+      "visible": true,
+      "inView": true
+    }
+  },
+  {
+    "frame": 2,
+    "elapsedSeconds": 1.193,
+    "state": {
+      "frames": 53,
+      "renderer": "webgl",
+      "activeScene": "astrology",
+      "running": true,
+      "paused": false,
+      "reduced": false,
+      "visible": true,
+      "inView": true
+    }
+  },
+  {
+    "frame": 3,
+    "elapsedSeconds": 1.628,
+    "state": {
+      "frames": 66,
+      "renderer": "webgl",
+      "activeScene": "astrology",
+      "running": true,
+      "paused": false,
+      "reduced": false,
+      "visible": true,
+      "inView": true
+    }
+  },
+  {
+    "frame": 4,
+    "elapsedSeconds": 2.065,
+    "state": {
+      "frames": 80,
+      "renderer": "webgl",
+      "activeScene": "astrology",
+      "running": true,
+      "paused": false,
+      "reduced": false,
+      "visible": true,
+      "inView": true
+    }
+  },
+  {
+    "frame": 5,
+    "elapsedSeconds": 2.505,
+    "state": {
+      "frames": 93,
+      "renderer": "webgl",
+      "activeScene": "astrology",
+      "running": true,
+      "paused": false,
+      "reduced": false,
+      "visible": true,
+      "inView": true
+    }
+  },
+  {
+    "frame": 6,
+    "elapsedSeconds": 2.94,
+    "state": {
+      "frames": 106,
+      "renderer": "webgl",
+      "activeScene": "astrology",
+      "running": true,
+      "paused": false,
+      "reduced": false,
+      "visible": true,
+      "inView": true
+    }
+  },
+  {
+    "frame": 7,
+    "elapsedSeconds": 3.395,
+    "state": {
+      "frames": 119,
+      "renderer": "webgl",
+      "activeScene": "astrology",
+      "running": true,
+      "paused": false,
+      "reduced": false,
+      "visible": true,
+      "inView": true
+    }
+  },
+  {
+    "frame": 8,
+    "elapsedSeconds": 3.817,
+    "state": {
+      "frames": 132,
+      "renderer": "webgl",
+      "activeScene": "astrology",
+      "running": true,
+      "paused": false,
+      "reduced": false,
+      "visible": true,
+      "inView": true
+    }
+  },
+  {
+    "frame": 9,
+    "elapsedSeconds": 4.25,
+    "state": {
+      "frames": 145,
+      "renderer": "webgl",
+      "activeScene": "astrology",
+      "running": true,
+      "paused": false,
+      "reduced": false,
+      "visible": true,
+      "inView": true
+    }
+  },
+  {
+    "frame": 10,
+    "elapsedSeconds": 4.667,
+    "state": {
+      "frames": 158,
+      "renderer": "webgl",
+      "activeScene": "astrology",
+      "running": true,
+      "paused": false,
+      "reduced": false,
+      "visible": true,
+      "inView": true
+    }
+  },
+  {
+    "frame": 11,
+    "elapsedSeconds": 5.09,
+    "state": {
+      "frames": 170,
+      "renderer": "webgl",
+      "activeScene": "astrology",
+      "running": true,
+      "paused": false,
+      "reduced": false,
+      "visible": true,
+      "inView": true
+    }
+  },
+  {
+    "frame": 12,
+    "elapsedSeconds": 5.396,
+    "state": {
+      "frames": 177,
+      "renderer": "webgl",
+      "activeScene": "skincare",
+      "running": false,
+      "paused": false,
+      "reduced": false,
+      "visible": true,
+      "inView": false
+    }
+  },
+  {
+    "frame": 13,
+    "elapsedSeconds": 5.657,
+    "state": {
+      "frames": 177,
+      "renderer": "webgl",
+      "activeScene": "skincare",
+      "running": false,
+      "paused": false,
+      "reduced": false,
+      "visible": true,
+      "inView": false
+    }
+  },
+  {
+    "frame": 14,
+    "elapsedSeconds": 5.936,
+    "state": {
+      "frames": 177,
+      "renderer": "webgl",
+      "activeScene": "skincare",
+      "running": false,
+      "paused": false,
+      "reduced": false,
+      "visible": true,
+      "inView": false
+    }
+  },
+  {
+    "frame": 15,
+    "elapsedSeconds": 6.207,
+    "state": {
+      "frames": 177,
+      "renderer": "webgl",
+      "activeScene": "skincare",
+      "running": false,
+      "paused": false,
+      "reduced": false,
+      "visible": true,
+      "inView": false
+    }
+  },
+  {
+    "frame": 16,
+    "elapsedSeconds": 6.471,
+    "state": {
+      "frames": 177,
+      "renderer": "webgl",
+      "activeScene": "skincare",
+      "running": false,
+      "paused": false,
+      "reduced": false,
+      "visible": true,
+      "inView": false
+    }
+  },
+  {
+    "frame": 17,
+    "elapsedSeconds": 6.742,
+    "state": {
+      "frames": 177,
+      "renderer": "webgl",
+      "activeScene": "skincare",
+      "running": false,
+      "paused": false,
+      "reduced": false,
+      "visible": true,
+      "inView": false
+    }
+  },
+  {
+    "frame": 18,
+    "elapsedSeconds": 7.002,
+    "state": {
+      "frames": 177,
+      "renderer": "webgl",
+      "activeScene": "skincare",
+      "running": false,
+      "paused": false,
+      "reduced": false,
+      "visible": true,
+      "inView": false
+    }
+  },
+  {
+    "frame": 19,
+    "elapsedSeconds": 7.265,
+    "state": {
+      "frames": 177,
+      "renderer": "webgl",
+      "activeScene": "skincare",
+      "running": false,
+      "paused": false,
+      "reduced": false,
+      "visible": true,
+      "inView": false
+    }
+  },
+  {
+    "frame": 20,
+    "elapsedSeconds": 7.561,
+    "state": {
+      "frames": 177,
+      "renderer": "webgl",
+      "activeScene": "numerology",
+      "running": false,
+      "paused": false,
+      "reduced": false,
+      "visible": true,
+      "inView": false
+    }
+  },
+  {
+    "frame": 21,
+    "elapsedSeconds": 7.845,
+    "state": {
+      "frames": 177,
+      "renderer": "webgl",
+      "activeScene": "numerology",
+      "running": false,
+      "paused": false,
+      "reduced": false,
+      "visible": true,
+      "inView": false
+    }
+  },
+  {
+    "frame": 22,
+    "elapsedSeconds": 8.112,
+    "state": {
+      "frames": 177,
+      "renderer": "webgl",
+      "activeScene": "numerology",
+      "running": false,
+      "paused": false,
+      "reduced": false,
+      "visible": true,
+      "inView": false
+    }
+  },
+  {
+    "frame": 23,
+    "elapsedSeconds": 8.373,
+    "state": {
+      "frames": 177,
+      "renderer": "webgl",
+      "activeScene": "numerology",
+      "running": false,
+      "paused": false,
+      "reduced": false,
+      "visible": true,
+      "inView": false
+    }
+  },
+  {
+    "frame": 24,
+    "elapsedSeconds": 8.647,
+    "state": {
+      "frames": 177,
+      "renderer": "webgl",
+      "activeScene": "numerology",
+      "running": false,
+      "paused": false,
+      "reduced": false,
+      "visible": true,
+      "inView": false
+    }
+  },
+  {
+    "frame": 25,
+    "elapsedSeconds": 8.908,
+    "state": {
+      "frames": 177,
+      "renderer": "webgl",
+      "activeScene": "numerology",
+      "running": false,
+      "paused": false,
+      "reduced": false,
+      "visible": true,
+      "inView": false
+    }
+  },
+  {
+    "frame": 26,
+    "elapsedSeconds": 9.179,
+    "state": {
+      "frames": 177,
+      "renderer": "webgl",
+      "activeScene": "numerology",
+      "running": false,
+      "paused": false,
+      "reduced": false,
+      "visible": true,
+      "inView": false
+    }
+  },
+  {
+    "frame": 27,
+    "elapsedSeconds": 9.455,
+    "state": {
+      "frames": 177,
+      "renderer": "webgl",
+      "activeScene": "numerology",
+      "running": false,
+      "paused": false,
+      "reduced": false,
+      "visible": true,
+      "inView": false
+    }
+  },
+  {
+    "frame": 28,
+    "elapsedSeconds": 9.765,
+    "state": {
+      "frames": 177,
+      "renderer": "webgl",
+      "activeScene": "skincare",
+      "running": false,
+      "paused": false,
+      "reduced": false,
+      "visible": true,
+      "inView": false
+    }
+  },
+  {
+    "frame": 29,
+    "elapsedSeconds": 10.042,
+    "state": {
+      "frames": 177,
+      "renderer": "webgl",
+      "activeScene": "skincare",
+      "running": false,
+      "paused": false,
+      "reduced": false,
+      "visible": true,
+      "inView": false
+    }
+  },
+  {
+    "frame": 30,
+    "elapsedSeconds": 10.304,
+    "state": {
+      "frames": 177,
+      "renderer": "webgl",
+      "activeScene": "skincare",
+      "running": false,
+      "paused": false,
+      "reduced": false,
+      "visible": true,
+      "inView": false
+    }
+  },
+  {
+    "frame": 31,
+    "elapsedSeconds": 10.57,
+    "state": {
+      "frames": 177,
+      "renderer": "webgl",
+      "activeScene": "skincare",
+      "running": false,
+      "paused": false,
+      "reduced": false,
+      "visible": true,
+      "inView": false
+    }
+  },
+  {
+    "frame": 32,
+    "elapsedSeconds": 10.84,
+    "state": {
+      "frames": 177,
+      "renderer": "webgl",
+      "activeScene": "skincare",
+      "running": false,
+      "paused": false,
+      "reduced": false,
+      "visible": true,
+      "inView": false
+    }
+  },
+  {
+    "frame": 33,
+    "elapsedSeconds": 11.104,
+    "state": {
+      "frames": 177,
+      "renderer": "webgl",
+      "activeScene": "skincare",
+      "running": false,
+      "paused": false,
+      "reduced": false,
+      "visible": true,
+      "inView": false
+    }
+  },
+  {
+    "frame": 34,
+    "elapsedSeconds": 11.376,
+    "state": {
+      "frames": 177,
+      "renderer": "webgl",
+      "activeScene": "skincare",
+      "running": false,
+      "paused": false,
+      "reduced": false,
+      "visible": true,
+      "inView": false
+    }
+  },
+  {
+    "frame": 35,
+    "elapsedSeconds": 11.635,
+    "state": {
+      "frames": 177,
+      "renderer": "webgl",
+      "activeScene": "skincare",
+      "running": false,
+      "paused": false,
+      "reduced": false,
+      "visible": true,
+      "inView": false
+    }
+  }
+]

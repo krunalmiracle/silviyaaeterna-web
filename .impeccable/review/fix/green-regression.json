@@ -1,0 +1,317 @@
+{
+  "checks": [
+    {
+      "name": "1: actual BFCache restore",
+      "passed": true
+    },
+    {
+      "name": "restored renderer and ScrollTriggers run",
+      "passed": true
+    },
+    {
+      "name": "post-return pause synchronizes renderer, CSS, label and aria",
+      "passed": true
+    },
+    {
+      "name": "post-return Bulgarian label updates",
+      "passed": true
+    },
+    {
+      "name": "2: actual BFCache restore",
+      "passed": true
+    },
+    {
+      "name": "paused preference survives second native return",
+      "passed": true
+    },
+    {
+      "name": "resume works after repeated return",
+      "passed": true
+    },
+    {
+      "name": "3: actual BFCache restore",
+      "passed": true
+    },
+    {
+      "name": "live reduced motion survives third native return",
+      "passed": true
+    },
+    {
+      "name": "AX 1440 en: exactly eight localized source descriptions in document order",
+      "passed": true
+    },
+    {
+      "name": "AX 1440 bg: exactly eight localized source descriptions in document order",
+      "passed": true
+    },
+    {
+      "name": "AX 390 en: exactly eight localized source descriptions in document order",
+      "passed": true
+    },
+    {
+      "name": "AX 390 bg: exactly eight localized source descriptions in document order",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "states": [
+    {
+      "first": {
+        "state": {
+          "frames": 29,
+          "renderer": "webgl",
+          "activeScene": "astrology",
+          "running": true,
+          "paused": false,
+          "reduced": false,
+          "visible": true,
+          "inView": true
+        },
+        "label": "Pause motion",
+        "pressed": "false",
+        "classes": "js motion-on shader-ready",
+        "triggers": 5,
+        "marker": "3073d5da-441f-42e9-9002-b45e46ba3053",
+        "events": []
+      }
+    },
+    {
+      "return": 1,
+      "state": {
+        "frames": 45,
+        "renderer": "webgl",
+        "activeScene": "astrology",
+        "running": true,
+        "paused": false,
+        "reduced": false,
+        "visible": true,
+        "inView": true
+      },
+      "label": "Pause motion",
+      "pressed": "false",
+      "classes": "js motion-on shader-ready",
+      "triggers": 5,
+      "marker": "3073d5da-441f-42e9-9002-b45e46ba3053",
+      "events": [
+        {
+          "type": "pagehide",
+          "persisted": true
+        },
+        {
+          "type": "pageshow",
+          "persisted": true
+        }
+      ]
+    },
+    {
+      "paused": {
+        "state": {
+          "frames": 59,
+          "renderer": "webgl",
+          "activeScene": "astrology",
+          "running": false,
+          "paused": true,
+          "reduced": false,
+          "visible": true,
+          "inView": true
+        },
+        "label": "Resume motion",
+        "pressed": "true",
+        "classes": "js shader-ready motion-off",
+        "triggers": 0,
+        "marker": "3073d5da-441f-42e9-9002-b45e46ba3053",
+        "events": [
+          {
+            "type": "pagehide",
+            "persisted": true
+          },
+          {
+            "type": "pageshow",
+            "persisted": true
+          }
+        ]
+      }
+    },
+    {
+      "return": 2,
+      "state": {
+        "frames": 59,
+        "renderer": "static",
+        "activeScene": "astrology",
+        "running": false,
+        "paused": true,
+        "reduced": false,
+        "visible": true,
+        "inView": true
+      },
+      "label": "Пусни движението",
+      "pressed": "true",
+      "classes": "js motion-off",
+      "triggers": 0,
+      "marker": "3073d5da-441f-42e9-9002-b45e46ba3053",
+      "events": [
+        {
+          "type": "pagehide",
+          "persisted": true
+        },
+        {
+          "type": "pageshow",
+          "persisted": true
+        },
+        {
+          "type": "pagehide",
+          "persisted": true
+        },
+        {
+          "type": "pageshow",
+          "persisted": true
+        }
+      ]
+    },
+    {
+      "return": 3,
+      "state": {
+        "frames": 76,
+        "renderer": "static",
+        "activeScene": "astrology",
+        "running": false,
+        "paused": false,
+        "reduced": true,
+        "visible": true,
+        "inView": true
+      },
+      "label": "Намалено движение",
+      "pressed": "true",
+      "classes": "js motion-off",
+      "triggers": 0,
+      "marker": "3073d5da-441f-42e9-9002-b45e46ba3053",
+      "events": [
+        {
+          "type": "pagehide",
+          "persisted": true
+        },
+        {
+          "type": "pageshow",
+          "persisted": true
+        },
+        {
+          "type": "pagehide",
+          "persisted": true
+        },
+        {
+          "type": "pageshow",
+          "persisted": true
+        },
+        {
+          "type": "pagehide",
+          "persisted": true
+        },
+        {
+          "type": "pageshow",
+          "persisted": true
+        }
+      ]
+    }
+  ],
+  "ax": [
+    {
+      "width": 1440,
+      "lang": "en",
+      "actual": [
+        "Jasmine frames an ancient stone arch beside a reflecting pool in an imagined moonlit garden.",
+        "A crescent moon above a mountain lake framed by jasmine in an imagined night garden.",
+        "Smooth pale stones and delicate fern fronds form a quiet repeating pattern beside dark water.",
+        "An unbranded cream jar and clear glass vial rest beside magnolia petals on a moonlit stone ledge.",
+        "A blank open journal and a single jasmine sprig rest beside a softly lit garden window.",
+        "Two mature silver-barked trees shelter a small sapling in a softly glowing woodland grove.",
+        "An empty linen chair faces a calm garden through an open stone arch, a quiet place to pause.",
+        "A single ivory magnolia blossom floats on dark teal water as gentle rings of light spread around it."
+      ],
+      "expected": [
+        "Jasmine frames an ancient stone arch beside a reflecting pool in an imagined moonlit garden.",
+        "A crescent moon above a mountain lake framed by jasmine in an imagined night garden.",
+        "Smooth pale stones and delicate fern fronds form a quiet repeating pattern beside dark water.",
+        "An unbranded cream jar and clear glass vial rest beside magnolia petals on a moonlit stone ledge.",
+        "A blank open journal and a single jasmine sprig rest beside a softly lit garden window.",
+        "Two mature silver-barked trees shelter a small sapling in a softly glowing woodland grove.",
+        "An empty linen chair faces a calm garden through an open stone arch, a quiet place to pause.",
+        "A single ivory magnolia blossom floats on dark teal water as gentle rings of light spread around it."
+      ]
+    },
+    {
+      "width": 1440,
+      "lang": "bg",
+      "actual": [
+        "Жасмин обрамчва стара каменна арка до отразяващ басейн във въображаема лунна градина.",
+        "Полумесец над планинско езеро, обрамчено с жасмин във въображаема нощна градина.",
+        "Гладки светли камъни и нежни папратови листа образуват спокоен повтарящ се мотив край тъмна вода.",
+        "Бурканче крем без марка и прозрачно стъклено шишенце до листенца магнолия върху огрян от луната каменен перваз.",
+        "Отворен дневник с празни страници и клонче жасмин до меко осветен прозорец към градина.",
+        "Две зрели дървета със сребриста кора закрилят малка фиданка в меко сияеща горичка.",
+        "Празно кресло с ленена тапицерия е обърнато към спокойна градина през отворена каменна арка, тихо място за пауза.",
+        "Един цвят на магнолия с цвят на слонова кост плува върху тъмнозелена вода, а около него се разстилат нежни светли кръгове."
+      ],
+      "expected": [
+        "Жасмин обрамчва стара каменна арка до отразяващ басейн във въображаема лунна градина.",
+        "Полумесец над планинско езеро, обрамчено с жасмин във въображаема нощна градина.",
+        "Гладки светли камъни и нежни папратови листа образуват спокоен повтарящ се мотив край тъмна вода.",
+        "Бурканче крем без марка и прозрачно стъклено шишенце до листенца магнолия върху огрян от луната каменен перваз.",
+        "Отворен дневник с празни страници и клонче жасмин до меко осветен прозорец към градина.",
+        "Две зрели дървета със сребриста кора закрилят малка фиданка в меко сияеща горичка.",
+        "Празно кресло с ленена тапицерия е обърнато към спокойна градина през отворена каменна арка, тихо място за пауза.",
+        "Един цвят на магнолия с цвят на слонова кост плува върху тъмнозелена вода, а около него се разстилат нежни светли кръгове."
+      ]
+    },
+    {
+      "width": 390,
+      "lang": "en",
+      "actual": [
+        "Jasmine frames an ancient stone arch beside a reflecting pool in an imagined moonlit garden.",
+        "A crescent moon above a mountain lake framed by jasmine in an imagined night garden.",
+        "Smooth pale stones and delicate fern fronds form a quiet repeating pattern beside dark water.",
+        "An unbranded cream jar and clear glass vial rest beside magnolia petals on a moonlit stone ledge.",
+        "A blank open journal and a single jasmine sprig rest beside a softly lit garden window.",
+        "Two mature silver-barked trees shelter a small sapling in a softly glowing woodland grove.",
+        "An empty linen chair faces a calm garden through an open stone arch, a quiet place to pause.",
+        "A single ivory magnolia blossom floats on dark teal water as gentle rings of light spread around it."
+      ],
+      "expected": [
+        "Jasmine frames an ancient stone arch beside a reflecting pool in an imagined moonlit garden.",
+        "A crescent moon above a mountain lake framed by jasmine in an imagined night garden.",
+        "Smooth pale stones and delicate fern fronds form a quiet repeating pattern beside dark water.",
+        "An unbranded cream jar and clear glass vial rest beside magnolia petals on a moonlit stone ledge.",
+        "A blank open journal and a single jasmine sprig rest beside a softly lit garden window.",
+        "Two mature silver-barked trees shelter a small sapling in a softly glowing woodland grove.",
+        "An empty linen chair faces a calm garden through an open stone arch, a quiet place to pause.",
+        "A single ivory magnolia blossom floats on dark teal water as gentle rings of light spread around it."
+      ]
+    },
+    {
+      "width": 390,
+      "lang": "bg",
+      "actual": [
+        "Жасмин обрамчва стара каменна арка до отразяващ басейн във въображаема лунна градина.",
+        "Полумесец над планинско езеро, обрамчено с жасмин във въображаема нощна градина.",
+        "Гладки светли камъни и нежни папратови листа образуват спокоен повтарящ се мотив край тъмна вода.",
+        "Бурканче крем без марка и прозрачно стъклено шишенце до листенца магнолия върху огрян от луната каменен перваз.",
+        "Отворен дневник с празни страници и клонче жасмин до меко осветен прозорец към градина.",
+        "Две зрели дървета със сребриста кора закрилят малка фиданка в меко сияеща горичка.",
+        "Празно кресло с ленена тапицерия е обърнато към спокойна градина през отворена каменна арка, тихо място за пауза.",
+        "Един цвят на магнолия с цвят на слонова кост плува върху тъмнозелена вода, а около него се разстилат нежни светли кръгове."
+      ],
+      "expected": [
+        "Жасмин обрамчва стара каменна арка до отразяващ басейн във въображаема лунна градина.",
+        "Полумесец над планинско езеро, обрамчено с жасмин във въображаема нощна градина.",
+        "Гладки светли камъни и нежни папратови листа образуват спокоен повтарящ се мотив край тъмна вода.",
+        "Бурканче крем без марка и прозрачно стъклено шишенце до листенца магнолия върху огрян от луната каменен перваз.",
+        "Отворен дневник с празни страници и клонче жасмин до меко осветен прозорец към градина.",
+        "Две зрели дървета със сребриста кора закрилят малка фиданка в меко сияеща горичка.",
+        "Празно кресло с ленена тапицерия е обърнато към спокойна градина през отворена каменна арка, тихо място за пауза.",
+        "Един цвят на магнолия с цвят на слонова кост плува върху тъмнозелена вода, а около него се разстилат нежни светли кръгове."
+      ]
+    }
+  ],
+  "passed": 13,
+  "total": 13,
+  "failed": []
+}

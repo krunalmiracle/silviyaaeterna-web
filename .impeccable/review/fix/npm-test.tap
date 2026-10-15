@@ -1,0 +1,46 @@
+
+> silviyaaeterna-web@2.0.0 test
+> node --test tests/*.test.mjs
+
+✔ no em dash or en dash anywhere in the shipped page (0.945944ms)
+✔ the page makes no third-party runtime requests (0.421601ms)
+✔ no inline styles or scripts that the CSP would block (0.187198ms)
+✔ every translatable node carries both languages (0.489814ms)
+✔ every image has alt text (0.456029ms)
+✔ every local reference resolves to a file on disk (8.363817ms)
+✔ navigation anchors all point at real sections (0.577315ms)
+✔ heading structure is a single h1 with ordered levels (0.254341ms)
+✔ coming soon states are honest, non clickable elements (0.443381ms)
+✔ language toggle is exposed accessibly (6.745178ms)
+✔ motion respects reduced motion and survives failed JavaScript (0.306091ms)
+✔ the page declares the two languages and viewport (0.120977ms)
+✔ saved Bulgarian preference applies content, lang, translated aria and image alt (2.805636ms)
+✔ invalid preference and denied storage retain functional English and language toggle (1.10366ms)
+✔ mobile menu closes on selection (0.526776ms)
+✔ mobile menu closes on Escape and restores summary focus (0.5732ms)
+✔ outside click closes mobile menu but inside click does not (0.499208ms)
+✔ all six theme selections open useful prompts with selected aria and focus (0.506378ms)
+✔ direct theme fragment enhances the correct topic (0.493821ms)
+✔ six static descriptions and native prompt disclosures exist without JavaScript (0.651808ms)
+✔ original images and responsive hero are real WebP assets (11.938193ms)
+✔ social preview is a real 1200 by 630 PNG (2.11197ms)
+✔ eight separate original scenes are present in the no-JS document (0.68974ms)
+✔ motion permission stops for manual pause, reduced motion, hidden or offscreen (0.775559ms)
+✔ GET / serves the landing page with security headers (115.0849ms)
+✔ GET /index.html behaves like the root document (6.811397ms)
+✔ HEAD / returns headers without a body (7.559859ms)
+✔ every local asset referenced by index.html answers 200 (57.833901ms)
+✔ styles, script and images are served with correct types (21.518749ms)
+✔ unknown routes return 404 (3.466408ms)
+✔ server sources and dev documents are never served (11.241053ms)
+✔ removed write and AI endpoints refuse every mutation method (15.111778ms)
+✔ path traversal stays inside the asset directory (8.27135ms)
+✔ the server keeps no secrets and makes no outbound calls (1.156513ms)
+ℹ tests 34
+ℹ suites 0
+ℹ pass 34
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 342.995016

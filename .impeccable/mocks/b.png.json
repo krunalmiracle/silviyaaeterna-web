@@ -1,0 +1,14 @@
+{
+  "success": false,
+  "image": null,
+  "model": "gpt-image-2-high",
+  "prompt": "Render a finished desktop website first viewport for Silviya Aeterna, edge to edge with crisp readable interface text, no device or browser. A bilingual personal educational project brings astrology, numerology, skincare, psychology-informed wellbeing, family and children, mental health into a fictional enchanted botanical sanctuary. Use the reference garden as actual dominant artwork, preserving its arch and reflecting pool. It supplies scene and material color only, not a website layout.\nComposition B: reflection-led cinema. The upper field is almost entirely the garden with restrained header brand 'Silviya Aeterna', navigation 'The themes', 'The project', and functional-looking 'EN', 'BG', 'Pause motion' controls. The lower reflecting pool becomes the stage for an expansive centered editorial serif headline 'A little more in tune.' The purpose and a clear 'Explore the themes' action sit together beneath, above an opening sliver of the next section 'Follow your curiosity.' Six themes appear as quiet navigation rather than cards: Astrology, Numerology, Skincare, Wellbeing, Family & children, Mental health. Preserve a clear legible hierarchy and do not place small text over busy flowers. Deep petrol and teal carry the scene, pearl typography and restrained warm champagne controls. Expressive serif and supporting sans must feel compatible with Cyrillic. One dominant cinematic move, mature and inviting, no gothic motifs, no claims or fake destinations.",
+  "provider": "openai-codex",
+  "aspect_ratio": "landscape",
+  "error": "OpenAI image generation via Codex auth failed: Codex Responses API returned HTTP 400: {\"detail\":\"The 'gpt-5.5' model is not supported when using Codex with a ChatGPT account.\"}",
+  "error_type": "api_error",
+  "references": [
+    "/opt/data/home/silviya-magic-assets/hero-garden.png"
+  ],
+  "output": "/opt/data/home/projects/silviyaaeterna-web/.worktrees/t_96b93555/.impeccable/mocks/b.png"
+}

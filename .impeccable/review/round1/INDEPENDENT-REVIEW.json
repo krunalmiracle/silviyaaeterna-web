@@ -1,0 +1,145 @@
+{
+  "passed": false,
+  "blocking_findings": [
+    "P1 BFCACHE-RESTORE: assets/scene.js:181-185,187-191,205-208 permanently dispose on pagehide, including persisted=true, with no pageshow restore. Reproduced native Back navigation from /index.htm?judge-away=1 to /: pagehide/pageshow both persisted=true and the document marker survives, but frames remain 131, renderer becomes static and ScrollTriggers fall from 5 to 0. Clicking pause changes paused=true while aria-pressed remains false, the label stays Pause motion, and root stays motion-on; switching BG leaves that English label. Narrow fix: reversible persisted-page suspension/resumption, or a pageshow reinitializer that resets disposed/renderer/context/scrollFrame, reconnects observers, recomputes inView and active chapter, restores current preferences and rebuilds choreography without replaying entrance. Add a real BFCache regression test for motion, pause/CSS transitions, language and reduced-motion state.",
+    "P1 DESKTOP-ART-ACCESSIBILITY: assets/styles.css:8 (.js .topic-art{display:none}), assets/scene.js:24-28 and index.html:89 hide both accessible versions of the six chapter artworks: semantic originals are display:none, while visible stage clones have empty alt inside aria-hidden=true. Chromium Accessibility.getFullAXTree exposes only hero and closing images at 1440px, versus all eight image descriptions at 390px. This removes the six meaningful bilingual scene descriptions from desktop assistive-technology reading, contrary to the semantic-source contract. Narrow fix: visually hide, rather than display:none, the semantic chapter figures on enhanced desktop while preserving their accessibility-tree presence and document order; keep the duplicate stage decorative. Verify all eight localized image names in EN/BG at both breakpoints without duplicate announcements."
+  ],
+  "nonblocking_findings": [
+    "Documentation drift: PRODUCT.md still specifies Daylight Glasshouse, Onest and locally authored 3D originals; the surface brief still says implementation/browser verification pending. DESIGN.md and the handoff correctly describe the current pinned sanctuary and GPT-produced sources. Reconcile obsolete product/surface statements without rerolling or changing the design.",
+    "Shader portability risk: assets/scene.js:110 calls smoothstep(1.,.78,uv.y), whose reversed edges are undefined by GLSL ES. No resulting corruption was observed in this Chromium software-WebGL run. Prefer 1.0-smoothstep(.78,1.0,uv.y) to express the intended inverse ramp portably.",
+    "Evidence limits are correctly disclosed, not release blockers: four builder axe runs contain zero A/AA violations but retain incomplete image-backed contrast checks; no full accessibility certification follows. Background-tab frame freezing is not native document.hidden observation; the visibility handler was separately tested with a synthetic flag. The 12.04-second MP4 is a timed capture sequence, not a continuous high-frame-rate recording or field-performance proof."
+  ],
+  "evidence_paths": [
+    "/opt/data/home/projects/silviyaaeterna-web/.worktrees/t_96b93555/.impeccable/review/INDEPENDENT-REVIEW.json",
+    "/opt/data/home/projects/silviyaaeterna-web/.worktrees/t_96b93555/.impeccable/review/INDEPENDENT-REVIEW.md",
+    "/opt/data/home/projects/silviyaaeterna-web/.worktrees/t_96b93555/.impeccable/review/judge/npm-test.tap",
+    "/opt/data/home/projects/silviyaaeterna-web/.worktrees/t_96b93555/.impeccable/review/judge/browser-probes.json",
+    "/opt/data/home/projects/silviyaaeterna-web/.worktrees/t_96b93555/.impeccable/review/judge/bfcache-return.png",
+    "/opt/data/home/projects/silviyaaeterna-web/.worktrees/t_96b93555/.impeccable/review/judge/fallback-checks.json",
+    "/opt/data/home/projects/silviyaaeterna-web/.worktrees/t_96b93555/.impeccable/review/judge/asset-and-evidence-checks.json",
+    "/opt/data/home/projects/silviyaaeterna-web/.worktrees/t_96b93555/.impeccable/review/judge/motion-evidence-contact.png",
+    "/opt/data/home/projects/silviyaaeterna-web/.worktrees/t_96b93555/.impeccable/review/browser-report.json",
+    "/opt/data/home/projects/silviyaaeterna-web/.worktrees/t_96b93555/.impeccable/review/verification.json",
+    "/opt/data/home/projects/silviyaaeterna-web/.worktrees/t_96b93555/.impeccable/review/accessibility-performance.json",
+    "/opt/data/home/projects/silviyaaeterna-web/.worktrees/t_96b93555/.impeccable/review/motion-timing.json",
+    "/opt/data/home/projects/silviyaaeterna-web/.worktrees/t_96b93555/.impeccable/review/sanctuary-motion.mp4",
+    "/opt/data/home/projects/silviyaaeterna-web/.worktrees/t_96b93555/.impeccable/review/desktop-en-top.png",
+    "/opt/data/home/projects/silviyaaeterna-web/.worktrees/t_96b93555/.impeccable/review/desktop-bg-top.png",
+    "/opt/data/home/projects/silviyaaeterna-web/.worktrees/t_96b93555/.impeccable/review/mobile-bg-full.png",
+    "/opt/data/home/projects/silviyaaeterna-web/.worktrees/t_96b93555/.impeccable/review/scenes-contact.png",
+    "/opt/data/home/projects/silviyaaeterna-web/.worktrees/t_96b93555/.impeccable/review/motion-running.png"
+  ],
+  "summary": "FAIL: two independently reproduced release blockers remain: BFCache return permanently breaks motion lifecycle/control synchronization, and enhanced desktop removes six semantic artwork descriptions from the accessibility tree. The pinned visual direction, eight-original asset pipeline, ordinary motion/fallback behavior and unchanged hardened server otherwise have substantial supporting evidence. No deployment or production verification was performed.",
+  "review_metadata": {
+    "card": "t_96b93555",
+    "reviewedAt": "2026-10-15T11:50:47.315116+00:00",
+    "cwd": "/opt/data/home/projects/silviyaaeterna-web/.worktrees/t_96b93555",
+    "branch": "silviya-aeterna-redesign/t_96b93555-silviya-aeterna-magical-gpt-redesign",
+    "baseline": "b6bcc235c61c7c8e8e2713b17ae42b72625b9c81",
+    "source_fingerprints": {
+      "index.html": "75196fdf9ac54dd4ae9c78d384bb8fd637bbc3498ae42353516ddd1415e2c023",
+      "assets/styles.css": "7915a849550da10ebfea5d87a29566c7513a5e2b122c9c9a08f9b4cce0983feb",
+      "assets/site.js": "2a8342d72c30719f338678a20555b7883353360a9dfe653ec87fddaad0e75800",
+      "assets/scene.js": "9213f1b1f7e59c7f943e034e6b24fb9587f35940b2939b7e4b0ed24e959598d6",
+      "assets/motion-state.js": "c5371e55ddff3565e257394a5c72ca6ee1234a6d6d2247f3cbc3704a2a772b61",
+      "server.ts": "3a74a542e94ce0dc911fbb7972427acc43cb6bf32f6c9849de02407d057d1d7b",
+      "Dockerfile": "a76824bbe55dd617fddd6464c06a1d9199b2f03b469b6a7a3b4be6c4c8d0f0bd",
+      "package.json": "bd46ec6530aa6a24eab08140f2d3acb40756b3539af72aa458025fbf9d76ba7e",
+      "package-lock.json": "29f2376b2cf245135c1467cf846ac2abcb18c470c209fb39206147eb54fe70fa",
+      "DESIGN.md": "8770ab2b7306e1a03c6af157dc7786436adedacf4094fe3882a5b7804de934fb",
+      ".impeccable/design.json": "aaced8791352540a23cee894e62e79a4038e669342c6bda1ed02ab092998d025"
+    },
+    "interactive_gates": "Explicitly waived; no human component receipt or numerical CLI SHIP required/claimed",
+    "production_deployed_by_judge": false,
+    "production_verified": false,
+    "scope": "Read-only implementation review; only allowed review artifacts and judge diagnostics written"
+  },
+  "evidence_summary": {
+    "independent_npm_tests": {
+      "tests": 34,
+      "pass": 34,
+      "fail": 0
+    },
+    "independent_ordinary_browser_checks": {
+      "total": 28,
+      "passed": 28
+    },
+    "builder_browser_checks": {
+      "total": 322,
+      "passed": 322,
+      "independently_counted": true,
+      "rerun_as_builder_suite": false
+    },
+    "builder_axe": {
+      "runs": 4,
+      "violations": 0,
+      "incomplete_retained": true,
+      "independently_rerun": false
+    },
+    "originals_hash_verified": 8,
+    "derivatives_hash_metadata_verified": 16,
+    "original_provider_cache_files": "Referenced ephemeral cache paths no longer exist; durable producer PNGs and manifests match. Exact backend engine version is not independently proven.",
+    "motion": {
+      "captures": 36,
+      "monotonic": true,
+      "first": {
+        "frame": 0,
+        "elapsedSeconds": 0.293,
+        "state": {
+          "frames": 25,
+          "renderer": "webgl",
+          "activeScene": "astrology",
+          "running": true,
+          "paused": false,
+          "reduced": false,
+          "visible": true,
+          "inView": true
+        }
+      },
+      "last": {
+        "frame": 35,
+        "elapsedSeconds": 12.099,
+        "state": {
+          "frames": 184,
+          "renderer": "webgl",
+          "activeScene": "skincare",
+          "running": false,
+          "paused": false,
+          "reduced": false,
+          "visible": true,
+          "inView": false
+        }
+      },
+      "captureSpan": 11.806,
+      "states": [
+        "astrology",
+        "numerology",
+        "skincare"
+      ],
+      "file": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "nb_frames": "37"
+          }
+        ],
+        "format": {
+          "duration": "12.040000",
+          "size": "1495597"
+        }
+      },
+      "sourceFramesPresent": true,
+      "distinctSourceFrames": 33,
+      "heroFrameDifferenceBBox": [
+        0,
+        0,
+        1280,
+        800
+      ]
+    },
+    "source_and_screenshot_fingerprints_match": true,
+    "server_and_Dockerfile_unchanged_from_baseline": true,
+    "cleanup": "All judge browser launches closed in finally; npm test child server exited; final process listing contained no Chromium or judge test server. Existing owner preview remains HTTP 200 on port 3417."
+  }
+}

@@ -9,5 +9,11 @@
     "start:bun": "bun run server.ts",
     "test": "node --test tests/*.test.mjs",
     "assets": "uv run --with pillow python tools/prepare_images.py"
+  },
+  "dependencies": {
+    "gsap": "3.13.0"
+  },
+  "devDependencies": {
+    "axe-core": "4.10.3"
   }
 }

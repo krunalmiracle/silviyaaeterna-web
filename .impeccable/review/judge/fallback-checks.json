@@ -1,0 +1,131 @@
+{
+  "checks": [
+    {
+      "name": "normal pause stops frames",
+      "passed": true
+    },
+    {
+      "name": "normal pause disables CSS atlas transitions",
+      "passed": true
+    },
+    {
+      "name": "pause persists after reload",
+      "passed": true
+    },
+    {
+      "name": "resume reinitializes renderer",
+      "passed": true
+    },
+    {
+      "name": "live reduced motion stops frames",
+      "passed": true
+    },
+    {
+      "name": "live no-preference resumes",
+      "passed": true
+    },
+    {
+      "name": "offscreen stops frames",
+      "passed": true
+    },
+    {
+      "name": "onscreen resumes",
+      "passed": true
+    },
+    {
+      "name": "mobile stops desktop shader",
+      "passed": true
+    },
+    {
+      "name": "desktop resize resumes shader",
+      "passed": true
+    },
+    {
+      "name": "context loss static fallback",
+      "passed": true
+    },
+    {
+      "name": "initial reduced motion",
+      "passed": true
+    },
+    {
+      "name": "en theme astrology",
+      "passed": true
+    },
+    {
+      "name": "en theme numerology",
+      "passed": true
+    },
+    {
+      "name": "en theme skincare",
+      "passed": true
+    },
+    {
+      "name": "en theme wellbeing",
+      "passed": true
+    },
+    {
+      "name": "en theme family",
+      "passed": true
+    },
+    {
+      "name": "en theme mental-health",
+      "passed": true
+    },
+    {
+      "name": "bg theme astrology",
+      "passed": true
+    },
+    {
+      "name": "bg theme numerology",
+      "passed": true
+    },
+    {
+      "name": "bg theme skincare",
+      "passed": true
+    },
+    {
+      "name": "bg theme wellbeing",
+      "passed": true
+    },
+    {
+      "name": "bg theme family",
+      "passed": true
+    },
+    {
+      "name": "bg theme mental-health",
+      "passed": true
+    },
+    {
+      "name": "no WebGL uses original hero",
+      "passed": true
+    },
+    {
+      "name": "no-JS six topics visible",
+      "passed": true
+    },
+    {
+      "name": "no-JS native disclosure",
+      "passed": true
+    },
+    {
+      "name": "no-JS native menu",
+      "passed": true
+    }
+  ],
+  "states": {
+    "context_loss": {
+      "frames": 44,
+      "renderer": "static",
+      "activeScene": "astrology",
+      "running": false,
+      "paused": false,
+      "reduced": false,
+      "visible": true,
+      "inView": true
+    }
+  },
+  "errors": [],
+  "total": 28,
+  "passed": 28
+}

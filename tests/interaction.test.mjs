@@ -83,13 +83,13 @@ test('direct theme fragment enhances the correct topic', () => {
 test('six static descriptions and native prompt disclosures exist without JavaScript', () => {
   for (const id of ['astrology', 'numerology', 'skincare', 'wellbeing', 'family', 'mental-health']) {
     const article = html.match(new RegExp(`<article[^>]+id="${id}"[\\s\\S]*?</article>`))?.[0];
-    assert.ok(article, id); assert.match(article, /<h4 data-en=/); assert.match(article, /<p data-en=/); assert.match(article, /<details class="reflection">/);
+    assert.ok(article, id); assert.match(article, /<h3 data-en=/); assert.match(article, /<p data-en=/); assert.match(article, /<details class="reflection">/);
   }
   assert.equal((html.match(/class="reflection"/g) || []).length, 6);
 });
 test('original images and responsive hero are real WebP assets', async () => {
   const manifest = JSON.parse(await readFile(new URL('../tools/ASSET-MANIFEST.json', import.meta.url), 'utf8'));
-  assert.equal(manifest.asset_count, 4);
+  assert.equal(manifest.asset_count, 8);
   for (const asset of manifest.assets) {
     const bytes = await readFile(new URL(`../assets/images/${asset.filename}`, import.meta.url));
     assert.equal(createHash('sha256').update(bytes).digest('hex'), asset.sha256);
@@ -100,13 +100,13 @@ test('original images and responsive hero are real WebP assets', async () => {
     assert.ok(tag.includes(`data-alt-bg="${asset.alt.bg}"`));
     assert.ok(bytes.includes(Buffer.from('XMP ')), 'original WebP provenance must be preserved');
   }
-  for (const name of ['hero-glasshouse', 'hero-glasshouse-mobile', 'sky-study', 'skin-ritual', 'quiet-growth']) {
+  for (const name of manifest.assets.flatMap(a => [a.id, a.id + '-small'])) {
     const bytes = await readFile(new URL(`../assets/images/${name}.webp`, import.meta.url));
     assert.equal(bytes.toString('ascii', 0, 4), 'RIFF'); assert.equal(bytes.toString('ascii', 8, 12), 'WEBP');
     assert.ok(bytes.length > 5000); assert.ok(bytes.length < 500000);
   }
   assert.match(html, /fetchpriority="high"/);
-  assert.equal((html.match(/loading="lazy"/g) || []).length, 3);
+  assert.equal((html.match(/loading="lazy"/g) || []).length, 7);
 });
 test('social preview is a real 1200 by 630 PNG', async () => {
   const png = await readFile(new URL('../assets/social-og.png', import.meta.url));

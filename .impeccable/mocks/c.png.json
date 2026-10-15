@@ -1,0 +1,14 @@
+{
+  "success": false,
+  "image": null,
+  "model": "gpt-image-2-high",
+  "prompt": "Render a finished desktop website first viewport for Silviya Aeterna, edge-to-edge real website, crisp readable text, no browser or device. This is a bilingual personal educational content project, not a resort: astrology, numerology, skincare, psychology-informed wellbeing, family and children, mental health. Use the supplied garden artwork for the recognizable moonlit arch, flowers and reflection; reference supplies the actual art and palette, no existing page structure.\nComposition C: the living atlas already begins at the threshold. A tall slim editorial theme index lives along the left edge of a huge garden canvas, the garden arch is the focal point and a short expansive serif statement 'A little more in tune.' spans the quieter lower scene without obscuring the arch. The index names the six themes with purposeful selection treatment, not cards. A quiet compact purpose passage states 'Astrology, everyday care and the art of paying attention. A personal project in English and Bulgarian.' and the main 'Explore the themes' action is unmistakable. Brand 'Silviya Aeterna' and navigation 'The themes', 'The project', 'EN', 'BG', 'Pause motion' complete the upper frame. The far bottom edge introduces 'Follow your curiosity.' as real next-section content. Palette derives from the garden: deep petrol, teal, pearl and small champagne details. Expressive Cyrillic-compatible serif, restrained sans controls; mature magical cinema, no neon, no claims, no resort booking language.",
+  "provider": "openai-codex",
+  "aspect_ratio": "landscape",
+  "error": "OpenAI image generation via Codex auth failed: Codex Responses API returned HTTP 400: {\"detail\":\"The 'gpt-5.5' model is not supported when using Codex with a ChatGPT account.\"}",
+  "error_type": "api_error",
+  "references": [
+    "/opt/data/home/silviya-magic-assets/hero-garden.png"
+  ],
+  "output": "/opt/data/home/projects/silviyaaeterna-web/.worktrees/t_96b93555/.impeccable/mocks/c.png"
+}

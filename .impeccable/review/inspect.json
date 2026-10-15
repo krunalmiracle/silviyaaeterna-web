@@ -1,0 +1,598 @@
+{
+  "url": "http://127.0.0.1:3417",
+  "capturedAt": "2026-10-15T11:16:45.036556+00:00",
+  "checks": [
+    {
+      "name": "desktop-en: persisted language",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "desktop-en: no clipping or overflow",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "desktop-en: 44px targets",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "desktop-en: all images decoded",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "desktop-en: Cyrillic display font",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "desktop-en: initial reduced motion",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "mobile-en: persisted language",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "mobile-en: no clipping or overflow",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "mobile-en: 44px targets",
+      "passed": false,
+      "detail": [
+        "EN",
+        "BG"
+      ]
+    },
+    {
+      "name": "mobile-en: all images decoded",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "mobile-en: Cyrillic display font",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "mobile-en: initial reduced motion",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "desktop-bg: persisted language",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "desktop-bg: no clipping or overflow",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "desktop-bg: 44px targets",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "desktop-bg: all images decoded",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "desktop-bg: Cyrillic display font",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "desktop-bg: initial reduced motion",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "mobile-bg: persisted language",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "mobile-bg: no clipping or overflow",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "mobile-bg: 44px targets",
+      "passed": false,
+      "detail": [
+        "EN",
+        "BG"
+      ]
+    },
+    {
+      "name": "mobile-bg: all images decoded",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "mobile-bg: Cyrillic display font",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "mobile-bg: initial reduced motion",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "viewports": [
+    {
+      "lang": "en",
+      "width": 1440,
+      "overflowX": 0,
+      "clipped": [],
+      "smallTargets": [],
+      "images": [
+        {
+          "src": "http://127.0.0.1:3417/assets/images/hero-garden.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/astrology-moon.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/numerology-pattern.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/skincare-ritual.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/psychology-journal.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/family-grove.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/mental-health-haven.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/astrology-moon.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/numerology-pattern.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/skincare-ritual.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/psychology-journal.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/family-grove.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/mental-health-haven.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/closing-bloom.webp",
+          "decoded": true
+        }
+      ],
+      "state": {
+        "frames": 0,
+        "renderer": "static",
+        "activeScene": "astrology",
+        "running": false,
+        "paused": false,
+        "reduced": true,
+        "visible": true,
+        "inView": true
+      },
+      "heroH1": {
+        "x": 338.546875,
+        "y": 477,
+        "width": 762.890625,
+        "height": 102.328125,
+        "top": 477,
+        "right": 1101.4375,
+        "bottom": 579.328125,
+        "left": 338.546875
+      },
+      "heroLinks": {
+        "x": 67.671875,
+        "y": 730,
+        "width": 1304.65625,
+        "height": 44,
+        "top": 730,
+        "right": 1372.328125,
+        "bottom": 774,
+        "left": 67.671875
+      },
+      "cta": {
+        "x": 607.921875,
+        "y": 668.609375,
+        "width": 224.15625,
+        "height": 52,
+        "top": 668.609375,
+        "right": 832.078125,
+        "bottom": 720.609375,
+        "left": 607.921875
+      },
+      "name": "desktop"
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "overflowX": 0,
+      "clipped": [],
+      "smallTargets": [
+        "EN",
+        "BG"
+      ],
+      "images": [
+        {
+          "src": "http://127.0.0.1:3417/assets/images/hero-garden-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/astrology-moon-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/numerology-pattern-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/skincare-ritual-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/psychology-journal-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/family-grove-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/mental-health-haven-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/astrology-moon-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/numerology-pattern-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/skincare-ritual-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/psychology-journal-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/family-grove-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/mental-health-haven-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/closing-bloom-small.webp",
+          "decoded": true
+        }
+      ],
+      "state": {
+        "frames": 0,
+        "renderer": "static",
+        "activeScene": "astrology",
+        "running": false,
+        "paused": false,
+        "reduced": true,
+        "visible": true,
+        "inView": true
+      },
+      "heroH1": {
+        "x": 22,
+        "y": 464.5,
+        "width": 346,
+        "height": 110.25,
+        "top": 464.5,
+        "right": 368,
+        "bottom": 574.75,
+        "left": 22
+      },
+      "heroLinks": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      },
+      "cta": {
+        "x": 82.921875,
+        "y": 692,
+        "width": 224.15625,
+        "height": 52,
+        "top": 692,
+        "right": 307.078125,
+        "bottom": 744,
+        "left": 82.921875
+      },
+      "name": "mobile"
+    },
+    {
+      "lang": "bg",
+      "width": 1440,
+      "overflowX": 0,
+      "clipped": [],
+      "smallTargets": [],
+      "images": [
+        {
+          "src": "http://127.0.0.1:3417/assets/images/hero-garden.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/astrology-moon.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/numerology-pattern.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/skincare-ritual.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/psychology-journal.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/family-grove.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/mental-health-haven.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/astrology-moon.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/numerology-pattern.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/skincare-ritual.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/psychology-journal.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/family-grove.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/mental-health-haven.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/closing-bloom.webp",
+          "decoded": true
+        }
+      ],
+      "state": {
+        "frames": 0,
+        "renderer": "static",
+        "activeScene": "astrology",
+        "running": false,
+        "paused": false,
+        "reduced": true,
+        "visible": true,
+        "inView": true
+      },
+      "heroH1": {
+        "x": 335.671875,
+        "y": 477,
+        "width": 768.65625,
+        "height": 102.328125,
+        "top": 477,
+        "right": 1104.328125,
+        "bottom": 579.328125,
+        "left": 335.671875
+      },
+      "heroLinks": {
+        "x": 67.671875,
+        "y": 730,
+        "width": 1304.65625,
+        "height": 44,
+        "top": 730,
+        "right": 1372.328125,
+        "bottom": 774,
+        "left": 67.671875
+      },
+      "cta": {
+        "x": 610.234375,
+        "y": 668.609375,
+        "width": 219.53125,
+        "height": 52,
+        "top": 668.609375,
+        "right": 829.765625,
+        "bottom": 720.609375,
+        "left": 610.234375
+      },
+      "name": "desktop"
+    },
+    {
+      "lang": "bg",
+      "width": 390,
+      "overflowX": 0,
+      "clipped": [],
+      "smallTargets": [
+        "EN",
+        "BG"
+      ],
+      "images": [
+        {
+          "src": "http://127.0.0.1:3417/assets/images/hero-garden-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/astrology-moon-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/numerology-pattern-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/skincare-ritual-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/psychology-journal-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/family-grove-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/mental-health-haven-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/astrology-moon-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/numerology-pattern-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/skincare-ritual-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/psychology-journal-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/family-grove-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/mental-health-haven-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/closing-bloom-small.webp",
+          "decoded": true
+        }
+      ],
+      "state": {
+        "frames": 0,
+        "renderer": "static",
+        "activeScene": "astrology",
+        "running": false,
+        "paused": false,
+        "reduced": true,
+        "visible": true,
+        "inView": true
+      },
+      "heroH1": {
+        "x": 22,
+        "y": 464.5,
+        "width": 346,
+        "height": 110.25,
+        "top": 464.5,
+        "right": 368,
+        "bottom": 574.75,
+        "left": 22
+      },
+      "heroLinks": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      },
+      "cta": {
+        "x": 85.234375,
+        "y": 692,
+        "width": 219.53125,
+        "height": 52,
+        "top": 692,
+        "right": 304.765625,
+        "bottom": 744,
+        "left": 85.234375
+      },
+      "name": "mobile"
+    }
+  ],
+  "consoleErrors": [],
+  "externalRequests": [],
+  "failedRequests": [],
+  "httpErrors": [],
+  "screenshots": [
+    ".impeccable/review/desktop-en-top.png",
+    ".impeccable/review/desktop-en-full.png",
+    ".impeccable/review/mobile-en-top.png",
+    ".impeccable/review/mobile-en-full.png",
+    ".impeccable/review/desktop-bg-top.png",
+    ".impeccable/review/desktop-bg-full.png",
+    ".impeccable/review/mobile-bg-top.png",
+    ".impeccable/review/mobile-bg-full.png"
+  ],
+  "passed": 22,
+  "total": 24,
+  "failed": [
+    {
+      "name": "mobile-en: 44px targets",
+      "passed": false,
+      "detail": [
+        "EN",
+        "BG"
+      ]
+    },
+    {
+      "name": "mobile-bg: 44px targets",
+      "passed": false,
+      "detail": [
+        "EN",
+        "BG"
+      ]
+    }
+  ]
+}

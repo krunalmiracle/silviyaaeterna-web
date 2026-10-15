@@ -1,0 +1,9 @@
+.git
+.impeccable
+node_modules
+tools
+tests
+*.md
+.env
+.env.*
+assets/plates

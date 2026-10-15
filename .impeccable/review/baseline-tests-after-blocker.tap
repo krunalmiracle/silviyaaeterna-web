@@ -1,0 +1,44 @@
+
+> silviyaaeterna-web@2.0.0 test
+> node --test tests/*.test.mjs
+
+✔ no em dash or en dash anywhere in the shipped page (1.013964ms)
+✔ the page makes no third-party runtime requests (0.401102ms)
+✔ no inline styles or scripts that the CSP would block (0.582742ms)
+✔ every translatable node carries both languages (0.442979ms)
+✔ every image has alt text (0.329764ms)
+✔ every local reference resolves to a file on disk (7.778673ms)
+✔ navigation anchors all point at real sections (0.321411ms)
+✔ heading structure is a single h1 with ordered levels (0.197653ms)
+✔ coming soon states are honest, non clickable elements (0.470136ms)
+✔ language toggle is exposed accessibly (0.557096ms)
+✔ motion respects reduced motion and survives failed JavaScript (0.153622ms)
+✔ the page declares the two languages and viewport (0.088361ms)
+✔ saved Bulgarian preference applies content, lang, translated aria and image alt (1.844418ms)
+✔ invalid preference and denied storage retain functional English and language toggle (2.675261ms)
+✔ mobile menu closes on selection (0.726029ms)
+✔ mobile menu closes on Escape and restores summary focus (0.677883ms)
+✔ outside click closes mobile menu but inside click does not (0.697169ms)
+✔ all six theme selections open useful prompts with selected aria and focus (0.558849ms)
+✔ direct theme fragment enhances the correct topic (0.51619ms)
+✔ six static descriptions and native prompt disclosures exist without JavaScript (0.628935ms)
+✔ original images and responsive hero are real WebP assets (15.28603ms)
+✔ social preview is a real 1200 by 630 PNG (2.340409ms)
+✔ GET / serves the landing page with security headers (121.106334ms)
+✔ GET /index.html behaves like the root document (5.75682ms)
+✔ HEAD / returns headers without a body (5.561081ms)
+✔ every local asset referenced by index.html answers 200 (27.607161ms)
+✔ styles, script and images are served with correct types (10.785107ms)
+✔ unknown routes return 404 (3.00202ms)
+✔ server sources and dev documents are never served (9.011518ms)
+✔ removed write and AI endpoints refuse every mutation method (12.943888ms)
+✔ path traversal stays inside the asset directory (9.283873ms)
+✔ the server keeps no secrets and makes no outbound calls (0.917662ms)
+ℹ tests 32
+ℹ suites 0
+ℹ pass 32
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 284.611518

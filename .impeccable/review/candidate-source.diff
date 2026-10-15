@@ -1,0 +1,803 @@
+diff --git a/.dockerignore b/.dockerignore
+new file mode 100644
+index 0000000..327c536
+--- /dev/null
++++ b/.dockerignore
+@@ -0,0 +1,9 @@
++.git
++.impeccable
++node_modules
++tools
++tests
++*.md
++.env
++.env.*
++assets/plates
+diff --git a/assets/motion-state.js b/assets/motion-state.js
+new file mode 100644
+index 0000000..48a61bf
+--- /dev/null
++++ b/assets/motion-state.js
+@@ -0,0 +1,3 @@
++export function motionAllowed({paused,reduced,visible,inView=true}) {
++  return !paused && !reduced && visible && inView;
++}
+diff --git a/assets/scene.js b/assets/scene.js
+new file mode 100644
+index 0000000..7a91cf4
+--- /dev/null
++++ b/assets/scene.js
+@@ -0,0 +1,237 @@
++import {motionAllowed} from './motion-state.js';
++
++const root = document.documentElement;
++root.classList.add('js');
++const reduce = matchMedia('(prefers-reduced-motion: reduce)');
++const desktop = matchMedia('(min-width: 901px)');
++const button = document.querySelector('#motion-toggle');
++const label = document.querySelector('#motion-label');
++const hero = document.querySelector('.hero');
++let paused = false;
++try { paused = localStorage.getItem('silviya-motion') === 'paused'; } catch (_) { /* private mode stays usable */ }
++let inView = true;
++let context = null;
++let entranceDone = false;
++let renderer = null;
++let disposed = false;
++const stats = {frames:0, renderer:'static', activeScene:'astrology', running:false};
++const allowed = () => motionAllowed({paused,reduced:reduce.matches,visible:!document.hidden});
++
++// A static, semantic source image for every chapter remains in the HTML.
++// The desktop art stage is presentation-only and never replaces that content.
++const chapters = [...document.querySelectorAll('.topic')];
++const stage = document.querySelector('.stage-images');
++const images = chapters.map(chapter => {
++  const image = chapter.querySelector('img').cloneNode();
++  image.alt = '';
++  image.removeAttribute('data-alt-en'); image.removeAttribute('data-alt-bg');
++  image.loading = 'lazy';
++  stage.append(image);
++  return image;
++});
++let active = -1;
++function activate(index) {
++  if (index === active || index < 0) return;
++  active = index;
++  images.forEach((image,i) => image.classList.toggle('is-active',i === index));
++  document.querySelectorAll('.theme-nav [data-theme]').forEach(link => {
++    if (link.dataset.theme === chapters[index].id) link.setAttribute('aria-current','true');
++    else link.removeAttribute('aria-current');
++  });
++  stats.activeScene = chapters[index].id;
++}
++activate(0);
++function chooseChapter() {
++  const center = innerHeight * .52;
++  const distances = chapters.map(chapter => {
++    const r=chapter.getBoundingClientRect();
++    return r.top <= center && r.bottom >= center ? 0 : Math.min(Math.abs(r.top-center),Math.abs(r.bottom-center));
++  });
++  activate(distances.indexOf(Math.min(...distances)));
++}
++let scrollFrame=0;
++function onScroll() {
++  if (!scrollFrame) scrollFrame=requestAnimationFrame(()=>{scrollFrame=0;chooseChapter();});
++}
++addEventListener('scroll',onScroll,{passive:true});
++
++function updateLabel() {
++  const bg=root.lang==='bg';
++  const stopped=paused||reduce.matches;
++  button.setAttribute('aria-pressed',String(stopped));
++  label.textContent=reduce.matches ? (bg?'Намалено движение':'Motion reduced') : stopped ? (bg?'Пусни движението':'Resume motion') : (bg?'Спри движението':'Pause motion');
++  button.setAttribute('aria-label',label.textContent);
++}
++
++function buildChoreography() {
++  if (context) { context.revert(); context=null; }
++  const enabled=allowed();
++  root.classList.toggle('motion-on',enabled);
++  root.classList.toggle('motion-off',!enabled);
++  updateLabel();
++  if (!enabled || !window.gsap || !window.ScrollTrigger) return;
++  const gsap=window.gsap;
++  gsap.registerPlugin(window.ScrollTrigger);
++  context=gsap.context(()=>{
++    if (!entranceDone && inView) {
++      entranceDone=true;
++      gsap.timeline({defaults:{ease:'power2.out'}})
++        .fromTo('.hero-art img',{scale:1.045},{scale:1,duration:3.2},0)
++        .fromTo('.hero h1',{y:26,opacity:.45},{y:0,opacity:1,duration:1.6},.2)
++        .fromTo('.hero-sub, .hero .primary-action',{y:14,opacity:.55},{y:0,opacity:1,duration:1.1,stagger:.12},.6);
++    }
++    if (desktop.matches) {
++      gsap.to('.hero-intro',{y:85,ease:'none',scrollTrigger:{trigger:hero,start:'top top',end:'bottom top',scrub:1}});
++      gsap.to('.hero-art',{y:70,ease:'none',scrollTrigger:{trigger:hero,start:'top top',end:'bottom top',scrub:1}});
++    }
++    gsap.fromTo('.about h2',{color:'#86aaa5'},{color:'#f3efe5',ease:'none',scrollTrigger:{trigger:'.about',start:'top 75%',end:'center 45%',scrub:1}});
++    gsap.fromTo('.section-heading h2',{y:30},{y:0,ease:'none',scrollTrigger:{trigger:'.section-heading',start:'top 95%',end:'bottom 70%',scrub:1}});
++    gsap.fromTo('.closing-art img',{scale:1.09,y:-25},{scale:1,y:0,ease:'none',scrollTrigger:{trigger:'.next',start:'top bottom',end:'center center',scrub:1.2}});
++  });
++  window.ScrollTrigger.refresh();
++}
++
++// The only custom renderer: low-amplitude refraction over the lower 45%
++// of the original hero. No invented 3D geometry and no WebGL dependency.
++function createWater() {
++  const canvas=document.querySelector('#garden-water');
++  const gl=canvas.getContext('webgl',{alpha:true,antialias:false,powerPreference:'low-power',preserveDrawingBuffer:false});
++  if (!gl) return null;
++  const vertex='attribute vec2 p;varying vec2 uv;void main(){uv=p*.5+.5;gl_Position=vec4(p,0.,1.);}';
++  const fragment=`precision mediump float;
++  uniform sampler2D artwork;uniform vec2 view;uniform float imageRatio;uniform float time;
++  varying vec2 uv;
++  void main(){
++    vec2 whole=vec2(uv.x,uv.y*.45);
++    float ratio=view.x/view.y;
++    vec2 crop=vec2(min(1.,ratio/imageRatio),min(1.,imageRatio/ratio));
++    vec2 sampleUV=(whole-.5)*crop+.5;
++    float edge=(1.-smoothstep(.78,1.,uv.y))*smoothstep(0.,.10,uv.y);
++    float center=exp(-pow((uv.x-.51)*2.5,2.));
++    float wave=sin(uv.y*61.+time*.65+sin(uv.x*19.))*.0007;
++    sampleUV.x+=wave*edge*center;
++    sampleUV.y+=sin(uv.x*39.+time*.45)*.00025*edge;
++    vec3 col=texture2D(artwork,sampleUV).rgb;
++    for(int i=0;i<4;i++){
++      float fi=float(i);vec2 at=vec2(.25+fi*.15+sin(time*.12+fi)*.028,.24+sin(time*.18+fi*2.)*.14);
++      float light=exp(-length((uv-at)*vec2(1.,.45))*650.);
++      col+=vec3(.8,.60,.28)*light*(.35+.25*sin(time+fi));
++    }
++    gl_FragColor=vec4(col,edge*.7);
++  }`;
++  const shaders=[];
++  let program,buffer,texture,raf=0,ready=false,dead=false,last=0,elapsed=0,previous=0;
++  function compile(type,source){
++    const shader=gl.createShader(type);gl.shaderSource(shader,source);gl.compileShader(shader);
++    if (!gl.getShaderParameter(shader,gl.COMPILE_STATUS)){gl.deleteShader(shader);throw new Error('Shader compilation unavailable');}
++    shaders.push(shader);return shader;
++  }
++  try {
++    program=gl.createProgram();gl.attachShader(program,compile(gl.VERTEX_SHADER,vertex));gl.attachShader(program,compile(gl.FRAGMENT_SHADER,fragment));gl.linkProgram(program);
++    if(!gl.getProgramParameter(program,gl.LINK_STATUS))throw new Error('Shader linking unavailable');
++    gl.useProgram(program);
++    buffer=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,buffer);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,1,-1,-1,1,-1,1,1,-1,1,1]),gl.STATIC_DRAW);
++    const p=gl.getAttribLocation(program,'p');gl.enableVertexAttribArray(p);gl.vertexAttribPointer(p,2,gl.FLOAT,false,0,0);
++    texture=gl.createTexture();gl.bindTexture(gl.TEXTURE_2D,texture);
++    gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_S,gl.CLAMP_TO_EDGE);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_T,gl.CLAMP_TO_EDGE);
++    gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MIN_FILTER,gl.LINEAR);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MAG_FILTER,gl.LINEAR);
++  } catch (_) { cleanup(); return null; }
++  const timeLocation=gl.getUniformLocation(program,'time');
++  const viewLocation=gl.getUniformLocation(program,'view');
++  const ratioLocation=gl.getUniformLocation(program,'imageRatio');
++  function resize(){
++    const rect=hero.getBoundingClientRect();
++    const dpr=Math.min(devicePixelRatio||1,1.25);
++    canvas.width=Math.round(Math.min(rect.width,1672)*dpr);
++    canvas.height=Math.round(canvas.width/rect.width*rect.height*.45);
++    gl.viewport(0,0,canvas.width,canvas.height);gl.uniform2f(viewLocation,rect.width,rect.height);
++  }
++  function permitted(){return !dead&&ready&&desktop.matches&&motionAllowed({paused,reduced:reduce.matches,visible:!document.hidden,inView});}
++  function tick(now){
++    raf=0;if(!permitted()){stats.running=false;previous=0;return;}
++    stats.running=true;
++    if(now-last>=32){
++      elapsed+=previous?Math.min(now-previous,60)/1000:0;
++      previous=now;last=now;
++      gl.uniform1f(timeLocation,elapsed);gl.drawArrays(gl.TRIANGLES,0,6);stats.frames++;
++    }
++    raf=requestAnimationFrame(tick);
++  }
++  function sync(){
++    if(permitted()){if(!raf){previous=0;raf=requestAnimationFrame(tick);}}
++    else{if(raf)cancelAnimationFrame(raf);raf=0;stats.running=false;previous=0;}
++  }
++  function cleanup(){
++    if(dead)return;
++    canvas.removeEventListener('webglcontextlost',onContextLost);
++    dead=true;if(raf)cancelAnimationFrame(raf);raf=0;stats.running=false;
++    root.classList.remove('shader-ready');stats.renderer='static';
++    if(texture)gl.deleteTexture(texture);if(buffer)gl.deleteBuffer(buffer);if(program)gl.deleteProgram(program);shaders.forEach(s=>gl.deleteShader(s));
++  }
++  function onContextLost(event){event.preventDefault();cleanup();}
++  canvas.addEventListener('webglcontextlost',onContextLost,{once:true});
++  const source=new Image();
++  source.onload=()=>{
++    if(dead)return;
++    try {
++      gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL,true);gl.bindTexture(gl.TEXTURE_2D,texture);
++      gl.texImage2D(gl.TEXTURE_2D,0,gl.RGBA,gl.RGBA,gl.UNSIGNED_BYTE,source);
++      gl.uniform1f(ratioLocation,source.naturalWidth/source.naturalHeight);resize();ready=true;
++      stats.renderer='webgl';root.classList.add('shader-ready');sync();
++    }catch(_){cleanup();}
++  };
++  source.onerror=cleanup;
++  source.src=document.querySelector('.hero-art img').src;
++  return {sync,resize,cleanup};
++}
++function syncAll(){
++  if(disposed)return;
++  buildChoreography();
++  if(!renderer && desktop.matches && !reduce.matches && !paused)renderer=createWater();
++  if(renderer)renderer.sync();
++}
++button.addEventListener('click',()=>{
++  paused=!paused;
++  try { localStorage.setItem('silviya-motion',paused?'paused':'playing'); } catch (_) { /* storage is optional */ }
++  syncAll();
++});
++reduce.addEventListener('change',syncAll);
++desktop.addEventListener('change',()=>{syncAll();if(renderer)renderer.resize();});
++const heroObserver=new IntersectionObserver(entries=>{
++  inView=entries[0].isIntersecting;
++  if(renderer)renderer.sync();
++},{threshold:0});
++heroObserver.observe(hero);
++document.addEventListener('visibilitychange',syncAll);
++const langObserver=new MutationObserver(()=>{updateLabel();if(window.ScrollTrigger)window.ScrollTrigger.refresh();});
++langObserver.observe(root,{attributes:true,attributeFilter:['lang']});
++let resizeTimer;
++addEventListener('resize',()=>{clearTimeout(resizeTimer);resizeTimer=setTimeout(()=>{if(renderer)renderer.resize();chooseChapter();},180);},{passive:true});
++function suspendPage(){
++  disposed=true;
++  if(renderer){renderer.cleanup();renderer=null;}
++  if(context){context.revert();context=null;}
++  heroObserver.disconnect();langObserver.disconnect();
++  clearTimeout(resizeTimer);resizeTimer=undefined;
++  if(scrollFrame)cancelAnimationFrame(scrollFrame);
++  scrollFrame=0;
++  root.classList.remove('motion-on');root.classList.add('motion-off');
++}
++function restorePage(event){
++  if(!event.persisted || !disposed)return;
++  disposed=false;
++  try { paused=localStorage.getItem('silviya-motion')==='paused'; } catch (_) { /* retain in-memory preference */ }
++  const rect=hero.getBoundingClientRect();
++  inView=rect.bottom>0 && rect.top<innerHeight;
++  heroObserver.observe(hero);
++  langObserver.observe(root,{attributes:true,attributeFilter:['lang']});
++  chooseChapter();
++  syncAll();
++}
++// BFCache preserves this JS document: suspend resources, then recreate them
++// on a native persisted pageshow. Listeners remain singletons across returns.
++addEventListener('pagehide',suspendPage);
++addEventListener('pageshow',restorePage);
++// Read-only diagnostics for actual frame/pause/fallback verification.
++window.sanctuaryState=()=>({...stats,paused,reduced:reduce.matches,visible:!document.hidden,inView});
++syncAll();
+diff --git a/assets/styles.css b/assets/styles.css
+index 9b324d2..25bbff1 100644
+--- a/assets/styles.css
++++ b/assets/styles.css
+@@ -1,192 +1,15 @@
+-@font-face { font-family: Onest; src: url('fonts/Onest-Variable.woff2') format('woff2'); font-weight: 100 900; font-display: swap; }
+-@font-face { font-family: Geist; src: url('fonts/Geist-Variable-subset.woff2') format('woff2'); font-weight: 100 900; font-display: swap; }
+-:root {
+-  --jade: #e6ede3; --leaf: #f2f6ef; --spruce: #183f35; --muted: #466255;
+-  --amber: #c5913d; --line: #a8bbab; --radius: 6px;
+-  --gutter: clamp(20px, 4vw, 64px); --section: clamp(64px, 8vw, 112px);
+-  color-scheme: light; background: var(--jade); color: var(--spruce);
+-  font-family: Geist, sans-serif; font-size: 16px; line-height: 1.6;
+-  scrollbar-color: var(--muted) var(--jade); caret-color: var(--spruce);
+-}
+-* { box-sizing: border-box; }
+-body { margin: 0; }
+-::selection { background: var(--spruce); color: var(--leaf); }
+-a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 5px; }
+-button, summary { -webkit-tap-highlight-color: transparent; }
+-button { font: inherit; cursor: pointer; }
+-button, a, summary { touch-action: manipulation; }
+-a:focus-visible, button:focus-visible, summary:focus-visible, .topic:focus-visible { outline: 2px solid var(--spruce); outline-offset: 5px; border-radius: var(--radius); }
+-[id] { scroll-margin-top: 110px; }
+-h1, h2, h3, h4 { font-family: Onest, sans-serif; font-weight: 500; line-height: 1.1; letter-spacing: -.035em; text-wrap: balance; margin: 0; }
+-h2 { font-size: clamp(2.2rem, 4.2vw, 3.8rem); }
+-h3 { font-size: clamp(2rem, 3.6vw, 3.2rem); }
+-h4 { font-size: clamp(1.45rem, 2vw, 1.9rem); letter-spacing: -.025em; }
+-p { margin: 0; max-width: 68ch; }
+-figure { margin: 0; }
+-img { display: block; width: 100%; height: auto; }
+-svg { flex: none; }
+-.shell { width: min(100% - var(--gutter) * 2, 1320px); margin-inline: auto; }
+-.visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+-.skip-link { position: fixed; z-index: 20; left: 20px; top: -100px; padding: 12px 24px; background: var(--spruce); color: var(--leaf); }
+-.skip-link:focus { top: 12px; outline-color: var(--amber); }
+-.site-header { position: sticky; top: 0; z-index: 10; background: var(--jade); border-bottom: 1px solid var(--line); }
+-.header-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 88px; }
+-.brand { display: flex; flex-direction: column; justify-content: center; min-height: 52px; font: 500 24px/1.02 Onest, sans-serif; letter-spacing: -.04em; text-decoration: none; }
+-.primary-nav { display: flex; gap: 28px; margin-left: auto; margin-right: 48px; }
+-.primary-nav a { display: inline-flex; align-items: center; min-height: 44px; text-decoration: none; font-size: .95rem; }
+-.primary-nav a:hover, .back-top:hover { text-decoration: underline; }
+-.header-tools { display: flex; align-items: center; gap: 16px; }
+-.lang { display: flex; gap: 2px; }
+-.lang button { min-width: 44px; height: 44px; border: 0; border-radius: var(--radius); background: transparent; color: var(--spruce); font-weight: 500; font-size: .875rem; }
+-.lang button[aria-pressed='true'] { background: var(--spruce); color: var(--leaf); }
+-.lang button:hover:not([aria-pressed='true']) { background: var(--leaf); }
+-.nav-more { display: none; }
+-.hero { padding-top: 48px; }
+-.hero-intro { display: grid; grid-template-columns: 1.3fr 1fr; align-items: end; gap: 64px; margin-bottom: 40px; }
+-h1 { font-size: clamp(3.2rem, 6.7vw, 6rem); line-height: 1.02; letter-spacing: -.04em; }
+-h1 span { display: block; }
+-.hero-note { padding-bottom: 4px; max-width: 420px; justify-self: end; }
+-.hero-sub { font-size: 18px; line-height: 1.55; }
+-.primary-action { display: inline-flex; gap: 28px; align-items: center; justify-content: space-between; min-height: 54px; padding: 12px 20px; margin-top: 24px; border-radius: var(--radius); background: var(--spruce); color: var(--leaf); font-weight: 500; text-decoration: none; }
+-.primary-action:hover { background: #285344; }
+-.hero-art img { height: clamp(320px, 30vw, 440px); object-fit: cover; object-position: 50% 53%; border-radius: var(--radius); }
+-.hero-art figcaption { display: flex; justify-content: space-between; gap: 24px; padding-top: 12px; font-size: .8rem; color: var(--muted); }
+-.atlas { padding-top: var(--section); }
+-.section-heading { display: grid; grid-template-columns: 1.15fr 1fr; gap: 72px; align-items: end; }
+-.section-heading p { max-width: 44ch; color: var(--muted); justify-self: end; font-size: 17px; }
+-.theme-nav { display: flex; flex-wrap: wrap; gap: 8px 28px; padding-block: 28px; margin-top: 20px; border-bottom: 1px solid var(--line); }
+-.theme-nav a { display: inline-flex; align-items: center; min-height: 44px; padding: 8px 0; text-decoration: none; border-bottom: 2px solid transparent; font-size: 16px; }
+-.theme-nav a:hover { border-color: var(--muted); }
+-.theme-nav a[aria-current='true'] { border-color: var(--spruce); font-weight: 600; }
+-.chapter { display: grid; grid-template-columns: 1.1fr 1fr; align-items: center; gap: clamp(32px, 7vw, 104px); padding-block: 64px 72px; }
+-.chapter + .chapter { border-top: 1px solid var(--line); }
+-.chapter-visual h3 { margin-bottom: 28px; max-width: 15ch; }
+-.chapter-visual img { width: 100%; height: auto; aspect-ratio: 1.12; object-fit: cover; border-radius: var(--radius); }
+-.chapter-topics { padding-top: 76px; }
+-.topic { padding-block: 24px; border-bottom: 1px solid var(--line); }
+-.topic:first-child { padding-top: 0; }
+-.topic p { margin-top: 16px; color: var(--muted); }
+-.reflection { margin-top: 12px; }
+-.reflection summary { min-height: 44px; display: flex; align-items: center; justify-content: space-between; gap: 16px; cursor: pointer; list-style: none; font-size: .9rem; font-weight: 500; }
+-.reflection summary::-webkit-details-marker, .nav-more summary::-webkit-details-marker { display: none; }
+-.reflection summary::after { content: ''; display: block; flex: 0 0 8px; height: 8px; border-right: 1.5px solid; border-bottom: 1.5px solid; transform: rotate(45deg); margin-right: 4px; }
+-.reflection[open] summary::after { transform: rotate(225deg); }
+-.reflection summary:hover { text-decoration: underline; text-underline-offset: 5px; }
+-.reflection[open] { background: var(--leaf); border-radius: var(--radius); padding: 8px 18px 18px; }
+-.reflection[open] p { margin-top: 4px; font-size: .95rem; }
+-.chapter-care { grid-template-columns: 1fr 1.1fr; }
+-.chapter-care .chapter-visual { grid-column: 2; grid-row: 1; }
+-.chapter-care .chapter-topics { grid-column: 1; grid-row: 1; }
+-.chapter-care .chapter-visual img { aspect-ratio: 1.3; }
+-.chapter-growth .chapter-visual img { aspect-ratio: 1.06; }
+-.about { margin-top: 24px; padding-block: var(--section); background: var(--leaf); }
+-.about-inner { display: grid; grid-template-columns: 1.2fr 1fr; gap: 96px; align-items: start; }
+-.about h2 { max-width: 16ch; }
+-.about p { font-size: 18px; color: var(--muted); }
+-.about p + p { margin-top: 24px; }
+-.next { padding-block: var(--section) 64px; }
+-.next h2 { max-width: 22ch; margin-bottom: 40px; }
+-.future-list > div { display: grid; grid-template-columns: .6fr 1.5fr .6fr; gap: 40px; align-items: start; border-top: 1px solid var(--line); padding-block: 26px; }
+-.future-list h3 { font-size: 25px; letter-spacing: -.025em; line-height: 1.3; }
+-.future-list p { color: var(--muted); max-width: 56ch; }
+-.soon-state { font-size: .9rem; padding-top: 4px; justify-self: end; text-align: right; font-weight: 500; }
+-.safety { border-top: 1px solid var(--line); padding-block: 40px 64px; display: grid; grid-template-columns: .65fr 1.5fr; gap: 64px; }
+-.safety h2 { font-size: 26px; letter-spacing: -.025em; }
+-.safety-copy { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; font-size: .9rem; color: var(--muted); }
+-.site-footer { padding-block: 40px 24px; border-top: 1px solid var(--line); }
+-.footer-top { display: flex; justify-content: space-between; align-items: center; gap: 24px; }
+-.footer-wordmark { font: 500 clamp(2rem, 5.7vw, 5rem)/1.15 Onest, sans-serif; letter-spacing: -.04em; text-decoration: none; min-height: 44px; display: flex; align-items: center; }
+-.back-top { display: flex; align-items: center; gap: 16px; min-height: 44px; text-decoration: none; }
+-.footer-bottom { display: flex; justify-content: space-between; align-items: center; gap: 24px; padding-top: 32px; color: var(--muted); font-size: .8rem; }
+-.footer-bottom a { display: inline-flex; align-items: center; min-height: 44px; }
+-@media (prefers-reduced-motion: no-preference) {
+-  .hero-art img { animation: daylight .8s cubic-bezier(.16,1,.3,1) both; }
+-  .primary-action, .lang button { transition: background-color .18s ease; }
+-  @keyframes daylight { from { filter: brightness(.92); } to { filter: brightness(1); } }
+-}
+-@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
+-@media (max-width: 1050px) {
+-  .primary-nav { margin-right: 12px; gap: 20px; }
+-  .hero-intro { gap: 32px; }
+-  .hero-sub { font-size: 16px; }
+-  .chapter { gap: 40px; }
+-  .about-inner { gap: 48px; }
+-  .safety { gap: 40px; }
+-}
+-@media (max-width: 800px) {
+-  .primary-nav { display: none; }
+-  .header-inner { min-height: 76px; }
+-  .nav-more { display: block; }
+-  .nav-more > summary { width: 44px; height: 44px; display: grid; place-items: center; cursor: pointer; list-style: none; border: 1px solid var(--line); border-radius: var(--radius); }
+-  .menu-mark { width: 18px; height: 8px; border-top: 1.5px solid; border-bottom: 1.5px solid; }
+-  .nav-more[open] .menu-mark { height: 0; border-bottom: 0; transform: rotate(-45deg); }
+-  .nav-more[open] .menu-mark::after { content: ''; display: block; width: 18px; border-top: 1.5px solid; transform: translateY(-1.5px) rotate(90deg); }
+-  .mobile-nav { position: absolute; top: 100%; left: 0; right: 0; background: var(--leaf); border-bottom: 1px solid var(--line); padding: 20px var(--gutter) 28px; box-shadow: 0 16px 24px #183f3514; }
+-  .mobile-nav a { display: flex; align-items: center; min-height: 52px; font-family: Onest, sans-serif; font-size: 22px; text-decoration: none; }
+-  .hero-intro { grid-template-columns: 1fr 1fr; gap: 24px; }
+-  .hero-note { max-width: 340px; }
+-  h1 { font-size: clamp(3rem, 7vw, 4.5rem); }
+-  .section-heading { gap: 32px; }
+-  .chapter { gap: 32px; }
+-  .chapter-topics { padding-top: 48px; }
+-  .chapter-visual img { aspect-ratio: 1.12; }
+-  .chapter-care .chapter-visual img, .chapter-growth .chapter-visual img { aspect-ratio: 1.12; }
+-  .future-list > div { grid-template-columns: .6fr 1.5fr; gap: 12px 24px; }
+-  .soon-state { grid-column: 2; justify-self: start; }
+-  .safety { grid-template-columns: 1fr; gap: 24px; }
+-  .footer-bottom { flex-wrap: wrap; gap: 4px 24px; }
+-}
+-@media (max-width: 600px) {
+-  :root { --gutter: 20px; }
+-  .header-inner { gap: 12px; min-height: 76px; }
+-  .brand { font-size: 21px; }
+-  .header-tools { gap: 10px; }
+-  .hero { padding-top: 36px; }
+-  .hero-intro { display: block; margin-bottom: 28px; }
+-  h1 { font-size: clamp(2.9rem, 12.2vw, 4.5rem); }
+-  .hero-note { margin-top: 24px; max-width: 100%; }
+-  .hero-sub { font-size: 16px; line-height: 1.6; }
+-  .primary-action { margin-top: 20px; font-size: 15px; }
+-  .hero-art img { height: 290px; object-position: 55% 50%; }
+-  .hero-art figcaption { display: block; font-size: .75rem; }
+-  .hero-art figcaption span { display: block; }
+-  .hero-art figcaption span + span { margin-top: 4px; }
+-  .section-heading { display: block; }
+-  .section-heading h2 { max-width: 15ch; }
+-  .section-heading p { margin-top: 24px; font-size: 16px; }
+-  .theme-nav { gap: 4px 20px; padding-block: 20px; margin-top: 12px; }
+-  .theme-nav a { font-size: 14px; }
+-  .chapter { display: flex; flex-direction: column; gap: 24px; align-items: stretch; padding-block: 48px; }
+-  .chapter-visual h3 { margin-bottom: 24px; max-width: 17ch; }
+-  .chapter-visual img, .chapter-care .chapter-visual img, .chapter-growth .chapter-visual img { aspect-ratio: 1.1; object-position: center; }
+-  .chapter-topics { padding-top: 0; }
+-  .topic { padding-block: 24px; }
+-  .topic p { font-size: 16px; }
+-  .about { margin-top: 16px; }
+-  .about-inner { display: block; }
+-  .about h2 { max-width: 16ch; margin-bottom: 28px; }
+-  .about p { font-size: 16px; }
+-  .next { padding-bottom: 40px; }
+-  .next h2 { margin-bottom: 28px; }
+-  .future-list > div { grid-template-columns: 1fr auto; gap: 16px; }
+-  .future-list h3 { font-size: 23px; }
+-  .future-list p { grid-column: 1 / -1; grid-row: 2; }
+-  .soon-state { grid-column: 2; grid-row: 1; justify-self: end; font-size: .8rem; padding-top: 5px; }
+-  .safety { padding-block: 32px 48px; }
+-  .safety-copy { grid-template-columns: 1fr; gap: 16px; }
+-  .footer-top { display: block; }
+-  .footer-wordmark { font-size: 36px; }
+-  .back-top { margin-top: 16px; width: fit-content; }
+-  .footer-bottom { display: block; padding-top: 20px; }
+-  .footer-bottom p { margin-block: 8px; }
+-}
+-@media (max-width: 350px) {
+-  :root { --gutter: 16px; }
+-  .header-tools { gap: 6px; }
+-  .header-inner { gap: 8px; }
+-  .brand { font-size: 19px; }
+-  h1 { font-size: 2.7rem; }
+-  .hero-art img { height: 270px; }
+-  .future-list > div { gap: 12px 8px; }
+-  .soon-state { max-width: 120px; }
+-}
++@font-face{font-family:Sanctuary;src:url('fonts/CormorantGaramond-Variable.woff2') format('woff2');font-weight:300 700;font-display:swap}
++@font-face{font-family:Geist;src:url('fonts/Geist-Variable-subset.woff2') format('woff2');font-weight:100 900;font-display:swap}
++:root{--ink:#081e22;--deep:#061619;--surface:#102c30;--pearl:#f3efe5;--muted:#bfd1cc;--gold:#e7c995;--line:#486362;--gutter:clamp(20px,4.7vw,80px);--ease:cubic-bezier(.16,1,.3,1);color-scheme:dark;scroll-padding-top:180px;background:var(--ink);color:var(--pearl);font-family:Geist,sans-serif;font-size:16px;line-height:1.65;scrollbar-color:var(--line) var(--deep)}
++*{box-sizing:border-box}body{margin:0}a{color:inherit;text-decoration:none;text-underline-offset:6px}button,summary,a{-webkit-tap-highlight-color:transparent}button{font:inherit;color:inherit;cursor:pointer}button,a,summary{touch-action:manipulation}button:active,.primary-action:active{transform:translateY(2px)}::selection{background:var(--gold);color:var(--deep)}:focus-visible{outline:2px solid var(--gold);outline-offset:5px}p{margin:0 0 1.3em;max-width:70ch}h1,h2,h3{font-family:Sanctuary,serif;font-weight:400;line-height:1.03;margin:0;text-wrap:balance;letter-spacing:-.025em}h1{font-weight:300}h2{font-size:clamp(44px,5vw,76px)}h3{font-size:clamp(39px,4vw,64px)}img{display:block;width:100%;height:auto}figure{margin:0}svg{flex-shrink:0}button{border:0;background:none}main{overflow:clip}section,article,aside{scroll-margin-top:180px}.shell{width:calc(100% - var(--gutter)*2);max-width:1512px;margin-inline:auto}.visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}.js-only{display:none}.js .js-only{display:flex}.skip-link{position:fixed;z-index:30;left:20px;top:-100px;padding:12px 20px;background:var(--gold);color:var(--deep)}.skip-link:focus{top:12px}
++.site-header{position:absolute;inset:0 0 auto;z-index:20;background:linear-gradient(180deg,#061619de,#06161900);height:105px}.header-inner{display:flex;align-items:center;justify-content:space-between;height:100%;gap:24px}.brand{display:flex;align-items:center;gap:.23em;font-family:Sanctuary,serif;font-size:36px;line-height:1;min-height:44px;white-space:nowrap}.primary-nav{display:flex;gap:34px;margin-left:auto}.primary-nav a{display:flex;align-items:center;min-height:44px;font-size:15px}.header-tools{display:flex;align-items:center;gap:20px}.lang{gap:0}.lang button{min-width:44px;min-height:44px;font-size:13px}.lang button[aria-pressed=true]{color:var(--gold);text-decoration:underline;text-underline-offset:8px}.motion-toggle{gap:9px;align-items:center;border:1px solid #e7c995a6;border-radius:40px;min-height:44px;padding:8px 17px;font-size:13px;white-space:nowrap}.pause-mark{display:inline-block;width:9px;height:12px;border-inline:2px solid var(--gold)}[aria-pressed=true] .pause-mark{border:1px solid var(--gold);height:9px}.primary-nav a:hover,.back-top:hover,.theme-nav a:hover,.hero-links a:hover{color:var(--gold)}.motion-toggle:hover{background:var(--surface)}.nav-more{display:none}.hero{position:relative;isolation:isolate;height:100svh;min-height:820px;max-height:1100px;background:var(--deep);overflow:hidden}.hero-art{position:absolute;inset:0;z-index:-4}.hero-art img{width:100%;height:100%;object-fit:cover;object-position:50% 50%}.hero-shade{position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,transparent 33%,#0616191c 47%,#06161980 66%,#061619a6 100%);pointer-events:none}#garden-water{position:absolute;left:0;bottom:0;width:100%;height:45%;z-index:-3;pointer-events:none;display:none}.shader-ready #garden-water{display:block}.hero-intro{position:absolute;top:51%;left:var(--gutter);right:var(--gutter);text-align:center;display:flex;flex-direction:column;align-items:center}.hero h1{font-size:clamp(64px,6.9vw,119px);max-width:100%;margin-bottom:12px}.hero-sub{max-width:700px;font-size:clamp(16px,1.2vw,20px);line-height:1.6;margin-bottom:22px;text-wrap:balance}.primary-action{display:inline-flex;gap:25px;align-items:center;justify-content:center;background:var(--gold);color:var(--deep);border-radius:40px;min-height:52px;padding:12px 25px;font-weight:500;font-size:14px;transition:background .2s,transform .2s}.primary-action:hover{background:var(--pearl)}.hero-links{position:absolute;left:var(--gutter);right:var(--gutter);bottom:11%;display:flex;justify-content:space-between;gap:10px;font-family:Sanctuary,serif;font-size:23px}.hero-links a{display:flex;align-items:center;justify-content:center;min-height:44px;padding:0 12px;border-right:1px solid #e7c99550;flex:1;text-align:center;line-height:1.2}.hero-links a:last-child{border:0}.continuation{position:absolute;bottom:2%;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:60px;text-align:center;font-size:14px;white-space:nowrap;gap:4px}.continuation svg{color:var(--gold)}
++.about{padding:clamp(90px,10vw,160px) 0;background:var(--ink);position:relative}.about-inner{display:grid;grid-template-columns:1.15fr 1fr;gap:10vw;align-items:center}.about h2{max-width:680px}.about p{color:var(--muted);font-size:17px}.about p:last-child{margin:0}.atlas{padding-bottom:120px}.section-heading{display:flex;align-items:end;gap:10vw;justify-content:space-between;padding-bottom:60px}.section-heading h2{max-width:650px}.section-heading p{max-width:365px;color:var(--muted);margin:0}.theme-nav{position:sticky;top:0;z-index:8;display:flex;align-items:stretch;gap:4px;background:var(--ink);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:10px 0;margin-bottom:60px}.theme-nav a{flex:1;display:flex;align-items:center;justify-content:center;text-align:center;min-height:48px;padding:7px 10px;line-height:1.3;font-size:14px;position:relative;transition:color .2s,background .2s}.theme-nav a[aria-current=true]{color:var(--gold);background:#213b3b}.theme-nav a[aria-current=true]::after{content:'';position:absolute;left:20%;right:20%;bottom:-11px;height:2px;background:var(--gold)}.atlas-stage{display:none}.topic{display:grid;grid-template-columns:1.2fr 1fr;gap:7vw;align-items:center;padding-bottom:90px;outline-offset:12px}.topic-art{overflow:hidden}.topic-art img{aspect-ratio:1.45;object-fit:cover}.topic h3{margin-bottom:24px}.topic p{color:var(--muted)}.topic-copy{max-width:580px}.reflection{border-top:1px solid var(--line);margin-top:30px}.reflection summary{cursor:pointer;min-height:56px;padding:14px 0;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:20px;font-size:14px;color:var(--gold)}.reflection summary::-webkit-details-marker{display:none}.reflection summary::after{content:'+';font-family:Geist,sans-serif;font-size:22px;font-weight:300}.reflection[open] summary::after{content:'−'}.reflection p{font-size:15px;padding:5px 0 22px;margin:0}.reflection[open]{border-bottom:1px solid var(--line)}
++.next{position:relative;isolation:isolate;background:var(--deep);padding:130px 0 60px;overflow:hidden}.closing-art{position:absolute;inset:0 0 auto;height:640px;z-index:-2}.closing-art img{width:100%;height:100%;object-fit:cover;object-position:70% 50%}.next::before{content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(90deg,#061619dd,transparent 85%),linear-gradient(180deg,transparent 20%,#061619 660px)}.next h2{max-width:660px;margin-bottom:65px}.future-list{max-width:700px}.future-list>div{display:grid;grid-template-columns:125px 1fr;gap:8px 30px;border-top:1px solid var(--line);padding:26px 0}.future-list h3{font-size:30px}.future-list p{font-size:15px;color:var(--muted);margin:0}.soon-state{grid-column:2;color:var(--gold);font-size:13px}.safety{border-top:1px solid var(--line);margin-top:70px;padding-top:30px;display:grid;grid-template-columns:1fr 2fr;gap:60px}.safety h2{font-size:34px;margin:0;max-width:400px}.safety-copy{display:grid;grid-template-columns:1fr 1fr;gap:35px;font-size:13px;color:var(--muted)}.site-footer{padding:65px 0 25px}.footer-top{display:flex;align-items:center;justify-content:space-between;gap:20px}.footer-wordmark{font-family:Sanctuary,serif;font-size:clamp(40px,5vw,76px);min-height:44px}.back-top{display:flex;gap:18px;align-items:center;min-height:44px;font-size:14px}.footer-bottom{border-top:1px solid var(--line);margin-top:35px;padding-top:18px;display:flex;justify-content:space-between;align-items:center;gap:20px;color:var(--muted);font-size:12px}.footer-bottom p{margin:0}.footer-bottom a{display:flex;align-items:center;min-height:44px}
++@media(min-width:901px){.js .atlas-body{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,.8fr);gap:7vw;align-items:start}.js .atlas-stage{display:block;position:sticky;top:110px;height:calc(100svh - 155px);max-height:850px;min-height:420px;overflow:hidden}.stage-images{height:calc(100% - 45px);position:relative;overflow:hidden;background:var(--deep)}.stage-images img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.06);transition:opacity .9s var(--ease),transform 1.5s var(--ease)}.stage-images img.is-active{opacity:1;transform:scale(1)}.stage-images img:nth-child(2){object-position:60% 50%}.stage-images img:nth-child(3){object-position:35% 50%}.stage-images img:nth-child(6){object-position:67% 50%}.stage-caption{font-size:12px;line-height:1.4;margin-top:16px;color:var(--muted)}.js .topic{display:flex;min-height:85svh;padding:80px 0;align-items:center}.js .topic-art{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}.js .topic:first-child{padding-top:15px}.js .topic:last-child{min-height:90svh}.topic h3{font-size:clamp(44px,4.7vw,72px)}.js .atlas-chapters{min-width:0}}
++@media(max-width:1200px){.primary-nav{gap:16px}.header-tools{gap:8px}.brand{font-size:31px}.hero h1{font-size:7.2vw}.hero-links{font-size:21px}.hero-intro{top:50%}.theme-nav a{font-size:13px}.about-inner{gap:6vw}}
++@media(max-width:900px){:root{scroll-padding-top:100px}.site-header{height:90px}.primary-nav{display:none}.header-inner{gap:12px}.header-tools{gap:5px}.nav-more{display:block}.nav-more summary{list-style:none;cursor:pointer;min-height:44px;min-width:44px;display:flex;align-items:center;justify-content:center}.nav-more summary::-webkit-details-marker{display:none}.menu-mark{width:21px;height:12px;border-block:1px solid var(--pearl);position:relative}.nav-more[open] .menu-mark{border:0}.nav-more[open] .menu-mark::before,.nav-more[open] .menu-mark::after{content:'';position:absolute;left:0;top:5px;width:21px;height:1px;background:var(--pearl);transform:rotate(45deg)}.nav-more[open] .menu-mark::after{transform:rotate(-45deg)}.mobile-nav{position:absolute;left:var(--gutter);right:var(--gutter);top:85px;background:var(--surface);border:1px solid var(--line);padding:20px;box-shadow:0 20px 40px #0005}.mobile-nav a{display:flex;align-items:center;min-height:52px;font-size:19px;border-bottom:1px solid var(--line)}.hero{min-height:780px}.hero-links{display:none}.hero-intro{top:auto;bottom:110px}.hero h1{font-size:clamp(64px,9vw,90px)}.hero-sub{max-width:550px}.hero-art img{object-position:58% 50%}.hero-shade{background:linear-gradient(180deg,#06161922 20%,transparent 35%,#061619c9 80%,#061619e6)}#garden-water{display:none!important}.about-inner{grid-template-columns:1fr;gap:35px}.about h2{max-width:660px}.about p{font-size:16px}.section-heading{display:block;padding-bottom:35px}.section-heading h2{margin-bottom:25px}.section-heading p{max-width:520px}.theme-nav{display:grid;grid-template-columns:repeat(3,1fr);position:relative;top:auto;margin-bottom:55px;padding:12px 0;gap:5px}.theme-nav a{min-height:48px;font-size:14px}.theme-nav a[aria-current=true]::after{bottom:0;left:10%;right:10%}.topic{display:flex;flex-direction:column;align-items:stretch;gap:35px;padding:0 0 80px;scroll-margin-top:30px}.topic-art img{aspect-ratio:1.5}.topic-copy{max-width:620px}.topic h3{font-size:52px}.topic:nth-child(2n) .topic-art{margin-inline:5%}.topic:nth-child(3) .topic-art img{aspect-ratio:1.25;object-position:35% 50%}.topic:nth-child(5) .topic-art img{aspect-ratio:1.15}.atlas{padding-bottom:0}.next{padding-top:100px}.next h2{max-width:520px}.safety{grid-template-columns:1fr;gap:25px}.footer-bottom{flex-wrap:wrap}}
++@media(max-width:600px){:root{--gutter:22px}.site-header{height:114px}.header-inner{align-items:flex-start;padding-top:22px;position:relative}.brand{font-size:29px;min-height:44px}.header-tools{gap:0}.lang button{min-width:44px}.motion-toggle{position:absolute;top:72px;right:0;font-size:12px;min-height:44px;padding:8px 13px}.mobile-nav{top:125px;left:0;right:0}.hero{height:100svh;min-height:780px;max-height:940px}.hero-intro{bottom:100px;left:22px;right:22px}.hero h1{font-size:clamp(53px,14vw,75px);line-height:1.01;max-width:390px;margin-bottom:20px}.hero-sub{font-size:15px;line-height:1.65;max-width:360px;margin-bottom:23px}.hero-art img{object-position:60% 50%}.hero-shade{background:linear-gradient(180deg,#06161980 0%,transparent 23%,transparent 35%,#061619c2 64%,#061619e6 100%)}.continuation{bottom:18px;font-size:13px}.about{padding:85px 0}.about h2,.section-heading h2{font-size:46px}.theme-nav{grid-template-columns:repeat(2,1fr)}.theme-nav a{font-size:13px;min-height:48px}.topic h3{font-size:45px}.topic-art{margin-inline:calc(var(--gutter)*-1)}.topic:nth-child(2n) .topic-art{margin-inline:0}.topic-copy p{font-size:16px}.topic{gap:30px;padding-bottom:70px}.next{padding:90px 0 40px}.closing-art{height:430px}.closing-art img{object-position:72% 50%}.next::before{background:linear-gradient(90deg,#061619b3,#06161922),linear-gradient(180deg,#06161900 0%,#061619 440px)}.next h2{font-size:48px;max-width:310px;margin-bottom:150px}.future-list>div{grid-template-columns:1fr;gap:12px}.soon-state{grid-column:1}.safety{margin-top:45px}.safety h2{font-size:33px;margin-bottom:0}.safety-copy{grid-template-columns:1fr;gap:0}.footer-top{align-items:start;flex-direction:column}.footer-bottom{display:block;font-size:12px}.footer-bottom p{margin:12px 0}.footer-wordmark{font-size:46px}.site-footer{padding-top:45px}}
++@media(max-width:350px){:root{--gutter:16px}.brand{font-size:25px;gap:.15em}.header-tools .lang button{min-width:44px}.header-inner{gap:0}.hero-intro{left:16px;right:16px}.hero h1{font-size:49px}.hero-sub{font-size:14px}.about h2,.section-heading h2{font-size:40px}.topic h3{font-size:40px}}
++@media(prefers-reduced-motion:no-preference){.motion-on .primary-action svg{transition:transform .3s var(--ease)}.motion-on .primary-action:hover svg{transform:translateX(4px)}}
++@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
++.motion-off *,.motion-off *::before,.motion-off *::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.motion-off .stage-images img{transform:none}
+diff --git a/index.html b/index.html
+index 6210b86..311efda 100644
+--- a/index.html
++++ b/index.html
+@@ -5,8 +5,8 @@
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title data-en="Silviya Aeterna | A little more in tune" data-bg="Silviya Aeterna | По-близо до себе си">Silviya Aeterna | A little more in tune</title>
+   <meta name="description" content="Explore astrology, numerology, skincare, wellbeing, family and mental health with Silviya Aeterna. A reflective personal project in English and Bulgarian.">
+-  <meta name="theme-color" content="#E6EDE3">
+-  <meta name="color-scheme" content="light">
++  <meta name="theme-color" content="#081e22">
++  <meta name="color-scheme" content="dark">
+   <meta property="og:type" content="website">
+   <meta property="og:url" content="https://silviyaaeterna.krusil.com/">
+   <meta property="og:site_name" content="Silviya Aeterna">
+@@ -16,17 +16,20 @@
+   <meta property="og:image:type" content="image/png">
+   <meta property="og:image:width" content="1200">
+   <meta property="og:image:height" content="630">
+-  <meta property="og:image:alt" content="Silviya Aeterna in deep spruce lettering on pale jade, beside an original botanical glasshouse still life.">
++  <meta property="og:image:alt" content="Silviya Aeterna above the reflecting pool of an illustrated moonlit garden.">
+   <meta property="og:locale" content="en_US">
+   <meta property="og:locale:alternate" content="bg_BG">
+   <meta name="twitter:card" content="summary_large_image">
+   <meta name="twitter:image" content="https://silviyaaeterna.krusil.com/assets/social-og.png">
+   <link rel="canonical" href="https://silviyaaeterna.krusil.com/">
+   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+-  <link rel="preload" href="assets/fonts/Onest-Variable.woff2" as="font" type="font/woff2" crossorigin>
++  <link rel="preload" href="assets/fonts/CormorantGaramond-Variable.woff2" as="font" type="font/woff2" crossorigin>
+   <link rel="preload" href="assets/fonts/Geist-Variable-subset.woff2" as="font" type="font/woff2" crossorigin>
+   <link rel="stylesheet" href="assets/styles.css">
++  <script src="assets/vendor/gsap.min.js" defer></script>
++  <script src="assets/vendor/ScrollTrigger.min.js" defer></script>
+   <script src="assets/site.js" defer></script>
++  <script type="module" src="assets/scene.js"></script>
+ </head>
+ <body id="top">
+   <a class="skip-link" href="#main" data-en="Skip to content" data-bg="Към съдържанието">Skip to content</a>
+@@ -38,8 +41,8 @@
+         <a href="#manifesto" data-en="The project" data-bg="Проектът">The project</a>
+         <a href="#next" data-en="What’s next" data-bg="Какво предстои">What’s next</a>
+       </nav>
+-      <div class="header-tools">
+-        <div class="lang" role="group" aria-label="Language" data-aria-en="Language" data-aria-bg="Език">
++      <div class="header-tools"><button type="button" class="motion-toggle js-only" id="motion-toggle" aria-pressed="false"><span class="pause-mark" aria-hidden="true"></span><span id="motion-label">Pause motion</span></button>
++        <div class="lang js-only" role="group" aria-label="Language" data-aria-en="Language" data-aria-bg="Език">
+           <button type="button" id="lang-en" lang="en" aria-pressed="true">EN</button>
+           <button type="button" id="lang-bg" lang="bg" aria-pressed="false">BG</button>
+         </div>
+@@ -56,115 +59,72 @@
+     </div>
+   </header>
+   <main id="main">
+-    <section class="hero shell" aria-labelledby="hero-title">
++    <section class="hero" aria-labelledby="hero-title">
++      <figure class="hero-art"><img src="assets/images/hero-garden.webp" srcset="assets/images/hero-garden-small.webp 780w, assets/images/hero-garden.webp 1672w" sizes="(max-width: 800px) 100vw, 65vw" width="1672" height="941" fetchpriority="high" alt="Jasmine frames an ancient stone arch beside a reflecting pool in an imagined moonlit garden." data-alt-en="Jasmine frames an ancient stone arch beside a reflecting pool in an imagined moonlit garden." data-alt-bg="Жасмин обрамчва стара каменна арка до отразяващ басейн във въображаема лунна градина."></figure>
++      <canvas id="garden-water" aria-hidden="true"></canvas>
++      <div class="hero-shade" aria-hidden="true"></div>
+       <div class="hero-intro">
+-        <h1 id="hero-title"><span data-en="A little more" data-bg="По-близо">A little more</span><span data-en="in tune." data-bg="до себе си.">in tune.</span></h1>
+-        <div class="hero-note">
+-          <p class="hero-sub" data-en="Astrology, numerology, skincare and the everyday art of wellbeing. A personal project to explore, in English and Bulgarian." data-bg="Астрология, нумерология, грижа за кожата и благополучие в ежедневието. Личен проект за любопитни хора, на български и английски.">Astrology, numerology, skincare and the everyday art of wellbeing. A personal project to explore, in English and Bulgarian.</p>
+-          <a class="primary-action" href="#atlas"><span data-en="Explore the themes" data-bg="Разгледай темите">Explore the themes</span><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 4v16m-6-6 6 6 6-6"/></svg></a>
+-        </div>
++        <h1 id="hero-title" data-en="A little more in tune." data-bg="По-близо до себе си.">A little more in tune.</h1>
++        <p class="hero-sub" data-en="Astrology, everyday care and the art of paying attention. A personal project in English and Bulgarian." data-bg="Астрология, ежедневна грижа и изкуството да обръщаме внимание. Личен проект на български и английски.">Astrology, everyday care and the art of paying attention. A personal project in English and Bulgarian.</p>
++        <a class="primary-action" href="#atlas"><span data-en="Explore the themes" data-bg="Разгледай темите">Explore the themes</span><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></a>
+       </div>
+-      <figure class="hero-art">
+-        <img src="assets/images/hero-glasshouse.webp" srcset="assets/images/hero-glasshouse-mobile.webp 780w, assets/images/hero-glasshouse.webp 1800w" sizes="(max-width: 600px) 100vw, 94vw" width="1800" height="1200" fetchpriority="high" alt="Amber glass sphere on a pale mineral plinth beside green foliage and a shallow water dish, framed by a curved jade wall." data-alt-en="Amber glass sphere on a pale mineral plinth beside green foliage and a shallow water dish, framed by a curved jade wall." data-alt-bg="Кехлибарена стъклена сфера върху светъл минерален постамент до зелени листа и плитък съд с вода, пред извита нефритенозелена стена.">
+-        <figcaption><span data-en="A space for curiosity. Room to grow." data-bg="Място за любопитство. Пространство за растеж.">A space for curiosity. Room to grow.</span><span data-en="Original rendered illustration" data-bg="Оригинална 3D илюстрация">Original rendered illustration</span></figcaption>
+-      </figure>
++      <nav class="hero-links" aria-label="Themes" data-aria-en="Themes" data-aria-bg="Теми"><a href="#astrology" data-en="Astrology" data-bg="Астрология">Astrology</a>
++<a href="#numerology" data-en="Numerology" data-bg="Нумерология">Numerology</a>
++<a href="#skincare" data-en="Skincare" data-bg="Грижа за кожата">Skincare</a>
++<a href="#wellbeing" data-en="Wellbeing" data-bg="Благополучие">Wellbeing</a>
++<a href="#family" data-en="Family & children" data-bg="Семейство и деца">Family &amp; children</a>
++<a href="#mental-health" data-en="Mental health" data-bg="Психично здраве">Mental health</a></nav><a class="continuation" href="#manifesto"><span data-en="Follow your curiosity." data-bg="Последвай любопитството си.">Follow your curiosity.</span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+     </section>
+-
+-    <section class="atlas shell" id="atlas" aria-labelledby="atlas-title">
+-      <div class="section-heading">
+-        <h2 id="atlas-title" data-en="Follow your curiosity." data-bg="Последвай любопитството си.">Follow your curiosity.</h2>
+-        <p data-en="Six themes, connected by one idea: paying a little more attention. Choose a theme to find a question worth sitting with." data-bg="Шест теми с една обща идея: да обръщаме малко повече внимание. Избери тема и открий въпрос за размисъл.">Six themes, connected by one idea: paying a little more attention. Choose a theme to find a question worth sitting with.</p>
++<section class="about" id="manifesto" aria-labelledby="about-title">
++      <div class="shell about-inner">
++        <h2 id="about-title" data-en="Curiosity, with both feet on the ground." data-bg="Любопитство, здраво стъпило на земята.">Curiosity, with both feet on the ground.</h2>
++        <div><p data-en="Silviya Aeterna is a personal project bringing together symbolic traditions, everyday care and psychology-informed reflection. Different ways of looking at life, without pretending they all offer the same kind of knowledge." data-bg="Silviya Aeterna е личен проект, който събира символични традиции, ежедневна грижа и размисли, основани на психологията. Различни погледи към живота, без да твърдим, че всички дават един и същ вид познание.">Silviya Aeterna is a personal project bringing together symbolic traditions, everyday care and psychology-informed reflection. Different ways of looking at life, without pretending they all offer the same kind of knowledge.</p>
++        <p data-en="Made for curious adults and families. Shared in Bulgarian and English, with space for your own perspective." data-bg="За любопитни възрастни и семейства. На български и английски, с място за твоята собствена гледна точка.">Made for curious adults and families. Shared in Bulgarian and English, with space for your own perspective.</p></div>
+       </div>
+-      <nav class="theme-nav" aria-label="Choose a theme" data-aria-en="Choose a theme" data-aria-bg="Избери тема">
++    </section><section class="atlas shell" id="atlas" aria-labelledby="atlas-title"><div class="section-heading"><h2 id="atlas-title" data-en="A living atlas of everyday life." data-bg="Жив атлас на ежедневието.">A living atlas of everyday life.</h2><p data-en="Six themes. Six ways of noticing. Follow the path, or choose what speaks to you." data-bg="Шест теми. Шест начина да забелязваме. Следвай пътеката или избери това, което те привлича.">Six themes. Six ways of noticing. Follow the path, or choose what speaks to you.</p></div><nav class="theme-nav" aria-label="Choose a theme" data-aria-en="Choose a theme" data-aria-bg="Избери тема">
+         <a href="#astrology" data-theme="astrology" data-en="Astrology" data-bg="Астрология">Astrology</a>
+         <a href="#numerology" data-theme="numerology" data-en="Numerology" data-bg="Нумерология">Numerology</a>
+         <a href="#skincare" data-theme="skincare" data-en="Skincare" data-bg="Грижа за кожата">Skincare</a>
+         <a href="#wellbeing" data-theme="wellbeing" data-en="Wellbeing" data-bg="Благополучие">Wellbeing</a>
+         <a href="#family" data-theme="family" data-en="Family & children" data-bg="Семейство и деца">Family &amp; children</a>
+         <a href="#mental-health" data-theme="mental-health" data-en="Mental health" data-bg="Психично здраве">Mental health</a>
+-      </nav>
+-
+-      <section class="chapter chapter-sky" aria-labelledby="sky-title">
+-        <div class="chapter-visual">
+-          <h3 id="sky-title" data-en="Look up. Look within." data-bg="Поглед навън. Поглед навътре.">Look up. Look within.</h3>
+-          <figure><img src="assets/images/sky-study.webp" width="1400" height="1050" loading="lazy" decoding="async" alt="A pale mineral sphere and amber glass crescent on a stone platform, with leafy stems in soft daylight." data-alt-en="A pale mineral sphere and amber glass crescent on a stone platform, with leafy stems in soft daylight." data-alt-bg="Светла минерална сфера и кехлибарен стъклен полумесец върху каменна платформа, със зелени клонки на мека дневна светлина."></figure>
+-        </div>
+-        <div class="chapter-topics">
+-          <article class="topic" id="astrology" tabindex="-1">
+-            <h4 data-en="Astrology" data-bg="Астрология">Astrology</h4>
++      </nav><div class="atlas-body"><div class="atlas-stage" aria-hidden="true"><div class="stage-images"></div><p class="stage-caption" data-en="An imagined garden. A real moment for reflection." data-bg="Въображаема градина. Истински миг за размисъл.">An imagined garden. A real moment for reflection.</p></div><div class="atlas-chapters"><article class="topic" id="astrology" tabindex="-1"><figure class="topic-art"><img src="assets/images/astrology-moon.webp" srcset="assets/images/astrology-moon-small.webp 780w, assets/images/astrology-moon.webp 1672w" sizes="(max-width: 800px) 100vw, 65vw" width="1672" height="941" loading="lazy" decoding="async" alt="A crescent moon above a mountain lake framed by jasmine in an imagined night garden." data-alt-en="A crescent moon above a mountain lake framed by jasmine in an imagined night garden." data-alt-bg="Полумесец над планинско езеро, обрамчено с жасмин във въображаема нощна градина."></figure><div class="topic-copy">
++            <h3 data-en="Astrology" data-bg="Астрология">Astrology</h3>
+             <p data-en="Birth charts, transits and seasonal cycles as a symbolic language for reflection. An invitation to notice patterns, not a prediction to live by." data-bg="Натални карти, транзити и сезонни цикли като символичен език за размисъл. Покана да забелязваш закономерности, не предсказание, което да ръководи живота ти.">Birth charts, transits and seasonal cycles as a symbolic language for reflection. An invitation to notice patterns, not a prediction to live by.</p>
+             <details class="reflection"><summary data-en="A question to explore" data-bg="Въпрос за размисъл">A question to explore</summary><p data-en="Which parts of a description feel familiar, and which do not? Leave room for both instead of letting a label define you." data-bg="Кои части от едно описание ти звучат познато и кои не? Дай място и на двете, вместо да позволяваш на един етикет да те определя.">Which parts of a description feel familiar, and which do not? Leave room for both instead of letting a label define you.</p></details>
+-          </article>
+-          <article class="topic" id="numerology" tabindex="-1">
+-            <h4 data-en="Numerology" data-bg="Нумерология">Numerology</h4>
++          </div></article><article class="topic" id="numerology" tabindex="-1"><figure class="topic-art"><img src="assets/images/numerology-pattern.webp" srcset="assets/images/numerology-pattern-small.webp 780w, assets/images/numerology-pattern.webp 1672w" sizes="(max-width: 800px) 100vw, 65vw" width="1672" height="941" loading="lazy" decoding="async" alt="Smooth pale stones and delicate fern fronds form a quiet repeating pattern beside dark water." data-alt-en="Smooth pale stones and delicate fern fronds form a quiet repeating pattern beside dark water." data-alt-bg="Гладки светли камъни и нежни папратови листа образуват спокоен повтарящ се мотив край тъмна вода."></figure><div class="topic-copy">
++            <h3 data-en="Numerology" data-bg="Нумерология">Numerology</h3>
+             <p data-en="Life paths, repeating numbers and the meanings we give them. A lens for personal interpretation, not scientific evidence or a fixed destiny." data-bg="Жизнени пътища, повтарящи се числа и смисълът, който им придаваме. Гледна точка за лично тълкуване, не научно доказателство или предопределена съдба.">Life paths, repeating numbers and the meanings we give them. A lens for personal interpretation, not scientific evidence or a fixed destiny.</p>
+             <details class="reflection"><summary data-en="A question to explore" data-bg="Въпрос за размисъл">A question to explore</summary><p data-en="Is there a number you associate with a memory? What matters more to you: the number itself, or the story attached to it?" data-bg="Има ли число, което свързваш със спомен? Кое е по-важно за теб: самото число или историята, която стои зад него?">Is there a number you associate with a memory? What matters more to you: the number itself, or the story attached to it?</p></details>
+-          </article>
+-        </div>
+-      </section>
+-
+-      <section class="chapter chapter-care" aria-labelledby="care-title">
+-        <div class="chapter-visual">
+-          <h3 id="care-title" data-en="Make room for care." data-bg="Направи място за грижа.">Make room for care.</h3>
+-          <figure><img src="assets/images/skin-ritual.webp" width="1400" height="1050" loading="lazy" decoding="async" alt="An unlabelled frosted vessel, a porcelain bowl of water and broad green leaves on a pale stone tray." data-alt-en="An unlabelled frosted vessel, a porcelain bowl of water and broad green leaves on a pale stone tray." data-alt-bg="Матиран съд без етикет, порцеланова купа с вода и широки зелени листа върху светъл каменен поднос."></figure>
+-        </div>
+-        <div class="chapter-topics">
+-          <article class="topic" id="skincare" tabindex="-1">
+-            <h4 data-en="Skincare" data-bg="Грижа за кожата">Skincare</h4>
++          </div></article><article class="topic" id="skincare" tabindex="-1"><figure class="topic-art"><img src="assets/images/skincare-ritual.webp" srcset="assets/images/skincare-ritual-small.webp 780w, assets/images/skincare-ritual.webp 1672w" sizes="(max-width: 800px) 100vw, 65vw" width="1672" height="941" loading="lazy" decoding="async" alt="An unbranded cream jar and clear glass vial rest beside magnolia petals on a moonlit stone ledge." data-alt-en="An unbranded cream jar and clear glass vial rest beside magnolia petals on a moonlit stone ledge." data-alt-bg="Бурканче крем без марка и прозрачно стъклено шишенце до листенца магнолия върху огрян от луната каменен перваз."></figure><div class="topic-copy">
++            <h3 data-en="Skincare" data-bg="Грижа за кожата">Skincare</h3>
+             <p data-en="Simple routines, ingredient literacy and realistic expectations. Space to understand your skin without miracle promises or pressure to buy more." data-bg="Лесни навици, разбиране на съставките и реалистични очаквания. Пространство да опознаеш кожата си без обещания за чудеса и натиск да купуваш повече.">Simple routines, ingredient literacy and realistic expectations. Space to understand your skin without miracle promises or pressure to buy more.</p>
+             <details class="reflection"><summary data-en="A question to explore" data-bg="Въпрос за размисъл">A question to explore</summary><p data-en="Which steps in your routine feel useful, and which are there out of habit? For persistent irritation or other skin concerns, ask a qualified clinician." data-bg="Кои стъпки в грижата ти се струват полезни и кои правиш просто по навик? При продължително раздразнение или други кожни проблеми се обърни към лекар.">Which steps in your routine feel useful, and which are there out of habit? For persistent irritation or other skin concerns, ask a qualified clinician.</p></details>
+-          </article>
+-          <article class="topic" id="wellbeing" tabindex="-1">
+-            <h4 data-en="Wellbeing" data-bg="Благополучие">Wellbeing</h4>
++          </div></article><article class="topic" id="wellbeing" tabindex="-1"><figure class="topic-art"><img src="assets/images/psychology-journal.webp" srcset="assets/images/psychology-journal-small.webp 780w, assets/images/psychology-journal.webp 1672w" sizes="(max-width: 800px) 100vw, 65vw" width="1672" height="941" loading="lazy" decoding="async" alt="A blank open journal and a single jasmine sprig rest beside a softly lit garden window." data-alt-en="A blank open journal and a single jasmine sprig rest beside a softly lit garden window." data-alt-bg="Отворен дневник с празни страници и клонче жасмин до меко осветен прозорец към градина."></figure><div class="topic-copy">
++            <h3 data-en="Wellbeing" data-bg="Благополучие">Wellbeing</h3>
+             <p data-en="Attention, rest, habits and self-improvement, approached through psychology-informed education. Small observations rather than another standard to live up to." data-bg="Внимание, почивка, навици и личностно развитие през призмата на психологията. Малки наблюдения, а не още един стандарт, на който да отговаряш.">Attention, rest, habits and self-improvement, approached through psychology-informed education. Small observations rather than another standard to live up to.</p>
+             <details class="reflection"><summary data-en="A question to explore" data-bg="Въпрос за размисъл">A question to explore</summary><p data-en="What gave you a little breathing room today? Notice it without turning it into another task to complete." data-bg="Какво ти даде малко спокойствие днес? Забележи го, без да го превръщаш в поредната задача за изпълнение.">What gave you a little breathing room today? Notice it without turning it into another task to complete.</p></details>
+-          </article>
+-        </div>
+-      </section>
+-
+-      <section class="chapter chapter-growth" aria-labelledby="growth-title">
+-        <div class="chapter-visual">
+-          <h3 id="growth-title" data-en="Grow, in good company." data-bg="Растем заедно.">Grow, in good company.</h3>
+-          <figure><img src="assets/images/quiet-growth.webp" width="1400" height="1050" loading="lazy" decoding="async" alt="A ribbed dark-green vase holding leafy branches beside nested pale ceramic and amber glass bowls." data-alt-en="A ribbed dark-green vase holding leafy branches beside nested pale ceramic and amber glass bowls." data-alt-bg="Оребрена тъмнозелена ваза с разлистени клонки до вложени една в друга светли керамични и кехлибарени стъклени купички."></figure>
+-        </div>
+-        <div class="chapter-topics">
+-          <article class="topic" id="family" tabindex="-1">
+-            <h4 data-en="Family & children" data-bg="Семейство и деца">Family &amp; children</h4>
++          </div></article><article class="topic" id="family" tabindex="-1"><figure class="topic-art"><img src="assets/images/family-grove.webp" srcset="assets/images/family-grove-small.webp 780w, assets/images/family-grove.webp 1672w" sizes="(max-width: 800px) 100vw, 65vw" width="1672" height="941" loading="lazy" decoding="async" alt="Two mature silver-barked trees shelter a small sapling in a softly glowing woodland grove." data-alt-en="Two mature silver-barked trees shelter a small sapling in a softly glowing woodland grove." data-alt-bg="Две зрели дървета със сребриста кора закрилят малка фиданка в меко сияеща горичка."></figure><div class="topic-copy">
++            <h3 data-en="Family & children" data-bg="Семейство и деца">Family &amp; children</h3>
+             <p data-en="Everyday routines, conversations and boundaries. Reflections for adults caring for children, with room for different families and imperfect days." data-bg="Ежедневни навици, разговори и граници. Размисли за възрастните, които се грижат за деца, с разбиране към различните семейства и несъвършените дни.">Everyday routines, conversations and boundaries. Reflections for adults caring for children, with room for different families and imperfect days.</p>
+             <details class="reflection"><summary data-en="A question to explore" data-bg="Въпрос за размисъл">A question to explore</summary><p data-en="When was the last time you felt heard at home? What helped that conversation feel different?" data-bg="Кога за последно усети, че те чуват у дома? Какво направи този разговор различен?">When was the last time you felt heard at home? What helped that conversation feel different?</p></details>
+-          </article>
+-          <article class="topic" id="mental-health" tabindex="-1">
+-            <h4 data-en="Mental health" data-bg="Психично здраве">Mental health</h4>
++          </div></article><article class="topic" id="mental-health" tabindex="-1"><figure class="topic-art"><img src="assets/images/mental-health-haven.webp" srcset="assets/images/mental-health-haven-small.webp 780w, assets/images/mental-health-haven.webp 1672w" sizes="(max-width: 800px) 100vw, 65vw" width="1672" height="941" loading="lazy" decoding="async" alt="An empty linen chair faces a calm garden through an open stone arch, a quiet place to pause." data-alt-en="An empty linen chair faces a calm garden through an open stone arch, a quiet place to pause." data-alt-bg="Празно кресло с ленена тапицерия е обърнато към спокойна градина през отворена каменна арка, тихо място за пауза."></figure><div class="topic-copy">
++            <h3 data-en="Mental health" data-bg="Психично здраве">Mental health</h3>
+             <p data-en="Clear language for feelings, support and asking for help. General education that respects the difference between a thoughtful conversation and professional care." data-bg="Разбираем език за чувствата, подкрепата и търсенето на помощ. Образователно съдържание, което различава внимателния разговор от професионалната грижа.">Clear language for feelings, support and asking for help. General education that respects the difference between a thoughtful conversation and professional care.</p>
+             <details class="reflection"><summary data-en="A question to explore" data-bg="Въпрос за размисъл">A question to explore</summary><p data-en="Who could you turn to when things feel difficult? You do not need to wait for a crisis to seek qualified support." data-bg="Към кого можеш да се обърнеш, когато ти е трудно? Не е нужно да чакаш криза, за да потърсиш квалифицирана подкрепа.">Who could you turn to when things feel difficult? You do not need to wait for a crisis to seek qualified support.</p></details>
+-          </article>
+-        </div>
+-      </section>
+-    </section>
+-
+-    <section class="about" id="manifesto" aria-labelledby="about-title">
+-      <div class="shell about-inner">
+-        <h2 id="about-title" data-en="Curiosity, with both feet on the ground." data-bg="Любопитство, здраво стъпило на земята.">Curiosity, with both feet on the ground.</h2>
+-        <div><p data-en="Silviya Aeterna is a personal project bringing together symbolic traditions, everyday care and psychology-informed reflection. Different ways of looking at life, without pretending they all offer the same kind of knowledge." data-bg="Silviya Aeterna е личен проект, който събира символични традиции, ежедневна грижа и размисли, основани на психологията. Различни погледи към живота, без да твърдим, че всички дават един и същ вид познание.">Silviya Aeterna is a personal project bringing together symbolic traditions, everyday care and psychology-informed reflection. Different ways of looking at life, without pretending they all offer the same kind of knowledge.</p>
+-        <p data-en="Made for curious adults and families. Shared in Bulgarian and English, with space for your own perspective." data-bg="За любопитни възрастни и семейства. На български и английски, с място за твоята собствена гледна точка.">Made for curious adults and families. Shared in Bulgarian and English, with space for your own perspective.</p></div>
+-      </div>
+-    </section>
+-
+-    <section class="next shell" id="next" aria-labelledby="next-title">
+-      <h2 id="next-title" data-en="Good things take shape." data-bg="Хубавите неща се изграждат постепенно.">Good things take shape.</h2>
++          </div></article></div></div></section><section class="next" id="next" aria-labelledby="next-title">
++      <figure class="closing-art"><img src="assets/images/closing-bloom.webp" srcset="assets/images/closing-bloom-small.webp 780w, assets/images/closing-bloom.webp 1672w" sizes="(max-width: 800px) 100vw, 65vw" width="1672" height="941" loading="lazy" decoding="async" alt="A single ivory magnolia blossom floats on dark teal water as gentle rings of light spread around it." data-alt-en="A single ivory magnolia blossom floats on dark teal water as gentle rings of light spread around it." data-alt-bg="Един цвят на магнолия с цвят на слонова кост плува върху тъмнозелена вода, а около него се разстилат нежни светли кръгове."></figure><div class="closing-inner shell"><h2 id="next-title" data-en="Good things take shape." data-bg="Хубавите неща се изграждат постепенно.">Good things take shape.</h2>
+       <div class="future-list">
+         <div id="channel"><h3>YouTube</h3><p data-en="A home for longer conversations. The channel is being prepared; the link will appear here when it launches." data-bg="Място за по-задълбочени разговори. Каналът се подготвя; връзката ще се появи тук след старта.">A home for longer conversations. The channel is being prepared; the link will appear here when it launches.</p><span class="soon-state" data-en="Coming soon" data-bg="Очаквай скоро">Coming soon</span></div>
+         <div id="shop"><h3>Oriflame</h3><p data-en="A future shopping option. Confirmed details will be shared here later. There is no active shop yet." data-bg="Бъдеща възможност за пазаруване. Потвърдените подробности ще бъдат споделени тук по-късно. Все още няма активен магазин.">A future shopping option. Confirmed details will be shared here later. There is no active shop yet.</p><span class="soon-state" data-en="Planned for later" data-bg="На по-късен етап">Planned for later</span></div>
+       </div>
+-    </section>
+-
+-    <aside class="safety shell" id="safety" aria-labelledby="safety-title">
++    <aside class="safety" id="safety" aria-labelledby="safety-title">
+       <h2 id="safety-title" data-en="A note on care." data-bg="За грижата и границите.">A note on care.</h2>
+       <div class="safety-copy"><p data-en="This is educational material for reflection, not medical advice, diagnosis, treatment or therapy. Astrology and numerology do not provide scientifically established predictions." data-bg="Това е образователно съдържание за размисъл, а не медицински съвет, диагноза, лечение или терапия. Астрологията и нумерологията не дават научно доказани предсказания.">This is educational material for reflection, not medical advice, diagnosis, treatment or therapy. Astrology and numerology do not provide scientifically established predictions.</p><p data-en="For concerns about your health or a child’s wellbeing, speak with a qualified professional. If you or someone else is in immediate danger, contact your local emergency services." data-bg="При притеснения за здравето ти или благополучието на дете се обърни към квалифициран специалист. Ако ти или друг човек сте в непосредствена опасност, потърси местните служби за спешна помощ.">For concerns about your health or a child’s wellbeing, speak with a qualified professional. If you or someone else is in immediate danger, contact your local emergency services.</p></div>
+-    </aside>
+-  </main>
++    </aside></div></section>
++</main>
+   <footer class="site-footer shell">
+-    <div class="footer-top"><a class="footer-wordmark" href="#top">Silviya Aeterna</a><a class="back-top" href="#top"><span data-en="Back to the light" data-bg="Обратно нагоре">Back to the light</span><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 20V4m-6 6 6-6 6 6"/></svg></a></div>
++    <div class="footer-top"><a class="footer-wordmark" href="#top">Silviya Aeterna</a><a class="back-top" href="#top"><span data-en="Back to the garden" data-bg="Обратно нагоре">Back to the garden</span><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 20V4m-6 6 6-6 6 6"/></svg></a></div>
+     <div class="footer-bottom"><p data-en="A little more attention. A little more room to grow." data-bg="Малко повече внимание. Малко повече място за растеж.">A little more attention. A little more room to grow.</p><a href="#safety" data-en="Educational content only" data-bg="Само образователно съдържание">Educational content only</a><p>© 2026 Silviya Aeterna</p></div>
+   </footer>
+ </body>
+diff --git a/package.json b/package.json
+index e58c607..70d53e8 100644
+--- a/package.json
++++ b/package.json
+@@ -9,5 +9,11 @@
+     "start:bun": "bun run server.ts",
+     "test": "node --test tests/*.test.mjs",
+     "assets": "uv run --with pillow python tools/prepare_images.py"
++  },
++  "dependencies": {
++    "gsap": "3.13.0"
++  },
++  "devDependencies": {
++    "axe-core": "4.10.3"
+   }
+ }
+diff --git a/tests/content.test.mjs b/tests/content.test.mjs
+index 144e50d..5974241 100644
+--- a/tests/content.test.mjs
++++ b/tests/content.test.mjs
+@@ -52,7 +52,7 @@ test("every translatable node carries both languages", () => {
+ 
+ test("every image has alt text", () => {
+   const imgs = [...html.matchAll(/<img\b[^>]*>/g)];
+-  assert.equal(imgs.length, 4, "four original editorial still lifes are required");
++  assert.equal(imgs.length, 8, "eight original sanctuary scenes are required");
+   let decorative = 0;
+   for (const [tag] of imgs) {
+     assert.match(tag, /\salt="/, `image missing alt: ${tag}`);
+@@ -120,8 +120,8 @@ test("language toggle is exposed accessibly", () => {
+ });
+ 
+ test("motion respects reduced motion and survives failed JavaScript", () => {
+-  assert.match(css, /@media \(prefers-reduced-motion: no-preference\)/);
+-  assert.match(css, /@media \(prefers-reduced-motion: reduce\)/);
++  assert.match(css, /@media\s*\(prefers-reduced-motion:\s*no-preference\)/);
++  assert.match(css, /@media\s*\(prefers-reduced-motion:\s*reduce\)/);
+   assert.ok(!css.includes("opacity: 0"), "content must never depend on a reveal");
+   assert.ok(!css.includes("visibility: hidden"), "content must remain readable without JS");
+   assert.ok(!js.includes('addEventListener("scroll"'), "no window scroll listeners");
+diff --git a/tests/interaction.test.mjs b/tests/interaction.test.mjs
+index 4383f9c..e25f51d 100644
+--- a/tests/interaction.test.mjs
++++ b/tests/interaction.test.mjs
+@@ -83,13 +83,13 @@ test('direct theme fragment enhances the correct topic', () => {
+ test('six static descriptions and native prompt disclosures exist without JavaScript', () => {
+   for (const id of ['astrology', 'numerology', 'skincare', 'wellbeing', 'family', 'mental-health']) {
+     const article = html.match(new RegExp(`<article[^>]+id="${id}"[\\s\\S]*?</article>`))?.[0];
+-    assert.ok(article, id); assert.match(article, /<h4 data-en=/); assert.match(article, /<p data-en=/); assert.match(article, /<details class="reflection">/);
++    assert.ok(article, id); assert.match(article, /<h3 data-en=/); assert.match(article, /<p data-en=/); assert.match(article, /<details class="reflection">/);
+   }
+   assert.equal((html.match(/class="reflection"/g) || []).length, 6);
+ });
+ test('original images and responsive hero are real WebP assets', async () => {
+   const manifest = JSON.parse(await readFile(new URL('../tools/ASSET-MANIFEST.json', import.meta.url), 'utf8'));
+-  assert.equal(manifest.asset_count, 4);
++  assert.equal(manifest.asset_count, 8);
+   for (const asset of manifest.assets) {
+     const bytes = await readFile(new URL(`../assets/images/${asset.filename}`, import.meta.url));
+     assert.equal(createHash('sha256').update(bytes).digest('hex'), asset.sha256);
+@@ -100,13 +100,13 @@ test('original images and responsive hero are real WebP assets', async () => {
+     assert.ok(tag.includes(`data-alt-bg="${asset.alt.bg}"`));
+     assert.ok(bytes.includes(Buffer.from('XMP ')), 'original WebP provenance must be preserved');
+   }
+-  for (const name of ['hero-glasshouse', 'hero-glasshouse-mobile', 'sky-study', 'skin-ritual', 'quiet-growth']) {
++  for (const name of manifest.assets.flatMap(a => [a.id, a.id + '-small'])) {
+     const bytes = await readFile(new URL(`../assets/images/${name}.webp`, import.meta.url));
+     assert.equal(bytes.toString('ascii', 0, 4), 'RIFF'); assert.equal(bytes.toString('ascii', 8, 12), 'WEBP');
+     assert.ok(bytes.length > 5000); assert.ok(bytes.length < 500000);
+   }
+   assert.match(html, /fetchpriority="high"/);
+-  assert.equal((html.match(/loading="lazy"/g) || []).length, 3);
++  assert.equal((html.match(/loading="lazy"/g) || []).length, 7);
+ });
+ test('social preview is a real 1200 by 630 PNG', async () => {
+   const png = await readFile(new URL('../assets/social-og.png', import.meta.url));
+diff --git a/tests/magic.test.mjs b/tests/magic.test.mjs
+new file mode 100644
+index 0000000..fbee9f1
+--- /dev/null
++++ b/tests/magic.test.mjs
+@@ -0,0 +1,9 @@
++import assert from 'node:assert/strict';
++import {readFile} from 'node:fs/promises';
++import {test} from 'node:test';
++const html = await readFile(new URL('../index.html',import.meta.url),'utf8');
++test('eight separate original scenes are present in the no-JS document',()=>{
++ const ids=['hero-garden','astrology-moon','numerology-pattern','skincare-ritual','psychology-journal','family-grove','mental-health-haven','closing-bloom'];
++ for(const id of ids) assert.match(html,new RegExp('assets/images/'+id+'\\.webp'),id);
++ assert.equal((html.match(/<img\b/g)||[]).length,8);
++});
+diff --git a/tests/motion.test.mjs b/tests/motion.test.mjs
+new file mode 100644
+index 0000000..7b92f43
+--- /dev/null
++++ b/tests/motion.test.mjs
+@@ -0,0 +1,9 @@
++import assert from 'node:assert/strict';
++import {test} from 'node:test';
++const mod=await import('../assets/motion-state.js').catch(()=>({}));
++test('motion permission stops for manual pause, reduced motion, hidden or offscreen',()=>{
++ assert.equal(typeof mod.motionAllowed,'function');
++ const base={paused:false,reduced:false,visible:true,inView:true};
++ assert.equal(mod.motionAllowed(base),true);
++ for(const change of [{paused:true},{reduced:true},{visible:false},{inView:false}]) assert.equal(mod.motionAllowed({...base,...change}),false);
++});
+diff --git a/tests/server.test.mjs b/tests/server.test.mjs
+index 8c1fb66..83e3c76 100644
+--- a/tests/server.test.mjs
++++ b/tests/server.test.mjs
+@@ -86,9 +86,9 @@ test("styles, script and images are served with correct types", async () => {
+     ["/assets/styles.css", /text\/css/],
+     ["/assets/site.js", /javascript/],
+     ["/assets/favicon.svg", /image\/svg\+xml/],
+-    ["/assets/images/hero-glasshouse.webp", /image\/webp/],
++    ["/assets/images/hero-garden.webp", /image\/webp/],
+     ["/assets/social-og.png", /image\/png/],
+-    ["/assets/fonts/Onest-Variable.woff2", /font\/woff2/],
++    ["/assets/fonts/CormorantGaramond-Variable.woff2", /font\/woff2/],
+     ["/assets/fonts/Geist-Variable-subset.woff2", /font\/woff2/],
+   ];
+   for (const [pathName, type] of cases) {

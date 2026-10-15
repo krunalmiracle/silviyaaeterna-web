@@ -1,0 +1,24 @@
+{
+  "passed": false,
+  "blocking_findings": [
+    "P1 — BFCache return breaks motion and controls. assets/scene.js:181-208 permanently disposes resources on pagehide, including persisted=true, without a pageshow restore handler. Independently reproduced by loading /, navigating to /index.htm?judge-away=1, then going Back: native pagehide/pageshow both reported persisted=true; shader frames remained at 131 and ScrollTriggers dropped from five to zero. Clicking pause changed internal paused state but left aria-pressed=false and motion-on active. Switching to Bulgarian left the motion label English. Narrow fix: implement reversible BFCache suspension/restoration, recreate disposed resources, reconnect observers, reset canceled frame handles, and synchronize preferences, labels and motion classes. Add a native Back/Forward regression test.",
+    "P1 — Desktop removes six artwork descriptions from assistive technology. assets/styles.css:8 hides semantic chapter figures with display:none; assets/scene.js:24-28 clears cloned alt text, and index.html places the visible stage inside aria-hidden=true. Independent Chromium accessibility-tree inspection exposed only two named images at 1440px, versus all eight at 390px. Narrow fix: visually hide the desktop semantic figures without removing them from the accessibility tree, keeping stage duplicates decorative. Verify eight localized descriptions in EN/BG without duplicate announcements."
+  ],
+  "nonblocking_findings": [
+    "PRODUCT.md still describes Daylight Glasshouse, Onest and local 3D originals; the surface brief retains pending-implementation wording. Reconcile these with the current sanctuary design and GPT provenance.",
+    "Shader portability risk at assets/scene.js:110: smoothstep(1.,.78,uv.y) uses reversed edges, which GLSL ES leaves undefined. No corruption was observed in tested Chromium. Express the inverse ramp as 1.0-smoothstep(.78,1.0,uv.y).",
+    "Evidence limitations remain explicit: four builder axe runs report zero violations but retain incomplete checks; background frame freezing is not native document.hidden observation; the 12.04-second video is a timestamped capture sequence, not continuous high-frame-rate evidence."
+  ],
+  "evidence_paths": [
+    "/opt/data/home/projects/silviyaaeterna-web/.worktrees/t_96b93555/.impeccable/review/INDEPENDENT-REVIEW.json",
+    "/opt/data/home/projects/silviyaaeterna-web/.worktrees/t_96b93555/.impeccable/review/INDEPENDENT-REVIEW.md",
+    "/opt/data/home/projects/silviyaaeterna-web/.worktrees/t_96b93555/.impeccable/review/judge/npm-test.tap",
+    "/opt/data/home/projects/silviyaaeterna-web/.worktrees/t_96b93555/.impeccable/review/judge/browser-probes.json",
+    "/opt/data/home/projects/silviyaaeterna-web/.worktrees/t_96b93555/.impeccable/review/judge/bfcache-return.png",
+    "/opt/data/home/projects/silviyaaeterna-web/.worktrees/t_96b93555/.impeccable/review/judge/fallback-checks.json",
+    "/opt/data/home/projects/silviyaaeterna-web/.worktrees/t_96b93555/.impeccable/review/judge/asset-and-evidence-checks.json"
+  ],
+  "summary": "FAIL pending two narrow fixes. Independently ran npm test: 34 passed, zero failed; 28 ordinary browser/fallback checks also passed. Verified eight producer-original hashes and sixteen derivative hashes/provenance records, inspected required screenshots and motion evidence, and confirmed server/CSP unchanged. The pinned cinematic design is not a blocker, and waived interactive gates were not demanded. Both review artifacts were written. Judge browsers closed; owner preview remains running. No source fixes, deployment or production verification were performed."
+}
+
+session_id: 20261015_113734_a1b15a

@@ -1,84 +1,160 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-14T01:55:42Z",
-  "title": "Design System: Silviya Aeterna",
+  "generatedAt": "2026-10-15T11:29:30.384538+00:00",
+  "title": "Silviya Aeterna: Enchanted botanical sanctuary",
   "extensions": {
     "colorMeta": {
-      "jade": { "role": "neutral", "displayName": "Pale jade", "canonical": "#e6ede3" },
-      "leaf": { "role": "neutral", "displayName": "Cool leaf", "canonical": "#f2f6ef" },
-      "spruce": { "role": "primary", "displayName": "Deep spruce", "canonical": "#183f35" },
-      "muted": { "role": "neutral", "displayName": "Supporting spruce", "canonical": "#466255" },
-      "amber": { "role": "secondary", "displayName": "Sunlit amber", "canonical": "#c5913d" },
-      "line": { "role": "neutral", "displayName": "Leaf divider", "canonical": "#a8bbab" },
-      "spruce-hover": { "role": "primary", "displayName": "Spruce hover", "canonical": "#285344" }
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#081e22"
+      },
+      "deep": {
+        "role": "neutral",
+        "displayName": "Deep",
+        "canonical": "#061619"
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Surface",
+        "canonical": "#102c30"
+      },
+      "pearl": {
+        "role": "neutral",
+        "displayName": "Pearl",
+        "canonical": "#f3efe5"
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted",
+        "canonical": "#bfd1cc"
+      },
+      "gold": {
+        "role": "primary",
+        "displayName": "Gold",
+        "canonical": "#e7c995"
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Line",
+        "canonical": "#486362"
+      }
     },
     "typographyMeta": {
-      "display": { "displayName": "Onest display", "purpose": "Two-line hero; 12.2vw mobile scaling, 2.7rem at compact width." },
-      "headline": { "displayName": "Section heading", "purpose": "Balanced editorial section headlines." },
-      "chapter": { "displayName": "Chapter heading", "purpose": "Introduces a paired-theme still life." },
-      "title": { "displayName": "Topic title", "purpose": "Six individual theme headings." },
-      "body": { "displayName": "Reading text", "purpose": "Geist, up to 68ch; all 49 used Cyrillic codepoints verified in both shipping font files." }
+      "display": {
+        "displayName": "Cormorant Garamond 300",
+        "purpose": "Measured reflection-led hero; local font registered as Sanctuary; Cyrillic parity"
+      },
+      "headline": {
+        "displayName": "Cormorant Garamond 400",
+        "purpose": "Quiet editorial hierarchy"
+      },
+      "body": {
+        "displayName": "Geist",
+        "purpose": "Legible local supporting type"
+      }
     },
-    "shadows": [{ "name": "mobile-menu", "value": "0 16px 24px #183f3514", "purpose": "Separate the open native navigation from content beneath." }],
-    "motion": [{ "name": "daylight", "value": "filter brightness(.92) to brightness(1), .8s cubic-bezier(.16,1,.3,1)", "purpose": "A single already-visible hero image brightening; disabled under reduced motion." }],
+    "motion": [
+      {
+        "name": "hero-entrance",
+        "value": "3.2s power2.out",
+        "purpose": "Art settle, live type and action entrance"
+      },
+      {
+        "name": "scroll-choreography",
+        "value": "ScrollTrigger scrub 1–1.2",
+        "purpose": "Hero parallax, reading color, heading arrival, closing image"
+      },
+      {
+        "name": "atlas-scenes",
+        "value": ".9s opacity, 1.5s transform cubic-bezier(.16,1,.3,1)",
+        "purpose": "Six distinct original images follow reading position"
+      },
+      {
+        "name": "bounded-water",
+        "value": "Native WebGL, lower 45%, max 1.25 DPR, ~30fps draw cap",
+        "purpose": "Low-amplitude refraction sampled from actual hero; static fallback"
+      }
+    ],
     "breakpoints": [
-      { "name": "tight", "value": "1050px" },
-      { "name": "navigation", "value": "800px" },
-      { "name": "single-column", "value": "600px" },
-      { "name": "compact", "value": "350px" }
+      {
+        "name": "tight",
+        "value": "1200px"
+      },
+      {
+        "name": "linear-atlas",
+        "value": "900px"
+      },
+      {
+        "name": "phone",
+        "value": "600px"
+      },
+      {
+        "name": "compact",
+        "value": "350px"
+      }
     ]
   },
   "components": [
     {
-      "name": "Primary action", "kind": "button", "refersTo": "primary-action",
-      "description": "One clear, real action into the themes.",
-      "html": "<a class=\"ds-action\" href=\"#atlas\">Explore the themes<svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" aria-hidden=\"true\"><path d=\"M12 4v16m-6-6 6 6 6-6\"/></svg></a>",
-      "css": ".ds-action {display:inline-flex;align-items:center;gap:28px;min-height:54px;padding:12px 20px;border-radius:6px;background:var(--spruce,#183f35);color:var(--leaf,#f2f6ef);font:500 16px/1.6 Geist,sans-serif;text-decoration:none;box-sizing:border-box}.ds-action:hover{background:#285344}.ds-action:focus-visible{outline:2px solid #183f35;outline-offset:5px}"
+      "name": "Primary action",
+      "kind": "button",
+      "description": "One gold anchor into the atlas",
+      "html": "<a class=\"primary-action\" href=\"#atlas\">Explore the themes</a>",
+      "css": ".primary-action{display:inline-flex;align-items:center;min-height:52px;padding:12px 25px;border-radius:40px;background:#e7c995;color:#061619;font:500 14px Geist,sans-serif}"
     },
     {
-      "name": "Language selector", "kind": "custom", "refersTo": "language-active",
-      "description": "Equal language choices; the active choice has a filled ground.",
-      "html": "<div class=\"ds-languages\" role=\"group\" aria-label=\"Language\"><button type=\"button\" lang=\"en\" aria-pressed=\"true\">EN</button><button type=\"button\" lang=\"bg\" aria-pressed=\"false\">BG</button></div>",
-      "css": ".ds-languages{display:flex;gap:2px}.ds-languages button{min-width:44px;height:44px;border:0;border-radius:6px;font:500 14px Geist,sans-serif;color:#183f35;background:transparent;cursor:pointer}.ds-languages button[aria-pressed=true]{color:#f2f6ef;background:#183f35}.ds-languages button:hover:not([aria-pressed=true]){background:#f2f6ef}.ds-languages button:focus-visible{outline:2px solid #183f35;outline-offset:5px}"
+      "name": "Motion toggle",
+      "kind": "button",
+      "description": "Persistent global motion pause; respects live system reduction",
+      "html": "<button type=\"button\" aria-pressed=\"false\">Pause motion</button>",
+      "css": "button{min-height:44px;border:1px solid #e7c995;border-radius:40px;padding:8px 17px;background:#081e22;color:#f3efe5}"
     },
     {
-      "name": "Theme wayfinding", "kind": "nav",
-      "description": "Anchors, not a tab panel: all six descriptions remain available.",
-      "html": "<nav class=\"ds-theme\" aria-label=\"Choose a theme\"><a href=\"#astrology\" aria-current=\"true\">Astrology</a><a href=\"#numerology\">Numerology</a></nav>",
-      "css": ".ds-theme{display:flex;flex-wrap:wrap;gap:28px}.ds-theme a{display:inline-flex;align-items:center;min-height:44px;padding:8px 0;color:#183f35;font:400 16px/1.6 Geist,sans-serif;text-decoration:none;border-bottom:2px solid transparent;box-sizing:border-box}.ds-theme a:hover{border-color:#466255}.ds-theme a[aria-current=true]{font-weight:600;border-color:#183f35}.ds-theme a:focus-visible{outline:2px solid #183f35;outline-offset:5px}"
+      "name": "Theme anchors",
+      "kind": "nav",
+      "description": "Six semantic anchors, active follows reading",
+      "html": "<nav aria-label=\"Themes\"><a href=\"#astrology\" aria-current=\"true\">Astrology</a><a href=\"#numerology\">Numerology</a></nav>",
+      "css": "nav{display:flex;background:#081e22;color:#f3efe5}nav a{min-height:48px;padding:7px 10px}nav a[aria-current=true]{color:#e7c995;background:#213b3b}"
     },
     {
-      "name": "Reflection disclosure", "kind": "custom", "refersTo": "reflection-open",
-      "description": "An optional useful question beneath a complete theme description.",
-      "html": "<details class=\"ds-reflection\" open><summary>A question to explore</summary><p>What gave you a little breathing room today?</p></details>",
-      "css": ".ds-reflection{font:400 15px/1.6 Geist,sans-serif;color:#466255}.ds-reflection[open]{background:#f2f6ef;padding:8px 18px 18px;border-radius:6px}.ds-reflection summary{display:flex;justify-content:space-between;align-items:center;min-height:44px;cursor:pointer;list-style:none;color:#183f35;font-weight:500}.ds-reflection summary::after{content:'';height:8px;width:8px;border-right:1.5px solid;border-bottom:1.5px solid;transform:rotate(45deg)}.ds-reflection[open] summary::after{transform:rotate(225deg)}.ds-reflection p{margin:4px 0 0}.ds-reflection summary:hover{text-decoration:underline;text-underline-offset:5px}.ds-reflection summary:focus-visible{outline:2px solid #183f35;outline-offset:5px}"
+      "name": "Reflection",
+      "kind": "custom",
+      "description": "Native disclosure below complete text",
+      "html": "<details><summary>A question to explore</summary><p>Which parts feel familiar, and which do not?</p></details>",
+      "css": "details{border-top:1px solid #486362;color:#bfd1cc}summary{min-height:56px;padding:14px 0;color:#e7c995}"
     },
     {
-      "name": "Future destination", "kind": "custom",
-      "description": "Honest noninteractive status, not an inactive watch or buy button.",
-      "html": "<div class=\"ds-future\"><h3>YouTube</h3><span>Coming soon</span><p>The channel is being prepared.</p></div>",
-      "css": ".ds-future{display:grid;grid-template-columns:1fr auto;gap:16px;padding:26px 0;border-top:1px solid #a8bbab;color:#183f35}.ds-future h3{font:500 25px/1.3 Onest,sans-serif;letter-spacing:-.025em;margin:0}.ds-future span{font:500 14px/1.6 Geist,sans-serif}.ds-future p{grid-column:1/-1;margin:0;color:#466255;font:400 16px/1.6 Geist,sans-serif}"
+      "name": "Future status",
+      "kind": "custom",
+      "description": "Plain text, no unavailable link",
+      "html": "<div><h3>YouTube</h3><p>The channel is being prepared.</p><span>Coming soon</span></div>",
+      "css": "div{color:#bfd1cc;background:#061619;padding:26px 0;border-top:1px solid #486362}h3{color:#f3efe5;font:400 30px Sanctuary,serif}span{color:#e7c995;font:13px Geist,sans-serif}"
     }
   ],
   "narrative": {
-    "northStar": "Daylight Glasshouse",
-    "overview": "Cool, leaf-tinted daylight surrounds confident sans-serif lettering and generous original botanical still lifes. The interface is open editorial space, not a collection of cards. Imagery carries physical depth; text and controls remain simple and legible.",
+    "northStar": "Enchanted botanical sanctuary",
+    "overview": "Eight original moonlit garden scenes, reflection-led hero, responsive living atlas, meaningful bounded motion. Seed aeb20778 retained.",
     "keyCharacteristics": [
-      "Pale jade owns the page; spruce carries both meaning and action.",
-      "Onest display lettering and Geist supporting text are self-hosted and Cyrillic-capable.",
-      "Broad, gently cornered imagery alternates with open reading space.",
-      "Native disclosures offer reflection without making basic content dependent on scripts."
+      "Actual original art is the dominant scene, not a card decoration.",
+      "Local Cyrillic-capable display and body type.",
+      "All content is readable without motion or JavaScript.",
+      "A single persistent accessible motion control."
     ],
-    "rules": [{ "name": "The Daylight Rule", "body": "Choose cool green space over cream, navy or a dark-mode variant. The original navy/coral system is superseded.", "section": "colors" }],
     "dos": [
-      "Do preserve Cyrillic parity, daylight contrast, 44px controls and readable content without scripts.",
-      "Do make the original raster still lifes decisive, with descriptive alt text and documented provenance.",
-      "Do retain the single corner language and open editorial rhythm."
+      "Retain original artwork provenance and bilingual parity.",
+      "Keep the custom shader bounded, low-power and optional.",
+      "Keep coming-soon destinations honest."
     ],
     "donts": [
-      "Don't reuse the old almanac diagrams, dark palette, rounded card grid or oversized disclaimer panel.",
-      "Don't imply that rendered vessels are branded products, the scene is a real location, or the project provides clinical services.",
-      "Don't hide content behind entrance animation or fabricate channel/shop destinations."
+      "Do not invent medical, commercial or credential claims.",
+      "Do not infer a human approval receipt from a delegated decision.",
+      "Do not weaken CSP for third-party runtime scripts."
     ]
+  },
+  "reviewAuthority": {
+    "interactiveGate": "Explicitly waived by user; refused CLI state retained",
+    "numericalShipClaim": false,
+    "independentReview": "Separate artifact required before release"
   }
 }

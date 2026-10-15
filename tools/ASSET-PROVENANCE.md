@@ -1,40 +1,40 @@
-# Asset provenance: integrated original glasshouse renders
+# Asset provenance: magical sanctuary
 
-## Status
+## Real sources, not substitutes
 
-All four final original WebPs are integrated, decoded and visually inspected. tools/prepare_images.py validated exact dimensions, byte counts, embedded XMP and SHA-256 values against the delivered manifest before copying. The npm regression suite also checks unchanged original hashes, HTML dimensions and exact EN/BG alt text. Builder verification is complete; independent judge and release belong to the parent.
+The eight producer PNG originals live read-only at `/opt/data/home/silviya-magic-assets`. `tools/ASSET-MANIFEST.json` records every original SHA-256, producer prompt, requested model, original dimensions, EN/BG alt and derivative hashes. These are actual generated raster originals, not local 3D, stock, placeholder URLs or synthesized API output. The previous glasshouse renders are removed from public assets; their historical development files are excluded from the Docker context.
 
-Producer origin: /opt/data/home/silviya-glasshouse-assets/. Unchanged manifest: tools/ASSET-MANIFEST.json. Producer execution record: tools/ASSET-SUMMARY.md. Integrated output inventory: tools/INTEGRATED-ASSETS.json. Final decoded asset/font/screenshot hashes: .impeccable/review/verification.json.
+The producer's requested model was GPT Image 2 high. This is a request/provenance fact, not a claim that the server disclosed its engine version. The native ChatGPT OAuth route used for comps B and C is server-managed; it did not return an exact image model. Those receipts explicitly say so. No claim of verified Image 2.5 or Sol-generated art is made.
 
-Actual method: original procedural geometry authored with Blender 5.2.2, exported as PLY by export_scenes.py, then rendered using Mitsuba 3.9.1 LLVM CPU at 64 samples with bounded tiles and three threads. Mild OpenCV non-local-means denoising is non-generative cleanup. Final images are not Cycles output: the producer's two Cycles attempts failed before producing any final image. No image model, stock, photographs, external textures, real products or real location claims are used.
+## Production derivatives
 
-Original files, copied byte-for-byte with embedded XMP:
+`tools/prepare_magic_assets.py` reads and verifies all eight originals without modifying them. It produces 1672px and 780px WebP variants with Pillow Lanczos and quality 87. Each XMP payload records source hash, dimensions, prompt and derivative method. It performs no content substitution or scene compositing. Total image transfer bytes are computed in the verification report, not guessed.
 
-- assets/images/hero-glasshouse.webp: 1800x1200, 188588 bytes. Amber sphere, foliage, mineral plinth and shallow water dish.
-- assets/images/sky-study.webp: 1400x1050, 103304 bytes. Mineral sphere and amber crescent with a botanical branch.
-- assets/images/skin-ritual.webp: 1400x1050, 92392 bytes. Unlabelled frosted vessel, porcelain water bowl and broad green leaves.
-- assets/images/quiet-growth.webp: 1400x1050, 116522 bytes. Ribbed spruce vase, leafy branches and nested pale/amber bowls.
+The HTML contains eight semantic source images, including hero and closing, with responsive srcset and meaningful bilingual alt. Desktop's six-image sticky stage clones the actual chapter images for presentation only. Mobile and no-JS show the original figure alongside each passage. Seven images are lazy-loaded in source; hero has high priority.
 
-Complete source remains in the original producer directory, including editable .blend scenes, meshes, PNG originals and render records. The website retains the eight requested small source/dependency/origin files under tools/glasshouse-source/source/, plus WebP sidecars and the producer summary. Its README explains the asset-root/source layout and the need to restore or regenerate excluded geometry before reproduction. Do not run render.py's unsuccessful Cycles entrypoint as if it were the final renderer. The saved render_mitsuba.py hash matches every manifest entry.
+The scene correspondences are: hero-garden, astrology-moon, numerology-pattern, skincare-ritual, psychology-journal, family-grove, mental-health-haven, closing-bloom.
 
-The former orbit-chart SVG imagery and old social PNG were removed. Current screenshots show this complete raster-led replacement, not the prior site.
+`tools/prepare_magic_social.py` crops the original hero to 1200×630, applies a documented contrast scrim and local font lettering, and embeds its source hash in PNG metadata. It does not regenerate the artwork. The social title is “Silviya Aeterna”.
 
-## Existing font assets
+## Comps and measured reference
 
-Onest variable TTF downloaded from https://raw.githubusercontent.com/google/fonts/main/ofl/onest/Onest%5Bwght%5D.ttf. License fetched from the same directory's OFL.txt; retained as assets/fonts/Onest-OFL.txt. Source SHA-256: 966c5c29b4755da84b6854d5c21dd4eaa2420225d0e9874de602de176d4a9f31.
+A was generated through the then-installed OAuth provider. B and C use the current upstream native OAuth provider loaded in a task-local helper. Three successful image outputs and receipts are under `.impeccable/mocks`. Earlier failed attempts are retained as failures. Builder visually inspected all three; B was selected under user-delegated design choice.
 
-Source retained under tools/Onest-source.ttf, converted by tools/prepare_font.py using fontTools and Brotli into the self-hosted assets/fonts/Onest-Variable.woff2. All 49 Cyrillic codepoints used by the current page were verified against the source cmap. No font CDN is used at runtime.
+`.impeccable/build/regions.json` is the measured first-viewport map, with crop inspection and font-ranking receipts. The prepared large plate is a Lanczos-resampled independent hero original; it adds no generated detail and is not extracted from a UI mock. Its upsampling is explicitly disclosed in its metadata. The production page uses efficient original-resolution WebP derivatives instead.
 
-Geist-Variable-subset.woff2 and OFL-1.1.txt are inherited local assets from the previous version. The source is the existing committed project asset, not a newly claimed download. tools/verify_delivery.py checked all 49 used Cyrillic codepoints against both final shipping WOFF2 files, with no missing glyphs; the EN/BG screenshots were also read visually.
+The user waived mandatory interactive review checkpoints. This is not a signed component-review approval, and the CLI's refused state is retained. No numerical comp-match or independent SHIP is invented.
 
-## Authored UI mark
+## Fonts and local animation
 
-assets/favicon.svg is locally authored vector code: an outlined leaf and restrained amber circle on jade. It is a small identity mark only; not a substitute for the original raster illustrations.
+- Cormorant Garamond variable TTF: `https://raw.githubusercontent.com/google/fonts/main/ofl/cormorantgaramond/CormorantGaramond%5Bwght%5D.ttf`. Actual downloaded source retained at `tools/CormorantGaramond-source.ttf`, converted to WOFF2 with fontTools/Brotli. OFL retained beside the shipping font.
+- Geist WOFF2 and its OFL are inherited local project assets. No new origin is invented for them.
+- GSAP and ScrollTrigger 3.13.0 are pinned in package-lock, copied from the installed npm package's dist directory. Their embedded copyright/license headers remain intact. GSAP uses its standard license, not the fonts' OFL. No CDN is contacted at runtime.
+- The native water shader is local authored code sampling only hero-garden.webp. It generates motion, not replacement artwork.
 
-## Verified derived files
+## Actual evidence and limitations
 
-assets/images/hero-glasshouse-mobile.webp is a 780x520 Pillow derivative of the actual hero (26552 bytes), with embedded XMP identifying the original render. It preserves the whole source composition; the mobile CSS crop is 55% 50%, retaining the sphere and foliage.
+`verification.json` hashes all derivatives, fonts, source files and screenshots and checks Cyrillic coverage. `browser-report.json` records real responsive/bilingual interactions and fallback states. `scenes-contact.png` assembles six real scrolled desktop captures; it is not a replacement site screenshot. `sanctuary-motion.mp4` encodes timestamped actual browser frames, with `motion-timing.json` retaining capture timings.
 
-assets/social-og.png is a genuine 1200x630 PNG (375390 bytes), composited with Pillow from the original hero and Onest brand lettering. PNG text records its source and derivative method. It was decoded and visually inspected; canonical and social-image URLs use the absolute production HTTPS origin. No PNG screenshot was substituted for the original artwork.
+Screenshots were opened with vision. Four axe desktop/mobile and EN/BG runs found no A/AA violations; incomplete checks are retained. Actual background-tab frame production stopped, but automation kept document.hidden false, so native hidden-state observation is not claimed. The explicit visibility handler was additionally tested with a synthetic hidden flag. Performance numbers are local unthrottled measurements, not real-user performance claims.
 
-All four originals, the mobile derivative and social card were visually inspected. Both final EN/BG desktop/mobile screenshot sets and menu/reflection captures were read. Stylized 3D materials and some fine sampling grain remain, particularly in the skin scene; these are disclosed qualities of authored renders, not photographic or clinical claims. Generator scripts, source files and manifests remain unserved under tools/.
+There is no claim of clinical credentials, guaranteed outcomes, a real depicted location, branded product endorsement, or a live YouTube/store destination.

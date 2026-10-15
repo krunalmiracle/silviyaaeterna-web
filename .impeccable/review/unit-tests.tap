@@ -1,0 +1,214 @@
+TAP version 13
+# Subtest: no em dash or en dash anywhere in the shipped page
+ok 1 - no em dash or en dash anywhere in the shipped page
+  ---
+  duration_ms: 0.917345
+  type: 'test'
+  ...
+# Subtest: the page makes no third-party runtime requests
+ok 2 - the page makes no third-party runtime requests
+  ---
+  duration_ms: 0.375397
+  type: 'test'
+  ...
+# Subtest: no inline styles or scripts that the CSP would block
+ok 3 - no inline styles or scripts that the CSP would block
+  ---
+  duration_ms: 0.180349
+  type: 'test'
+  ...
+# Subtest: every translatable node carries both languages
+ok 4 - every translatable node carries both languages
+  ---
+  duration_ms: 0.465792
+  type: 'test'
+  ...
+# Subtest: every image has alt text
+ok 5 - every image has alt text
+  ---
+  duration_ms: 0.393532
+  type: 'test'
+  ...
+# Subtest: every local reference resolves to a file on disk
+ok 6 - every local reference resolves to a file on disk
+  ---
+  duration_ms: 8.940543
+  type: 'test'
+  ...
+# Subtest: navigation anchors all point at real sections
+ok 7 - navigation anchors all point at real sections
+  ---
+  duration_ms: 0.407892
+  type: 'test'
+  ...
+# Subtest: heading structure is a single h1 with ordered levels
+ok 8 - heading structure is a single h1 with ordered levels
+  ---
+  duration_ms: 0.187558
+  type: 'test'
+  ...
+# Subtest: coming soon states are honest, non clickable elements
+ok 9 - coming soon states are honest, non clickable elements
+  ---
+  duration_ms: 0.404918
+  type: 'test'
+  ...
+# Subtest: language toggle is exposed accessibly
+ok 10 - language toggle is exposed accessibly
+  ---
+  duration_ms: 0.288208
+  type: 'test'
+  ...
+# Subtest: motion respects reduced motion and survives failed JavaScript
+ok 11 - motion respects reduced motion and survives failed JavaScript
+  ---
+  duration_ms: 0.284261
+  type: 'test'
+  ...
+# Subtest: the page declares the two languages and viewport
+ok 12 - the page declares the two languages and viewport
+  ---
+  duration_ms: 0.092758
+  type: 'test'
+  ...
+# Subtest: saved Bulgarian preference applies content, lang, translated aria and image alt
+ok 13 - saved Bulgarian preference applies content, lang, translated aria and image alt
+  ---
+  duration_ms: 3.000846
+  type: 'test'
+  ...
+# Subtest: invalid preference and denied storage retain functional English and language toggle
+ok 14 - invalid preference and denied storage retain functional English and language toggle
+  ---
+  duration_ms: 2.502139
+  type: 'test'
+  ...
+# Subtest: mobile menu closes on selection
+ok 15 - mobile menu closes on selection
+  ---
+  duration_ms: 0.515281
+  type: 'test'
+  ...
+# Subtest: mobile menu closes on Escape and restores summary focus
+ok 16 - mobile menu closes on Escape and restores summary focus
+  ---
+  duration_ms: 0.533455
+  type: 'test'
+  ...
+# Subtest: outside click closes mobile menu but inside click does not
+ok 17 - outside click closes mobile menu but inside click does not
+  ---
+  duration_ms: 0.441048
+  type: 'test'
+  ...
+# Subtest: all six theme selections open useful prompts with selected aria and focus
+ok 18 - all six theme selections open useful prompts with selected aria and focus
+  ---
+  duration_ms: 0.541657
+  type: 'test'
+  ...
+# Subtest: direct theme fragment enhances the correct topic
+ok 19 - direct theme fragment enhances the correct topic
+  ---
+  duration_ms: 0.621586
+  type: 'test'
+  ...
+# Subtest: six static descriptions and native prompt disclosures exist without JavaScript
+ok 20 - six static descriptions and native prompt disclosures exist without JavaScript
+  ---
+  duration_ms: 0.670274
+  type: 'test'
+  ...
+# Subtest: original images and responsive hero are real WebP assets
+ok 21 - original images and responsive hero are real WebP assets
+  ---
+  duration_ms: 30.179556
+  type: 'test'
+  ...
+# Subtest: social preview is a real 1200 by 630 PNG
+ok 22 - social preview is a real 1200 by 630 PNG
+  ---
+  duration_ms: 1.424383
+  type: 'test'
+  ...
+# Subtest: eight separate original scenes are present in the no-JS document
+ok 23 - eight separate original scenes are present in the no-JS document
+  ---
+  duration_ms: 0.77667
+  type: 'test'
+  ...
+# Subtest: motion permission stops for manual pause, reduced motion, hidden or offscreen
+ok 24 - motion permission stops for manual pause, reduced motion, hidden or offscreen
+  ---
+  duration_ms: 0.522501
+  type: 'test'
+  ...
+# Subtest: GET / serves the landing page with security headers
+ok 25 - GET / serves the landing page with security headers
+  ---
+  duration_ms: 136.010441
+  type: 'test'
+  ...
+# Subtest: GET /index.html behaves like the root document
+ok 26 - GET /index.html behaves like the root document
+  ---
+  duration_ms: 5.353688
+  type: 'test'
+  ...
+# Subtest: HEAD / returns headers without a body
+ok 27 - HEAD / returns headers without a body
+  ---
+  duration_ms: 5.91347
+  type: 'test'
+  ...
+# Subtest: every local asset referenced by index.html answers 200
+ok 28 - every local asset referenced by index.html answers 200
+  ---
+  duration_ms: 40.630851
+  type: 'test'
+  ...
+# Subtest: styles, script and images are served with correct types
+ok 29 - styles, script and images are served with correct types
+  ---
+  duration_ms: 14.139358
+  type: 'test'
+  ...
+# Subtest: unknown routes return 404
+ok 30 - unknown routes return 404
+  ---
+  duration_ms: 2.804935
+  type: 'test'
+  ...
+# Subtest: server sources and dev documents are never served
+ok 31 - server sources and dev documents are never served
+  ---
+  duration_ms: 8.143344
+  type: 'test'
+  ...
+# Subtest: removed write and AI endpoints refuse every mutation method
+ok 32 - removed write and AI endpoints refuse every mutation method
+  ---
+  duration_ms: 9.87415
+  type: 'test'
+  ...
+# Subtest: path traversal stays inside the asset directory
+ok 33 - path traversal stays inside the asset directory
+  ---
+  duration_ms: 6.377119
+  type: 'test'
+  ...
+# Subtest: the server keeps no secrets and makes no outbound calls
+ok 34 - the server keeps no secrets and makes no outbound calls
+  ---
+  duration_ms: 0.796268
+  type: 'test'
+  ...
+1..34
+# tests 34
+# suites 0
+# pass 34
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 342.521071

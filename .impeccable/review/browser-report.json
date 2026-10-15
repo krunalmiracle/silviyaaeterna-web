@@ -1,0 +1,2959 @@
+{
+  "url": "http://127.0.0.1:3417",
+  "capturedAt": "2026-10-15T11:59:40.968265+00:00",
+  "checks": [
+    {
+      "name": "desktop-en: persisted language",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "desktop-en: no clipping or overflow",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "desktop-en: 44px targets",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "desktop-en: all images decoded",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "desktop-en: Cyrillic display font",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "desktop-en: initial reduced motion",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "desktop-en: opens astrology",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "desktop-en: focus astrology",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "desktop-en: anchor headroom astrology",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage scene astrology",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "desktop-en: opens numerology",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "desktop-en: focus numerology",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "desktop-en: anchor headroom numerology",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage scene numerology",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "desktop-en: opens skincare",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "desktop-en: focus skincare",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "desktop-en: anchor headroom skincare",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage scene skincare",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "desktop-en: opens wellbeing",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "desktop-en: focus wellbeing",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "desktop-en: anchor headroom wellbeing",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage scene wellbeing",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "desktop-en: opens family",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "desktop-en: focus family",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "desktop-en: anchor headroom family",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage scene family",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "desktop-en: opens mental-health",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "desktop-en: focus mental-health",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "desktop-en: anchor headroom mental-health",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage scene mental-health",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "mobile-en: persisted language",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "mobile-en: no clipping or overflow",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "mobile-en: 44px targets",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "mobile-en: all images decoded",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "mobile-en: Cyrillic display font",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "mobile-en: initial reduced motion",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "mobile-en: opens astrology",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "mobile-en: focus astrology",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "mobile-en: anchor headroom astrology",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "mobile-en: opens numerology",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "mobile-en: focus numerology",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "mobile-en: anchor headroom numerology",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "mobile-en: opens skincare",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "mobile-en: focus skincare",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "mobile-en: anchor headroom skincare",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "mobile-en: opens wellbeing",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "mobile-en: focus wellbeing",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "mobile-en: anchor headroom wellbeing",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "mobile-en: opens family",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "mobile-en: focus family",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "mobile-en: anchor headroom family",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "mobile-en: opens mental-health",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "mobile-en: focus mental-health",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "mobile-en: anchor headroom mental-health",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "mobile-en: menu opens",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "mobile-en: Escape restores focus",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "compact-en: persisted language",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "compact-en: no clipping or overflow",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "compact-en: 44px targets",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "compact-en: all images decoded",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "compact-en: Cyrillic display font",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "compact-en: initial reduced motion",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "compact-en: opens astrology",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "compact-en: focus astrology",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "compact-en: anchor headroom astrology",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "compact-en: opens numerology",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "compact-en: focus numerology",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "compact-en: anchor headroom numerology",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "compact-en: opens skincare",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "compact-en: focus skincare",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "compact-en: anchor headroom skincare",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "compact-en: opens wellbeing",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "compact-en: focus wellbeing",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "compact-en: anchor headroom wellbeing",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "compact-en: opens family",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "compact-en: focus family",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "compact-en: anchor headroom family",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "compact-en: opens mental-health",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "compact-en: focus mental-health",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "compact-en: anchor headroom mental-health",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "compact-en: menu opens",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "compact-en: Escape restores focus",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tablet-en: persisted language",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tablet-en: no clipping or overflow",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "tablet-en: 44px targets",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "tablet-en: all images decoded",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tablet-en: Cyrillic display font",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tablet-en: initial reduced motion",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tablet-en: opens astrology",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tablet-en: focus astrology",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tablet-en: anchor headroom astrology",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tablet-en: opens numerology",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tablet-en: focus numerology",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tablet-en: anchor headroom numerology",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tablet-en: opens skincare",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tablet-en: focus skincare",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tablet-en: anchor headroom skincare",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tablet-en: opens wellbeing",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tablet-en: focus wellbeing",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tablet-en: anchor headroom wellbeing",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tablet-en: opens family",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tablet-en: focus family",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tablet-en: anchor headroom family",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tablet-en: opens mental-health",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tablet-en: focus mental-health",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tablet-en: anchor headroom mental-health",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tablet-en: menu opens",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tablet-en: Escape restores focus",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "laptop-en: persisted language",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "laptop-en: no clipping or overflow",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "laptop-en: 44px targets",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "laptop-en: all images decoded",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "laptop-en: Cyrillic display font",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "laptop-en: initial reduced motion",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "laptop-en: opens astrology",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "laptop-en: focus astrology",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "laptop-en: anchor headroom astrology",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "laptop-en: opens numerology",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "laptop-en: focus numerology",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "laptop-en: anchor headroom numerology",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "laptop-en: opens skincare",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "laptop-en: focus skincare",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "laptop-en: anchor headroom skincare",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "laptop-en: opens wellbeing",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "laptop-en: focus wellbeing",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "laptop-en: anchor headroom wellbeing",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "laptop-en: opens family",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "laptop-en: focus family",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "laptop-en: anchor headroom family",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "laptop-en: opens mental-health",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "laptop-en: focus mental-health",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "laptop-en: anchor headroom mental-health",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "comp-en: persisted language",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "comp-en: no clipping or overflow",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "comp-en: 44px targets",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "comp-en: all images decoded",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "comp-en: Cyrillic display font",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "comp-en: initial reduced motion",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "comp-en: opens astrology",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "comp-en: focus astrology",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "comp-en: anchor headroom astrology",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "comp-en: opens numerology",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "comp-en: focus numerology",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "comp-en: anchor headroom numerology",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "comp-en: opens skincare",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "comp-en: focus skincare",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "comp-en: anchor headroom skincare",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "comp-en: opens wellbeing",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "comp-en: focus wellbeing",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "comp-en: anchor headroom wellbeing",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "comp-en: opens family",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "comp-en: focus family",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "comp-en: anchor headroom family",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "comp-en: opens mental-health",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "comp-en: focus mental-health",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "comp-en: anchor headroom mental-health",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "desktop-bg: persisted language",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "desktop-bg: no clipping or overflow",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "desktop-bg: 44px targets",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "desktop-bg: all images decoded",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "desktop-bg: Cyrillic display font",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "desktop-bg: initial reduced motion",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "desktop-bg: opens astrology",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "desktop-bg: focus astrology",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "desktop-bg: anchor headroom astrology",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "desktop-bg: opens numerology",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "desktop-bg: focus numerology",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "desktop-bg: anchor headroom numerology",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "desktop-bg: opens skincare",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "desktop-bg: focus skincare",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "desktop-bg: anchor headroom skincare",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "desktop-bg: opens wellbeing",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "desktop-bg: focus wellbeing",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "desktop-bg: anchor headroom wellbeing",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "desktop-bg: opens family",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "desktop-bg: focus family",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "desktop-bg: anchor headroom family",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "desktop-bg: opens mental-health",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "desktop-bg: focus mental-health",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "desktop-bg: anchor headroom mental-health",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "mobile-bg: persisted language",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "mobile-bg: no clipping or overflow",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "mobile-bg: 44px targets",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "mobile-bg: all images decoded",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "mobile-bg: Cyrillic display font",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "mobile-bg: initial reduced motion",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "mobile-bg: opens astrology",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "mobile-bg: focus astrology",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "mobile-bg: anchor headroom astrology",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "mobile-bg: opens numerology",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "mobile-bg: focus numerology",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "mobile-bg: anchor headroom numerology",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "mobile-bg: opens skincare",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "mobile-bg: focus skincare",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "mobile-bg: anchor headroom skincare",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "mobile-bg: opens wellbeing",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "mobile-bg: focus wellbeing",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "mobile-bg: anchor headroom wellbeing",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "mobile-bg: opens family",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "mobile-bg: focus family",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "mobile-bg: anchor headroom family",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "mobile-bg: opens mental-health",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "mobile-bg: focus mental-health",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "mobile-bg: anchor headroom mental-health",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "mobile-bg: menu opens",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "mobile-bg: Escape restores focus",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "compact-bg: persisted language",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "compact-bg: no clipping or overflow",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "compact-bg: 44px targets",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "compact-bg: all images decoded",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "compact-bg: Cyrillic display font",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "compact-bg: initial reduced motion",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "compact-bg: opens astrology",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "compact-bg: focus astrology",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "compact-bg: anchor headroom astrology",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "compact-bg: opens numerology",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "compact-bg: focus numerology",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "compact-bg: anchor headroom numerology",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "compact-bg: opens skincare",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "compact-bg: focus skincare",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "compact-bg: anchor headroom skincare",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "compact-bg: opens wellbeing",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "compact-bg: focus wellbeing",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "compact-bg: anchor headroom wellbeing",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "compact-bg: opens family",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "compact-bg: focus family",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "compact-bg: anchor headroom family",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "compact-bg: opens mental-health",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "compact-bg: focus mental-health",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "compact-bg: anchor headroom mental-health",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "compact-bg: menu opens",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "compact-bg: Escape restores focus",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tablet-bg: persisted language",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tablet-bg: no clipping or overflow",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "tablet-bg: 44px targets",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "tablet-bg: all images decoded",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tablet-bg: Cyrillic display font",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tablet-bg: initial reduced motion",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tablet-bg: opens astrology",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tablet-bg: focus astrology",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tablet-bg: anchor headroom astrology",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tablet-bg: opens numerology",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tablet-bg: focus numerology",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tablet-bg: anchor headroom numerology",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tablet-bg: opens skincare",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tablet-bg: focus skincare",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tablet-bg: anchor headroom skincare",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tablet-bg: opens wellbeing",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tablet-bg: focus wellbeing",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tablet-bg: anchor headroom wellbeing",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tablet-bg: opens family",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tablet-bg: focus family",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tablet-bg: anchor headroom family",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tablet-bg: opens mental-health",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tablet-bg: focus mental-health",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tablet-bg: anchor headroom mental-health",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tablet-bg: menu opens",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tablet-bg: Escape restores focus",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "laptop-bg: persisted language",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "laptop-bg: no clipping or overflow",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "laptop-bg: 44px targets",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "laptop-bg: all images decoded",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "laptop-bg: Cyrillic display font",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "laptop-bg: initial reduced motion",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "laptop-bg: opens astrology",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "laptop-bg: focus astrology",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "laptop-bg: anchor headroom astrology",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "laptop-bg: opens numerology",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "laptop-bg: focus numerology",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "laptop-bg: anchor headroom numerology",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "laptop-bg: opens skincare",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "laptop-bg: focus skincare",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "laptop-bg: anchor headroom skincare",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "laptop-bg: opens wellbeing",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "laptop-bg: focus wellbeing",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "laptop-bg: anchor headroom wellbeing",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "laptop-bg: opens family",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "laptop-bg: focus family",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "laptop-bg: anchor headroom family",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "laptop-bg: opens mental-health",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "laptop-bg: focus mental-health",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "laptop-bg: anchor headroom mental-health",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "comp-bg: persisted language",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "comp-bg: no clipping or overflow",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "comp-bg: 44px targets",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "comp-bg: all images decoded",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "comp-bg: Cyrillic display font",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "comp-bg: initial reduced motion",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "comp-bg: opens astrology",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "comp-bg: focus astrology",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "comp-bg: anchor headroom astrology",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "comp-bg: opens numerology",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "comp-bg: focus numerology",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "comp-bg: anchor headroom numerology",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "comp-bg: opens skincare",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "comp-bg: focus skincare",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "comp-bg: anchor headroom skincare",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "comp-bg: opens wellbeing",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "comp-bg: focus wellbeing",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "comp-bg: anchor headroom wellbeing",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "comp-bg: opens family",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "comp-bg: focus family",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "comp-bg: anchor headroom family",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "comp-bg: opens mental-health",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "comp-bg: focus mental-health",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "comp-bg: anchor headroom mental-health",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "normal motion: real WebGL frames",
+      "passed": true,
+      "detail": {
+        "before": {
+          "frames": 119,
+          "renderer": "webgl",
+          "activeScene": "astrology",
+          "running": true,
+          "paused": false,
+          "reduced": false,
+          "visible": true,
+          "inView": true
+        },
+        "after": {
+          "frames": 138,
+          "renderer": "webgl",
+          "activeScene": "astrology",
+          "running": true,
+          "paused": false,
+          "reduced": false,
+          "visible": true,
+          "inView": true
+        }
+      }
+    },
+    {
+      "name": "pause freezes renderer",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pause persists on reload",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "live reduced-motion change stops frames",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "offscreen hero stops frames",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "visibility handler stops renderer (synthetic hidden flag; headless tab did not hide)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "context-loss static fallback",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "WebGL unavailable: original fallback",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "denied storage: language and pause work",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "direct fragment opens reflection",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "keyboard skip link focus",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "keyboard skip target",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "keyboard native reflection",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no JS: all six themes visible",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no JS: native disclosure",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no JS: navigation",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "viewports": [
+    {
+      "lang": "en",
+      "width": 1440,
+      "overflowX": 0,
+      "clipped": [],
+      "smallTargets": [],
+      "images": [
+        {
+          "src": "http://127.0.0.1:3417/assets/images/hero-garden.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/astrology-moon.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/numerology-pattern.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/skincare-ritual.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/psychology-journal.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/family-grove.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/mental-health-haven.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/astrology-moon.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/numerology-pattern.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/skincare-ritual.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/psychology-journal.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/family-grove.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/mental-health-haven.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/closing-bloom.webp",
+          "decoded": true
+        }
+      ],
+      "state": {
+        "frames": 0,
+        "renderer": "static",
+        "activeScene": "astrology",
+        "running": false,
+        "paused": false,
+        "reduced": true,
+        "visible": true,
+        "inView": true
+      },
+      "heroH1": {
+        "x": 338.546875,
+        "y": 459,
+        "width": 762.890625,
+        "height": 102.328125,
+        "top": 459,
+        "right": 1101.4375,
+        "bottom": 561.328125,
+        "left": 338.546875
+      },
+      "heroLinks": {
+        "x": 67.671875,
+        "y": 757,
+        "width": 1304.65625,
+        "height": 44,
+        "top": 757,
+        "right": 1372.328125,
+        "bottom": 801,
+        "left": 67.671875
+      },
+      "cta": {
+        "x": 607.921875,
+        "y": 650.609375,
+        "width": 224.15625,
+        "height": 52,
+        "top": 650.609375,
+        "right": 832.078125,
+        "bottom": 702.609375,
+        "left": 607.921875
+      },
+      "name": "desktop"
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "overflowX": 0,
+      "clipped": [],
+      "smallTargets": [],
+      "images": [
+        {
+          "src": "http://127.0.0.1:3417/assets/images/hero-garden-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/astrology-moon-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/numerology-pattern-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/skincare-ritual-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/psychology-journal-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/family-grove-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/mental-health-haven-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/astrology-moon-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/numerology-pattern-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/skincare-ritual-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/psychology-journal-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/family-grove-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/mental-health-haven-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/closing-bloom-small.webp",
+          "decoded": true
+        }
+      ],
+      "state": {
+        "frames": 0,
+        "renderer": "static",
+        "activeScene": "astrology",
+        "running": false,
+        "paused": false,
+        "reduced": true,
+        "visible": true,
+        "inView": true
+      },
+      "heroH1": {
+        "x": 22,
+        "y": 464.5,
+        "width": 346,
+        "height": 110.25,
+        "top": 464.5,
+        "right": 368,
+        "bottom": 574.75,
+        "left": 22
+      },
+      "heroLinks": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      },
+      "cta": {
+        "x": 82.921875,
+        "y": 692,
+        "width": 224.15625,
+        "height": 52,
+        "top": 692,
+        "right": 307.078125,
+        "bottom": 744,
+        "left": 82.921875
+      },
+      "name": "mobile"
+    },
+    {
+      "lang": "en",
+      "width": 320,
+      "overflowX": 0,
+      "clipped": [],
+      "smallTargets": [],
+      "images": [
+        {
+          "src": "http://127.0.0.1:3417/assets/images/hero-garden-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/astrology-moon-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/numerology-pattern-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/skincare-ritual-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/psychology-journal-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/family-grove-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/mental-health-haven-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/astrology-moon-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/numerology-pattern-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/skincare-ritual-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/psychology-journal-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/family-grove-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/mental-health-haven-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/closing-bloom-small.webp",
+          "decoded": true
+        }
+      ],
+      "state": {
+        "frames": 0,
+        "renderer": "static",
+        "activeScene": "astrology",
+        "running": false,
+        "paused": false,
+        "reduced": true,
+        "visible": true,
+        "inView": true
+      },
+      "heroH1": {
+        "x": 16,
+        "y": 480.75,
+        "width": 288,
+        "height": 98.96875,
+        "top": 480.75,
+        "right": 304,
+        "bottom": 579.71875,
+        "left": 16
+      },
+      "heroLinks": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      },
+      "cta": {
+        "x": 47.921875,
+        "y": 692,
+        "width": 224.15625,
+        "height": 52,
+        "top": 692,
+        "right": 272.078125,
+        "bottom": 744,
+        "left": 47.921875
+      },
+      "name": "compact"
+    },
+    {
+      "lang": "en",
+      "width": 768,
+      "overflowX": 0,
+      "clipped": [],
+      "smallTargets": [],
+      "images": [
+        {
+          "src": "http://127.0.0.1:3417/assets/images/hero-garden-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/astrology-moon-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/numerology-pattern-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/skincare-ritual-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/psychology-journal-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/family-grove-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/mental-health-haven-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/astrology-moon-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/numerology-pattern-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/skincare-ritual-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/psychology-journal-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/family-grove-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/mental-health-haven-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/closing-bloom-small.webp",
+          "decoded": true
+        }
+      ],
+      "state": {
+        "frames": 0,
+        "renderer": "static",
+        "activeScene": "astrology",
+        "running": false,
+        "paused": false,
+        "reduced": true,
+        "visible": true,
+        "inView": true
+      },
+      "heroH1": {
+        "x": 118.6875,
+        "y": 705.625,
+        "width": 530.625,
+        "height": 71.1875,
+        "top": 705.625,
+        "right": 649.3125,
+        "bottom": 776.8125,
+        "left": 118.6875
+      },
+      "heroLinks": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      },
+      "cta": {
+        "x": 271.921875,
+        "y": 862,
+        "width": 224.15625,
+        "height": 52,
+        "top": 862,
+        "right": 496.078125,
+        "bottom": 914,
+        "left": 271.921875
+      },
+      "name": "tablet"
+    },
+    {
+      "lang": "en",
+      "width": 1024,
+      "overflowX": 0,
+      "clipped": [],
+      "smallTargets": [],
+      "images": [
+        {
+          "src": "http://127.0.0.1:3417/assets/images/hero-garden-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/astrology-moon-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/numerology-pattern-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/skincare-ritual-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/psychology-journal-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/family-grove-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/mental-health-haven-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/astrology-moon-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/numerology-pattern-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/skincare-ritual-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/psychology-journal-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/family-grove-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/mental-health-haven-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/closing-bloom-small.webp",
+          "decoded": true
+        }
+      ],
+      "state": {
+        "frames": 0,
+        "renderer": "static",
+        "activeScene": "astrology",
+        "running": false,
+        "paused": false,
+        "reduced": true,
+        "visible": true,
+        "inView": true
+      },
+      "heroH1": {
+        "x": 228.984375,
+        "y": 450,
+        "width": 566.015625,
+        "height": 75.9375,
+        "top": 450,
+        "right": 795,
+        "bottom": 525.9375,
+        "left": 228.984375
+      },
+      "heroLinks": {
+        "x": 48.125,
+        "y": 750.625,
+        "width": 927.75,
+        "height": 50.375,
+        "top": 750.625,
+        "right": 975.875,
+        "bottom": 801,
+        "left": 48.125
+      },
+      "cta": {
+        "x": 399.921875,
+        "y": 611.125,
+        "width": 224.15625,
+        "height": 52,
+        "top": 611.125,
+        "right": 624.078125,
+        "bottom": 663.125,
+        "left": 399.921875
+      },
+      "name": "laptop"
+    },
+    {
+      "lang": "en",
+      "width": 1672,
+      "overflowX": 0,
+      "clipped": [],
+      "smallTargets": [],
+      "images": [
+        {
+          "src": "http://127.0.0.1:3417/assets/images/hero-garden.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/astrology-moon.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/numerology-pattern.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/skincare-ritual.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/psychology-journal.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/family-grove.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/mental-health-haven.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/astrology-moon.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/numerology-pattern.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/skincare-ritual.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/psychology-journal.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/family-grove.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/mental-health-haven.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/closing-bloom.webp",
+          "decoded": true
+        }
+      ],
+      "state": {
+        "frames": 0,
+        "renderer": "static",
+        "activeScene": "astrology",
+        "running": false,
+        "paused": false,
+        "reduced": true,
+        "visible": true,
+        "inView": true
+      },
+      "heroH1": {
+        "x": 393.125,
+        "y": 479.90625,
+        "width": 885.734375,
+        "height": 118.828125,
+        "top": 479.90625,
+        "right": 1278.859375,
+        "bottom": 598.734375,
+        "left": 393.125
+      },
+      "heroLinks": {
+        "x": 78.578125,
+        "y": 793.5,
+        "width": 1514.84375,
+        "height": 44,
+        "top": 793.5,
+        "right": 1593.421875,
+        "bottom": 837.5,
+        "left": 78.578125
+      },
+      "cta": {
+        "x": 723.921875,
+        "y": 696.734375,
+        "width": 224.15625,
+        "height": 52,
+        "top": 696.734375,
+        "right": 948.078125,
+        "bottom": 748.734375,
+        "left": 723.921875
+      },
+      "name": "comp"
+    },
+    {
+      "lang": "bg",
+      "width": 1440,
+      "overflowX": 0,
+      "clipped": [],
+      "smallTargets": [],
+      "images": [
+        {
+          "src": "http://127.0.0.1:3417/assets/images/hero-garden.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/astrology-moon.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/numerology-pattern.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/skincare-ritual.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/psychology-journal.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/family-grove.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/mental-health-haven.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/astrology-moon.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/numerology-pattern.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/skincare-ritual.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/psychology-journal.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/family-grove.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/mental-health-haven.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/closing-bloom.webp",
+          "decoded": true
+        }
+      ],
+      "state": {
+        "frames": 0,
+        "renderer": "static",
+        "activeScene": "astrology",
+        "running": false,
+        "paused": false,
+        "reduced": true,
+        "visible": true,
+        "inView": true
+      },
+      "heroH1": {
+        "x": 335.671875,
+        "y": 459,
+        "width": 768.65625,
+        "height": 102.328125,
+        "top": 459,
+        "right": 1104.328125,
+        "bottom": 561.328125,
+        "left": 335.671875
+      },
+      "heroLinks": {
+        "x": 67.671875,
+        "y": 757,
+        "width": 1304.65625,
+        "height": 44,
+        "top": 757,
+        "right": 1372.328125,
+        "bottom": 801,
+        "left": 67.671875
+      },
+      "cta": {
+        "x": 610.234375,
+        "y": 650.609375,
+        "width": 219.53125,
+        "height": 52,
+        "top": 650.609375,
+        "right": 829.765625,
+        "bottom": 702.609375,
+        "left": 610.234375
+      },
+      "name": "desktop"
+    },
+    {
+      "lang": "bg",
+      "width": 390,
+      "overflowX": 0,
+      "clipped": [],
+      "smallTargets": [],
+      "images": [
+        {
+          "src": "http://127.0.0.1:3417/assets/images/hero-garden-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/astrology-moon-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/numerology-pattern-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/skincare-ritual-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/psychology-journal-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/family-grove-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/mental-health-haven-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/astrology-moon-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/numerology-pattern-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/skincare-ritual-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/psychology-journal-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/family-grove-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/mental-health-haven-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/closing-bloom-small.webp",
+          "decoded": true
+        }
+      ],
+      "state": {
+        "frames": 0,
+        "renderer": "static",
+        "activeScene": "astrology",
+        "running": false,
+        "paused": false,
+        "reduced": true,
+        "visible": true,
+        "inView": true
+      },
+      "heroH1": {
+        "x": 22,
+        "y": 464.5,
+        "width": 346,
+        "height": 110.25,
+        "top": 464.5,
+        "right": 368,
+        "bottom": 574.75,
+        "left": 22
+      },
+      "heroLinks": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      },
+      "cta": {
+        "x": 85.234375,
+        "y": 692,
+        "width": 219.53125,
+        "height": 52,
+        "top": 692,
+        "right": 304.765625,
+        "bottom": 744,
+        "left": 85.234375
+      },
+      "name": "mobile"
+    },
+    {
+      "lang": "bg",
+      "width": 320,
+      "overflowX": 0,
+      "clipped": [],
+      "smallTargets": [],
+      "images": [
+        {
+          "src": "http://127.0.0.1:3417/assets/images/hero-garden-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/astrology-moon-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/numerology-pattern-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/skincare-ritual-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/psychology-journal-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/family-grove-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/mental-health-haven-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/astrology-moon-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/numerology-pattern-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/skincare-ritual-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/psychology-journal-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/family-grove-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/mental-health-haven-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/closing-bloom-small.webp",
+          "decoded": true
+        }
+      ],
+      "state": {
+        "frames": 0,
+        "renderer": "static",
+        "activeScene": "astrology",
+        "running": false,
+        "paused": false,
+        "reduced": true,
+        "visible": true,
+        "inView": true
+      },
+      "heroH1": {
+        "x": 16,
+        "y": 480.75,
+        "width": 288,
+        "height": 98.96875,
+        "top": 480.75,
+        "right": 304,
+        "bottom": 579.71875,
+        "left": 16
+      },
+      "heroLinks": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      },
+      "cta": {
+        "x": 50.234375,
+        "y": 692,
+        "width": 219.53125,
+        "height": 52,
+        "top": 692,
+        "right": 269.765625,
+        "bottom": 744,
+        "left": 50.234375
+      },
+      "name": "compact"
+    },
+    {
+      "lang": "bg",
+      "width": 768,
+      "overflowX": 0,
+      "clipped": [],
+      "smallTargets": [],
+      "images": [
+        {
+          "src": "http://127.0.0.1:3417/assets/images/hero-garden-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/astrology-moon-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/numerology-pattern-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/skincare-ritual-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/psychology-journal-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/family-grove-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/mental-health-haven-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/astrology-moon-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/numerology-pattern-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/skincare-ritual-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/psychology-journal-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/family-grove-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/mental-health-haven-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/closing-bloom-small.webp",
+          "decoded": true
+        }
+      ],
+      "state": {
+        "frames": 0,
+        "renderer": "static",
+        "activeScene": "astrology",
+        "running": false,
+        "paused": false,
+        "reduced": true,
+        "visible": true,
+        "inView": true
+      },
+      "heroH1": {
+        "x": 116.671875,
+        "y": 705.625,
+        "width": 534.640625,
+        "height": 71.1875,
+        "top": 705.625,
+        "right": 651.3125,
+        "bottom": 776.8125,
+        "left": 116.671875
+      },
+      "heroLinks": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      },
+      "cta": {
+        "x": 274.234375,
+        "y": 862,
+        "width": 219.53125,
+        "height": 52,
+        "top": 862,
+        "right": 493.765625,
+        "bottom": 914,
+        "left": 274.234375
+      },
+      "name": "tablet"
+    },
+    {
+      "lang": "bg",
+      "width": 1024,
+      "overflowX": 0,
+      "clipped": [],
+      "smallTargets": [],
+      "images": [
+        {
+          "src": "http://127.0.0.1:3417/assets/images/hero-garden-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/astrology-moon-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/numerology-pattern-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/skincare-ritual-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/psychology-journal-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/family-grove-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/mental-health-haven-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/astrology-moon-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/numerology-pattern-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/skincare-ritual-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/psychology-journal-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/family-grove-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/mental-health-haven-small.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/closing-bloom-small.webp",
+          "decoded": true
+        }
+      ],
+      "state": {
+        "frames": 0,
+        "renderer": "static",
+        "activeScene": "astrology",
+        "running": false,
+        "paused": false,
+        "reduced": true,
+        "visible": true,
+        "inView": true
+      },
+      "heroH1": {
+        "x": 226.84375,
+        "y": 450,
+        "width": 570.296875,
+        "height": 75.9375,
+        "top": 450,
+        "right": 797.140625,
+        "bottom": 525.9375,
+        "left": 226.84375
+      },
+      "heroLinks": {
+        "x": 48.125,
+        "y": 750.625,
+        "width": 927.75,
+        "height": 50.375,
+        "top": 750.625,
+        "right": 975.875,
+        "bottom": 801,
+        "left": 48.125
+      },
+      "cta": {
+        "x": 402.234375,
+        "y": 611.125,
+        "width": 219.53125,
+        "height": 52,
+        "top": 611.125,
+        "right": 621.765625,
+        "bottom": 663.125,
+        "left": 402.234375
+      },
+      "name": "laptop"
+    },
+    {
+      "lang": "bg",
+      "width": 1672,
+      "overflowX": 0,
+      "clipped": [],
+      "smallTargets": [],
+      "images": [
+        {
+          "src": "http://127.0.0.1:3417/assets/images/hero-garden.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/astrology-moon.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/numerology-pattern.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/skincare-ritual.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/psychology-journal.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/family-grove.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/mental-health-haven.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/astrology-moon.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/numerology-pattern.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/skincare-ritual.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/psychology-journal.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/family-grove.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/mental-health-haven.webp",
+          "decoded": true
+        },
+        {
+          "src": "http://127.0.0.1:3417/assets/images/closing-bloom.webp",
+          "decoded": true
+        }
+      ],
+      "state": {
+        "frames": 0,
+        "renderer": "static",
+        "activeScene": "astrology",
+        "running": false,
+        "paused": false,
+        "reduced": true,
+        "visible": true,
+        "inView": true
+      },
+      "heroH1": {
+        "x": 389.78125,
+        "y": 479.90625,
+        "width": 892.421875,
+        "height": 118.828125,
+        "top": 479.90625,
+        "right": 1282.203125,
+        "bottom": 598.734375,
+        "left": 389.78125
+      },
+      "heroLinks": {
+        "x": 78.578125,
+        "y": 793.5,
+        "width": 1514.84375,
+        "height": 44,
+        "top": 793.5,
+        "right": 1593.421875,
+        "bottom": 837.5,
+        "left": 78.578125
+      },
+      "cta": {
+        "x": 726.234375,
+        "y": 696.734375,
+        "width": 219.53125,
+        "height": 52,
+        "top": 696.734375,
+        "right": 945.765625,
+        "bottom": 748.734375,
+        "left": 726.234375
+      },
+      "name": "comp"
+    }
+  ],
+  "consoleErrors": [],
+  "externalRequests": [],
+  "failedRequests": [],
+  "httpErrors": [],
+  "screenshots": [
+    ".impeccable/review/desktop-en-top.png",
+    ".impeccable/review/desktop-en-full.png",
+    ".impeccable/review/scene-astrology.png",
+    ".impeccable/review/scene-numerology.png",
+    ".impeccable/review/scene-skincare.png",
+    ".impeccable/review/scene-wellbeing.png",
+    ".impeccable/review/scene-family.png",
+    ".impeccable/review/scene-mental-health.png",
+    ".impeccable/review/mobile-en-top.png",
+    ".impeccable/review/mobile-en-full.png",
+    ".impeccable/review/mobile-menu-en.png",
+    ".impeccable/review/comp-en-top.png",
+    ".impeccable/review/comp-en-full.png",
+    ".impeccable/review/desktop-bg-top.png",
+    ".impeccable/review/desktop-bg-full.png",
+    ".impeccable/review/mobile-bg-top.png",
+    ".impeccable/review/mobile-bg-full.png",
+    ".impeccable/review/mobile-menu-bg.png",
+    ".impeccable/review/comp-bg-top.png",
+    ".impeccable/review/comp-bg-full.png",
+    ".impeccable/review/motion-running.png",
+    ".impeccable/review/motion-paused.png",
+    ".impeccable/review/reduced-motion.png",
+    ".impeccable/review/context-loss.png",
+    ".impeccable/review/webgl-unavailable.png",
+    ".impeccable/review/no-js-mobile.png"
+  ],
+  "tabVisibility": {
+    "hidden": false,
+    "state": {
+      "frames": 29,
+      "renderer": "webgl",
+      "activeScene": "astrology",
+      "running": true,
+      "paused": false,
+      "reduced": false,
+      "visible": true,
+      "inView": true
+    }
+  },
+  "passed": 322,
+  "total": 322,
+  "failed": []
+}

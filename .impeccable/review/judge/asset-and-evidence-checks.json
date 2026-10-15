@@ -1,0 +1,452 @@
+{
+  "originals": [
+    {
+      "id": "hero-garden",
+      "sha256": "edda6fc3b6dabbe9cf89c3f279978af64cefbee4a2fbff0bffe2ba21374abb75",
+      "matchesManifest": true,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "provider": "openai-codex",
+      "requestedModel": "gpt-image-2-high",
+      "promptPresent": true,
+      "providerCacheExists": false,
+      "providerCacheHashMatches": null
+    },
+    {
+      "id": "astrology-moon",
+      "sha256": "d2f855b23ebd57a0f394867d2e15d9f4f2036a00462af30a55902bb79dba98c8",
+      "matchesManifest": true,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "provider": "openai-codex",
+      "requestedModel": "gpt-image-2-high",
+      "promptPresent": true,
+      "providerCacheExists": false,
+      "providerCacheHashMatches": null
+    },
+    {
+      "id": "numerology-pattern",
+      "sha256": "d604b1e8641b278c59e44dbfea7f4eb405a877c3663de2e817c2dfd7de65cc17",
+      "matchesManifest": true,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "provider": "openai-codex",
+      "requestedModel": "gpt-image-2-high",
+      "promptPresent": true,
+      "providerCacheExists": false,
+      "providerCacheHashMatches": null
+    },
+    {
+      "id": "skincare-ritual",
+      "sha256": "c1fca513a3f34a288325b0da74754b1c410e9a9432d18493e3509384d10cba22",
+      "matchesManifest": true,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "provider": "openai-codex",
+      "requestedModel": "gpt-image-2-high",
+      "promptPresent": true,
+      "providerCacheExists": false,
+      "providerCacheHashMatches": null
+    },
+    {
+      "id": "psychology-journal",
+      "sha256": "fad68910c83da8258a47a3646e1170e20ccadfd4e2a077753a3fd3f7b0870d84",
+      "matchesManifest": true,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "provider": "openai-codex",
+      "requestedModel": "gpt-image-2-high",
+      "promptPresent": true,
+      "providerCacheExists": false,
+      "providerCacheHashMatches": null
+    },
+    {
+      "id": "family-grove",
+      "sha256": "2e2b043b6353ddba66b6e7345100cbdfeecd716264d6883c178dfa971e30b88f",
+      "matchesManifest": true,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "provider": "openai-codex",
+      "requestedModel": "gpt-image-2-high",
+      "promptPresent": true,
+      "providerCacheExists": false,
+      "providerCacheHashMatches": null
+    },
+    {
+      "id": "mental-health-haven",
+      "sha256": "7d541e4797e032f4c84656f77d1b6d915b15d84ae2bf0791009094eb8affe1ac",
+      "matchesManifest": true,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "provider": "openai-codex",
+      "requestedModel": "gpt-image-2-high",
+      "promptPresent": true,
+      "providerCacheExists": false,
+      "providerCacheHashMatches": null
+    },
+    {
+      "id": "closing-bloom",
+      "sha256": "dca225800623b5e3fa5e07771932d3324cdc396b423c5532cedb4eda29ad61ff",
+      "matchesManifest": true,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "provider": "openai-codex",
+      "requestedModel": "gpt-image-2-high",
+      "promptPresent": true,
+      "providerCacheExists": false,
+      "providerCacheHashMatches": null
+    }
+  ],
+  "derivatives": [
+    {
+      "name": "hero-garden.webp",
+      "hashMatches": true,
+      "sizeMatches": true,
+      "sourceMetadataMatches": true,
+      "promptMetadataMatches": true
+    },
+    {
+      "name": "hero-garden-small.webp",
+      "hashMatches": true,
+      "sizeMatches": true,
+      "sourceMetadataMatches": true,
+      "promptMetadataMatches": true
+    },
+    {
+      "name": "astrology-moon.webp",
+      "hashMatches": true,
+      "sizeMatches": true,
+      "sourceMetadataMatches": true,
+      "promptMetadataMatches": true
+    },
+    {
+      "name": "astrology-moon-small.webp",
+      "hashMatches": true,
+      "sizeMatches": true,
+      "sourceMetadataMatches": true,
+      "promptMetadataMatches": true
+    },
+    {
+      "name": "numerology-pattern.webp",
+      "hashMatches": true,
+      "sizeMatches": true,
+      "sourceMetadataMatches": true,
+      "promptMetadataMatches": true
+    },
+    {
+      "name": "numerology-pattern-small.webp",
+      "hashMatches": true,
+      "sizeMatches": true,
+      "sourceMetadataMatches": true,
+      "promptMetadataMatches": true
+    },
+    {
+      "name": "skincare-ritual.webp",
+      "hashMatches": true,
+      "sizeMatches": true,
+      "sourceMetadataMatches": true,
+      "promptMetadataMatches": true
+    },
+    {
+      "name": "skincare-ritual-small.webp",
+      "hashMatches": true,
+      "sizeMatches": true,
+      "sourceMetadataMatches": true,
+      "promptMetadataMatches": true
+    },
+    {
+      "name": "psychology-journal.webp",
+      "hashMatches": true,
+      "sizeMatches": true,
+      "sourceMetadataMatches": true,
+      "promptMetadataMatches": true
+    },
+    {
+      "name": "psychology-journal-small.webp",
+      "hashMatches": true,
+      "sizeMatches": true,
+      "sourceMetadataMatches": true,
+      "promptMetadataMatches": true
+    },
+    {
+      "name": "family-grove.webp",
+      "hashMatches": true,
+      "sizeMatches": true,
+      "sourceMetadataMatches": true,
+      "promptMetadataMatches": true
+    },
+    {
+      "name": "family-grove-small.webp",
+      "hashMatches": true,
+      "sizeMatches": true,
+      "sourceMetadataMatches": true,
+      "promptMetadataMatches": true
+    },
+    {
+      "name": "mental-health-haven.webp",
+      "hashMatches": true,
+      "sizeMatches": true,
+      "sourceMetadataMatches": true,
+      "promptMetadataMatches": true
+    },
+    {
+      "name": "mental-health-haven-small.webp",
+      "hashMatches": true,
+      "sizeMatches": true,
+      "sourceMetadataMatches": true,
+      "promptMetadataMatches": true
+    },
+    {
+      "name": "closing-bloom.webp",
+      "hashMatches": true,
+      "sizeMatches": true,
+      "sourceMetadataMatches": true,
+      "promptMetadataMatches": true
+    },
+    {
+      "name": "closing-bloom-small.webp",
+      "hashMatches": true,
+      "sizeMatches": true,
+      "sourceMetadataMatches": true,
+      "promptMetadataMatches": true
+    }
+  ],
+  "sourceFingerprints": [
+    {
+      "path": "index.html",
+      "matches": true,
+      "actual": "75196fdf9ac54dd4ae9c78d384bb8fd637bbc3498ae42353516ddd1415e2c023"
+    },
+    {
+      "path": "assets/styles.css",
+      "matches": true,
+      "actual": "7915a849550da10ebfea5d87a29566c7513a5e2b122c9c9a08f9b4cce0983feb"
+    },
+    {
+      "path": "assets/site.js",
+      "matches": true,
+      "actual": "2a8342d72c30719f338678a20555b7883353360a9dfe653ec87fddaad0e75800"
+    },
+    {
+      "path": "assets/scene.js",
+      "matches": true,
+      "actual": "9213f1b1f7e59c7f943e034e6b24fb9587f35940b2939b7e4b0ed24e959598d6"
+    },
+    {
+      "path": "assets/motion-state.js",
+      "matches": true,
+      "actual": "c5371e55ddff3565e257394a5c72ca6ee1234a6d6d2247f3cbc3704a2a772b61"
+    },
+    {
+      "path": "server.ts",
+      "matches": true,
+      "actual": "3a74a542e94ce0dc911fbb7972427acc43cb6bf32f6c9849de02407d057d1d7b"
+    },
+    {
+      "path": "Dockerfile",
+      "matches": true,
+      "actual": "a76824bbe55dd617fddd6464c06a1d9199b2f03b469b6a7a3b4be6c4c8d0f0bd"
+    },
+    {
+      "path": "package.json",
+      "matches": true,
+      "actual": "bd46ec6530aa6a24eab08140f2d3acb40756b3539af72aa458025fbf9d76ba7e"
+    },
+    {
+      "path": "package-lock.json",
+      "matches": true,
+      "actual": "29f2376b2cf245135c1467cf846ac2abcb18c470c209fb39206147eb54fe70fa"
+    },
+    {
+      "path": "DESIGN.md",
+      "matches": true,
+      "actual": "8770ab2b7306e1a03c6af157dc7786436adedacf4094fe3882a5b7804de934fb"
+    },
+    {
+      "path": ".impeccable/design.json",
+      "matches": true,
+      "actual": "aaced8791352540a23cee894e62e79a4038e669342c6bda1ed02ab092998d025"
+    }
+  ],
+  "screenshots": [
+    {
+      "path": ".impeccable/review/desktop-en-top.png",
+      "matches": true
+    },
+    {
+      "path": ".impeccable/review/desktop-en-full.png",
+      "matches": true
+    },
+    {
+      "path": ".impeccable/review/scene-astrology.png",
+      "matches": true
+    },
+    {
+      "path": ".impeccable/review/scene-numerology.png",
+      "matches": true
+    },
+    {
+      "path": ".impeccable/review/scene-skincare.png",
+      "matches": true
+    },
+    {
+      "path": ".impeccable/review/scene-wellbeing.png",
+      "matches": true
+    },
+    {
+      "path": ".impeccable/review/scene-family.png",
+      "matches": true
+    },
+    {
+      "path": ".impeccable/review/scene-mental-health.png",
+      "matches": true
+    },
+    {
+      "path": ".impeccable/review/mobile-en-top.png",
+      "matches": true
+    },
+    {
+      "path": ".impeccable/review/mobile-en-full.png",
+      "matches": true
+    },
+    {
+      "path": ".impeccable/review/mobile-menu-en.png",
+      "matches": true
+    },
+    {
+      "path": ".impeccable/review/comp-en-top.png",
+      "matches": true
+    },
+    {
+      "path": ".impeccable/review/comp-en-full.png",
+      "matches": true
+    },
+    {
+      "path": ".impeccable/review/desktop-bg-top.png",
+      "matches": true
+    },
+    {
+      "path": ".impeccable/review/desktop-bg-full.png",
+      "matches": true
+    },
+    {
+      "path": ".impeccable/review/mobile-bg-top.png",
+      "matches": true
+    },
+    {
+      "path": ".impeccable/review/mobile-bg-full.png",
+      "matches": true
+    },
+    {
+      "path": ".impeccable/review/mobile-menu-bg.png",
+      "matches": true
+    },
+    {
+      "path": ".impeccable/review/comp-bg-top.png",
+      "matches": true
+    },
+    {
+      "path": ".impeccable/review/comp-bg-full.png",
+      "matches": true
+    },
+    {
+      "path": ".impeccable/review/motion-running.png",
+      "matches": true
+    },
+    {
+      "path": ".impeccable/review/motion-paused.png",
+      "matches": true
+    },
+    {
+      "path": ".impeccable/review/reduced-motion.png",
+      "matches": true
+    },
+    {
+      "path": ".impeccable/review/context-loss.png",
+      "matches": true
+    },
+    {
+      "path": ".impeccable/review/webgl-unavailable.png",
+      "matches": true
+    },
+    {
+      "path": ".impeccable/review/no-js-mobile.png",
+      "matches": true
+    }
+  ],
+  "motion": {
+    "captures": 36,
+    "monotonic": true,
+    "first": {
+      "frame": 0,
+      "elapsedSeconds": 0.293,
+      "state": {
+        "frames": 25,
+        "renderer": "webgl",
+        "activeScene": "astrology",
+        "running": true,
+        "paused": false,
+        "reduced": false,
+        "visible": true,
+        "inView": true
+      }
+    },
+    "last": {
+      "frame": 35,
+      "elapsedSeconds": 12.099,
+      "state": {
+        "frames": 184,
+        "renderer": "webgl",
+        "activeScene": "skincare",
+        "running": false,
+        "paused": false,
+        "reduced": false,
+        "visible": true,
+        "inView": false
+      }
+    },
+    "captureSpan": 11.806,
+    "states": [
+      "astrology",
+      "numerology",
+      "skincare"
+    ],
+    "file": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "nb_frames": "37"
+        }
+      ],
+      "format": {
+        "duration": "12.040000",
+        "size": "1495597"
+      }
+    },
+    "sourceFramesPresent": true,
+    "distinctSourceFrames": 33,
+    "heroFrameDifferenceBBox": [
+      0,
+      0,
+      1280,
+      800
+    ]
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "scope": "Independent local browser probes; no deployment",
+  "errors": [],
+  "motion_before": {
+    "state": {
+      "frames": 116,
+      "renderer": "webgl",
+      "activeScene": "astrology",
+      "running": true,
+      "paused": false,
+      "reduced": false,
+      "visible": true,
+      "inView": true
+    },
+    "label": "Pause motion",
+    "pressed": "false",
+    "root": "js motion-on shader-ready",
+    "lang": "en",
+    "triggers": 5,
+    "events": null,
+    "marker": null
+  },
+  "motion_after": {
+    "state": {
+      "frames": 131,
+      "renderer": "webgl",
+      "activeScene": "astrology",
+      "running": true,
+      "paused": false,
+      "reduced": false,
+      "visible": true,
+      "inView": true
+    },
+    "label": "Pause motion",
+    "pressed": "false",
+    "root": "js motion-on shader-ready",
+    "lang": "en",
+    "triggers": 5,
+    "events": null,
+    "marker": null
+  },
+  "lifecycle_before": {
+    "state": {
+      "frames": 131,
+      "renderer": "webgl",
+      "activeScene": "astrology",
+      "running": true,
+      "paused": false,
+      "reduced": false,
+      "visible": true,
+      "inView": true
+    },
+    "label": "Pause motion",
+    "pressed": "false",
+    "root": "js motion-on shader-ready",
+    "lang": "en",
+    "triggers": 5,
+    "events": [],
+    "marker": "0ae447bf-a78c-4472-8416-1fca8d11ddf4"
+  },
+  "exception": "Traceback (most recent call last):\n  File \"/opt/data/home/projects/silviyaaeterna-web/.worktrees/t_96b93555/.impeccable/review/judge/browser-probes.py\", line 21, in <module>\n    p.go_back(wait_until=\"load\");p.wait_for_timeout(1000)\n    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^\n  File \"/opt/data/home/.cache/uv/archive-v0/EVIWeh_sWuxs5AC65AUOy/lib/python3.13/site-packages/patchright/sync_api/_generated.py\", line 10138, in go_back\n    self._sync(\n    ~~~~~~~~~~^\n        self._impl_obj.go_back(\n        ^^^^^^^^^^^^^^^^^^^^^^^\n            timeout=to_milliseconds(timeout), waitUntil=wait_until\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n        )\n        ^\n    )\n    ^\n  File \"/opt/data/home/.cache/uv/archive-v0/EVIWeh_sWuxs5AC65AUOy/lib/python3.13/site-packages/patchright/_impl/_sync_base.py\", line 94, in _sync\n    return task.result()\n           ~~~~~~~~~~~^^\n  File \"/opt/data/home/.cache/uv/archive-v0/EVIWeh_sWuxs5AC65AUOy/lib/python3.13/site-packages/patchright/_impl/_page.py\", line 577, in go_back\n    await self._channel.send(\n    ...<3 lines>...\n    )\n  File \"/opt/data/home/.cache/uv/archive-v0/EVIWeh_sWuxs5AC65AUOy/lib/python3.13/site-packages/patchright/_impl/_connection.py\", line 59, in send\n    return await self._connection.wrap_api_call(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    ...<3 lines>...\n    )\n    ^\n  File \"/opt/data/home/.cache/uv/archive-v0/EVIWeh_sWuxs5AC65AUOy/lib/python3.13/site-packages/patchright/_impl/_connection.py\", line 565, in wrap_api_call\n    raise rewrite_error(error, f\"{parsed_st['apiName']}: {error}\") from None\npatchright._impl._errors.TimeoutError: Page.go_back: Timeout 30000ms exceeded.\nCall log:\n  - waiting for navigation until \"load\"\n    - navigated to \"http://127.0.0.1:3417/\"\n\n"
+}

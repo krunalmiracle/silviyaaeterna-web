@@ -1,0 +1,474 @@
+{
+  "axe": [
+    {
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand > span:nth-child(1)"
+            ],
+            [
+              ".brand > span:nth-child(2)"
+            ],
+            [
+              ".primary-nav > a[data-en=\"The themes\"][data-bg=\"Темите\"][href$=\"#atlas\"]"
+            ],
+            [
+              ".primary-nav > a[data-en=\"The project\"][data-bg=\"Проектът\"][href$=\"#manifesto\"]"
+            ],
+            [
+              ".primary-nav > a[href$=\"#next\"][data-en=\"What’s next\"][data-bg=\"Какво предстои\"]"
+            ],
+            [
+              "#motion-label"
+            ],
+            [
+              "#lang-en"
+            ],
+            [
+              "#lang-bg"
+            ],
+            [
+              "#next-title"
+            ],
+            [
+              "#channel > h3"
+            ],
+            [
+              "#channel > p"
+            ],
+            [
+              "span[data-en=\"Coming soon\"]"
+            ],
+            [
+              "#shop > h3"
+            ],
+            [
+              "#shop > p"
+            ],
+            [
+              "span[data-en=\"Planned for later\"]"
+            ],
+            [
+              "#safety-title"
+            ],
+            [
+              ".safety-copy > p:nth-child(1)"
+            ],
+            [
+              ".safety-copy > p:nth-child(2)"
+            ]
+          ]
+        }
+      ],
+      "passes": 23,
+      "width": 1440,
+      "lang": "en"
+    },
+    {
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand > span:nth-child(1)"
+            ],
+            [
+              ".brand > span:nth-child(2)"
+            ],
+            [
+              ".primary-nav > a[data-en=\"The themes\"][data-bg=\"Темите\"][href$=\"#atlas\"]"
+            ],
+            [
+              ".primary-nav > a[data-en=\"The project\"][data-bg=\"Проектът\"][href$=\"#manifesto\"]"
+            ],
+            [
+              ".primary-nav > a[href$=\"#next\"][data-en=\"What’s next\"][data-bg=\"Какво предстои\"]"
+            ],
+            [
+              "#motion-label"
+            ],
+            [
+              "#lang-en"
+            ],
+            [
+              "#lang-bg"
+            ],
+            [
+              "#next-title"
+            ],
+            [
+              "#channel > h3"
+            ],
+            [
+              "#channel > p"
+            ],
+            [
+              "span[data-en=\"Coming soon\"]"
+            ],
+            [
+              "#shop > h3"
+            ],
+            [
+              "#shop > p"
+            ],
+            [
+              "span[data-en=\"Planned for later\"]"
+            ],
+            [
+              "#safety-title"
+            ],
+            [
+              ".safety-copy > p:nth-child(1)"
+            ],
+            [
+              ".safety-copy > p:nth-child(2)"
+            ]
+          ]
+        }
+      ],
+      "passes": 23,
+      "width": 1440,
+      "lang": "bg"
+    },
+    {
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand > span:nth-child(1)"
+            ],
+            [
+              ".brand > span:nth-child(2)"
+            ],
+            [
+              "#motion-label"
+            ],
+            [
+              "#lang-en"
+            ],
+            [
+              "#lang-bg"
+            ],
+            [
+              "#next-title"
+            ],
+            [
+              "#channel > h3"
+            ],
+            [
+              "#channel > p"
+            ],
+            [
+              "span[data-en=\"Coming soon\"]"
+            ],
+            [
+              "#shop > h3"
+            ],
+            [
+              "#shop > p"
+            ],
+            [
+              "span[data-en=\"Planned for later\"]"
+            ],
+            [
+              "#safety-title"
+            ],
+            [
+              ".safety-copy > p:nth-child(1)"
+            ],
+            [
+              ".safety-copy > p:nth-child(2)"
+            ]
+          ]
+        }
+      ],
+      "passes": 23,
+      "width": 390,
+      "lang": "en"
+    },
+    {
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand > span:nth-child(1)"
+            ],
+            [
+              ".brand > span:nth-child(2)"
+            ],
+            [
+              "#motion-label"
+            ],
+            [
+              "#lang-en"
+            ],
+            [
+              "#lang-bg"
+            ],
+            [
+              "#next-title"
+            ],
+            [
+              "#channel > h3"
+            ],
+            [
+              "#channel > p"
+            ],
+            [
+              "span[data-en=\"Coming soon\"]"
+            ],
+            [
+              "#shop > h3"
+            ],
+            [
+              "#shop > p"
+            ],
+            [
+              "span[data-en=\"Planned for later\"]"
+            ],
+            [
+              "#safety-title"
+            ],
+            [
+              ".safety-copy > p:nth-child(1)"
+            ],
+            [
+              ".safety-copy > p:nth-child(2)"
+            ]
+          ]
+        }
+      ],
+      "passes": 23,
+      "width": 390,
+      "lang": "bg"
+    }
+  ],
+  "performance": {
+    "observed": {
+      "lcp": [
+        {
+          "start": 132,
+          "size": 92565
+        }
+      ],
+      "longTasks": []
+    },
+    "resources": [
+      {
+        "name": "/assets/fonts/CormorantGaramond-Variable.woff2",
+        "bytes": 209784,
+        "duration": 14.699999928474426
+      },
+      {
+        "name": "/assets/styles.css",
+        "bytes": 15247,
+        "duration": 13.200000047683716
+      },
+      {
+        "name": "/assets/fonts/Geist-Variable-subset.woff2",
+        "bytes": 28384,
+        "duration": 17.90000009536743
+      },
+      {
+        "name": "/assets/scene.js",
+        "bytes": 12071,
+        "duration": 17.800000071525574
+      },
+      {
+        "name": "/assets/vendor/ScrollTrigger.min.js",
+        "bytes": 44457,
+        "duration": 18.300000071525574
+      },
+      {
+        "name": "/assets/site.js",
+        "bytes": 2910,
+        "duration": 20
+      },
+      {
+        "name": "/assets/vendor/gsap.min.js",
+        "bytes": 72735,
+        "duration": 18.899999976158142
+      },
+      {
+        "name": "/assets/images/hero-garden.webp",
+        "bytes": 284018,
+        "duration": 20.5
+      },
+      {
+        "name": "/assets/motion-state.js",
+        "bytes": 423,
+        "duration": 4.5
+      },
+      {
+        "name": "/assets/images/astrology-moon.webp",
+        "bytes": 264050,
+        "duration": 30.5
+      },
+      {
+        "name": "/assets/images/numerology-pattern.webp",
+        "bytes": 266164,
+        "duration": 31.09999990463257
+      },
+      {
+        "name": "/assets/images/skincare-ritual.webp",
+        "bytes": 202080,
+        "duration": 31.299999952316284
+      },
+      {
+        "name": "/assets/images/psychology-journal.webp",
+        "bytes": 252310,
+        "duration": 32.199999928474426
+      },
+      {
+        "name": "/assets/images/family-grove.webp",
+        "bytes": 346414,
+        "duration": 32.59999990463257
+      },
+      {
+        "name": "/assets/images/mental-health-haven.webp",
+        "bytes": 311630,
+        "duration": 32.5
+      },
+      {
+        "name": "/assets/favicon.svg",
+        "bytes": 598,
+        "duration": 3.5
+      }
+    ],
+    "navigation": {
+      "name": "http://127.0.0.1:3417/",
+      "entryType": "navigation",
+      "startTime": 0,
+      "duration": 150.29999995231628,
+      "navigationId": 7575,
+      "initiatorType": "navigation",
+      "deliveryType": "",
+      "nextHopProtocol": "",
+      "renderBlockingStatus": "non-blocking",
+      "contentType": "text/html",
+      "contentEncoding": "",
+      "workerStart": 0,
+      "workerRouterEvaluationStart": 0,
+      "workerCacheLookupStart": 0,
+      "workerMatchedSourceType": "",
+      "workerFinalSourceType": "",
+      "redirectStart": 0,
+      "redirectEnd": 0,
+      "fetchStart": 0.5999999046325684,
+      "domainLookupStart": 0.5999999046325684,
+      "domainLookupEnd": 0.5999999046325684,
+      "connectStart": 0.5999999046325684,
+      "secureConnectionStart": 0,
+      "connectEnd": 0.5999999046325684,
+      "requestStart": 0.5999999046325684,
+      "responseStart": 8.5,
+      "firstInterimResponseStart": 0,
+      "finalResponseHeadersStart": 0,
+      "responseEnd": 8.599999904632568,
+      "transferSize": 28542,
+      "encodedBodySize": 28242,
+      "decodedBodySize": 28242,
+      "responseStatus": 200,
+      "serverTiming": [],
+      "unloadEventStart": 0,
+      "unloadEventEnd": 0,
+      "domInteractive": 33.09999990463257,
+      "domContentLoadedEventStart": 69.89999997615814,
+      "domContentLoadedEventEnd": 70.79999995231628,
+      "domComplete": 149.29999995231628,
+      "loadEventStart": 149.29999995231628,
+      "loadEventEnd": 150.29999995231628,
+      "type": "navigate",
+      "redirectCount": 0,
+      "activationStart": 0,
+      "criticalCHRestart": 0,
+      "notRestoredReasons": null,
+      "confidence": {
+        "randomizedTriggerRate": 0.4994798,
+        "value": "low"
+      }
+    },
+    "state": {
+      "frames": 77,
+      "renderer": "webgl",
+      "activeScene": "astrology",
+      "running": true,
+      "paused": false,
+      "reduced": false,
+      "visible": true,
+      "inView": true
+    },
+    "throttling": "No network or CPU throttling; local host, software WebGL under Xvfb. Not field-performance metrics."
+  },
+  "visibility": {
+    "before": {
+      "frames": 89,
+      "renderer": "webgl",
+      "activeScene": "astrology",
+      "running": true,
+      "paused": false,
+      "reduced": false,
+      "visible": true,
+      "inView": true
+    },
+    "hidden": {
+      "hidden": false,
+      "state": {
+        "frames": 94,
+        "renderer": "webgl",
+        "activeScene": "astrology",
+        "running": true,
+        "paused": false,
+        "reduced": false,
+        "visible": true,
+        "inView": true
+      }
+    },
+    "after": {
+      "frames": 94,
+      "renderer": "webgl",
+      "activeScene": "astrology",
+      "running": true,
+      "paused": false,
+      "reduced": false,
+      "visible": true,
+      "inView": true
+    },
+    "mechanism": "Actual second foreground tab in headed Chromium under task-owned Xvfb",
+    "limitation": "Chromium reports document.hidden=false for the background target in this automation setup. Actual frame production is measured independently; the hidden visibilitychange handler is tested separately in browser-report.json."
+  },
+  "checks": [
+    {
+      "name": "actual background tab stops frame production",
+      "passed": true
+    },
+    {
+      "name": "foreground resumes shader",
+      "passed": true
+    },
+    {
+      "name": "axe 1440 en: no WCAG A/AA violations",
+      "passed": true
+    },
+    {
+      "name": "axe 1440 bg: no WCAG A/AA violations",
+      "passed": true
+    },
+    {
+      "name": "axe 390 en: no WCAG A/AA violations",
+      "passed": true
+    },
+    {
+      "name": "axe 390 bg: no WCAG A/AA violations",
+      "passed": true
+    }
+  ]
+}

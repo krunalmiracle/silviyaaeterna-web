@@ -1,0 +1,544 @@
+{
+  "scope": "Independent local browser probes; no deployment",
+  "errors": [],
+  "motion_before": {
+    "state": {
+      "frames": 116,
+      "renderer": "webgl",
+      "activeScene": "astrology",
+      "running": true,
+      "paused": false,
+      "reduced": false,
+      "visible": true,
+      "inView": true
+    },
+    "label": "Pause motion",
+    "pressed": "false",
+    "root": "js motion-on shader-ready",
+    "lang": "en",
+    "triggers": 5,
+    "events": null,
+    "marker": null
+  },
+  "motion_after": {
+    "state": {
+      "frames": 131,
+      "renderer": "webgl",
+      "activeScene": "astrology",
+      "running": true,
+      "paused": false,
+      "reduced": false,
+      "visible": true,
+      "inView": true
+    },
+    "label": "Pause motion",
+    "pressed": "false",
+    "root": "js motion-on shader-ready",
+    "lang": "en",
+    "triggers": 5,
+    "events": null,
+    "marker": null
+  },
+  "lifecycle_before": {
+    "state": {
+      "frames": 131,
+      "renderer": "webgl",
+      "activeScene": "astrology",
+      "running": true,
+      "paused": false,
+      "reduced": false,
+      "visible": true,
+      "inView": true
+    },
+    "label": "Pause motion",
+    "pressed": "false",
+    "root": "js motion-on shader-ready",
+    "lang": "en",
+    "triggers": 5,
+    "events": [],
+    "marker": "156566c6-cf83-42c6-ad7f-2f2d1155a612"
+  },
+  "lifecycle_return": {
+    "state": {
+      "frames": 131,
+      "renderer": "static",
+      "activeScene": "astrology",
+      "running": false,
+      "paused": false,
+      "reduced": false,
+      "visible": true,
+      "inView": true
+    },
+    "label": "Pause motion",
+    "pressed": "false",
+    "root": "js motion-on",
+    "lang": "en",
+    "triggers": 0,
+    "events": [
+      {
+        "type": "pagehide",
+        "persisted": true,
+        "time": 4694
+      },
+      {
+        "type": "pageshow",
+        "persisted": true,
+        "time": 5128.899999976158
+      }
+    ],
+    "marker": "156566c6-cf83-42c6-ad7f-2f2d1155a612"
+  },
+  "lifecycle_pause_click": {
+    "state": {
+      "frames": 131,
+      "renderer": "static",
+      "activeScene": "astrology",
+      "running": false,
+      "paused": true,
+      "reduced": false,
+      "visible": true,
+      "inView": true
+    },
+    "label": "Pause motion",
+    "pressed": "false",
+    "root": "js motion-on",
+    "lang": "en",
+    "triggers": 0,
+    "events": [
+      {
+        "type": "pagehide",
+        "persisted": true,
+        "time": 4694
+      },
+      {
+        "type": "pageshow",
+        "persisted": true,
+        "time": 5128.899999976158
+      }
+    ],
+    "marker": "156566c6-cf83-42c6-ad7f-2f2d1155a612"
+  },
+  "lifecycle_bg_click": {
+    "state": {
+      "frames": 131,
+      "renderer": "static",
+      "activeScene": "astrology",
+      "running": false,
+      "paused": true,
+      "reduced": false,
+      "visible": true,
+      "inView": true
+    },
+    "label": "Pause motion",
+    "pressed": "false",
+    "root": "js motion-on",
+    "lang": "bg",
+    "triggers": 0,
+    "events": [
+      {
+        "type": "pagehide",
+        "persisted": true,
+        "time": 4694
+      },
+      {
+        "type": "pageshow",
+        "persisted": true,
+        "time": 5128.899999976158
+      }
+    ],
+    "marker": "156566c6-cf83-42c6-ad7f-2f2d1155a612"
+  },
+  "lifecycle_resume_click": {
+    "state": {
+      "frames": 131,
+      "renderer": "static",
+      "activeScene": "astrology",
+      "running": false,
+      "paused": false,
+      "reduced": false,
+      "visible": true,
+      "inView": true
+    },
+    "label": "Pause motion",
+    "pressed": "false",
+    "root": "js motion-on",
+    "lang": "bg",
+    "triggers": 0,
+    "events": [
+      {
+        "type": "pagehide",
+        "persisted": true,
+        "time": 4694
+      },
+      {
+        "type": "pageshow",
+        "persisted": true,
+        "time": 5128.899999976158
+      }
+    ],
+    "marker": "156566c6-cf83-42c6-ad7f-2f2d1155a612"
+  },
+  "lifecycle_reduce": {
+    "state": {
+      "frames": 131,
+      "renderer": "static",
+      "activeScene": "astrology",
+      "running": false,
+      "paused": false,
+      "reduced": true,
+      "visible": true,
+      "inView": true
+    },
+    "label": "Pause motion",
+    "pressed": "false",
+    "root": "js motion-on",
+    "lang": "bg",
+    "triggers": 0,
+    "events": [
+      {
+        "type": "pagehide",
+        "persisted": true,
+        "time": 4694
+      },
+      {
+        "type": "pageshow",
+        "persisted": true,
+        "time": 5128.899999976158
+      }
+    ],
+    "marker": "156566c6-cf83-42c6-ad7f-2f2d1155a612"
+  },
+  "desktop_accessible_images": [
+    {
+      "name": "Жасмин обрамчва стара каменна арка до отразяващ басейн във въображаема лунна градина.",
+      "ignored": false
+    },
+    {
+      "name": "Един цвят на магнолия с цвят на слонова кост плува върху тъмнозелена вода, а около него се разстилат нежни светли кръгове.",
+      "ignored": false
+    }
+  ],
+  "desktop_source_images": [
+    {
+      "src": "assets/images/hero-garden.webp",
+      "alt": "Жасмин обрамчва стара каменна арка до отразяващ басейн във въображаема лунна градина.",
+      "display": "block",
+      "hiddenAncestor": false
+    },
+    {
+      "src": "assets/images/astrology-moon.webp",
+      "alt": "",
+      "display": "block",
+      "hiddenAncestor": true
+    },
+    {
+      "src": "assets/images/numerology-pattern.webp",
+      "alt": "",
+      "display": "block",
+      "hiddenAncestor": true
+    },
+    {
+      "src": "assets/images/skincare-ritual.webp",
+      "alt": "",
+      "display": "block",
+      "hiddenAncestor": true
+    },
+    {
+      "src": "assets/images/psychology-journal.webp",
+      "alt": "",
+      "display": "block",
+      "hiddenAncestor": true
+    },
+    {
+      "src": "assets/images/family-grove.webp",
+      "alt": "",
+      "display": "block",
+      "hiddenAncestor": true
+    },
+    {
+      "src": "assets/images/mental-health-haven.webp",
+      "alt": "",
+      "display": "block",
+      "hiddenAncestor": true
+    },
+    {
+      "src": "assets/images/astrology-moon.webp",
+      "alt": "Полумесец над планинско езеро, обрамчено с жасмин във въображаема нощна градина.",
+      "display": "none",
+      "hiddenAncestor": false
+    },
+    {
+      "src": "assets/images/numerology-pattern.webp",
+      "alt": "Гладки светли камъни и нежни папратови листа образуват спокоен повтарящ се мотив край тъмна вода.",
+      "display": "none",
+      "hiddenAncestor": false
+    },
+    {
+      "src": "assets/images/skincare-ritual.webp",
+      "alt": "Бурканче крем без марка и прозрачно стъклено шишенце до листенца магнолия върху огрян от луната каменен перваз.",
+      "display": "none",
+      "hiddenAncestor": false
+    },
+    {
+      "src": "assets/images/psychology-journal.webp",
+      "alt": "Отворен дневник с празни страници и клонче жасмин до меко осветен прозорец към градина.",
+      "display": "none",
+      "hiddenAncestor": false
+    },
+    {
+      "src": "assets/images/family-grove.webp",
+      "alt": "Две зрели дървета със сребриста кора закрилят малка фиданка в меко сияеща горичка.",
+      "display": "none",
+      "hiddenAncestor": false
+    },
+    {
+      "src": "assets/images/mental-health-haven.webp",
+      "alt": "Празно кресло с ленена тапицерия е обърнато към спокойна градина през отворена каменна арка, тихо място за пауза.",
+      "display": "none",
+      "hiddenAncestor": false
+    },
+    {
+      "src": "assets/images/closing-bloom.webp",
+      "alt": "Един цвят на магнолия с цвят на слонова кост плува върху тъмнозелена вода, а около него се разстилат нежни светли кръгове.",
+      "display": "block",
+      "hiddenAncestor": false
+    }
+  ],
+  "mobile_accessible_images": [
+    "Жасмин обрамчва стара каменна арка до отразяващ басейн във въображаема лунна градина.",
+    "Един цвят на магнолия с цвят на слонова кост плува върху тъмнозелена вода, а около него се разстилат нежни светли кръгове.",
+    "Полумесец над планинско езеро, обрамчено с жасмин във въображаема нощна градина.",
+    "Гладки светли камъни и нежни папратови листа образуват спокоен повтарящ се мотив край тъмна вода.",
+    "Бурканче крем без марка и прозрачно стъклено шишенце до листенца магнолия върху огрян от луната каменен перваз.",
+    "Отворен дневник с празни страници и клонче жасмин до меко осветен прозорец към градина.",
+    "Две зрели дървета със сребриста кора закрилят малка фиданка в меко сияеща горичка.",
+    "Празно кресло с ленена тапицерия е обърнато към спокойна градина през отворена каменна арка, тихо място за пауза."
+  ],
+  "narrow_layouts": [
+    {
+      "width": 320,
+      "overflow": 0,
+      "header": [
+        {
+          "name": "brand",
+          "rect": {
+            "x": 16,
+            "y": 22,
+            "width": 146.9375,
+            "height": 44,
+            "top": 22,
+            "right": 162.9375,
+            "bottom": 66,
+            "left": 16
+          }
+        },
+        {
+          "name": "primary-nav",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          }
+        },
+        {
+          "name": "header-tools",
+          "rect": {
+            "x": 172,
+            "y": 22,
+            "width": 132,
+            "height": 44,
+            "top": 22,
+            "right": 304,
+            "bottom": 66,
+            "left": 172
+          }
+        }
+      ]
+    },
+    {
+      "width": 901,
+      "overflow": 0,
+      "header": [
+        {
+          "name": "brand",
+          "rect": {
+            "x": 42.34375,
+            "y": 30.5,
+            "width": 184.671875,
+            "height": 44,
+            "top": 30.5,
+            "right": 227.015625,
+            "bottom": 74.5,
+            "left": 42.34375
+          }
+        },
+        {
+          "name": "primary-nav",
+          "rect": {
+            "x": 291.15625,
+            "y": 30.5,
+            "width": 265.03125,
+            "height": 44,
+            "top": 30.5,
+            "right": 556.1875,
+            "bottom": 74.5,
+            "left": 291.15625
+          }
+        },
+        {
+          "name": "header-tools",
+          "rect": {
+            "x": 580.1875,
+            "y": 30.5,
+            "width": 278.453125,
+            "height": 44,
+            "top": 30.5,
+            "right": 858.640625,
+            "bottom": 74.5,
+            "left": 580.1875
+          }
+        }
+      ]
+    },
+    {
+      "width": 920,
+      "overflow": 0,
+      "header": [
+        {
+          "name": "brand",
+          "rect": {
+            "x": 43.234375,
+            "y": 30.5,
+            "width": 184.671875,
+            "height": 44,
+            "top": 30.5,
+            "right": 227.90625,
+            "bottom": 74.5,
+            "left": 43.234375
+          }
+        },
+        {
+          "name": "primary-nav",
+          "rect": {
+            "x": 309.265625,
+            "y": 30.5,
+            "width": 265.03125,
+            "height": 44,
+            "top": 30.5,
+            "right": 574.296875,
+            "bottom": 74.5,
+            "left": 309.265625
+          }
+        },
+        {
+          "name": "header-tools",
+          "rect": {
+            "x": 598.296875,
+            "y": 30.5,
+            "width": 278.453125,
+            "height": 44,
+            "top": 30.5,
+            "right": 876.75,
+            "bottom": 74.5,
+            "left": 598.296875
+          }
+        }
+      ]
+    },
+    {
+      "width": 1000,
+      "overflow": 0,
+      "header": [
+        {
+          "name": "brand",
+          "rect": {
+            "x": 47,
+            "y": 30.5,
+            "width": 184.671875,
+            "height": 44,
+            "top": 30.5,
+            "right": 231.671875,
+            "bottom": 74.5,
+            "left": 47
+          }
+        },
+        {
+          "name": "primary-nav",
+          "rect": {
+            "x": 385.515625,
+            "y": 30.5,
+            "width": 265.03125,
+            "height": 44,
+            "top": 30.5,
+            "right": 650.546875,
+            "bottom": 74.5,
+            "left": 385.515625
+          }
+        },
+        {
+          "name": "header-tools",
+          "rect": {
+            "x": 674.546875,
+            "y": 30.5,
+            "width": 278.453125,
+            "height": 44,
+            "top": 30.5,
+            "right": 953,
+            "bottom": 74.5,
+            "left": 674.546875
+          }
+        }
+      ]
+    },
+    {
+      "width": 1024,
+      "overflow": 0,
+      "header": [
+        {
+          "name": "brand",
+          "rect": {
+            "x": 48.125,
+            "y": 30.5,
+            "width": 184.671875,
+            "height": 44,
+            "top": 30.5,
+            "right": 232.796875,
+            "bottom": 74.5,
+            "left": 48.125
+          }
+        },
+        {
+          "name": "primary-nav",
+          "rect": {
+            "x": 408.375,
+            "y": 30.5,
+            "width": 265.03125,
+            "height": 44,
+            "top": 30.5,
+            "right": 673.40625,
+            "bottom": 74.5,
+            "left": 408.375
+          }
+        },
+        {
+          "name": "header-tools",
+          "rect": {
+            "x": 697.40625,
+            "y": 30.5,
+            "width": 278.453125,
+            "height": 44,
+            "top": 30.5,
+            "right": 975.859375,
+            "bottom": 74.5,
+            "left": 697.40625
+          }
+        }
+      ]
+    }
+  ]
+}

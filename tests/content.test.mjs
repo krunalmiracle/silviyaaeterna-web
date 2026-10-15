@@ -52,7 +52,7 @@ test("every translatable node carries both languages", () => {
 
 test("every image has alt text", () => {
   const imgs = [...html.matchAll(/<img\b[^>]*>/g)];
-  assert.equal(imgs.length, 4, "four original editorial still lifes are required");
+  assert.equal(imgs.length, 8, "eight original sanctuary scenes are required");
   let decorative = 0;
   for (const [tag] of imgs) {
     assert.match(tag, /\salt="/, `image missing alt: ${tag}`);
@@ -120,8 +120,8 @@ test("language toggle is exposed accessibly", () => {
 });
 
 test("motion respects reduced motion and survives failed JavaScript", () => {
-  assert.match(css, /@media \(prefers-reduced-motion: no-preference\)/);
-  assert.match(css, /@media \(prefers-reduced-motion: reduce\)/);
+  assert.match(css, /@media\s*\(prefers-reduced-motion:\s*no-preference\)/);
+  assert.match(css, /@media\s*\(prefers-reduced-motion:\s*reduce\)/);
   assert.ok(!css.includes("opacity: 0"), "content must never depend on a reveal");
   assert.ok(!css.includes("visibility: hidden"), "content must remain readable without JS");
   assert.ok(!js.includes('addEventListener("scroll"'), "no window scroll listeners");
