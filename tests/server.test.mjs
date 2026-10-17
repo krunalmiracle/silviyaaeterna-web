@@ -86,7 +86,7 @@ test("styles, script and images are served with correct types", async () => {
     ["/assets/styles.css", /text\/css/],
     ["/assets/site.js", /javascript/],
     ["/assets/favicon.svg", /image\/svg\+xml/],
-    ["/assets/images/hero-garden.webp", /image\/webp/],
+    ["/assets/images/hero-daylight.webp", /image\/webp/],
     ["/assets/social-og.png", /image\/png/],
     ["/assets/fonts/CormorantGaramond-Variable.woff2", /font\/woff2/],
     ["/assets/fonts/Geist-Variable-subset.woff2", /font\/woff2/],

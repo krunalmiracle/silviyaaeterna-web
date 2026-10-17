@@ -3,63 +3,27 @@
 <!-- impeccable:product-schema 1 -->
 
 ## Platform
-
 web
 
 ## Users
-
-Primary: adults in Bulgaria and the Bulgarian diaspora looking for practical, bilingual notes on skincare, everyday wellbeing, family conversations and mental health. Visitors can also reach the current Oriflame Bulgaria catalogue and official registration, clearly identified as direct Oriflame links rather than Silviya's unconfirmed personal links.
+Adults and families who want practical bilingual notes on skincare, everyday wellbeing, family conversations and mental health.
 
 ## Product Purpose
-
-Silviya Aeterna is a bilingual (Bulgarian and English) personal content project covering four everyday topics: skincare, wellbeing, family and children, and mental health. It uses practical questions and honest boundaries rather than symbolic traditions or unsupported promises. The site also links to Oriflame Bulgaria's official catalogue and registration, without implying these links belong to Silviya. A future YouTube channel remains a clearly labelled coming-soon item.
-
-## Positioning
-
-A calm personal project for everyday care, with clear educational boundaries and no invented qualifications, results or endorsements. Bulgarian and English carry equal content. Oriflame actions lead to Oriflame Bulgaria directly; a personal referral link has not been supplied.
+Silviya Aeterna is an English/Bulgarian personal project covering four everyday themes. It links to the current official Oriflame Bulgaria catalogue and registration while stating that these are not confirmed personal referral links. A future YouTube channel is marked as coming soon. No invented qualifications, outcomes, testimonials or affiliate association.
 
 ## Operating Context
+- Production repo: `krunalmiracle/silviyaaeterna-web`, Dokploy `main`, https://silviyaaeterna.krusil.com/.
+- Minimal Bun static server on port 3000 behind Traefik; no database, auth, form, tracking, cookies or third-party runtime dependencies.
+- EN/BG content parity, working language preference and navigation.
 
-- Live production repo: `krunalmiracle/silviyaaeterna-web`, deployed by Dokploy from `main` to `silviyaaeterna.krusil.com`.
-- Runtime: a single Bun process serving static files on port 3000 behind Traefik (Docker). No database, no auth, no third-party runtime services.
-- Language: Bulgarian and English are equal; visitors switch languages on the page.
+## Design Commitments
+- The owner's latest direction is light by default with cool silver as the brand accent, not dark or gold.
+- Six original, separate daylight images illustrate the hero, skincare, wellbeing, family, mental health and closing section. They are illustrative scenes rather than photos of Silviya, specific Oriflame products or a medical service.
+- No astrology, numerology, moonlit imagery, mystical claims or luminous shader on the published page.
+- Accessible, high-contrast charcoal copy on airy off-white and pearl-grey surfaces, brushed-silver accents, local Cormorant Garamond and Geist fonts, restrained animation with pause and reduced-motion support.
+- Description, alt text and interactive states remain equivalent in English and Bulgarian. The latest artwork, bilingual alternatives, dimensions, hashes, provider requests and sidecar provenance are in `tools/ASSET-MANIFEST.json` and `tools/ASSET-PROVENANCE.md`; PNG originals are archived outside the static server.
+- Safety copy is educational and never a substitute for professional medical or mental-health care. Catalogue and registration link to https://bg.oriflame.com/ and https://bg.oriflame.com/join-us/self-registration, without attributing a referral to Silviya.
 
-## Capabilities and Constraints
-
-- Static, single-page site: HTML, CSS, local language/navigation and scene JavaScript, self-hosted GSAP/ScrollTrigger, eight original GPT-produced garden scenes as responsive WebPs, a raster social preview and a small SVG favicon. One bounded native WebGL hero effect has a static fallback. No runtime third-party requests.
-- Accessible language toggle (keyboard operable, `aria-pressed`, `lang` attribute updated, preference remembered locally).
-- Honest states only: no fake links, follower counts, videos, testimonials, qualifications, pricing, income claims, product claims, newsletter success or medical outcomes.
-- No YouTube, social or Oriflame destinations exist yet; their sections are explicit coming-soon states with no href.
-- Health and psychology material must be phrased as educational and reflective, never diagnosis, treatment or professional care; a concise disclaimer and a calm professional-help boundary are required.
-- Security: the exposed AI web editor surface (write/generate/rollback endpoints, hard-coded S3 credentials, remote model calls) must be removed entirely; the server becomes a minimal static file server with security headers, an allow-list of servable paths, and no secrets or outbound network calls.
-- Dev-only documents (PRODUCT.md, DESIGN.md, surface briefs, `.impeccable/`) must never be served by the web server.
-- Must stay deployable by the existing Dockerfile/Bun command.
-
-## Brand Commitments
-
-- Brand and future YouTube channel name: **Silviya Aeterna** (fact; preserve exactly).
-- Broad subject areas are fixed: astrology, numerology, skincare, psychology-informed wellbeing, family and children, adult self-improvement, mental health.
-- Bilingual EN/BG parity at launch.
-- The user authorized complete replacement and delegated design choice. The pinned direction is an enchanted botanical sanctuary, seed aeb20778: moonlit garden, deep petrol, pearl display and champagne controls. A reflection-led hero leads through six illustrated scenes. Self-hosted Cyrillic-capable Cormorant Garamond display and Geist supporting text; no repeated cards or static green polish pass. No em dashes in visible copy.
-- User explicitly required actual GPT-produced original artwork and rejected stock, Picsum and local 3D stand-ins. Eight read-only producer PNGs are integrated via hash-verified WebP derivatives. Prompts, requested model and exact-engine uncertainty are documented honestly. Provenance and helpers stay dev-only under tools/.
-
-## Evidence on Hand
-
-- Both the navy/coral SVG almanac and pale jade Daylight Glasshouse are superseded anti-references. The already-hardened static server, strict CSP and port 3000 deployment contract are preserved unchanged.
-- Brand name and six topics are settled. Eight actual GPT-produced originals are integrated and hash-verified against tools/ASSET-MANIFEST.json as sixteen responsive derivatives. The 1200x630 social PNG is a documented hero crop with local typography. Original source archive remains read-only at /opt/data/home/silviya-magic-assets. Three real comps, measured region/font records, browser evidence and motion captures are retained under .impeccable/.
-- Absences future work must not fabricate: no YouTube channel URL, no social accounts, no Oriflame links, product details or pricing, no audience metrics, no testimonials, no credentials, no published videos.
-
-## Product Principles
-
-1. Say only what is true; where something does not exist yet, say so plainly.
-2. Reflection, not prescription: everything is educational material for curious adults and families.
-3. Two languages, one voice: Bulgarian and English carry identical content and standing.
-4. Calm and unhurried: no urgency tricks, no hype, no dark patterns.
-5. Own assets only: no stock imagery, no hotlinks, no third-party runtime dependencies.
-
-## Accessibility & Inclusion
-
-- Keyboard-complete navigation with visible focus; touch targets at least 44px.
-- WCAG 2.1 AA contrast on the actual dark sanctuary palette; semantic landmarks and heading order; all eight descriptive bilingual image alternatives remain in the accessibility tree at desktop and mobile.
-- Initial and changing `prefers-reduced-motion`, persistent manual pause, offscreen/hidden suspension, BFCache restoration and no-WebGL/context-loss fallback are required. Mobile uses static original art. Content remains visible without JavaScript.
-- Language switch exposed through `lang` and `aria-pressed`; no horizontal scrolling at 320, 390, 768, 1024 or 1440px. Theme anchors enhance native disclosures without hiding any of the six topic descriptions.
+## Accessibility and Release
+- Preserve ordered headings, skip link, keyboard controls, 44px targets, responsive layout, useful content without JavaScript, reduced motion and no unintended third-party requests.
+- Run `npm test` and the responsive browser review before release; inspect the actual live commit, image URLs, CSS and social preview after Dokploy deployment.

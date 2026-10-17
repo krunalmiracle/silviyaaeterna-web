@@ -89,8 +89,8 @@ test('four static descriptions and native prompt disclosures exist without JavaS
 });
 test('original images and responsive hero are real WebP assets', async () => {
   const manifest = JSON.parse(await readFile(new URL('../tools/ASSET-MANIFEST.json', import.meta.url), 'utf8'));
-  assert.equal(manifest.asset_count, 8);
-  for (const asset of manifest.assets.filter(a => !['astrology-moon', 'numerology-pattern'].includes(a.id))) {
+  assert.equal(manifest.asset_count, 6);
+  for (const asset of manifest.assets) {
     const bytes = await readFile(new URL(`../assets/images/${asset.filename}`, import.meta.url));
     assert.equal(createHash('sha256').update(bytes).digest('hex'), asset.sha256);
     const tag = [...html.matchAll(/<img\b[^>]*>/g)].map(m => m[0]).find(t => t.includes(`assets/images/${asset.filename}`));
@@ -98,7 +98,12 @@ test('original images and responsive hero are real WebP assets', async () => {
     assert.ok(tag.includes(`width="${asset.width}" height="${asset.height}"`), 'intrinsic dimensions must match the original');
     assert.ok(tag.includes(`alt="${asset.alt.en}"`));
     assert.ok(tag.includes(`data-alt-bg="${asset.alt.bg}"`));
-    assert.ok(bytes.includes(Buffer.from('XMP ')), 'original WebP provenance must be preserved');
+    assert.ok(asset.source_sha256 && asset.prompt && asset.source_path && asset.provider,
+      'generated artwork must retain a sidecar provenance record');
+    for (const derivative of asset.derivatives) {
+      const optimized = await readFile(new URL(`../assets/images/${derivative.filename}`, import.meta.url));
+      assert.equal(createHash('sha256').update(optimized).digest('hex'), derivative.sha256);
+    }
   }
   for (const name of manifest.assets.flatMap(a => [a.id, a.id + '-small'])) {
     const bytes = await readFile(new URL(`../assets/images/${name}.webp`, import.meta.url));

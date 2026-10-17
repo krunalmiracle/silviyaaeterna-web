@@ -16,7 +16,7 @@ URL = 'http://127.0.0.1:43118'
 LAYOUT_ONLY = '--layout-only' in sys.argv
 
 def chrome_path():
-    for base in [Path.home() / '.linkedin-mcp/patchright-browsers', Path.home() / '.cache/ms-playwright']:
+    for base in [Path('/opt/data/home/.linkedin-mcp/patchright-browsers'), Path.home() / '.linkedin-mcp/patchright-browsers', Path.home() / '.cache/ms-playwright']:
         for found in sorted(base.glob('chromium*/chrome-linux*/chrome'), reverse=True):
             return str(found)
     raise RuntimeError('No local Chromium binary found')
@@ -24,9 +24,7 @@ def chrome_path():
 def settle(page):
     page.evaluate('document.fonts.ready')
     if not LAYOUT_ONLY:
-        for img in page.locator('main img').all():
-            img.scroll_into_view_if_needed()
-            img.evaluate('(i) => i.decode()')
+        page.evaluate('''async () => { await Promise.all([...document.querySelectorAll('main img')].map(async img => { img.loading = 'eager'; await img.decode(); })); }''')
     page.evaluate('window.scrollTo(0, 0)')
     page.wait_for_timeout(180)
 
@@ -86,8 +84,8 @@ def main():
                     check(result['overflowX']==0 and not result['clipped'],f'{name}-{lang}: no overflow or clipped text')
                     check(not result['smallTargets'],f'{name}-{lang}: 44px touch targets')
                     if not LAYOUT_ONLY:
-                        check(all(i['decoded'] for i in result['images']),f'{name}-{lang}: four decoded still lifes')
-                    check(result['allTopics']==6 and result['soonAreControls']==0 and result['cta']=='#atlas',f'{name}-{lang}: semantic content')
+                        check(all(i['decoded'] for i in result['images']),f'{name}-{lang}: six decoded daylight images')
+                    check(result['allTopics']==4 and result['soonAreControls']==0 and result['cta']=='#atlas',f'{name}-{lang}: semantic content')
                     check(page.evaluate("document.fonts.check('500 48px Onest', 'Любопитство')"),f'{name}-{lang}: display font loaded')
                     if name in ['desktop','mobile'] and not LAYOUT_ONLY:
                         stem=name+('-bg' if lang=='bg' else '')
@@ -95,14 +93,25 @@ def main():
                             target=OUT/(stem+suffix+'.png'); page.screenshot(path=str(target),full_page=full)
                             report['screenshots'].append(str(target.relative_to(ROOT)))
                     # Theme anchors must open useful prompts, move focus and respect sticky headroom.
-                    for theme in ['astrology','numerology','skincare','wellbeing','family','mental-health']:
+                    for theme in ['skincare','wellbeing','family','mental-health']:
                         page.locator('[data-theme="'+theme+'"]').click()
                         check(page.locator('#'+theme+' details').get_attribute('open') is not None and page.locator('[data-theme="'+theme+'"]').get_attribute('aria-current')=='true',f'{name}-{lang}: select {theme}')
                         check(page.evaluate('(id)=>document.activeElement.id===id',theme),f'{name}-{lang}: focus {theme}')
                         top=page.locator('#'+theme).bounding_box()['y']
                         header=page.locator('.site-header').bounding_box()['height']
                         check(top>=header-1,f'{name}-{lang}: anchor headroom {theme}')
-                        if name=='mobile' and theme=='astrology' and not LAYOUT_ONLY:
+                        if name=='desktop' and not LAYOUT_ONLY:
+                            page.wait_for_timeout(80)
+                            expected = 'wellbeing' if theme == 'wellbeing' else theme
+                            check(expected+'-daylight' in (page.locator('.stage-images img.is-active').get_attribute('src') or ''),
+                                  f'{name}-{lang}: {theme} stage image matches theme')
+                        if name=='mobile' and not LAYOUT_ONLY:
+                            check(page.locator('#'+theme+' .topic-art img').evaluate('(i)=>i.complete && i.naturalWidth>0 && i.getBoundingClientRect().width>300'),
+                                  f'{name}-{lang}: {theme} inline image visible')
+                        if lang=='en' and theme=='family' and name in ['desktop','mobile'] and not LAYOUT_ONLY:
+                            target=OUT/f'{name}-family-scrolled.png'; page.screenshot(path=str(target))
+                            report['screenshots'].append(str(target.relative_to(ROOT)))
+                        if name=='mobile' and theme=='skincare' and not LAYOUT_ONLY:
                             target=OUT/f'mobile-reflection-{lang}.png'; page.screenshot(path=str(target))
                             report['screenshots'].append(str(target.relative_to(ROOT)))
                     if width<=800:
@@ -128,8 +137,8 @@ def main():
             check(page.locator('.hero-art img').evaluate('(e)=>getComputedStyle(e).animationName==="none"'),'reduced motion: no image animation')
             page.emulate_media(reduced_motion='no-preference'); page.reload(wait_until='load'); page.wait_for_timeout(900)
             check(page.locator('.hero-art img').evaluate('(e)=>getComputedStyle(e).opacity==="1"'),'normal motion: content remains visible')
-            page.goto(URL+'/#numerology',wait_until='load')
-            check(page.locator('#numerology details').get_attribute('open') is not None,'direct fragment: correct prompt opens')
+            page.goto(URL+'/#mental-health',wait_until='load')
+            check(page.locator('#mental-health details').get_attribute('open') is not None,'direct fragment: correct prompt opens')
             blocked=browser.new_page()
             blocked.add_init_script("Object.defineProperty(window, 'localStorage', {get(){throw new Error('Storage denied')}})")
             blocked.goto(URL,wait_until='load'); blocked.click('#lang-bg')
@@ -142,7 +151,7 @@ def main():
                 nojs=second.new_context(java_script_enabled=False,viewport={'width':390,'height':844})
             try:
                 np=nojs.new_page(); np.goto(URL,wait_until='load')
-                check(np.locator('.topic').count()==6 and all(np.locator('#'+i+' h4').is_visible() for i in ['astrology','numerology','skincare','wellbeing','family','mental-health']),'no JS: all six topics visible')
+                check(np.locator('.topic').count()==4 and all(np.locator('#'+i+' h3').is_visible() for i in ['skincare','wellbeing','family','mental-health']),'no JS: all four topics visible')
                 np.locator('#wellbeing summary').click()
                 check(np.locator('#wellbeing details').get_attribute('open') is not None,'no JS: native reflection opens')
                 np.locator('.nav-more summary').click()
@@ -156,7 +165,7 @@ def main():
             vals=[v/12.92 if v<=.04045 else ((v+.055)/1.055)**2.4 for v in vals]
             return sum(a*b for a,b in zip(vals,[.2126,.7152,.0722]))
         report['contrast']={}
-        for fg,bg in [('#183f35','#e6ede3'),('#466255','#e6ede3'),('#466255','#f2f6ef'),('#f2f6ef','#183f35'),('#f2f6ef','#285344')]:
+        for fg,bg in [('#263840','#f7f9fa'),('#4d626b','#f7f9fa'),('#4d626b','#ebeff1'),('#263840','#bac8ce'),('#425e69','#f7f9fa')]:
             a,b=sorted([lum(fg),lum(bg)]); ratio=(b+.05)/(a+.05)
             report['contrast'][fg+' on '+bg]=round(ratio,2); check(ratio>=4.5,'contrast: '+fg+' on '+bg)
         for key in ['consoleErrors','failedRequests','externalRequests','httpErrors']:

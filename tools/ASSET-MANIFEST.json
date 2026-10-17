@@ -1,370 +1,214 @@
 {
-  "asset_count": 8,
+  "asset_count": 6,
+  "design": "daylight, light-first, silver accents; original model-generated illustrative scenes",
   "assets": [
     {
-      "provider": "openai-codex",
-      "model": "gpt-image-2-high",
-      "image_source": "final",
-      "output": "/opt/data/home/silviya-magic-assets/hero-garden.png",
-      "original_cache_file": "/opt/data/cache/images/openai_codex_gpt-image-2-high_20261014_094523_3bb15022.png",
+      "id": "hero-daylight",
+      "filename": "hero-daylight.webp",
       "width": 1672,
       "height": 941,
-      "sha256": "ee3037f6761a377df6d3ac5a30800124a411236c5c6d0363f7bbfeacdaf63a65",
-      "prompt": "Create an original cinematic photographic artwork for the Silviya Aeterna website: an enchanted botanical sanctuary at blue hour, exquisite and emotionally inviting, not a game environment or a cheap fantasy illustration. A weathered pale limestone arch is partly concealed by lush dark teal leaves and delicate white jasmine, with an impossibly beautiful pearl-lit moon garden visible through it. A still reflecting pool gives the scene depth; a few tiny golden fireflies and fine silver mist make the air feel alive. Real tactile leaf veins, water, stone, soft natural light and restrained film grain. Deep petrol and midnight green, luminous ivory blossoms, a subtle warm champagne accent. Rich, layered, beautiful rather than ominous. Wide atmospheric composition: the arch is slightly right of centre; foreground foliage frames the lower corners; the left-centre and upper third have calm dark negative space suitable for live website typography. Keep the central garden and arch meaningful in a tighter mobile crop. This is a fictional dream garden, not a claimed real place. No people, statues, symbols, astrology charts, planets, glowing glass spheres, product bottles, lettering, logo, watermark, UI, border or frame. Render a finished high-resolution original image, not a progressive preview. Use the image generation tool.",
-      "recovery_note": "Actual GPT generation returned a successful final PNG. Initial local validator wrongly required both axes >=1024 and rejected this 1672x941 widescreen image before persisting the response. Recovered the sole matching provider cache file; this metadata documents recovery, not a fabricated raw API response.",
-      "id": "hero-garden",
-      "section": "Hero",
-      "alt_en": "Jasmine frames an ancient stone arch beside a reflecting pool in an imagined moonlit garden.",
-      "alt_bg": "Жасмин обрамчва стара каменна арка до отразяващ басейн във въображаема лунна градина.",
-      "filename": "hero-garden.webp",
-      "originalSha256": "edda6fc3b6dabbe9cf89c3f279978af64cefbee4a2fbff0bffe2ba21374abb75",
+      "sha256": "b8021db2691d64206a49ecf2d3a0b64d2d6a786f0d07e8b65cda1165db05c2ef",
       "alt": {
-        "en": "Jasmine frames an ancient stone arch beside a reflecting pool in an imagined moonlit garden.",
-        "bg": "Жасмин обрамчва стара каменна арка до отразяващ басейн във въображаема лунна градина."
+        "en": "A light-filled conservatory with silver-grey framing, greenery and open doors toward a sunlit terrace.",
+        "bg": "Светла оранжерия със сребристосиви рамки, зеленина и отворени врати към слънчева тераса."
       },
+      "source_sha256": "dfd6fe2da67cae68d426a86ad6353e5129dfda799940ff327823faa104c2e919",
+      "source_path": "/opt/data/home/silviyaaeterna-daylight-source/hero-daylight.png",
+      "provider": "openai-codex",
+      "requested_model": "gpt-image-2-medium",
+      "reported_size": "1672x941",
+      "reported_quality": "low",
+      "request_id": "da5d5714-e787-4741-8598-82ab48dfe9c2",
+      "prompt": "Create one original finished high-resolution horizontal editorial photograph for a bilingual personal website called Silviya Aeterna. The visual world is bright natural daylight, matte porcelain, cool silver and soft dove-grey, clean whites, subtle pale foliage, tactile real-world detail, calm and human. Not a night garden, no moon, gold, astrology, numerology, mystical symbols, text, logos, watermark, interface, fake branded packaging or staged medical claim. Photorealistic but art-directed; leave clear quiet space suitable for responsive cropping. This is illustrative imagery, not a photograph of Silviya or an endorsement. A light-filled botanical conservatory with a brushed-silver frame, pale stone floor and soft eucalyptus foliage. A simple open doorway leads toward diffuse morning light; elegant reflections on brushed metal and glass. Wide architectural composition with a calm light area in the center-left for dark website text. No people, products or fantasy setting.",
       "derivatives": [
         {
-          "filename": "hero-garden.webp",
+          "filename": "hero-daylight.webp",
           "width": 1672,
           "height": 941,
-          "bytes": 283718,
-          "sha256": "ee3037f6761a377df6d3ac5a30800124a411236c5c6d0363f7bbfeacdaf63a65"
+          "bytes": 296422,
+          "sha256": "b8021db2691d64206a49ecf2d3a0b64d2d6a786f0d07e8b65cda1165db05c2ef"
         },
         {
-          "filename": "hero-garden-small.webp",
+          "filename": "hero-daylight-small.webp",
           "width": 780,
           "height": 439,
-          "bytes": 94574,
-          "sha256": "f9fb9f5f85d587b4749642bd68606be3a84a0ecddabb8272cdc4c088361f5a7a"
+          "bytes": 94356,
+          "sha256": "62d0f05a1ef04da29c73d4f72012d831a278e124b817b7adcc4352027443eb68"
         }
       ]
     },
     {
-      "success": true,
-      "image": "/opt/data/cache/images/openai_codex_gpt-image-2-high_20261014_100859_aef70cd8.png",
-      "model": "gpt-image-2-high",
-      "prompt": "Create one finished high-resolution original cinematic photographic artwork for Silviya Aeterna. The attached image is a reference for the cohesive moonlit botanical world, photographic realism, deep petrol/teal, pearl-white light and restrained warm champagne accents; do NOT repeat its composition or objects. This is fictional illustrative artwork, not documentary evidence. Use a wide horizontal canvas. Rich tactile detail, exquisite controlled light, a magical mature atmosphere, no cheap fantasy CGI. A wide view from a jasmine-lined stone terrace across an alpine lake at blue hour. A beautiful slender crescent moon appears in a believable indigo sky with only a few subtle stars; its silver reflection stretches across dark teal water. Layered mountain silhouettes, a fine low mist, one branch of white jasmine entering the close foreground. Mystical but photographic and mature, not a poster of planets or astrology charts. The sky and reflected light lead; architecture is subordinate. Leave a calm dark area at the lower left for live editorial captioning. No astrological glyphs, diagrams, or text. No UI, watermark, lettering or border. Use the image generation tool.",
-      "provider": "openai-codex",
-      "modality": "image",
-      "quality": "high",
-      "aspect_ratio": "landscape",
-      "image_source": "final",
-      "requested_size": "1536x1024",
-      "pixel_size": "1672x941",
-      "references": [
-        "/opt/data/home/silviya-magic-assets/hero-garden.png"
-      ],
-      "output": "/opt/data/home/silviya-magic-assets/astrology-moon.png",
+      "id": "skincare-daylight",
+      "filename": "skincare-daylight.webp",
       "width": 1672,
       "height": 941,
-      "sha256": "32fa068a073bee5e05a52493f560f677f61fcf9ed7da78e5b13dab0de3e43302",
-      "bytes": 2494720,
-      "id": "astrology-moon",
-      "section": "Astrology",
-      "alt_en": "A crescent moon above a mountain lake framed by jasmine in an imagined night garden.",
-      "alt_bg": "Полумесец над планинско езеро, обрамчено с жасмин във въображаема нощна градина.",
-      "filename": "astrology-moon.webp",
-      "originalSha256": "d2f855b23ebd57a0f394867d2e15d9f4f2036a00462af30a55902bb79dba98c8",
+      "sha256": "8dfce75dd950bc684d5f48267b28e355bd618927c049d4f3080888cb35997e24",
       "alt": {
-        "en": "A crescent moon above a mountain lake framed by jasmine in an imagined night garden.",
-        "bg": "Полумесец над планинско езеро, обрамчено с жасмин във въображаема нощна градина."
+        "en": "Unbranded skincare containers and a glass of water rest on a pale stone shelf in daylight.",
+        "bg": "Козметични опаковки без марка и чаша вода върху светъл каменен плот на дневна светлина."
       },
+      "source_sha256": "d2e7899b9df232df3c2ec77ec7b9da929bbf9cbd72c7d6e05b697bfaa6528925",
+      "source_path": "/opt/data/home/silviyaaeterna-daylight-source/skincare-daylight.png",
+      "provider": "openai-codex",
+      "requested_model": "gpt-image-2-medium",
+      "reported_size": "1672x941",
+      "reported_quality": "medium",
+      "request_id": "419102c0-1a30-454c-a464-16f8f58c8106",
+      "prompt": "Create one original finished high-resolution horizontal editorial photograph for a bilingual personal website called Silviya Aeterna. The visual world is bright natural daylight, matte porcelain, cool silver and soft dove-grey, clean whites, subtle pale foliage, tactile real-world detail, calm and human. Not a night garden, no moon, gold, astrology, numerology, mystical symbols, text, logos, watermark, interface, fake branded packaging or staged medical claim. Photorealistic but art-directed; leave clear quiet space suitable for responsive cropping. This is illustrative imagery, not a photograph of Silviya or an endorsement. Close editorial still life of an unbranded moisturiser jar, a neutral cleanser bottle and a plain sunscreen tube on a pale stone shelf beside a window. Gentle shadows, a translucent glass of water and one eucalyptus sprig. Blank packaging without legible labels; not an Oriflame product photo. Objects arranged to the left with generous cool off-white space on the right.",
       "derivatives": [
         {
-          "filename": "astrology-moon.webp",
+          "filename": "skincare-daylight.webp",
           "width": 1672,
           "height": 941,
-          "bytes": 263750,
-          "sha256": "32fa068a073bee5e05a52493f560f677f61fcf9ed7da78e5b13dab0de3e43302"
+          "bytes": 96784,
+          "sha256": "8dfce75dd950bc684d5f48267b28e355bd618927c049d4f3080888cb35997e24"
         },
         {
-          "filename": "astrology-moon-small.webp",
+          "filename": "skincare-daylight-small.webp",
           "width": 780,
           "height": 439,
-          "bytes": 85802,
-          "sha256": "4d46591173d7f9d52e96fb3329ca46d3eaa1a01c3e2d1135d65ec617b1f00f4b"
+          "bytes": 32314,
+          "sha256": "7a214224eee77c075bc0de6e8ae460cd869c2c8086f1e5de4f84d666e7dde4c4"
         }
       ]
     },
     {
-      "success": true,
-      "image": "/opt/data/cache/images/openai_codex_gpt-image-2-high_20261014_100841_478879e0.png",
-      "model": "gpt-image-2-high",
-      "prompt": "Create one finished high-resolution original cinematic photographic artwork for Silviya Aeterna. The attached image is a reference for the cohesive moonlit botanical world, photographic realism, deep petrol/teal, pearl-white light and restrained warm champagne accents; do NOT repeat its composition or objects. This is fictional illustrative artwork, not documentary evidence. Use a wide horizontal canvas. Rich tactile detail, exquisite controlled light, a magical mature atmosphere, no cheap fantasy CGI. An art-directed close overhead still life, not a landscape: smooth pale river stones form a graceful irregular repeating sequence along the edge of a shallow dark teal pool, with delicate fern fronds and tiny dew drops. Soft pearl moonlight reveals the differing stone textures and their subtle reflections. The composition explores rhythm and pattern in natural objects, a poetic illustration for symbolic numerology, NOT scientific evidence or a magical claim. Strong diagonal composition from lower left to upper right, dark negative space in the upper left. No numerals, diagrams, text, glowing spheres, stacked zen stones, or product objects. No UI, watermark, lettering or border. Use the image generation tool.",
-      "provider": "openai-codex",
-      "modality": "image",
-      "quality": "high",
-      "aspect_ratio": "landscape",
-      "image_source": "final",
-      "requested_size": "1536x1024",
-      "pixel_size": "1672x941",
-      "references": [
-        "/opt/data/home/silviya-magic-assets/hero-garden.png"
-      ],
-      "output": "/opt/data/home/silviya-magic-assets/numerology-pattern.png",
-      "width": 1672,
-      "height": 941,
-      "sha256": "423cba2b34d0610f29163b331b57cbf8efcbee0eaa41e5c4454fdbde58d849c6",
-      "bytes": 2505164,
-      "id": "numerology-pattern",
-      "section": "Numerology",
-      "alt_en": "Smooth pale stones and delicate fern fronds form a quiet repeating pattern beside dark water.",
-      "alt_bg": "Гладки светли камъни и нежни папратови листа образуват спокоен повтарящ се мотив край тъмна вода.",
-      "filename": "numerology-pattern.webp",
-      "originalSha256": "d604b1e8641b278c59e44dbfea7f4eb405a877c3663de2e817c2dfd7de65cc17",
+      "id": "wellbeing-daylight",
+      "filename": "wellbeing-daylight.webp",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "c976ca88b68e426b13877e96d2d62cdc566a563460f5de7beadf2c9ea439994f",
       "alt": {
-        "en": "Smooth pale stones and delicate fern fronds form a quiet repeating pattern beside dark water.",
-        "bg": "Гладки светли камъни и нежни папратови листа образуват спокоен повтарящ се мотив край тъмна вода."
+        "en": "An open blank notebook, a mug and a chair beside a bright garden window.",
+        "bg": "Отворен празен бележник, чаша и стол до светъл прозорец с изглед към градина."
       },
+      "source_sha256": "3a523f917092936e73c89cb41f90589dc32b050e25b55b90ca0323363814021d",
+      "source_path": "/opt/data/home/silviyaaeterna-daylight-source/wellbeing-daylight.png",
+      "provider": "openai-codex",
+      "requested_model": "gpt-image-2-medium",
+      "reported_size": "1536x1024",
+      "reported_quality": "low",
+      "request_id": "124123ce-df39-4de6-a2ec-624134c90310",
+      "prompt": "Create one original finished high-resolution horizontal editorial photograph for a bilingual personal website called Silviya Aeterna. The visual world is bright natural daylight, matte porcelain, cool silver and soft dove-grey, clean whites, subtle pale foliage, tactile real-world detail, calm and human. Not a night garden, no moon, gold, astrology, numerology, mystical symbols, text, logos, watermark, interface, fake branded packaging or staged medical claim. Photorealistic but art-directed; leave clear quiet space suitable for responsive cropping. This is illustrative imagery, not a photograph of Silviya or an endorsement. An open unmarked notebook and a simple ceramic mug on a light linen table by a sunlit window, one relaxed chair and leafy view. Quiet everyday pause, not a wellness ritual, no candles or spiritual imagery. The notebook remains blank. Airy off-white and silver-grey palette, close human-scale composition.",
       "derivatives": [
         {
-          "filename": "numerology-pattern.webp",
-          "width": 1672,
-          "height": 941,
-          "bytes": 265864,
-          "sha256": "423cba2b34d0610f29163b331b57cbf8efcbee0eaa41e5c4454fdbde58d849c6"
+          "filename": "wellbeing-daylight.webp",
+          "width": 1536,
+          "height": 1024,
+          "bytes": 194764,
+          "sha256": "c976ca88b68e426b13877e96d2d62cdc566a563460f5de7beadf2c9ea439994f"
         },
         {
-          "filename": "numerology-pattern-small.webp",
+          "filename": "wellbeing-daylight-small.webp",
           "width": 780,
-          "height": 439,
-          "bytes": 91080,
-          "sha256": "12a3bd388d3fbb94ca7fc5c270dd0e096c50e997955d1fc736f67b4d929d0309"
+          "height": 520,
+          "bytes": 73650,
+          "sha256": "211dd77d9d8f8d097b133f5db9ba2daf6fe444f897c81ddbef3a126888f478d6"
         }
       ]
     },
     {
-      "success": true,
-      "image": "/opt/data/cache/images/openai_codex_gpt-image-2-high_20261014_100710_f173d97f.png",
-      "model": "gpt-image-2-high",
-      "prompt": "Create one finished high-resolution original cinematic photographic artwork for Silviya Aeterna. The attached image is a reference for the cohesive moonlit botanical world, photographic realism, deep petrol/teal, pearl-white light and restrained warm champagne accents; do NOT repeat its composition or objects. This is fictional illustrative artwork, not documentary evidence. Use a wide horizontal canvas. Rich tactile detail, exquisite controlled light, a magical mature atmosphere, no cheap fantasy CGI. An exquisite macro editorial skincare still life on weathered ivory limestone in the same moon garden. One small open unbranded frosted glass cream jar with natural cream texture and one simple clear glass vial, a white magnolia petal and a few water droplets. Lush dark teal foliage softly out of focus, soft pearl highlights, tactile photographic materials, premium intimate care rather than an advertisement. Close low oblique camera, objects to the left and calm deep teal space on the right. No brand, no label, no text, no logos, no claims, no invented Oriflame packaging, no plastic CGI sheen. No UI, watermark, lettering or border. Use the image generation tool.",
-      "provider": "openai-codex",
-      "modality": "image",
-      "quality": "high",
-      "aspect_ratio": "landscape",
-      "image_source": "final",
-      "requested_size": "1536x1024",
-      "pixel_size": "1672x941",
-      "references": [
-        "/opt/data/home/silviya-magic-assets/hero-garden.png"
-      ],
-      "output": "/opt/data/home/silviya-magic-assets/skincare-ritual.png",
-      "width": 1672,
-      "height": 941,
-      "sha256": "98bd134bd9f2a97eb8ce4573ec647b14b37633f1a11586c6d7db8cbf73d1d37b",
-      "bytes": 2266752,
-      "id": "skincare-ritual",
-      "section": "Skincare",
-      "alt_en": "An unbranded cream jar and clear glass vial rest beside magnolia petals on a moonlit stone ledge.",
-      "alt_bg": "Бурканче крем без марка и прозрачно стъклено шишенце до листенца магнолия върху огрян от луната каменен перваз.",
-      "filename": "skincare-ritual.webp",
-      "originalSha256": "c1fca513a3f34a288325b0da74754b1c410e9a9432d18493e3509384d10cba22",
+      "id": "family-daylight",
+      "filename": "family-daylight.webp",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "a19055e671c30b0a808890fb11e9f9a6bb4bdff042dea3797ce2eadc100e0177",
       "alt": {
-        "en": "An unbranded cream jar and clear glass vial rest beside magnolia petals on a moonlit stone ledge.",
-        "bg": "Бурканче крем без марка и прозрачно стъклено шишенце до листенца магнолия върху огрян от луната каменен перваз."
+        "en": "A sunlit family table with drawing pencils, a childlike drawing, chairs and leafy flowers.",
+        "bg": "Осветена от слънце семейна маса с цветни моливи, детска рисунка, столове и цветя."
       },
+      "source_sha256": "caf25adc52fab105a272c986791312515cfe2cf31578bd03604f20fe34d6d13d",
+      "source_path": "/opt/data/home/silviyaaeterna-daylight-source/family-daylight.png",
+      "provider": "openai-codex",
+      "requested_model": "gpt-image-2-medium",
+      "reported_size": "1536x1024",
+      "reported_quality": "low",
+      "request_id": "df1cacc9-63de-41f5-b38f-56c17ef56c72",
+      "prompt": "Create one original finished high-resolution horizontal editorial photograph for a bilingual personal website called Silviya Aeterna. The visual world is bright natural daylight, matte porcelain, cool silver and soft dove-grey, clean whites, subtle pale foliage, tactile real-world detail, calm and human. Not a night garden, no moon, gold, astrology, numerology, mystical symbols, text, logos, watermark, interface, fake branded packaging or staged medical claim. Photorealistic but art-directed; leave clear quiet space suitable for responsive cropping. This is illustrative imagery, not a photograph of Silviya or an endorsement. A genuine-feeling bright home table with two empty chairs of different sizes, a simple drawing with no legible words and a small glass vase of leaves. Morning light, everyday family conversation suggested without showing any identifiable child or person. Calm pale neutral room with small brushed-silver details, wide editorial composition.",
       "derivatives": [
         {
-          "filename": "skincare-ritual.webp",
-          "width": 1672,
-          "height": 941,
-          "bytes": 201780,
-          "sha256": "98bd134bd9f2a97eb8ce4573ec647b14b37633f1a11586c6d7db8cbf73d1d37b"
+          "filename": "family-daylight.webp",
+          "width": 1536,
+          "height": 1024,
+          "bytes": 146488,
+          "sha256": "a19055e671c30b0a808890fb11e9f9a6bb4bdff042dea3797ce2eadc100e0177"
         },
         {
-          "filename": "skincare-ritual-small.webp",
+          "filename": "family-daylight-small.webp",
           "width": 780,
-          "height": 439,
-          "bytes": 79848,
-          "sha256": "93f4d79aa627c45060c2fc56ef4e704130daa387590a098f7aad0113359fea57"
+          "height": 520,
+          "bytes": 57874,
+          "sha256": "c547ca79c147f73e8d52287fa3f3e85aa25d8f8268b4e70bb77112520dbe5952"
         }
       ]
     },
     {
-      "success": true,
-      "image": "/opt/data/cache/images/openai_codex_gpt-image-2-high_20261014_100711_75b7f284.png",
-      "model": "gpt-image-2-high",
-      "prompt": "Create one finished high-resolution original cinematic photographic artwork for Silviya Aeterna. The attached image is a reference for the cohesive moonlit botanical world, photographic realism, deep petrol/teal, pearl-white light and restrained warm champagne accents; do NOT repeat its composition or objects. This is fictional illustrative artwork, not documentary evidence. Use a wide horizontal canvas. Rich tactile detail, exquisite controlled light, a magical mature atmosphere, no cheap fantasy CGI. A quiet photographic editorial interior at the edge of the enchanted garden: an open linen-bound journal with visibly blank ivory pages and a dark green silk bookmark rests on a weathered wooden table beside one jasmine sprig. A rounded stone window frames a softly blurred moonlit garden. Warm champagne lamplight from out of frame brushes the paper; deep teal shadow provides intimacy. A place to think and write, not a therapy office, not a product advertisement. Asymmetric three-quarter composition with tactile paper in sharp focus, background depth. No handwriting, printed words, logo, people, medical symbols, or extra clutter. No UI, watermark, lettering or border. Use the image generation tool.",
-      "provider": "openai-codex",
-      "modality": "image",
-      "quality": "high",
-      "aspect_ratio": "landscape",
-      "image_source": "final",
-      "requested_size": "1536x1024",
-      "pixel_size": "1672x941",
-      "references": [
-        "/opt/data/home/silviya-magic-assets/hero-garden.png"
-      ],
-      "output": "/opt/data/home/silviya-magic-assets/psychology-journal.png",
-      "width": 1672,
-      "height": 941,
-      "sha256": "d2521917d7fc6449408b0f78ff31cc7a86697d2b186e67c1a63f2a1aadeab60e",
-      "bytes": 2409548,
-      "id": "psychology-journal",
-      "section": "Psychology-informed wellbeing",
-      "alt_en": "A blank open journal and a single jasmine sprig rest beside a softly lit garden window.",
-      "alt_bg": "Отворен дневник с празни страници и клонче жасмин до меко осветен прозорец към градина.",
-      "filename": "psychology-journal.webp",
-      "originalSha256": "fad68910c83da8258a47a3646e1170e20ccadfd4e2a077753a3fd3f7b0870d84",
+      "id": "mental-health-daylight",
+      "filename": "mental-health-daylight.webp",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "4ba35d2ff1fa958e977ae1aeffe01299ca5794dbbbf9f138cd14eec1e9990eed",
       "alt": {
-        "en": "A blank open journal and a single jasmine sprig rest beside a softly lit garden window.",
-        "bg": "Отворен дневник с празни страници и клонче жасмин до меко осветен прозорец към градина."
+        "en": "Two comfortable chairs face a small table in a bright, quiet living room.",
+        "bg": "Два удобни стола около малка маса в светла и спокойна дневна."
       },
+      "source_sha256": "ea193b7334c332c203ec182b385831e6520acceba09792838d81cc84f57183cc",
+      "source_path": "/opt/data/home/silviyaaeterna-daylight-source/mental-health-daylight.png",
+      "provider": "openai-codex",
+      "requested_model": "gpt-image-2-medium",
+      "reported_size": "1536x1024",
+      "reported_quality": "low",
+      "request_id": "87a1002c-9b94-4279-b391-ecad8dcb949f",
+      "prompt": "Create one original finished high-resolution horizontal editorial photograph for a bilingual personal website called Silviya Aeterna. The visual world is bright natural daylight, matte porcelain, cool silver and soft dove-grey, clean whites, subtle pale foliage, tactile real-world detail, calm and human. Not a night garden, no moon, gold, astrology, numerology, mystical symbols, text, logos, watermark, interface, fake branded packaging or staged medical claim. Photorealistic but art-directed; leave clear quiet space suitable for responsive cropping. This is illustrative imagery, not a photograph of Silviya or an endorsement. A softly lit quiet corner of a modern home with one comfortable chair near a window and a second chair angled toward it, suggesting space for conversation and listening. No people, medical props, charts, pills or therapist credentials. Gentle natural sunlight, cool stone and silver-grey fabrics, reassuring uncluttered composition.",
       "derivatives": [
         {
-          "filename": "psychology-journal.webp",
-          "width": 1672,
-          "height": 941,
-          "bytes": 252010,
-          "sha256": "d2521917d7fc6449408b0f78ff31cc7a86697d2b186e67c1a63f2a1aadeab60e"
+          "filename": "mental-health-daylight.webp",
+          "width": 1536,
+          "height": 1024,
+          "bytes": 276428,
+          "sha256": "4ba35d2ff1fa958e977ae1aeffe01299ca5794dbbbf9f138cd14eec1e9990eed"
         },
         {
-          "filename": "psychology-journal-small.webp",
+          "filename": "mental-health-daylight-small.webp",
           "width": 780,
-          "height": 439,
-          "bytes": 89958,
-          "sha256": "01751b788c47c25f11925e745dadafe10f157dc40def336c6c6c6b97df4c9261"
+          "height": 520,
+          "bytes": 97390,
+          "sha256": "54dbc384139a48341df7ebcaf95ef09d0056a98584f7d98782d01209a554cba2"
         }
       ]
     },
     {
-      "success": true,
-      "image": "/opt/data/cache/images/openai_codex_gpt-image-2-high_20261014_100740_911bf271.png",
-      "model": "gpt-image-2-high",
-      "prompt": "Create one finished high-resolution original cinematic photographic artwork for Silviya Aeterna. The attached image is a reference for the cohesive moonlit botanical world, photographic realism, deep petrol/teal, pearl-white light and restrained warm champagne accents; do NOT repeat its composition or objects. This is fictional illustrative artwork, not documentary evidence. Use a wide horizontal canvas. Rich tactile detail, exquisite controlled light, a magical mature atmosphere, no cheap fantasy CGI. A beautiful cinematic woodland scene in the same imagined sanctuary. Two mature silver-barked birch trees curve gently toward one young sapling between them, their canopy forming a protective shelter, without human faces or anthropomorphic features. Moss, small white woodland flowers, delicate pearl moonbeams and a few restrained warm fireflies. This is an image of care and growing together, not a claimed portrait of anyone's family. A low camera sees the sapling clearly in the central foreground; the trees extend beyond the wide frame. Natural anatomy of trees, photographic detail, inviting and safe, never ominous. No humans, houses, text, signs, glowing orbs or stock-photo cliches. No UI, watermark, lettering or border. Use the image generation tool.",
-      "provider": "openai-codex",
-      "modality": "image",
-      "quality": "high",
-      "aspect_ratio": "landscape",
-      "image_source": "final",
-      "requested_size": "1536x1024",
-      "pixel_size": "1672x941",
-      "references": [
-        "/opt/data/home/silviya-magic-assets/hero-garden.png"
-      ],
-      "output": "/opt/data/home/silviya-magic-assets/family-grove.png",
+      "id": "closing-daylight",
+      "filename": "closing-daylight.webp",
       "width": 1672,
       "height": 941,
-      "sha256": "31d3408ec318cf5596f65db506764cbdecc7ec7c2c02125ba33c3202f09594cc",
-      "bytes": 2725469,
-      "id": "family-grove",
-      "section": "Family and children",
-      "alt_en": "Two mature silver-barked trees shelter a small sapling in a softly glowing woodland grove.",
-      "alt_bg": "Две зрели дървета със сребриста кора закрилят малка фиданка в меко сияеща горичка.",
-      "filename": "family-grove.webp",
-      "originalSha256": "2e2b043b6353ddba66b6e7345100cbdfeecd716264d6883c178dfa971e30b88f",
+      "sha256": "f2be90df39677216b669c0e01e76129c879ea8974b8b5414084220e89e2044e4",
       "alt": {
-        "en": "Two mature silver-barked trees shelter a small sapling in a softly glowing woodland grove.",
-        "bg": "Две зрели дървета със сребриста кора закрилят малка фиданка в меко сияеща горичка."
+        "en": "A white magnolia in a clear vase on a reflective table beside a bright window.",
+        "bg": "Бяла магнолия в прозрачна ваза върху отразяваща маса до светъл прозорец."
       },
-      "derivatives": [
-        {
-          "filename": "family-grove.webp",
-          "width": 1672,
-          "height": 941,
-          "bytes": 346114,
-          "sha256": "31d3408ec318cf5596f65db506764cbdecc7ec7c2c02125ba33c3202f09594cc"
-        },
-        {
-          "filename": "family-grove-small.webp",
-          "width": 780,
-          "height": 439,
-          "bytes": 112792,
-          "sha256": "608cca634441dd35c9385afaef2d97e9895b1e0510a30d261b3d351a4d0ce3a5"
-        }
-      ]
-    },
-    {
-      "success": true,
-      "image": "/opt/data/cache/images/openai_codex_gpt-image-2-high_20261014_100744_d81b9726.png",
-      "model": "gpt-image-2-high",
-      "prompt": "Create one finished high-resolution original cinematic photographic artwork for Silviya Aeterna. The attached image is a reference for the cohesive moonlit botanical world, photographic realism, deep petrol/teal, pearl-white light and restrained warm champagne accents; do NOT repeat its composition or objects. This is fictional illustrative artwork, not documentary evidence. Use a wide horizontal canvas. Rich tactile detail, exquisite controlled light, a magical mature atmosphere, no cheap fantasy CGI. An intimate refuge at the edge of the same moonlit botanical garden: a single comfortable ivory linen lounge chair, a loosely folded natural textile and a small plain ceramic cup beside an open pale stone arch. The arch opens onto calm dark green foliage and reflective water. Gentle warm light from outside the frame balances pearl moonlight. Quiet, grounded, beautiful and humane, not a wellness advertisement and not a medical treatment scene. The empty chair is the focal point, offset to the right; deep teal shadow and spacious breathing room on the left. Tactile fabric and believable stone, no staged luxury clutter, no humans, no text, no logos, no clinical claims. No UI, watermark, lettering or border. Use the image generation tool.",
+      "source_sha256": "6ea82408727e52dd3528c1a95a10f209289746aed547caecf8e7ba5f89beea6a",
+      "source_path": "/opt/data/home/silviyaaeterna-daylight-source/closing-daylight.png",
       "provider": "openai-codex",
-      "modality": "image",
-      "quality": "high",
-      "aspect_ratio": "landscape",
-      "image_source": "final",
-      "requested_size": "1536x1024",
-      "pixel_size": "1672x941",
-      "references": [
-        "/opt/data/home/silviya-magic-assets/hero-garden.png"
-      ],
-      "output": "/opt/data/home/silviya-magic-assets/mental-health-haven.png",
-      "width": 1672,
-      "height": 941,
-      "sha256": "557108a4cfd7687151a4eb51ad15195767223cbb39fe6c3d4c111cde9d764ca0",
-      "bytes": 2654812,
-      "id": "mental-health-haven",
-      "section": "Mental health",
-      "alt_en": "An empty linen chair faces a calm garden through an open stone arch, a quiet place to pause.",
-      "alt_bg": "Празно кресло с ленена тапицерия е обърнато към спокойна градина през отворена каменна арка, тихо място за пауза.",
-      "filename": "mental-health-haven.webp",
-      "originalSha256": "7d541e4797e032f4c84656f77d1b6d915b15d84ae2bf0791009094eb8affe1ac",
-      "alt": {
-        "en": "An empty linen chair faces a calm garden through an open stone arch, a quiet place to pause.",
-        "bg": "Празно кресло с ленена тапицерия е обърнато към спокойна градина през отворена каменна арка, тихо място за пауза."
-      },
+      "requested_model": "gpt-image-2-medium",
+      "reported_size": "1672x941",
+      "reported_quality": "low",
+      "request_id": "3c54a7a8-9cfc-482d-8667-d04098828f1b",
+      "prompt": "Create one original finished high-resolution horizontal editorial photograph for a bilingual personal website called Silviya Aeterna. The visual world is bright natural daylight, matte porcelain, cool silver and soft dove-grey, clean whites, subtle pale foliage, tactile real-world detail, calm and human. Not a night garden, no moon, gold, astrology, numerology, mystical symbols, text, logos, watermark, interface, fake branded packaging or staged medical claim. Photorealistic but art-directed; leave clear quiet space suitable for responsive cropping. This is illustrative imagery, not a photograph of Silviya or an endorsement. A single magnolia bloom and a few pale green leaves in a simple clear vase on a brushed-silver table by a bright window. Honest daylight, long delicate shadows and airy white negative space, hopeful rather than mystical. Wide minimal editorial still life with no text, logo or branded product.",
       "derivatives": [
         {
-          "filename": "mental-health-haven.webp",
+          "filename": "closing-daylight.webp",
           "width": 1672,
           "height": 941,
-          "bytes": 311330,
-          "sha256": "557108a4cfd7687151a4eb51ad15195767223cbb39fe6c3d4c111cde9d764ca0"
+          "bytes": 90038,
+          "sha256": "f2be90df39677216b669c0e01e76129c879ea8974b8b5414084220e89e2044e4"
         },
         {
-          "filename": "mental-health-haven-small.webp",
+          "filename": "closing-daylight-small.webp",
           "width": 780,
           "height": 439,
-          "bytes": 103420,
-          "sha256": "7c4f8309c9d38f0c140042fe0e133f95b26d1de130ae109108b2c4f1acdeb19d"
-        }
-      ]
-    },
-    {
-      "success": true,
-      "image": "/opt/data/cache/images/openai_codex_gpt-image-2-high_20261014_100910_fdc9d13e.png",
-      "model": "gpt-image-2-high",
-      "prompt": "Create one finished high-resolution original cinematic photographic artwork for Silviya Aeterna. The attached image is a reference for the cohesive moonlit botanical world, photographic realism, deep petrol/teal, pearl-white light and restrained warm champagne accents; do NOT repeat its composition or objects. This is fictional illustrative artwork, not documentary evidence. Use a wide horizontal canvas. Rich tactile detail, exquisite controlled light, a magical mature atmosphere, no cheap fantasy CGI. An extraordinary wide photographic macro of one open ivory magnolia flower floating on still midnight-teal water, viewed slightly above the waterline. Fine natural petal texture and droplets, softly illuminated by pearl moonlight, tiny restrained champagne highlights reflected in slow concentric ripples. Rich quiet dark water fills most of the composition; place the flower in the right third so the left is a restful field for live website text. This is a calm magical closing scene, not a product shot, not an illustration with excessive glow. No foliage clutter, candles, numbers, symbols, lettering, logos, border or frame. No UI, watermark, lettering or border. Use the image generation tool.",
-      "provider": "openai-codex",
-      "modality": "image",
-      "quality": "high",
-      "aspect_ratio": "landscape",
-      "image_source": "final",
-      "requested_size": "1536x1024",
-      "pixel_size": "1672x941",
-      "references": [
-        "/opt/data/home/silviya-magic-assets/hero-garden.png"
-      ],
-      "output": "/opt/data/home/silviya-magic-assets/closing-bloom.png",
-      "width": 1672,
-      "height": 941,
-      "sha256": "10486bdffafa6ffa8c29c045e37a64351c00979cb4ea9c3bbee99ac80a450ce1",
-      "bytes": 1773025,
-      "id": "closing-bloom",
-      "section": "Closing",
-      "alt_en": "A single ivory magnolia blossom floats on dark teal water as gentle rings of light spread around it.",
-      "alt_bg": "Един цвят на магнолия с цвят на слонова кост плува върху тъмнозелена вода, а около него се разстилат нежни светли кръгове.",
-      "filename": "closing-bloom.webp",
-      "originalSha256": "dca225800623b5e3fa5e07771932d3324cdc396b423c5532cedb4eda29ad61ff",
-      "alt": {
-        "en": "A single ivory magnolia blossom floats on dark teal water as gentle rings of light spread around it.",
-        "bg": "Един цвят на магнолия с цвят на слонова кост плува върху тъмнозелена вода, а около него се разстилат нежни светли кръгове."
-      },
-      "derivatives": [
-        {
-          "filename": "closing-bloom.webp",
-          "width": 1672,
-          "height": 941,
-          "bytes": 95346,
-          "sha256": "10486bdffafa6ffa8c29c045e37a64351c00979cb4ea9c3bbee99ac80a450ce1"
-        },
-        {
-          "filename": "closing-bloom-small.webp",
-          "width": 780,
-          "height": 439,
-          "bytes": 37578,
-          "sha256": "69e98b1c6421a2a57381866e6e0d6030306d5b1684f2ec59007ec357e2d2c3e9"
+          "bytes": 34550,
+          "sha256": "7e31fb40df198dd1ef3ba1c3b4e8e5830948c815085b13ee475a61215fd9f211"
         }
       ]
     }
