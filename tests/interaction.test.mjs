@@ -25,7 +25,7 @@ function fixture(saved = 'en', denyStorage = false, hash = '') {
   menu.querySelector = () => summary;
   menu.querySelectorAll = () => [menuLink];
   menu.contains = el => el === menu || el === summary || el === menuLink;
-  const ids = ['astrology', 'numerology', 'skincare', 'wellbeing', 'family', 'mental-health'];
+  const ids=['skincare', 'wellbeing', 'family', 'mental-health'];
   const topics = Object.fromEntries(ids.map(id => { const e = new Element(); e.details = new Element(); e.querySelector = () => e.details; return [id,e]; }));
   const links = ids.map(theme => new Element({theme}));
   const docEvents = {}, winEvents = {};
@@ -66,7 +66,7 @@ test('outside click closes mobile menu but inside click does not', () => {
   const f = fixture(); f.menu.open = true; f.docEvents.click({target: f.summary}); assert.equal(f.menu.open, true);
   f.docEvents.click({target: f.bg}); assert.equal(f.menu.open, false);
 });
-test('all six theme selections open useful prompts with selected aria and focus', () => {
+test('all four theme selections open useful prompts with selected aria and focus', () => {
   const f = fixture();
   for (const link of f.links) {
     link.click(); assert.equal(link.attrs['aria-current'], 'true');
@@ -78,19 +78,19 @@ test('all six theme selections open useful prompts with selected aria and focus'
 test('direct theme fragment enhances the correct topic', () => {
   const f = fixture('en', false, '#mental-health');
   assert.equal(f.topics['mental-health'].details.open, true);
-  assert.equal(f.links[5].attrs['aria-current'], 'true');
+  assert.equal(f.links[3].attrs['aria-current'], 'true');
 });
-test('six static descriptions and native prompt disclosures exist without JavaScript', () => {
-  for (const id of ['astrology', 'numerology', 'skincare', 'wellbeing', 'family', 'mental-health']) {
+test('four static descriptions and native prompt disclosures exist without JavaScript', () => {
+  for (const id of ['skincare', 'wellbeing', 'family', 'mental-health']) {
     const article = html.match(new RegExp(`<article[^>]+id="${id}"[\\s\\S]*?</article>`))?.[0];
     assert.ok(article, id); assert.match(article, /<h3 data-en=/); assert.match(article, /<p data-en=/); assert.match(article, /<details class="reflection">/);
   }
-  assert.equal((html.match(/class="reflection"/g) || []).length, 6);
+  assert.equal((html.match(/class="reflection"/g) || []).length, 4);
 });
 test('original images and responsive hero are real WebP assets', async () => {
   const manifest = JSON.parse(await readFile(new URL('../tools/ASSET-MANIFEST.json', import.meta.url), 'utf8'));
   assert.equal(manifest.asset_count, 8);
-  for (const asset of manifest.assets) {
+  for (const asset of manifest.assets.filter(a => !['astrology-moon', 'numerology-pattern'].includes(a.id))) {
     const bytes = await readFile(new URL(`../assets/images/${asset.filename}`, import.meta.url));
     assert.equal(createHash('sha256').update(bytes).digest('hex'), asset.sha256);
     const tag = [...html.matchAll(/<img\b[^>]*>/g)].map(m => m[0]).find(t => t.includes(`assets/images/${asset.filename}`));
@@ -106,7 +106,7 @@ test('original images and responsive hero are real WebP assets', async () => {
     assert.ok(bytes.length > 5000); assert.ok(bytes.length < 500000);
   }
   assert.match(html, /fetchpriority="high"/);
-  assert.equal((html.match(/loading="lazy"/g) || []).length, 7);
+  assert.equal((html.match(/loading="lazy"/g) || []).length, 5);
 });
 test('social preview is a real 1200 by 630 PNG', async () => {
   const png = await readFile(new URL('../assets/social-og.png', import.meta.url));

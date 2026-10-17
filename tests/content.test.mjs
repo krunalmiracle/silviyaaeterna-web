@@ -20,8 +20,9 @@ test("the page makes no third-party runtime requests", () => {
   const productionOrigin = "https://silviyaaeterna.krusil.com";
   const absoluteUrls = [...html.matchAll(/https?:\/\/[^\"'\s<]+/g)].map((match) => match[0]);
   assert.ok(absoluteUrls.length >= 3, "expected canonical and social metadata URLs");
+  const allowedOrigins = [productionOrigin, "https://bg.oriflame.com"];
   for (const url of absoluteUrls) {
-    assert.ok(url.startsWith(productionOrigin), `unexpected external URL: ${url}`);
+    assert.ok(allowedOrigins.some(origin => url.startsWith(origin)), `unexpected external URL: ${url}`);
   }
   assert.ok(!/<(?:script|img)[^>]+(?:src|href)="https?:\/\//.test(html), "runtime asset uses an absolute URL");
   for (const [name, source] of [["styles.css", css], ["site.js", js]]) {
@@ -52,7 +53,7 @@ test("every translatable node carries both languages", () => {
 
 test("every image has alt text", () => {
   const imgs = [...html.matchAll(/<img\b[^>]*>/g)];
-  assert.equal(imgs.length, 8, "eight original sanctuary scenes are required");
+  assert.equal(imgs.length, 6, "six original sanctuary scenes remain");
   let decorative = 0;
   for (const [tag] of imgs) {
     assert.match(tag, /\salt="/, `image missing alt: ${tag}`);
@@ -101,14 +102,13 @@ test("heading structure is a single h1 with ordered levels", () => {
   }
 });
 
-test("coming soon states are honest, non clickable elements", () => {
+test("only the YouTube channel is still coming soon; official shopping links are honest", () => {
   const chips = [...html.matchAll(/<(\w+)([^>]*class="[^"]*soon-state[^"]*"[^>]*)>/g)];
-  assert.equal(chips.length, 2, "one honest state each for YouTube and Oriflame");
-  for (const [, tag, attrs] of chips) {
-    assert.equal(tag, "span", "coming soon state must not be a control");
-    assert.ok(!/href=/.test(attrs), "coming soon state must not link anywhere");
-  }
-  assert.ok(!/<a\b[^>]*href="https?:/.test(html), "page must not link to social or shop destinations");
+  assert.equal(chips.length, 1);
+  assert.match(html, /href="https:\/\/bg\.oriflame\.com\/"/);
+  assert.match(html, /href="https:\/\/bg\.oriflame\.com\/join-us\/self-registration"/);
+  assert.match(html, /Silviya’s personal link has not been confirmed/);
+  assert.doesNotMatch(html, /astrology|numerology|астролог|нумеролог/i);
 });
 
 test("language toggle is exposed accessibly", () => {

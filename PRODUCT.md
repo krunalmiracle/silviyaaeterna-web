@@ -8,15 +8,15 @@ web
 
 ## Users
 
-Primary: adults in Bulgaria and the Bulgarian diaspora who are curious about astrology, numerology, skincare and psychology-informed wellbeing, and who want calm, honest material in their own language. Secondary: parents looking for grounded, educational notes about children, family routines and adult self-improvement. Visitors arrive from a future YouTube channel or a shared link, in a browsing, evaluating state, and need to understand within seconds what this project is and what it is not.
+Primary: adults in Bulgaria and the Bulgarian diaspora looking for practical, bilingual notes on skincare, everyday wellbeing, family conversations and mental health. Visitors can also reach the current Oriflame Bulgaria catalogue and official registration, clearly identified as direct Oriflame links rather than Silviya's unconfirmed personal links.
 
 ## Product Purpose
 
-Silviya Aeterna is a bilingual (Bulgarian and English) personal brand and content project, led by a future YouTube channel, covering six topic pillars: astrology, numerology, skincare, psychology-informed wellbeing, family and children, and mental health. This website exists to introduce the brand, publish the topic map, state the content boundaries honestly, and hold honest "coming soon" states until the channel and any shopping path exist. Success means a visitor leaves understanding the project, its topics, its limits, and where to return when the channel launches.
+Silviya Aeterna is a bilingual (Bulgarian and English) personal content project covering four everyday topics: skincare, wellbeing, family and children, and mental health. It uses practical questions and honest boundaries rather than symbolic traditions or unsupported promises. The site also links to Oriflame Bulgaria's official catalogue and registration, without implying these links belong to Silviya. A future YouTube channel remains a clearly labelled coming-soon item.
 
 ## Positioning
 
-An unhurried personal project for curiosity and everyday care: reflection material with explicit boundaries (educational, never diagnosis, treatment or professional care), fully bilingual at launch, and honest about everything that does not exist yet. Symbolic traditions are clearly distinguished from scientific knowledge. No fake links, metrics or social proof.
+A calm personal project for everyday care, with clear educational boundaries and no invented qualifications, results or endorsements. Bulgarian and English carry equal content. Oriflame actions lead to Oriflame Bulgaria directly; a personal referral link has not been supplied.
 
 ## Operating Context
 

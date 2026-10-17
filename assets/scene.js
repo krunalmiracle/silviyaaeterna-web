@@ -14,7 +14,7 @@ let context = null;
 let entranceDone = false;
 let renderer = null;
 let disposed = false;
-const stats = {frames:0, renderer:'static', activeScene:'astrology', running:false};
+const stats = {frames:0, renderer:'static', activeScene:'skincare', running:false};
 const allowed = () => motionAllowed({paused,reduced:reduce.matches,visible:!document.hidden});
 
 // A static, semantic source image for every chapter remains in the HTML.
