@@ -105,7 +105,8 @@ test("heading structure is a single h1 with ordered levels", () => {
 test("only the YouTube channel is still coming soon; official shopping links are honest", () => {
   const chips = [...html.matchAll(/<(\w+)([^>]*class="[^"]*soon-state[^"]*"[^>]*)>/g)];
   assert.equal(chips.length, 1);
-  assert.match(html, /href="https:\/\/bg\.oriflame\.com\/products"/);
+  assert.match(html, /href="https:\/\/bg\.oriflame\.com\/"/);
+  assert.doesNotMatch(html, /href="https:\/\/bg\.oriflame\.com\/products"/); // Listing route returns 404.
   assert.match(html, /href="https:\/\/bg\.oriflame\.com\/join-us\/self-registration"/);
   assert.match(html, /Silviya’s personal invitation code or link is not published here yet/);
   assert.match(html, /cannot confirm that signing up through them benefits Silviya/);

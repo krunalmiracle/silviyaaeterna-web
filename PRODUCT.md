@@ -9,7 +9,7 @@ web
 Bulgarian Oriflame shoppers and prospective VIP customers or partners who want verified products, transparent joining terms and optional bilingual everyday-care notes.
 
 ## Product Purpose
-Silviya Aeterna leads with eight individually verified Oriflame Bulgaria products, official photographs, dated EUR prices and exact product destinations. The complete catalogue and separate VIP/partner registration routes are prominent. Silviya's invitation code or personal link is still unknown: generic official forms must not be described as crediting her. Four bilingual everyday-care themes support the commercial paths; a future YouTube channel is coming soon. No invented qualifications, income promises, testimonials or affiliate attribution.
+Silviya Aeterna leads with eight individually verified Oriflame Bulgaria products, official photographs, dated EUR prices and exact product destinations. The official Oriflame Bulgaria store and separate VIP/partner registration routes are prominent. Silviya's invitation code or personal link is still unknown: generic official forms must not be described as crediting her. Four bilingual everyday-care themes support the commercial paths; a future YouTube channel is coming soon. No invented qualifications, income promises, testimonials or affiliate attribution.
 
 ## Operating Context
 - Production repo: `krunalmiracle/silviyaaeterna-web`, Dokploy `main`, https://silviyaaeterna.krusil.com/.
