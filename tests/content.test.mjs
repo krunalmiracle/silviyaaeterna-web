@@ -53,7 +53,7 @@ test("every translatable node carries both languages", () => {
 
 test("every image has alt text", () => {
   const imgs = [...html.matchAll(/<img\b[^>]*>/g)];
-  assert.equal(imgs.length, 6, "six original sanctuary scenes remain");
+  assert.equal(imgs.length, 14, "six editorial scenes and eight official products remain");
   let decorative = 0;
   for (const [tag] of imgs) {
     assert.match(tag, /\salt="/, `image missing alt: ${tag}`);
@@ -82,7 +82,7 @@ test("every local reference resolves to a file on disk", async () => {
 
 test("navigation anchors all point at real sections", () => {
   const ids = new Set([...html.matchAll(/\sid="([^"]+)"/g)].map((match) => match[1]));
-  for (const id of ["main", "manifesto", "atlas", "channel", "shop", "safety", "hero-title"]) {
+  for (const id of ["main", "products", "join", "manifesto", "atlas", "channel", "safety", "hero-title"]) {
     assert.ok(ids.has(id), `missing section id ${id}`);
   }
   const anchors = [...html.matchAll(/href="#([^"]+)"/g)].map((match) => match[1]);
@@ -105,9 +105,10 @@ test("heading structure is a single h1 with ordered levels", () => {
 test("only the YouTube channel is still coming soon; official shopping links are honest", () => {
   const chips = [...html.matchAll(/<(\w+)([^>]*class="[^"]*soon-state[^"]*"[^>]*)>/g)];
   assert.equal(chips.length, 1);
-  assert.match(html, /href="https:\/\/bg\.oriflame\.com\/"/);
+  assert.match(html, /href="https:\/\/bg\.oriflame\.com\/products"/);
   assert.match(html, /href="https:\/\/bg\.oriflame\.com\/join-us\/self-registration"/);
-  assert.match(html, /Silviya’s personal link has not been confirmed/);
+  assert.match(html, /Silviya’s personal invitation code or link is not published here yet/);
+  assert.match(html, /cannot confirm that signing up through them benefits Silviya/);
   assert.doesNotMatch(html, /astrology|numerology|астролог|нумеролог/i);
 });
 

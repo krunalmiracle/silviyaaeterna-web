@@ -1,6 +1,6 @@
 ---
 name: Silviya Aeterna
-description: Light botanical editorial site with cool silver branding and everyday-care imagery.
+description: Light silver Oriflame product discovery and invitation-led registration with supporting everyday-care imagery.
 colors:
   ink: "#f7f9fa"
   deep: "#ebeff1"
@@ -39,8 +39,8 @@ components:
 
 The latest approved brief requests light by default and silver branding instead of gold. A daylight conservatory opens the site with a restrained off-white text veil, dark lettering and a silver action. The four topic scenes show unbranded skincare, an everyday journal pause, a family table and a quiet two-chair conversation. A magnolia still life closes the page. These are generated illustrative images, not documentary photographs, Silviya's likeness, branded products or evidence of a practice.
 
-The site preserves its bilingual information architecture, four anchors and native disclosures. Desktop uses a sticky visual stage; mobile places the full local image beside each passage. Native HTML works without JavaScript. Local GSAP transitions are decorative, paused by the motion control and disabled for reduced-motion users. The prior water/refraction shader and gold light points are retired. No night garden, astrology or numerology imagery remains in the page assets.
+The first CTA opens an eight-product gallery immediately after the hero. Product cards use official product images on pale silver surfaces, with price, code and a direct official product link. A two-route VIP/partner invitation section follows the gallery; both generic forms explicitly disclaim Silviya attribution until her personal invitation details are verified. The four editorial anchors and native disclosures follow as supporting content. Desktop uses a sticky visual stage for those themes; mobile places the local image beside each passage. Native HTML works without JavaScript. Local GSAP transitions are decorative, paused by the motion control and disabled for reduced-motion users.
 
-Actual asset metadata, original source hashes, optimized WebP hashes, dimensions, prompts and EN/BG alternatives live in `tools/ASSET-MANIFEST.json`. Full generated PNG originals and generation responses are archived in `/opt/data/home/silviyaaeterna-daylight-source/`, outside the web-serving allowlist. The social preview was recreated from the final hero. External Oriflame links are the official Bulgaria site and registration, not an unverified personal referral.
+Editorial metadata, original source hashes, optimized WebP hashes, dimensions, prompts and EN/BG alternatives live in `tools/ASSET-MANIFEST.json`; full generated PNG originals are archived in `/opt/data/home/silviyaaeterna-daylight-source/`. Product names, codes, dated EUR prices, stock, source URLs, official image bytes and hashes are recorded separately in `tools/ORIFLAME-PRODUCTS.json`; original official downloads are archived outside the server. Product prices may change and final checkout terms belong to Oriflame. The social preview retains the conservatory image. No generic Oriflame link is represented as a personal referral.
 
 Light and silver are the default brand appearance, including for devices with a dark OS preference. Text and actions must retain WCAG AA contrast against the light surfaces. Validate both languages, five responsive widths, keyboard use, image decode, no horizontal overflow and live served bytes before delivery.

@@ -1,8 +1,8 @@
 # Silviya Aeterna
 
-A bilingual English/Bulgarian personal site for practical skincare, everyday wellbeing, family conversations and mental-health reflection. Light default, cool silver accents and six original daylight scenes. Live at https://silviyaaeterna.krusil.com/.
+A bilingual English/Bulgarian Oriflame product-discovery and joining site. Eight verified Bulgarian listings with official product images, dated EUR prices and exact product links lead the page; four practical lifestyle themes follow. Light default, cool silver accents and six original daylight editorial scenes. Live at https://silviyaaeterna.krusil.com/.
 
-No clinical or commercial endorsement is implied. The two shopping destinations lead to official Oriflame Bulgaria; a Silviya-specific referral link has not been provided. The future YouTube destination is clearly marked as coming soon.
+No clinical endorsement, guaranteed earnings or personal referral attribution is implied. The VIP and partner forms are official but generic. Silviya's invitation code/link has not been provided; obtain it before registration if attribution to her matters. The partner route lists the official €10 annual fee, added to the first order. The future YouTube destination is marked coming soon.
 
 ## Run and test
 
@@ -24,6 +24,6 @@ The script opens an isolated local Chromium, checks both languages at 1440, 1024
 
 ## Images and provenance
 
-The six original generated PNGs and generation manifest are archived at `/opt/data/home/silviyaaeterna-daylight-source/` (development only). The delivered source images are optimized WebPs with 780px responsive variants. `tools/ASSET-MANIFEST.json` lists the exact source and derivative hashes, prompts, dimensions and bilingual alt text. `assets/social-og.png` is derived from the new conservatory image, not the retired garden art. See `tools/ASSET-PROVENANCE.md`. No original PNGs or developer notes are published by the static server.
+The six original generated PNGs and generation manifest are archived at `/opt/data/home/silviyaaeterna-daylight-source/` (development only). The delivered editorial images are optimized WebPs with 780px responsive variants. `tools/ASSET-MANIFEST.json` lists their source and derivative hashes, prompts, dimensions and bilingual alt text. Eight official product images are locally optimized into `assets/products/`; `tools/ORIFLAME-PRODUCTS.json` preserves their exact source URLs, source and derivative hashes, product codes, dated stock and EUR price evidence. The source HTML and original product-image bytes are archived at `/opt/data/home/silviyaaeterna-oriflame-sources/2026-10-22/`, outside the served allowlist. `assets/social-og.png` derives from the conservatory image. No source originals or developer notes are published by the static server.
 
 The old moonlit/gold design documents and art generation helpers are historical artifacts only. `PRODUCT.md` and `DESIGN.md` describe the current site. Self-hosted fonts and GSAP remain licensed with their files.

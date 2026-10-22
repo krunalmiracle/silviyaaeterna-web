@@ -111,7 +111,7 @@ test('original images and responsive hero are real WebP assets', async () => {
     assert.ok(bytes.length > 5000); assert.ok(bytes.length < 500000);
   }
   assert.match(html, /fetchpriority="high"/);
-  assert.equal((html.match(/loading="lazy"/g) || []).length, 5);
+  assert.equal((html.match(/loading="lazy"/g) || []).length, 13);
 });
 test('social preview is a real 1200 by 630 PNG', async () => {
   const png = await readFile(new URL('../assets/social-og.png', import.meta.url));

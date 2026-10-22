@@ -85,8 +85,8 @@ def main():
                     check(not result['smallTargets'],f'{name}-{lang}: 44px touch targets')
                     if not LAYOUT_ONLY:
                         check(all(i['decoded'] for i in result['images']),f'{name}-{lang}: six decoded daylight images')
-                    check(result['allTopics']==4 and result['soonAreControls']==0 and result['cta']=='#atlas',f'{name}-{lang}: semantic content')
-                    check(page.evaluate("document.fonts.check('500 48px Onest', 'Любопитство')"),f'{name}-{lang}: display font loaded')
+                    check(result['allTopics']==4 and result['soonAreControls']==0 and result['cta']=='#products' and page.locator('.product-card').count()==8,f'{name}-{lang}: semantic content')
+                    check(page.evaluate("document.fonts.check('400 48px Sanctuary', 'Silviya')"),f'{name}-{lang}: display font loaded')
                     if name in ['desktop','mobile'] and not LAYOUT_ONLY:
                         stem=name+('-bg' if lang=='bg' else '')
                         for suffix,full in [('-top',False),('',True)]:
@@ -126,9 +126,9 @@ def main():
                         page.keyboard.press('Escape')
                         check(page.locator('.nav-more').get_attribute('open') is None and page.locator('.nav-more summary').evaluate('(el)=>el===document.activeElement'),f'{name}-{lang}: Escape closes and restores focus')
                         page.keyboard.press('Enter')
-                        page.locator('.mobile-nav a[href="#manifesto"]').click()
+                        page.locator('.mobile-nav a[href="#products"]').click()
                         check(page.locator('.nav-more').get_attribute('open') is None,f'{name}-{lang}: selection closes menu')
-                        check(page.locator('#manifesto').bounding_box()['y']>=header-1,f'{name}-{lang}: mobile nav headroom')
+                        check(page.locator('#products').bounding_box()['y']>=header-1,f'{name}-{lang}: mobile nav headroom')
             # Real keyboard entry, reduced motion, native disclosures, and failure modes.
             page.goto(URL,wait_until='load'); page.keyboard.press('Tab')
             check(page.locator('.skip-link').evaluate('(e)=>e===document.activeElement && getComputedStyle(e).outlineStyle!=="none"'), 'keyboard: visible skip-link focus')
